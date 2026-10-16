@@ -1,13 +1,16 @@
 # Rain-VOLEitH：基于 Rain 单向函数的 VOLE-in-the-Head 签名
 
 [![verify](../../actions/workflows/verify.yml/badge.svg)](../../actions/workflows/verify.yml)
+[![tls-windows](../../actions/workflows/tls-windows.yml/badge.svg)](../../actions/workflows/tls-windows.yml)
 
 **English summary.** A post-quantum signature that replaces the EM-AES one-way function of
 [rFAEST](https://github.com/samsungsds-research-papers/rFAEST) (commit `7a59c5c`) with the Rain-3 / Rain-4
 block cipher, keeping rFAEST's VOLE, commitment, hashing and AVX2 code unchanged. Six 128-bit parameter sets.
 Key generation uses an optimized but functionally identical Rain evaluation (`src/rain_kg.hpp`), checked bit for bit
 against the original implementation. Run `docker build -t rain-voleith . && docker run --rm rain-voleith` to rebuild
-and check all known-answer tests byte-for-byte. Documentation is in Chinese.
+and check all known-answer tests byte-for-byte. `tls/` integrates the six sets into a hybrid TLS 1.3
+implementation (the team's earlier v9 stack) as the post-quantum CertificateVerify signature; a Windows CI job builds
+the DLL, reproduces the KATs through it and runs the TLS test suite. Documentation is in Chinese.
 
 本仓库在 rFAEST 的同一份代码基础上，把单向函数由 EM-AES 换成 Rain-3／Rain-4，其余部分（VOLE、承诺、哈希、AVX2 实现）保持不变。共有六组 128 位参数。任何人都可以按下文一键复现编译、测试和已知答案测试（KAT）比对，也可以直接调用签名接口。
 
@@ -111,10 +114,57 @@ docker run --rm rain-voleith taskset -c 2 ./build/rain_bench 501
 | `src/examples/`、`src/bench/` | 使用示例、便捷测速 |
 | `KAT/` | 六组签名 KAT 与 SHA-256 |
 | `docs/` | Q2 验收、Q3 实测报告、Q4 安全证明、Q5 建钥优化（计划、组件测试、实测报告、汇总表、分析）等文档（中文）；文中指向作者内部记录的链接已改为文字标注 |
-| `verify.sh`、`Dockerfile`、`.github/workflows/` | 一键验证与持续集成 |
+| `tls/` | 混合 TLS 1.3 应用：团队前期的 v9 实现接入 Rain-VOLEitH（见第 6 节） |
+| `verify.sh`、`Dockerfile`、`.github/workflows/` | 一键验证与持续集成（`verify.yml`：Linux 上的算法验证；`tls-windows.yml`：Windows 上的 TLS 接入验证） |
 
-## 6. 来源与许可
+## 6. TLS 1.3 应用（`tls/`）
+
+`tls/` 是团队前期的混合 TLS 1.3 实现 v9，接入了本仓库的 Rain-VOLEitH，作为握手中的后量子签名使用：
+
+- **协议**：密钥协商用 X25519＋ML-KEM-768。认证时，ECDSA P-256 与 Rain-VOLEitH 对同一个 CertificateVerify 输入各签一次，客户端要求两者都通过。X.509 叶证书的私有扩展携带 32 字节的 Rain 公钥。
+- **改动范围**：v9 的握手、密钥协商、密钥调度和记录层都没有改。新增的是：
+  - 原生库接口 `tls/native/rain_voleith/`，由本仓库 `src/` 编成 Windows DLL；
+  - ctypes 后端 `tls/tls/pq/rain_voleith.py`；
+  - 测试、已知答案关卡、演示与文档。
+
+  说明见 [tls/docs/RAIN_VOLEITH.md](tls/docs/RAIN_VOLEITH.md)。
+- **只含 Rain-VOLEitH**：本仓库只发布我方算法的接入。六组参数的编号为 0xFEB0–0xFEB5。
+- **验证**：GitHub Actions（`tls-windows.yml`）在 Windows 上依次完成：
+  1. 用 MinGW-w64 GCC 构建生产版与测试版 DLL；
+  2. 已知答案关卡 `tls/tools/rain_voleith_kat_gate.py`：经 DLL 逐字节复现六份签名 KAT，并核对建钥 KAT、负例、随机源失败和并发；
+  3. 在要求 Rain 可用的设置下，运行 v9 全套测试；
+  4. 运行演示。
+- **作者本机结果**：关卡 337/337；v9 全套测试 460 项通过；`verify_all.ps1` 29/29（Verifpal 未安装，未运行）。
+
+| PQ 签名 | 握手字节 | CertificateVerify / B | 进程内握手 / ms |
+|---|---:|---:|---:|
+| rain3-fast | 7,893 | 4,249 | 2.23 |
+| rain3-bal | 7,453 | 3,810 | 2.52 |
+| rain3-short | 6,760 | 3,117 | 5.54 |
+| rain4-fast | 7,859 | 4,216 | 2.29 |
+| rain4-bal | 7,827 | 4,184 | 2.32 |
+| rain4-short | 6,937 | 3,293 | 5.75 |
+| falcon-512（v9 原有，可移植 C） | 5,273 | 759 | 7.12 |
+| ml-dsa-44（v9 原有，可移植 C） | 7,453 | 2,523 | 10.13 |
+
+上表在一台 Windows 笔记本（i7-14700HX）上测得：X.509 链，经 Python 调用，每组 30 次取中位数。六组 Rain 在回环 TCP 与三条整形链路上都保持 1-RTT。Falcon、ML-DSA 用的是 v9 依赖中的可移植 C 实现，不是 AVX2 优化版，所以时间对比只是本协议栈内可用实现之间的比较。
+
+**运行（Windows，x86-64-v3 加 AES-NI、PCLMULQDQ）**，在 `tls/` 目录中依次执行：
+
+1. 构建 DLL，见 [tls/native/rain_voleith/README.md](tls/native/rain_voleith/README.md)。需要 MSYS2 UCRT64 GCC，以及 XKCP 的固定提交。
+2. 安装锁定的依赖：`python -m pip install --require-hashes --only-binary :all: --target .deps -r requirements.lock.txt`。
+3. 设 `PYTHONPATH=.deps`，然后运行：
+   - 演示：`python demo/rain_voleith_demo.py`；
+   - 测试：`RAIN_VOLEITH_REQUIRED=1 python -m pytest tests -q`。
+
+**发布时的处理：**
+- **脱敏**：`tls/README.md` 中两处开发者本机路径改为 `<仓库>\tls`；`tls/validation/environment*.json` 中的本机路径、用户名和会话编号换成占位符。
+- **按 v9 自带的 `.gitignore`**：`.bench-out/*.json` 测量输出不纳入版本库。
+- 除 [tls/docs/RAIN_VOLEITH.md](tls/docs/RAIN_VOLEITH.md) 第 2 节列出的接入改动与上述脱敏外，其余 v9 文件与团队提供的 v9 包逐字节相同（`tls/` 按原字节入库，不做换行转换）。
+
+## 7. 来源与许可
 
 - 代码基于 [rFAEST](https://github.com/samsungsds-research-papers/rFAEST)（Samsung SDS，提交 `7a59c5c18b199bae427bd71d3b9fb5ea3f3b6d97`），rFAEST 又基于 FAEST 参考实现。按 MIT 许可证发布，版权声明见 [src/LICENSE](src/LICENSE)。
 - SHAKE 使用 [XKCP](https://github.com/XKCP/XKCP)，固定在提交 `64404bee`。
+- `tls/` 中的混合 TLS 1.3 实现 v9 是团队前期工作，原包未附许可证。
 - `src/` 相对 Q2 验收源码的改动：`src/meson.build` 追加了 `sign_demo`、`rain_bench` 与 `q5_kg_test` 三个构建目标并新增这三个程序；Q5 新增 `src/rain_kg.hpp`，`src/faest_keys.inc` 中建钥（`faest_pubkey`）改调它（增 3 行、删 1 行）。协议字节由 KAT 比对保证不变。

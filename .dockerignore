@@ -2,3 +2,4 @@ build*/
 .git/
 src/subprojects/xkcp/
 src/subprojects/packagecache/
+tls/
