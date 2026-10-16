@@ -1,0 +1,71 @@
+{
+ "upstream": "samsungsds-research-papers/rFAEST @ 7a59c5c18b199bae427bd71d3b9fb5ea3f3b6d97 (MIT)",
+ "edits": [
+  {
+   "file": "faest.inc",
+   "reason": "迭代028 兼容性改动：删 <cstdalign>，quicksilver.hpp 补 <algorithm>",
+   "before_sha256": "878ea49bd71fd704b95310ac2c07273abef4f06ba517d4279840da85559b4ac2",
+   "after_sha256": "96bb384c2c26b3d9fdcf76ea623e98b5f5cf39e1f709fcfcefe5b0190c343b8b"
+  },
+  {
+   "file": "quicksilver.hpp",
+   "reason": "迭代028 兼容性改动：删 <cstdalign>，quicksilver.hpp 补 <algorithm>",
+   "before_sha256": "ec1e78c066b59dadaadc4d1938639f0e4cc9330e64a9ae95000c31fcafd6a6ce",
+   "after_sha256": "283d9e6eecbfb89f8e58ce78ab7969801c4894ca2648f61407f30b17b1621132"
+  },
+  {
+   "file": "vector_com.inc",
+   "reason": "迭代028 兼容性改动：删 <cstdalign>，quicksilver.hpp 补 <algorithm>",
+   "before_sha256": "98a6f0479b6d0fad8146364c2154055226b6ec36dd02fe0018c65ba864eba742",
+   "after_sha256": "592e535f23ce6c940d99459355871918f0b2abe1277a58a0e82b2fa31f5ca56d"
+  },
+  {
+   "file": "vole_commit.inc",
+   "reason": "迭代028 兼容性改动：删 <cstdalign>，quicksilver.hpp 补 <algorithm>",
+   "before_sha256": "5d995a150e437c8c6d5b90b953f95c77eb42bd369c15c35727ee96eaa2234413",
+   "after_sha256": "4b66fb8beda8b02f7895313712af58511696234fb17731ebd2bb8ebbb9f0c4ac"
+  },
+  {
+   "file": "parameters.hpp",
+   "reason": "迭代030：新增 owf::rain3/rain4、is_owf_rain、rain_rounds 与六个 Rain 参数集",
+   "before_sha256": "d31e0f884a33d9b132d24c869671a867cfea37ea0fa76a5d28c3e43e68597b6f",
+   "after_sha256": "9566c9b1efb1a7015220eee0e83e7fcc8b8ea465820af7a5eb9c7869e5b881c7"
+  },
+  {
+   "file": "constants.hpp",
+   "reason": "迭代030：Rain 的 OWF_CONSTANTS 特化；VOLE 检查 B=6",
+   "before_sha256": "b57ab9f737e9ad8d467a6b89066bdd16d390680773d3eb1b533dfda2ffaf8929",
+   "after_sha256": "009442d460c143484cff73a81c0f9797d9e9c1d4ac23c2567eb3b76dd0c16d87"
+  },
+  {
+   "file": "faest_keys.hpp",
+   "reason": "迭代030：Rain 的 public_key / secret_key；FAEST_IV_BYTES",
+   "before_sha256": "41c2193aa33a3355199ccf297a964e949ed4adb6b501fc02389298905ec354f4",
+   "after_sha256": "080a197434290f3e4e4c8c203201e567ead1834d8fc0a56ebfa6d7602c7b7ef0"
+  },
+  {
+   "file": "faest_keys.inc",
+   "reason": "迭代030：五个密钥函数增加 Rain 分支（原函数体原样放进 else）",
+   "before_sha256": "12df356942844f97355be10e3bf624092ba7b0d9d493c35707c7b92016418598",
+   "after_sha256": "a4180f23f14cd4f02c74481989c87317f1dbf964b68320068012ec42ed026bb2"
+  },
+  {
+   "file": "owf_proof.inc",
+   "reason": "迭代030：Rain 约束 rain_combine / rain_constraints；owf_constraints 增加 Rain 分支",
+   "before_sha256": "f76f51a27520671b42b57cb105317e6713aaf4089f0acd5ca02b2cb5cffb8e56",
+   "after_sha256": "cb4716062942fa42029b3d7fa83102258fa1ebab127ea0b4fad0b54ed8b5d2ab"
+  },
+  {
+   "file": "meson.build",
+   "reason": "迭代030：去掉 test 子目录，加 rain_test",
+   "before_sha256": "d650a2ceb37eb390f3ced95eb4e722828abfc29c106ff4269c4658bf29e9587a",
+   "after_sha256": "1641f55c03a4e54176ef2239f3a5b65803d4681747585dd39ffedfd7e77a7a53"
+  }
+ ],
+ "added": {
+  "rain_owf.hpp": "94563f133e514d04a8d786eaa4c504d11c27fa0eb546e0ebe1dc4c99f19260ec",
+  "rain_test.cpp": "f7c6ce1f47ded95774af14876a1136593deaf72d77940583ace92c66c25eaf5b",
+  "rain_params.hpp": "3a6d1240faf8da930d1e56b59de226d76aeb80520449644079ccc7a7e2a277e1",
+  "rain_kat.hpp": "39a44f09aec94bcfd72d0096118f31f3453beb1c25509dbab984a6d41f50e7dc"
+ }
+}

@@ -1,0 +1,3 @@
+# 迭代030 Q2/B1：缩小密钥空间开关（交接 v2 B1）。默认 false，与冻结源码逐字节相同。
+option('rain_shrunk_keyspace', type : 'boolean', value : false,
+       description : 'Rain: reject keys whose psi(k) bits 0 and 1 are both 1 and prove k0*k1 = 0')
