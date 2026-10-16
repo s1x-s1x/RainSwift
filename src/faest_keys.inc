@@ -9,6 +9,7 @@
 #include "faest_keys.hpp"
 #include "gfsmall.hpp"
 #include "parameters.hpp"
+#include "rain_kg.hpp" // 迭代030 Q5：建钥专用的 Rain 正向计算（与 rain::forward 同一函数）
 
 namespace faest
 {
@@ -337,7 +338,8 @@ template <typename P> bool faest_pubkey(uint8_t* pk_packed, const uint8_t* sk_pa
         constexpr unsigned R = rain_rounds(P::owf_v);
         bool zero;
         rain::e128 pt = rain::load(sk_packed), k = rain::load(sk_packed + 16);
-        rain::e128 ct = rain::forward<R>(k, pt, nullptr, &zero);
+        // 迭代030 Q5：建钥改用 rain::kg::forward（同一函数的快速实现）；签发中的见证计算仍用 rain::forward
+        rain::e128 ct = rain::kg::forward<R>(k, pt, &zero);
         if (zero)
             return false;
 #if RAIN_SHRUNK_KEYSPACE

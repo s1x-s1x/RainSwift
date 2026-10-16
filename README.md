@@ -5,25 +5,26 @@
 **English summary.** A post-quantum signature that replaces the EM-AES one-way function of
 [rFAEST](https://github.com/samsungsds-research-papers/rFAEST) (commit `7a59c5c`) with the Rain-3 / Rain-4
 block cipher, keeping rFAEST's VOLE, commitment, hashing and AVX2 code unchanged. Six 128-bit parameter sets.
-Run `docker build -t rain-voleith . && docker run --rm rain-voleith` to rebuild and check all known-answer
-tests byte-for-byte. Documentation is in Chinese.
+Key generation uses an optimized but functionally identical Rain evaluation (`src/rain_kg.hpp`), checked bit for bit
+against the original implementation. Run `docker build -t rain-voleith . && docker run --rm rain-voleith` to rebuild
+and check all known-answer tests byte-for-byte. Documentation is in Chinese.
 
 本仓库在 rFAEST 的同一份代码基础上，把单向函数由 EM-AES 换成 Rain-3／Rain-4，其余部分（VOLE、承诺、哈希、AVX2 实现）保持不变。共有六组 128 位参数。任何人都可以按下文一键复现编译、测试和已知答案测试（KAT）比对，也可以直接调用签名接口。
 
 ## 1. 结果概览
 
-公钥与打包私钥均为 32 B。下表为作者在一台服务器上的**实测**数据：AMD EPYC 7R32（Zen 2，AVX2），同机同窗口，调用完整 API，取 1,503 个样本的中位数。测量规程见 [Q3 实测报告](docs/Q3_benchmark_report.md)。
+公钥与打包私钥均为 32 B。下表为作者在一台服务器上的**实测**数据：AMD EPYC 7R32（Zen 2，AVX2），同机同窗口，调用完整 API，取 1,503 个样本的中位数。数据来自建钥优化（Q5）后的重测，见 [Q5 实测报告](docs/Q5_keygen_report.md)；测量规程见 [Q3 实测报告](docs/Q3_benchmark_report.md)。比值以同一窗口内的 rFAEST 为基准：签发、验签为加速倍数，建钥为时间比（小于 1 表示更快）。
 
-| 参数集 | 签名 / B | 签发 / ms | 验签 / ms | 对照 | 签发加速 | 验签加速 |
-|---|---:|---:|---:|---|---:|---:|
-| Rain-3 快档 `rain3_fast` | 4,146 | 0.131 | 0.131 | rFAEST-EM-128f（4,980 B） | 3.03× | 2.48× |
-| Rain-3 均衡档 `rain3_bal` | 3,706 | 0.240 | 0.220 | rFAEST-EM-128f | 1.66× | 1.48× |
-| Rain-4 快档 `rain4_fast` | 4,112 | 0.195 | 0.181 | rFAEST-EM-128f | 2.05× | 1.80× |
-| Rain-4 均衡档 `rain4_bal` | 4,080 | 0.207 | 0.168 | rFAEST-EM-128f | 1.92× | 1.94× |
-| Rain-3 短档 `rain3_short` | 3,014 | 1.879 | 1.364 | rFAEST-EM-128s（4,014 B） | 1.00× | 1.25× |
-| Rain-4 短档 `rain4_short` | 3,190 | 1.943 | 1.398 | rFAEST-EM-128s | 0.97× | 1.22× |
+| 参数集 | 签名 / B | 签发 / ms | 验签 / ms | 建钥 / µs | 对照 | 签发加速 | 验签加速 | 建钥时间比 |
+|---|---:|---:|---:|---:|---|---:|---:|---:|
+| Rain-3 快档 `rain3_fast` | 4,146 | 0.131 | 0.131 | 1.02 | rFAEST-EM-128f（4,980 B） | 3.03× | 2.49× | 0.87 |
+| Rain-3 均衡档 `rain3_bal` | 3,706 | 0.239 | 0.220 | 0.99 | rFAEST-EM-128f | 1.66× | 1.48× | 0.85 |
+| Rain-4 快档 `rain4_fast` | 4,112 | 0.194 | 0.181 | 1.14 | rFAEST-EM-128f | 2.04× | 1.80× | 0.97 |
+| Rain-4 均衡档 `rain4_bal` | 4,080 | 0.202 | 0.168 | 1.14 | rFAEST-EM-128f | 1.97× | 1.94× | 0.97 |
+| Rain-3 短档 `rain3_short` | 3,014 | 1.852 | 1.355 | 1.09 | rFAEST-EM-128s（4,014 B） | 1.01× | 1.25× | 0.89 |
+| Rain-4 短档 `rain4_short` | 3,190 | 1.906 | 1.390 | 1.24 | rFAEST-EM-128s | 0.98× | 1.22× | 1.01 |
 
-建钥约 1.2–1.6 µs，比 EM-AES 对照慢：Rain-3 慢约 5%，Rain-4 慢约 26%。数值依赖机器，在其他机器上应在同一次运行内比较比值（见第 4 节）。
+同窗对照的建钥：rFAEST-EM-128f 约 1.17 µs，FAEST v3 EM-128f 约 1.18 µs；128s 对照约 1.22–1.23 µs。建钥优化前（Q3 主窗口），Rain 的建钥比 EM-AES 对照慢 5%–27%；优化只替换建钥中 Rain 正向计算的实现，所计算的函数不变，KAT 与签发、验签均不变（见第 3 节差分测试）。数值依赖机器，在其他机器上应在同一次运行内比较比值（见第 4 节）。
 
 ## 2. 安全性口径
 
@@ -46,7 +47,7 @@ docker run --rm rain-voleith
 第一次构建大约需要 5 分钟，构建时会从 GitHub 下载固定版本的 XKCP。看到下面这行就表示验证通过：
 
 ```
-VERIFY PASS: T1-T8 passed and all six signature KATs match byte-for-byte
+VERIFY PASS: T1-T8 passed, the key-generation differential test passed and all six signature KATs match byte-for-byte
 ```
 
 **方式二：本机 Linux**
@@ -70,7 +71,7 @@ bash verify.sh
 | T7 | Rain 原语 KAT 与签名 KAT |
 | T8 | 签名随机数派生 |
 
-测完后，`verify.sh` 把 T7 用确定性随机源生成的六组签名与 [KAT/](KAT/) 逐字节比对。作者用 Zig/Clang 18 生成了这些 KAT，本仓库的 Docker 环境用 GCC 14 独立复现，结果一致。GitHub Actions 每次推送都会自动重跑上述验证。
+随后 `q5_kg_test` 把建钥所用的优化实现与原实现逐位对照（GF(2^64) 乘法与平方、多次平方表、线性层、求逆以及完整正向计算，每类 2^20 组输入外加构造用例），任何不一致都判失败。最后，`verify.sh` 把 T7 用确定性随机源生成的六组签名与 [KAT/](KAT/) 逐字节比对。作者用 Zig/Clang 18 生成了这些 KAT，本仓库的 Docker 环境用 GCC 14 独立复现，结果一致。GitHub Actions 每次推送都会自动重跑上述验证。
 
 ## 4. 使用算法
 
@@ -94,7 +95,7 @@ docker run --rm rain-voleith ./build/sign_demo "hello"
 
 想在自己的项目中使用，可以把 `src/` 作为 Meson 子项目引入并依赖 `faest_dep`，随机源链接 `randomness_os_dep`。
 
-**在自己机器上测速。** 下面的命令在同一进程内依次测量 Rain 六组以及同源码树编译的 rFAEST-EM-128f／128s，并输出比值。这只是便捷工具；正式测量规程见 Q3 报告，原始脚本存档在 [docs/q3_scripts/](docs/q3_scripts/)。
+**在自己机器上测速。** 下面的命令在同一进程内依次测量 Rain 六组以及同源码树编译的 rFAEST-EM-128f／128s，并输出比值。这只是便捷工具；正式测量规程见 Q3 报告，原始脚本存档在 [docs/q3_scripts/](docs/q3_scripts/) 与 [docs/q5_scripts/](docs/q5_scripts/)。建钥各组件的新旧耗时可以用 `docker run --rm rain-voleith taskset -c 2 ./build/q5_kg_test --bench` 查看。
 
 ```bash
 docker run --rm rain-voleith taskset -c 2 ./build/rain_bench 501
@@ -106,13 +107,14 @@ docker run --rm rain-voleith taskset -c 2 ./build/rain_bench 501
 |---|---|
 | `src/` | 源码（rFAEST 7a59c5c ＋ Rain 补丁，改动清单见 `src/RAIN_PATCHES.json`）；参数集在 `src/parameters.hpp` 的 `rain_sets` |
 | `src/rain_q2_test.cpp` | T1–T8 测试 |
+| `src/rain_kg.hpp`、`src/q5_kg_test.cpp` | 建钥专用的 Rain 正向计算（与原实现同一函数）及其差分测试、组件微基准 |
 | `src/examples/`、`src/bench/` | 使用示例、便捷测速 |
 | `KAT/` | 六组签名 KAT 与 SHA-256 |
-| `docs/` | Q2 验收、Q3 实测报告、Q4 安全证明三份文档（中文）；文中指向作者内部记录的链接已改为文字标注 |
+| `docs/` | Q2 验收、Q3 实测报告、Q4 安全证明、Q5 建钥优化（计划、组件测试、实测报告、汇总表、分析）等文档（中文）；文中指向作者内部记录的链接已改为文字标注 |
 | `verify.sh`、`Dockerfile`、`.github/workflows/` | 一键验证与持续集成 |
 
 ## 6. 来源与许可
 
 - 代码基于 [rFAEST](https://github.com/samsungsds-research-papers/rFAEST)（Samsung SDS，提交 `7a59c5c18b199bae427bd71d3b9fb5ea3f3b6d97`），rFAEST 又基于 FAEST 参考实现。按 MIT 许可证发布，版权声明见 [src/LICENSE](src/LICENSE)。
 - SHAKE 使用 [XKCP](https://github.com/XKCP/XKCP)，固定在提交 `64404bee`。
-- `src/` 相对 Q2 验收源码的唯一改动是在 `src/meson.build` 末尾追加了 `sign_demo` 和 `rain_bench` 两个构建目标，并新增了这两个程序；协议字节由 KAT 比对保证不变。
+- `src/` 相对 Q2 验收源码的改动：`src/meson.build` 追加了 `sign_demo`、`rain_bench` 与 `q5_kg_test` 三个构建目标并新增这三个程序；Q5 新增 `src/rain_kg.hpp`，`src/faest_keys.inc` 中建钥（`faest_pubkey`）改调它（增 3 行、删 1 行）。协议字节由 KAT 比对保证不变。

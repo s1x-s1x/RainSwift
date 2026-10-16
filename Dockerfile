@@ -1,8 +1,9 @@
 # Reproducible build and verification environment (GCC 14, Meson, Ninja).
 #   docker build -t rain-voleith .
-#   docker run --rm rain-voleith                 # full verification (T1-T8 + KAT)
+#   docker run --rm rain-voleith                 # full verification (T1-T8, keygen differential test, KAT)
 #   docker run --rm rain-voleith ./build/sign_demo
 #   docker run --rm rain-voleith ./build/rain_bench
+#   docker run --rm rain-voleith ./build/q5_kg_test --bench   # key-generation component timings (old vs. new)
 # The image is compiled with -march=native: build and run it on the same machine.
 FROM debian:trixie-slim
 RUN apt-get update \

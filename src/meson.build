@@ -100,6 +100,9 @@ executable('rain_q2_test', 'rain_q2_test.cpp',
   dependencies : [faest_dep],
 )
 
+# 迭代030 Q5：建钥专用实现与原实现的差分测试和组件微基准（只用头文件，不链接库）
+executable('q5_kg_test', 'q5_kg_test.cpp')
+
 # GitHub release: usage example and quick benchmark (build-only additions; protocol bytes are checked by verify.sh).
 executable('sign_demo', 'examples/sign_demo.cpp',
   dependencies : [faest_dep, randomness_os_dep],
