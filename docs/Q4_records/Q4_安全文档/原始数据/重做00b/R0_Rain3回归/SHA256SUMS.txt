@@ -1,0 +1,9 @@
+# R0 Rain-3 regression: original 00 scripts (sha below) rebuilt 2026-10-14 in Linux VM
+# toolchain: ziglang 0.13.0 (python -m ziglang), target x86_64-linux-gnu.2.35, -O2 -march=native; XKCP copy from 迭代028/资料/sources/xkcp_v2 (64404be); cryptography 50.0.1; Python Python 3.10.12
+# CPU flags present: avx2 aes pclmulqdq vaes vpclmulqdq bmi2; nproc=2
+# r00_dump.json is byte-identical to 原始数据/重做00/r00_dump.json (1deb2aa9...); r00_dump.err identical; r00_check.txt identical except final timing line
+1deb2aa92d4462efd3309761494c10086e10af703734be390d45dbcd0dddeb26  r00_dump.json
+0e7061da1852a4fe6688b5c558582ad28d752e7a72b2db0e754fe39feea527d5  r00_dump.err
+7ce931394aa75852ecd5cebcc11cfbc350ff5930f1c74b011f103743ad98fdd9  r00_check.txt
+5f0a66eefd9cb5b2f3528cf8fb0aaefc3fa674e5d7ca3d9b7ec1aa7a53d6daf9  build_stdout.txt
+02d234fb15ea2716de83e8e6e7f5ab2c4b075ad9fc7d8595bc3d7a4946f4033a  build_stderr.txt

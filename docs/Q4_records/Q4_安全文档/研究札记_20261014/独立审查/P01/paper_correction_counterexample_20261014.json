@@ -1,0 +1,93 @@
+{
+  "kind": "AI internal independent refutation check",
+  "scope": "rFAEST p10 section4.4 Ext Step(4) omitted correction, not a signature attack",
+  "configs": 1024,
+  "opening_checks": 4096,
+  "literal_step4_abort_despite_all_openings_valid": 768,
+  "first_counterexample": {
+    "messages": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "raw_u": [
+      0,
+      1
+    ],
+    "raw_v": [
+      0,
+      1
+    ],
+    "c": [
+      0,
+      1
+    ],
+    "corrected_u": [
+      0,
+      0
+    ],
+    "hash": "low bit, H(x)=x&1",
+    "utilde": 0,
+    "vtilde": [
+      0,
+      1
+    ],
+    "openings": [
+      {
+        "beta": [
+          0,
+          0
+        ],
+        "q": [
+          0,
+          1
+        ],
+        "vhash_accepts": true
+      },
+      {
+        "beta": [
+          0,
+          1
+        ],
+        "q": [
+          0,
+          1
+        ],
+        "vhash_accepts": true
+      },
+      {
+        "beta": [
+          1,
+          0
+        ],
+        "q": [
+          0,
+          1
+        ],
+        "vhash_accepts": true
+      },
+      {
+        "beta": [
+          1,
+          1
+        ],
+        "q": [
+          0,
+          1
+        ],
+        "vhash_accepts": true
+      }
+    ],
+    "literal_paper_step4": "bottom_abort: raw u values unequal",
+    "new_extractor": "free trees agree on a_t=U_t xor c_t"
+  },
+  "elapsed_seconds": 0.009379,
+  "timestamp_utc": "2026-10-14T12:25:31.470766+00:00",
+  "script_sha256": "4401158ddb6aa466392e3ef233a958d8d6d64ca1dcf50e96cd97a29201230555",
+  "status": "PASS: literal-paper counterexample reproduced; corrected affine relation holds"
+}

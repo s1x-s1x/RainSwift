@@ -1,0 +1,157 @@
+{
+  "scope": "finite conditional algebra and address checks; no cryptographic strength certificate",
+  "script_sha256": "1a1ca52da8bf98695d0169a027c8f0130ce9da0005f672de6c58ff1f1389e007",
+  "prior_result_sha256": "95d51a32392ebc88bc3e9eba33c3efd37d7e689735ff5a397be846a20aafa8db",
+  "gate_sha256": "22e563d7976db0d7ec5dacfe1a38e458a949acb18b065272283fb4d377a10799",
+  "started_utc": "2026-10-14T20:19:26.392943+00:00",
+  "parameter_source": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\等强核验_rFAEST128_20261015\\原始数据\\R1\\comparison.json",
+  "all_checks_passed": true,
+  "three_hole_counterexample": {
+    "m": [
+      3,
+      5,
+      6,
+      1
+    ],
+    "c": 7,
+    "kernel_error": 4,
+    "records": [
+      [
+        0,
+        [
+          4,
+          7
+        ],
+        0
+      ],
+      [
+        1,
+        [
+          2,
+          7
+        ],
+        0
+      ],
+      [
+        2,
+        [
+          0,
+          1
+        ],
+        4
+      ]
+    ],
+    "all_VH_checks_pass": true,
+    "common_affine_pair_exists": false,
+    "scope": "conditional legal-copath tape model, not a sampled AES attack or complete signature forgery"
+  },
+  "partial_parent": [
+    {
+      "M": 4,
+      "probability": "1/3",
+      "larger_than_M_inverse_squared": true
+    },
+    {
+      "M": 8,
+      "probability": "1/7",
+      "larger_than_M_inverse_squared": true
+    },
+    {
+      "M": 16,
+      "probability": "1/15",
+      "larger_than_M_inverse_squared": true
+    },
+    {
+      "M": 32,
+      "probability": "1/31",
+      "larger_than_M_inverse_squared": true
+    }
+  ],
+  "cache_coefficients": [
+    {
+      "name": "ref_f",
+      "r": 11,
+      "distinct_heights": 2,
+      "old_extra_IC_per_H1_upper": 33792,
+      "new_extra_IC_per_source_anchor_upper": 22,
+      "scope": "coefficients multiply different query counts; not a runtime ratio"
+    },
+    {
+      "name": "ref_s",
+      "r": 11,
+      "distinct_heights": 2,
+      "old_extra_IC_per_H1_upper": 214016,
+      "new_extra_IC_per_source_anchor_upper": 22,
+      "scope": "coefficients multiply different query counts; not a runtime ratio"
+    },
+    {
+      "name": "rain3_fast",
+      "r": 6,
+      "distinct_heights": 2,
+      "old_extra_IC_per_H1_upper": 7488,
+      "new_extra_IC_per_source_anchor_upper": 12,
+      "scope": "coefficients multiply different query counts; not a runtime ratio"
+    },
+    {
+      "name": "rain3_bal",
+      "r": 6,
+      "distinct_heights": 2,
+      "old_extra_IC_per_H1_upper": 14592,
+      "new_extra_IC_per_source_anchor_upper": 12,
+      "scope": "coefficients multiply different query counts; not a runtime ratio"
+    },
+    {
+      "name": "rain3_short",
+      "r": 6,
+      "distinct_heights": 2,
+      "old_extra_IC_per_H1_upper": 104448,
+      "new_extra_IC_per_source_anchor_upper": 12,
+      "scope": "coefficients multiply different query counts; not a runtime ratio"
+    },
+    {
+      "name": "rain4_fast",
+      "r": 7,
+      "distinct_heights": 2,
+      "old_extra_IC_per_H1_upper": 14336,
+      "new_extra_IC_per_source_anchor_upper": 14,
+      "scope": "coefficients multiply different query counts; not a runtime ratio"
+    },
+    {
+      "name": "rain4_bal",
+      "r": 7,
+      "distinct_heights": 2,
+      "old_extra_IC_per_H1_upper": 13440,
+      "new_extra_IC_per_source_anchor_upper": 14,
+      "scope": "coefficients multiply different query counts; not a runtime ratio"
+    },
+    {
+      "name": "rain4_short",
+      "r": 7,
+      "distinct_heights": 2,
+      "old_extra_IC_per_H1_upper": 121856,
+      "new_extra_IC_per_source_anchor_upper": 14,
+      "scope": "coefficients multiply different query counts; not a runtime ratio"
+    }
+  ],
+  "counts": {
+    "affine_families": 66816,
+    "accepted_openings": 34304,
+    "empty_families": 52800,
+    "cross_pair_families": 1088,
+    "single_pair_families": 12928,
+    "column_identities": 100864,
+    "lane_address_equalities": 7360,
+    "partial_parent_states": 1300
+  },
+  "assertions": 291222,
+  "resources": {
+    "body_wall_seconds": 0.7787027000449598,
+    "process_cpu_seconds": 0.53125,
+    "peak_working_set_bytes": 22831104,
+    "affinity_mask": 1,
+    "per_check_wall_cap_seconds": 30,
+    "memory_cap_bytes": 536870912,
+    "measure_scope": "body after preflight and affinity; excludes launcher/serialization"
+  },
+  "finished_utc": "2026-10-14T20:19:27.171647+00:00"
+}

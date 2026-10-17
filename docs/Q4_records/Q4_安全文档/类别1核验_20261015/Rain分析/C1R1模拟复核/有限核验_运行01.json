@@ -1,0 +1,490 @@
+{
+  "scope": "classical simulation finite models and source-derived arithmetic; not security certification",
+  "created_at": "2026-10-15T02:19:30.549183+08:00",
+  "input_sha256": {
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\类别1核验_20261015\\源码候选\\C1R1\\parameters.hpp": "0f1af1d706859e8c2e8146477c05a416223be2a779e008dfdbda8db02b799e23",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\类别1核验_20261015\\源码候选\\C1R1\\vector_com.hpp": "74cee3571ec67df31a312c4062a3d3c100f50cd531747132d8b5fee52f4e6eca",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\类别1核验_20261015\\源码候选\\C1R1\\vector_com.inc": "2b15bba6050de22f82ea10c9770a5fb8a1944a4ca0c5782bc176bd1bb8e92f2c",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\类别1核验_20261015\\源码候选\\C1R1\\small_vole.inc": "8323eb103875052369275daa95d597444b288d19faa111933280000a77c42ed0",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\类别1核验_20261015\\源码候选\\C1R1\\constants.hpp": "009442d460c143484cff73a81c0f9797d9e9c1d4ac23c2567eb3b76dd0c16d87",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\类别1核验_20261015\\源码候选\\C1R1\\avx2\\constants_impl.hpp": "26be84b6f0135d41f4b336e35d9d58d573f11354ebdf599fc462057ef1957744",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\类别1核验_20261015\\源码候选\\C1R1\\c1_domain.hpp": "46a47ab4b1945e814bba6385fb65bd35536026038fd2a28f65c23d9439513950",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\类别1核验_20261015\\源码候选\\C1R1\\faest.inc": "60b9c71ce4c7aa8b0d526459d330b364ea2c1667207973c2c59cd01018ada1bf",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\类别1核验_20261015\\源码候选\\C1R1\\hash.hpp": "baca00183802507b49458be23b26f2bcbe547d35b610073b76598923f476d909",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\类别1核验_20261015\\Rain分析\\rain_c1_arithmetic.py": "742806e455b3ea8393130e1e5bbb810e5bea4ef9db7a34cc19a3bd4c220e708e",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\类别1核验_20261015\\Rain分析\\C1R1模拟复核\\c1r1_simulation_checks.py": "ff472ee1fea0a7f4055580803eacc3c3a6889fb41d29f811d03f6e0954a58be9"
+  },
+  "parameters": [
+    {
+      "parameter": "rain3_fast",
+      "R": 3,
+      "tau": 21,
+      "g": 5,
+      "D": 123,
+      "height_counts": {
+        "6": 18,
+        "5": 3
+      },
+      "N": 1248,
+      "ell": 384,
+      "logical_tape_bits": 688,
+      "r": 6,
+      "S": 166,
+      "J": 393,
+      "A_sign": 9963,
+      "A_public": 9570,
+      "ordinary_HL_per_reconstruct": 1248,
+      "dummy_HL": 21,
+      "latent_HL_per_signature": 21,
+      "V_per_signature": 648
+    },
+    {
+      "parameter": "rain3_bal",
+      "R": 3,
+      "tau": 17,
+      "g": 7,
+      "D": 121,
+      "height_counts": {
+        "8": 2,
+        "7": 15
+      },
+      "N": 2432,
+      "ell": 384,
+      "logical_tape_bits": 688,
+      "r": 6,
+      "S": 156,
+      "J": 361,
+      "A_sign": 19439,
+      "A_public": 19078,
+      "ordinary_HL_per_reconstruct": 2432,
+      "dummy_HL": 17,
+      "latent_HL_per_signature": 17,
+      "V_per_signature": 512
+    },
+    {
+      "parameter": "rain3_short",
+      "R": 3,
+      "tau": 11,
+      "g": 12,
+      "D": 116,
+      "height_counts": {
+        "11": 6,
+        "10": 5
+      },
+      "N": 17408,
+      "ell": 384,
+      "logical_tape_bits": 688,
+      "r": 6,
+      "S": 139,
+      "J": 309,
+      "A_sign": 139253,
+      "A_public": 138944,
+      "ordinary_HL_per_reconstruct": 17408,
+      "dummy_HL": 11,
+      "latent_HL_per_signature": 11,
+      "V_per_signature": 336
+    },
+    {
+      "parameter": "rain4_fast",
+      "R": 4,
+      "tau": 18,
+      "g": 6,
+      "D": 122,
+      "height_counts": {
+        "7": 14,
+        "6": 4
+      },
+      "N": 2048,
+      "ell": 512,
+      "logical_tape_bits": 816,
+      "r": 7,
+      "S": 159,
+      "J": 388,
+      "A_sign": 18414,
+      "A_public": 18026,
+      "ordinary_HL_per_reconstruct": 2048,
+      "dummy_HL": 18,
+      "latent_HL_per_signature": 18,
+      "V_per_signature": 653
+    },
+    {
+      "parameter": "rain4_bal",
+      "R": 4,
+      "tau": 18,
+      "g": 8,
+      "D": 120,
+      "height_counts": {
+        "7": 12,
+        "6": 6
+      },
+      "N": 1920,
+      "ell": 512,
+      "logical_tape_bits": 816,
+      "r": 7,
+      "S": 157,
+      "J": 384,
+      "A_sign": 17262,
+      "A_public": 16878,
+      "ordinary_HL_per_reconstruct": 1920,
+      "dummy_HL": 18,
+      "latent_HL_per_signature": 18,
+      "V_per_signature": 651
+    },
+    {
+      "parameter": "rain4_short",
+      "R": 4,
+      "tau": 11,
+      "g": 12,
+      "D": 116,
+      "height_counts": {
+        "11": 6,
+        "10": 5
+      },
+      "N": 17408,
+      "ell": 512,
+      "logical_tape_bits": 816,
+      "r": 7,
+      "S": 139,
+      "J": 320,
+      "A_sign": 156661,
+      "A_public": 156341,
+      "ordinary_HL_per_reconstruct": 17408,
+      "dummy_HL": 11,
+      "latent_HL_per_signature": 11,
+      "V_per_signature": 402
+    }
+  ],
+  "delayed_labels": {
+    "M": 8,
+    "H": 2,
+    "ordinary_adaptive_traces": 64,
+    "label_assignments_per_trace": 64,
+    "omission_counterexamples": {
+      "Hleaf_input_raw_seed": "1/8",
+      "IC_derived_tape_key": "1/8",
+      "zero_seed_dummy": "1/8"
+    },
+    "forbidden_phantom_feedback_hit": "1",
+    "traces": [
+      {
+        "candidate_count": 1,
+        "bad_probability": "11/32"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 3,
+        "bad_probability": "11/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 2,
+        "bad_probability": "17/32"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 3,
+        "bad_probability": "11/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 2,
+        "bad_probability": "17/32"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 5,
+        "bad_probability": "29/32"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 3,
+        "bad_probability": "11/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 5,
+        "bad_probability": "29/32"
+      },
+      {
+        "candidate_count": 2,
+        "bad_probability": "17/32"
+      },
+      {
+        "candidate_count": 5,
+        "bad_probability": "29/32"
+      },
+      {
+        "candidate_count": 2,
+        "bad_probability": "17/32"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 5,
+        "bad_probability": "29/32"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 2,
+        "bad_probability": "17/32"
+      },
+      {
+        "candidate_count": 5,
+        "bad_probability": "29/32"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 5,
+        "bad_probability": "29/32"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 3,
+        "bad_probability": "11/16"
+      },
+      {
+        "candidate_count": 2,
+        "bad_probability": "17/32"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 3,
+        "bad_probability": "11/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 2,
+        "bad_probability": "17/32"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 3,
+        "bad_probability": "11/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 2,
+        "bad_probability": "17/32"
+      },
+      {
+        "candidate_count": 3,
+        "bad_probability": "11/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 5,
+        "bad_probability": "29/32"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 5,
+        "bad_probability": "29/32"
+      },
+      {
+        "candidate_count": 2,
+        "bad_probability": "17/32"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 5,
+        "bad_probability": "29/32"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 2,
+        "bad_probability": "17/32"
+      },
+      {
+        "candidate_count": 5,
+        "bad_probability": "29/32"
+      },
+      {
+        "candidate_count": 2,
+        "bad_probability": "17/32"
+      },
+      {
+        "candidate_count": 5,
+        "bad_probability": "29/32"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 3,
+        "bad_probability": "11/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 5,
+        "bad_probability": "29/32"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      },
+      {
+        "candidate_count": 4,
+        "bad_probability": "13/16"
+      }
+    ]
+  },
+  "permutation": [
+    {
+      "M": 4,
+      "j": 1,
+      "collision_probability": "0",
+      "bound": "0",
+      "completions_per_injective_map": 6
+    },
+    {
+      "M": 4,
+      "j": 2,
+      "collision_probability": "1/4",
+      "bound": "1/4",
+      "completions_per_injective_map": 2
+    },
+    {
+      "M": 4,
+      "j": 3,
+      "collision_probability": "5/8",
+      "bound": "3/4",
+      "completions_per_injective_map": 1
+    },
+    {
+      "M": 8,
+      "j": 1,
+      "collision_probability": "0",
+      "bound": "0",
+      "completions_per_injective_map": 5040
+    },
+    {
+      "M": 8,
+      "j": 2,
+      "collision_probability": "1/8",
+      "bound": "1/8",
+      "completions_per_injective_map": 720
+    },
+    {
+      "M": 8,
+      "j": 3,
+      "collision_probability": "11/32",
+      "bound": "3/8",
+      "completions_per_injective_map": 120
+    }
+  ],
+  "leaf_ro": {
+    "core_bits": 6,
+    "key_bits": 2,
+    "commitment_bits": 4,
+    "full_outputs_enumerated": 64,
+    "ordinary_rows": 1,
+    "potential_rows": 1,
+    "dummy_preserved": true
+  },
+  "threads": 1,
+  "rss_bytes": 23019520,
+  "peak_rss_bytes": 23019520,
+  "wall_seconds": 0.056829400011338294,
+  "cpu_seconds": 0.0625,
+  "status": "PASS",
+  "checks": 96923,
+  "resource_limits": "Windows Job: per-process CPU=120s; process committed memory=512MiB",
+  "python": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+  "all_inputs_unchanged": true
+}

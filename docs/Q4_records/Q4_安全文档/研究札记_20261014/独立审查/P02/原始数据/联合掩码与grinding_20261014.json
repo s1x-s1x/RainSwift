@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "scope": "AI internal independent toy counterexample attempts; no full-scheme distribution claim",
+  "joint_mask": {
+    "field": "GF(4), x^2+x+1",
+    "valid_relation": "wx*wy=1",
+    "contexts": 12288,
+    "mask_instances": 3145728,
+    "all_joint_maps_bijective": true,
+    "all_real_b_equal_pk_verifier_b": true,
+    "fixed_fields": [
+      "delta",
+      "q0",
+      "q1",
+      "q2",
+      "theta",
+      "VH coefficients",
+      "valid witness"
+    ]
+  },
+  "grinding": {
+    "lambda_bits": 2,
+    "grind_bits": 1,
+    "counter_count": 4,
+    "real_outcomes": 256,
+    "sim_coin_outcomes": 512,
+    "exact_joint_counter_and_x4_rows_equal": true,
+    "exhaustion_mass": "1/16",
+    "fixed_counter_zero_counterexample": "real P[ctr>0 | success]=7/15, fixed-zero simulator gives 0"
+  },
+  "dummy_key_counterexample": {
+    "M": 8,
+    "real_match_probability": "15/64",
+    "sim_match_probability": "1/8",
+    "distinguishing_gap": "7/64",
+    "event_needed": "hidden leaf seed equals known key 0; public Verify itself queries it",
+    "scope": "refutes a zero-loss lemma omitting dummy known key, not the current broad collision bound"
+  },
+  "elapsed_seconds": 20.32731540000532,
+  "script_sha256": "e47f85b1e10b46b04577669a21e944f9341be06c617d9a15aa1dda0a40f2a3bc"
+}

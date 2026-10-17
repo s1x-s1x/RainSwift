@@ -1,0 +1,194 @@
+PASS  [rain4_fast#0] mu = SHAKE128(pk||msg||0x08)
+PASS  [rain4_fast#0] (r,iv_pre) = SHAKE128(k||mu||rho||0x03); det: rho omitted
+PASS  [rain4_fast#0] iv = SHAKE128(iv_pre||0x04)
+PASS  [rain4_fast#0] leaf commitments com_{t,j} = AES_{s_{t,j}}(iv ⊞ <0,(k_t+1)tau+t>), natural order
+PASS  [rain4_fast#0] c_t = (u_0 xor u_t)[:VOLE_ROWS] for t=1..tau-1 == sig prefix
+PASS  [rain4_fast#0] u = XOR_j tape_{0,j} (natural index) == C++ u (VOLE_ROWS rows)
+PASS  [rain4_fast#0] V column offs_t+b = XOR_{j: bit b of j} tape_{t,j} (natural index) == C++ v
+PASS  [rain4_fast#0] V columns delta_bits..127 are all zero
+PASS  [rain4_fast#0] h_com = SHAKE128(h_0||..||h_{tau-1}||0x01), h_t = SHAKE128(com_t||0x01)
+PASS  [rain4_fast#0] chall1 = SHAKE128(mu||h_com||c_1..c_{tau-1}||iv||0x09), 88 bytes
+PASS  [rain4_fast#0] layout c|u~|d|a~|open|Delta|iv_pre|ctr sums to sig length
+PASS  [rain4_fast#0] iv_pre in sig == H3 output
+PASS  [rain4_fast#0] d = w xor u_0[:l]
+PASS  [rain4_fast#0] grinding: Delta bits delta_bits..127 are 0
+PASS  [rain4_fast#0] opening = per tree: siblings of hole path (top-down) || com_{t,hole}; hole = int_LE(Delta_t)
+PASS  [rain4_fast#0] verifier-side h_com from opening only == prover h_com
+PASS  [rain4_fast#0] VOLE relation q_t[b] = v_t[b] xor delta_{t,b}*u_0 (from opening; hole seed not used)
+PASS  [rain4_fast#0] Python q (from opening) == C++ vole_reconstruct q
+PASS  [rain4_fast#0] chall2 = SHAKE128(chall1||u~||V~_0..V~_{D-1}||0^{22(128-D)}||d||0x0A), 56 bytes
+PASS  [rain4_fast#0] Q~_c xor Delta_c*u~ == V~_c (all c)
+PASS  [rain4_fast#0] Delta = chall3 = SHAKE128(chall2||qs_check||a~||ctr_LE32||0x0B)
+PASS  [rain4_fast#0] V~_c = sum_r v_c[r]*M[r] with M from unit vectors (linearity, 3 columns)
+PASS  [rain4_fast#0] rows QS_ROWS..VOLE_ROWS-1 of M are the identity (mask = last 176 rows)
+PASS  [rain4_fast#0] rank(M)=176; rank(M[:QS_ROWS])=176; rank(M[:witness])=176
+INFO  [rain4_fast#0] GF(2) rank of the 176-bit VOLE hash: all rows 176, first 640 rows 176, first 512 rows 176
+INFO  [rain4_fast#0] holes per tree = [96, 121, 8, 34, 120, 21, 13, 81, 42, 6, 95, 8, 107, 92, 46, 23, 16, 54]
+PASS  [rain4_fast#1] mu = SHAKE128(pk||msg||0x08)
+PASS  [rain4_fast#1] (r,iv_pre) = SHAKE128(k||mu||rho||0x03); det: rho omitted
+PASS  [rain4_fast#1] iv = SHAKE128(iv_pre||0x04)
+PASS  [rain4_fast#1] leaf commitments com_{t,j} = AES_{s_{t,j}}(iv ⊞ <0,(k_t+1)tau+t>), natural order
+PASS  [rain4_fast#1] c_t = (u_0 xor u_t)[:VOLE_ROWS] for t=1..tau-1 == sig prefix
+PASS  [rain4_fast#1] u = XOR_j tape_{0,j} (natural index) == C++ u (VOLE_ROWS rows)
+PASS  [rain4_fast#1] h_com = SHAKE128(h_0||..||h_{tau-1}||0x01), h_t = SHAKE128(com_t||0x01)
+PASS  [rain4_fast#1] chall1 = SHAKE128(mu||h_com||c_1..c_{tau-1}||iv||0x09), 88 bytes
+PASS  [rain4_fast#1] layout c|u~|d|a~|open|Delta|iv_pre|ctr sums to sig length
+PASS  [rain4_fast#1] iv_pre in sig == H3 output
+PASS  [rain4_fast#1] d = w xor u_0[:l]
+PASS  [rain4_fast#1] grinding: Delta bits delta_bits..127 are 0
+PASS  [rain4_fast#1] opening = per tree: siblings of hole path (top-down) || com_{t,hole}; hole = int_LE(Delta_t)
+PASS  [rain4_fast#1] verifier-side h_com from opening only == prover h_com
+PASS  [rain4_fast#1] VOLE relation q_t[b] = v_t[b] xor delta_{t,b}*u_0 (from opening; hole seed not used)
+PASS  [rain4_fast#1] chall2 = SHAKE128(chall1||u~||V~_0..V~_{D-1}||0^{22(128-D)}||d||0x0A), 56 bytes
+PASS  [rain4_fast#1] Q~_c xor Delta_c*u~ == V~_c (all c)
+PASS  [rain4_fast#1] Delta = chall3 = SHAKE128(chall2||qs_check||a~||ctr_LE32||0x0B)
+INFO  [rain4_fast#1] holes per tree = [77, 9, 124, 88, 47, 78, 69, 41, 86, 50, 62, 59, 121, 98, 41, 9, 10, 61]
+PASS  [rain4_fast#2det] mu = SHAKE128(pk||msg||0x08)
+PASS  [rain4_fast#2det] (r,iv_pre) = SHAKE128(k||mu||rho||0x03); det: rho omitted
+PASS  [rain4_fast#2det] iv = SHAKE128(iv_pre||0x04)
+PASS  [rain4_fast#2det] leaf commitments com_{t,j} = AES_{s_{t,j}}(iv ⊞ <0,(k_t+1)tau+t>), natural order
+PASS  [rain4_fast#2det] c_t = (u_0 xor u_t)[:VOLE_ROWS] for t=1..tau-1 == sig prefix
+PASS  [rain4_fast#2det] u = XOR_j tape_{0,j} (natural index) == C++ u (VOLE_ROWS rows)
+PASS  [rain4_fast#2det] h_com = SHAKE128(h_0||..||h_{tau-1}||0x01), h_t = SHAKE128(com_t||0x01)
+PASS  [rain4_fast#2det] chall1 = SHAKE128(mu||h_com||c_1..c_{tau-1}||iv||0x09), 88 bytes
+PASS  [rain4_fast#2det] layout c|u~|d|a~|open|Delta|iv_pre|ctr sums to sig length
+PASS  [rain4_fast#2det] iv_pre in sig == H3 output
+PASS  [rain4_fast#2det] d = w xor u_0[:l]
+PASS  [rain4_fast#2det] grinding: Delta bits delta_bits..127 are 0
+PASS  [rain4_fast#2det] opening = per tree: siblings of hole path (top-down) || com_{t,hole}; hole = int_LE(Delta_t)
+PASS  [rain4_fast#2det] verifier-side h_com from opening only == prover h_com
+PASS  [rain4_fast#2det] VOLE relation q_t[b] = v_t[b] xor delta_{t,b}*u_0 (from opening; hole seed not used)
+PASS  [rain4_fast#2det] chall2 = SHAKE128(chall1||u~||V~_0..V~_{D-1}||0^{22(128-D)}||d||0x0A), 56 bytes
+PASS  [rain4_fast#2det] Q~_c xor Delta_c*u~ == V~_c (all c)
+PASS  [rain4_fast#2det] Delta = chall3 = SHAKE128(chall2||qs_check||a~||ctr_LE32||0x0B)
+INFO  [rain4_fast#2det] holes per tree = [122, 47, 115, 122, 56, 126, 3, 63, 81, 7, 90, 116, 75, 101, 33, 43, 22, 48]
+PASS  [rain4_bal#0] mu = SHAKE128(pk||msg||0x08)
+PASS  [rain4_bal#0] (r,iv_pre) = SHAKE128(k||mu||rho||0x03); det: rho omitted
+PASS  [rain4_bal#0] iv = SHAKE128(iv_pre||0x04)
+PASS  [rain4_bal#0] leaf commitments com_{t,j} = AES_{s_{t,j}}(iv ⊞ <0,(k_t+1)tau+t>), natural order
+PASS  [rain4_bal#0] c_t = (u_0 xor u_t)[:VOLE_ROWS] for t=1..tau-1 == sig prefix
+PASS  [rain4_bal#0] u = XOR_j tape_{0,j} (natural index) == C++ u (VOLE_ROWS rows)
+PASS  [rain4_bal#0] V column offs_t+b = XOR_{j: bit b of j} tape_{t,j} (natural index) == C++ v
+PASS  [rain4_bal#0] V columns delta_bits..127 are all zero
+PASS  [rain4_bal#0] h_com = SHAKE128(h_0||..||h_{tau-1}||0x01), h_t = SHAKE128(com_t||0x01)
+PASS  [rain4_bal#0] chall1 = SHAKE128(mu||h_com||c_1..c_{tau-1}||iv||0x09), 88 bytes
+PASS  [rain4_bal#0] layout c|u~|d|a~|open|Delta|iv_pre|ctr sums to sig length
+PASS  [rain4_bal#0] iv_pre in sig == H3 output
+PASS  [rain4_bal#0] d = w xor u_0[:l]
+PASS  [rain4_bal#0] grinding: Delta bits delta_bits..127 are 0
+PASS  [rain4_bal#0] opening = per tree: siblings of hole path (top-down) || com_{t,hole}; hole = int_LE(Delta_t)
+PASS  [rain4_bal#0] verifier-side h_com from opening only == prover h_com
+PASS  [rain4_bal#0] VOLE relation q_t[b] = v_t[b] xor delta_{t,b}*u_0 (from opening; hole seed not used)
+PASS  [rain4_bal#0] Python q (from opening) == C++ vole_reconstruct q
+PASS  [rain4_bal#0] chall2 = SHAKE128(chall1||u~||V~_0..V~_{D-1}||0^{22(128-D)}||d||0x0A), 56 bytes
+PASS  [rain4_bal#0] Q~_c xor Delta_c*u~ == V~_c (all c)
+PASS  [rain4_bal#0] Delta = chall3 = SHAKE128(chall2||qs_check||a~||ctr_LE32||0x0B)
+PASS  [rain4_bal#0] V~_c = sum_r v_c[r]*M[r] with M from unit vectors (linearity, 3 columns)
+PASS  [rain4_bal#0] rows QS_ROWS..VOLE_ROWS-1 of M are the identity (mask = last 176 rows)
+PASS  [rain4_bal#0] rank(M)=176; rank(M[:QS_ROWS])=176; rank(M[:witness])=176
+INFO  [rain4_bal#0] GF(2) rank of the 176-bit VOLE hash: all rows 176, first 640 rows 176, first 512 rows 176
+INFO  [rain4_bal#0] holes per tree = [36, 98, 52, 60, 95, 126, 58, 94, 113, 91, 42, 45, 38, 9, 21, 4, 22, 50]
+PASS  [rain4_bal#1] mu = SHAKE128(pk||msg||0x08)
+PASS  [rain4_bal#1] (r,iv_pre) = SHAKE128(k||mu||rho||0x03); det: rho omitted
+PASS  [rain4_bal#1] iv = SHAKE128(iv_pre||0x04)
+PASS  [rain4_bal#1] leaf commitments com_{t,j} = AES_{s_{t,j}}(iv ⊞ <0,(k_t+1)tau+t>), natural order
+PASS  [rain4_bal#1] c_t = (u_0 xor u_t)[:VOLE_ROWS] for t=1..tau-1 == sig prefix
+PASS  [rain4_bal#1] u = XOR_j tape_{0,j} (natural index) == C++ u (VOLE_ROWS rows)
+PASS  [rain4_bal#1] h_com = SHAKE128(h_0||..||h_{tau-1}||0x01), h_t = SHAKE128(com_t||0x01)
+PASS  [rain4_bal#1] chall1 = SHAKE128(mu||h_com||c_1..c_{tau-1}||iv||0x09), 88 bytes
+PASS  [rain4_bal#1] layout c|u~|d|a~|open|Delta|iv_pre|ctr sums to sig length
+PASS  [rain4_bal#1] iv_pre in sig == H3 output
+PASS  [rain4_bal#1] d = w xor u_0[:l]
+PASS  [rain4_bal#1] grinding: Delta bits delta_bits..127 are 0
+PASS  [rain4_bal#1] opening = per tree: siblings of hole path (top-down) || com_{t,hole}; hole = int_LE(Delta_t)
+PASS  [rain4_bal#1] verifier-side h_com from opening only == prover h_com
+PASS  [rain4_bal#1] VOLE relation q_t[b] = v_t[b] xor delta_{t,b}*u_0 (from opening; hole seed not used)
+PASS  [rain4_bal#1] chall2 = SHAKE128(chall1||u~||V~_0..V~_{D-1}||0^{22(128-D)}||d||0x0A), 56 bytes
+PASS  [rain4_bal#1] Q~_c xor Delta_c*u~ == V~_c (all c)
+PASS  [rain4_bal#1] Delta = chall3 = SHAKE128(chall2||qs_check||a~||ctr_LE32||0x0B)
+INFO  [rain4_bal#1] holes per tree = [123, 1, 87, 115, 36, 33, 111, 103, 42, 106, 127, 32, 24, 13, 5, 5, 59, 14]
+PASS  [rain4_bal#2det] mu = SHAKE128(pk||msg||0x08)
+PASS  [rain4_bal#2det] (r,iv_pre) = SHAKE128(k||mu||rho||0x03); det: rho omitted
+PASS  [rain4_bal#2det] iv = SHAKE128(iv_pre||0x04)
+PASS  [rain4_bal#2det] leaf commitments com_{t,j} = AES_{s_{t,j}}(iv ⊞ <0,(k_t+1)tau+t>), natural order
+PASS  [rain4_bal#2det] c_t = (u_0 xor u_t)[:VOLE_ROWS] for t=1..tau-1 == sig prefix
+PASS  [rain4_bal#2det] u = XOR_j tape_{0,j} (natural index) == C++ u (VOLE_ROWS rows)
+PASS  [rain4_bal#2det] h_com = SHAKE128(h_0||..||h_{tau-1}||0x01), h_t = SHAKE128(com_t||0x01)
+PASS  [rain4_bal#2det] chall1 = SHAKE128(mu||h_com||c_1..c_{tau-1}||iv||0x09), 88 bytes
+PASS  [rain4_bal#2det] layout c|u~|d|a~|open|Delta|iv_pre|ctr sums to sig length
+PASS  [rain4_bal#2det] iv_pre in sig == H3 output
+PASS  [rain4_bal#2det] d = w xor u_0[:l]
+PASS  [rain4_bal#2det] grinding: Delta bits delta_bits..127 are 0
+PASS  [rain4_bal#2det] opening = per tree: siblings of hole path (top-down) || com_{t,hole}; hole = int_LE(Delta_t)
+PASS  [rain4_bal#2det] verifier-side h_com from opening only == prover h_com
+PASS  [rain4_bal#2det] VOLE relation q_t[b] = v_t[b] xor delta_{t,b}*u_0 (from opening; hole seed not used)
+PASS  [rain4_bal#2det] chall2 = SHAKE128(chall1||u~||V~_0..V~_{D-1}||0^{22(128-D)}||d||0x0A), 56 bytes
+PASS  [rain4_bal#2det] Q~_c xor Delta_c*u~ == V~_c (all c)
+PASS  [rain4_bal#2det] Delta = chall3 = SHAKE128(chall2||qs_check||a~||ctr_LE32||0x0B)
+INFO  [rain4_bal#2det] holes per tree = [66, 49, 40, 99, 97, 38, 10, 100, 90, 99, 20, 96, 52, 1, 23, 62, 59, 11]
+PASS  [rain4_short#0] mu = SHAKE128(pk||msg||0x08)
+PASS  [rain4_short#0] (r,iv_pre) = SHAKE128(k||mu||rho||0x03); det: rho omitted
+PASS  [rain4_short#0] iv = SHAKE128(iv_pre||0x04)
+PASS  [rain4_short#0] leaf commitments com_{t,j} = AES_{s_{t,j}}(iv ⊞ <0,(k_t+1)tau+t>), natural order
+PASS  [rain4_short#0] c_t = (u_0 xor u_t)[:VOLE_ROWS] for t=1..tau-1 == sig prefix
+PASS  [rain4_short#0] u = XOR_j tape_{0,j} (natural index) == C++ u (VOLE_ROWS rows)
+PASS  [rain4_short#0] V column offs_t+b = XOR_{j: bit b of j} tape_{t,j} (natural index) == C++ v
+PASS  [rain4_short#0] V columns delta_bits..127 are all zero
+PASS  [rain4_short#0] h_com = SHAKE128(h_0||..||h_{tau-1}||0x01), h_t = SHAKE128(com_t||0x01)
+PASS  [rain4_short#0] chall1 = SHAKE128(mu||h_com||c_1..c_{tau-1}||iv||0x09), 88 bytes
+PASS  [rain4_short#0] layout c|u~|d|a~|open|Delta|iv_pre|ctr sums to sig length
+PASS  [rain4_short#0] iv_pre in sig == H3 output
+PASS  [rain4_short#0] d = w xor u_0[:l]
+PASS  [rain4_short#0] grinding: Delta bits delta_bits..127 are 0
+PASS  [rain4_short#0] opening = per tree: siblings of hole path (top-down) || com_{t,hole}; hole = int_LE(Delta_t)
+PASS  [rain4_short#0] verifier-side h_com from opening only == prover h_com
+PASS  [rain4_short#0] VOLE relation q_t[b] = v_t[b] xor delta_{t,b}*u_0 (from opening; hole seed not used)
+PASS  [rain4_short#0] Python q (from opening) == C++ vole_reconstruct q
+PASS  [rain4_short#0] chall2 = SHAKE128(chall1||u~||V~_0..V~_{D-1}||0^{22(128-D)}||d||0x0A), 56 bytes
+PASS  [rain4_short#0] Q~_c xor Delta_c*u~ == V~_c (all c)
+PASS  [rain4_short#0] Delta = chall3 = SHAKE128(chall2||qs_check||a~||ctr_LE32||0x0B)
+PASS  [rain4_short#0] V~_c = sum_r v_c[r]*M[r] with M from unit vectors (linearity, 3 columns)
+PASS  [rain4_short#0] rows QS_ROWS..VOLE_ROWS-1 of M are the identity (mask = last 176 rows)
+PASS  [rain4_short#0] rank(M)=176; rank(M[:QS_ROWS])=176; rank(M[:witness])=176
+INFO  [rain4_short#0] GF(2) rank of the 176-bit VOLE hash: all rows 176, first 640 rows 176, first 512 rows 176
+INFO  [rain4_short#0] holes per tree = [1440, 18, 719, 1563, 1209, 552, 333, 632, 161, 949, 827]
+PASS  [rain4_short#1] mu = SHAKE128(pk||msg||0x08)
+PASS  [rain4_short#1] (r,iv_pre) = SHAKE128(k||mu||rho||0x03); det: rho omitted
+PASS  [rain4_short#1] iv = SHAKE128(iv_pre||0x04)
+PASS  [rain4_short#1] leaf commitments com_{t,j} = AES_{s_{t,j}}(iv ⊞ <0,(k_t+1)tau+t>), natural order
+PASS  [rain4_short#1] c_t = (u_0 xor u_t)[:VOLE_ROWS] for t=1..tau-1 == sig prefix
+PASS  [rain4_short#1] u = XOR_j tape_{0,j} (natural index) == C++ u (VOLE_ROWS rows)
+PASS  [rain4_short#1] h_com = SHAKE128(h_0||..||h_{tau-1}||0x01), h_t = SHAKE128(com_t||0x01)
+PASS  [rain4_short#1] chall1 = SHAKE128(mu||h_com||c_1..c_{tau-1}||iv||0x09), 88 bytes
+PASS  [rain4_short#1] layout c|u~|d|a~|open|Delta|iv_pre|ctr sums to sig length
+PASS  [rain4_short#1] iv_pre in sig == H3 output
+PASS  [rain4_short#1] d = w xor u_0[:l]
+PASS  [rain4_short#1] grinding: Delta bits delta_bits..127 are 0
+PASS  [rain4_short#1] opening = per tree: siblings of hole path (top-down) || com_{t,hole}; hole = int_LE(Delta_t)
+PASS  [rain4_short#1] verifier-side h_com from opening only == prover h_com
+PASS  [rain4_short#1] VOLE relation q_t[b] = v_t[b] xor delta_{t,b}*u_0 (from opening; hole seed not used)
+PASS  [rain4_short#1] chall2 = SHAKE128(chall1||u~||V~_0..V~_{D-1}||0^{22(128-D)}||d||0x0A), 56 bytes
+PASS  [rain4_short#1] Q~_c xor Delta_c*u~ == V~_c (all c)
+PASS  [rain4_short#1] Delta = chall3 = SHAKE128(chall2||qs_check||a~||ctr_LE32||0x0B)
+INFO  [rain4_short#1] holes per tree = [1019, 169, 646, 477, 1865, 340, 156, 248, 41, 159, 281]
+PASS  [rain4_short#2det] mu = SHAKE128(pk||msg||0x08)
+PASS  [rain4_short#2det] (r,iv_pre) = SHAKE128(k||mu||rho||0x03); det: rho omitted
+PASS  [rain4_short#2det] iv = SHAKE128(iv_pre||0x04)
+PASS  [rain4_short#2det] leaf commitments com_{t,j} = AES_{s_{t,j}}(iv ⊞ <0,(k_t+1)tau+t>), natural order
+PASS  [rain4_short#2det] c_t = (u_0 xor u_t)[:VOLE_ROWS] for t=1..tau-1 == sig prefix
+PASS  [rain4_short#2det] u = XOR_j tape_{0,j} (natural index) == C++ u (VOLE_ROWS rows)
+PASS  [rain4_short#2det] h_com = SHAKE128(h_0||..||h_{tau-1}||0x01), h_t = SHAKE128(com_t||0x01)
+PASS  [rain4_short#2det] chall1 = SHAKE128(mu||h_com||c_1..c_{tau-1}||iv||0x09), 88 bytes
+PASS  [rain4_short#2det] layout c|u~|d|a~|open|Delta|iv_pre|ctr sums to sig length
+PASS  [rain4_short#2det] iv_pre in sig == H3 output
+PASS  [rain4_short#2det] d = w xor u_0[:l]
+PASS  [rain4_short#2det] grinding: Delta bits delta_bits..127 are 0
+PASS  [rain4_short#2det] opening = per tree: siblings of hole path (top-down) || com_{t,hole}; hole = int_LE(Delta_t)
+PASS  [rain4_short#2det] verifier-side h_com from opening only == prover h_com
+PASS  [rain4_short#2det] VOLE relation q_t[b] = v_t[b] xor delta_{t,b}*u_0 (from opening; hole seed not used)
+PASS  [rain4_short#2det] chall2 = SHAKE128(chall1||u~||V~_0..V~_{D-1}||0^{22(128-D)}||d||0x0A), 56 bytes
+PASS  [rain4_short#2det] Q~_c xor Delta_c*u~ == V~_c (all c)
+PASS  [rain4_short#2det] Delta = chall3 = SHAKE128(chall2||qs_check||a~||ctr_LE32||0x0B)
+INFO  [rain4_short#2det] holes per tree = [1970, 1615, 794, 914, 333, 270, 1012, 994, 558, 576, 205]
+
+r00_check: 9 instances, 180 checks, 0 failed, 5.8 s

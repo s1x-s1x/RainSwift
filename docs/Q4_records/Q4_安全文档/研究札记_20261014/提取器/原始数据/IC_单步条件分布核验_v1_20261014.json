@@ -1,0 +1,65 @@
+{
+  "date_local": "2026-10-14",
+  "timezone": "Asia/Shanghai",
+  "activity": "finite evidence-audit",
+  "limits": {
+    "wall_seconds": 110.0,
+    "processes": 1,
+    "target_memory_mib": 512
+  },
+  "script_sha256": "a9e2f44329ab07539ab5fc3c62da09a758bdff15a1b60fded63a4a4d5a4820bc",
+  "status": "PASS_FOR_STATED_FINITE_CHECKS",
+  "exhaustive": {
+    "block_bits": 2,
+    "key_labels": 2,
+    "maximum_prior_rows": 3,
+    "prior_partial_permutations_by_size": [
+      1,
+      16,
+      72,
+      96
+    ],
+    "prefix_states_seen": 2929,
+    "prefix_states_without_pair_collision": 2625,
+    "fresh_forward_transitions": 13576,
+    "fresh_inverse_transitions": 13576,
+    "pair_collision_step_checks": 27152,
+    "late_target_set_checks": 2549056,
+    "maximum_pair_step_probability": "1/2",
+    "maximum_late_step_probability": "1"
+  },
+  "inverse_chosen_output_counterexample": {
+    "old_row": {
+      "key": "A",
+      "x": 2,
+      "y": 1
+    },
+    "new_query": {
+      "direction": "inverse",
+      "key": "B",
+      "chosen_y": 1
+    },
+    "equiprobable_new_rows": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    "Pr_same_y": "1",
+    "Pr_same_x_and_y": "1/4",
+    "scope": "Refutes global output-collision counting for inverse queries; not a forgery."
+  },
+  "elapsed_seconds": 9.382141
+}

@@ -1,0 +1,3622 @@
+{
+  "schema": "rfaest128_comparison_v1",
+  "candidate": "C030-RFAEST128-EQUIV",
+  "started_utc": "2026-10-14T19:44:12.313203+00:00",
+  "script_sha256": "ff0be0c361f4efb64eae4af276f69c20c4f1da1c9da4e74d82634518572cda7a",
+  "input_sha256": {
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_00b_六组参数补充映射.md": "6354ad7688aee0f0bceef3c56d0195c6ed92f6d45ddbc16fc0af69129aee30e1",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_01_P01_在线PPT提取器与正确性.md": "453e11c2dfb3a300720019bd045e024f01b612604255051b47d51f97af8e9060",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_02_P01_坏事件与自适应分析.md": "a7ec740da63ac5660caa56d3d1273636d333237e034665fd2dd04e7b601bc36e",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_03_P02_H3_ROM与无私钥模拟.md": "949f4d9ba04d3d4943d1d8533e76c5bec980c2720d6cf07348c2c7f007785619",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_04_独立反驳审查.md": "38bf430c29d71565aa66761ec559fb92bd3928a887f1caa1fda70d2df728b0bb",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_05_EUFCMA_最终账本.md": "40add264c021cc572be33f5e9bcc8abc0d6123fad22841c117f57ae1079db12a",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做04\\review_gate.json": "6199acf5f4d6b35b2279c4ddff84aa85f2047860fdde40f9b5b9c016d5b7ac88",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做05\\R1_精确账本\\ledger.json": "ffe907b341f641a0812d1b14ed988dc72d32f26809013febde502a0b7f4fd92f",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\.clang-format": "ad1e91437272c8f80bf39e8ebdbdbb01cc48ef2e3a65d4ea11aa6408733a9443",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\.gitattributes": "be85c70b007d05c4443905c463d38d339cae60a05636f906ad118781439e8a9d",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\.gitignore": "56f2d6b63f624dd6ff6ea5524119d4e739bcb797949980d4998058958e430a3a",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\aes.hpp": "8279f8b18f1e1b52990edd88824160d4cfd9eaf26281e6b39b8b9447180dcde7",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\aes_defs.hpp": "5df8a01dac1e8dcb77597f8bedb533cba2c42e1fa4368fe1962eee1a916e1e05",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\all.inc": "43a72427620940f38870721cc7174dfc5e82136573dcdb4f020a84dfca8dfe5c",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\api.cpp.in": "09adb484dd296a48dd42923cf35c54e67833751ca89a098f20e1e0701a3ac31f",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\api.h.in": "3375c9eccf9ce1e424408cc1f652ccdfc2343321f687b0f53e98171c59c2c49b",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\api.hpp": "907d80abf9cfec2868225820e34b2c4828f7dcde3a896724ac0fb4aba85f76da",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\aes_impl.cpp": "89ce12a897ddf6f11e986d7be6df05003ec47ce859884604133afdcb140ff6c1",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\aes_impl.hpp": "2945906ecca698f22ef170a675902f3ce9ea4293b063b54a47218fe1eb43909c",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\block_impl.hpp": "1a32b74c489593fb37ecb18c3eb0ea61bba56fe5247b68ffee8ca41167a8055a",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\constants_impl.hpp": "26be84b6f0135d41f4b336e35d9d58d573f11354ebdf599fc462057ef1957744",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\gfsmall_impl.hpp": "39b8171bc33f4dcb2d105043b000d429be7259f025db46741d8ac0ec9fa56a82",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\polynomials_impl.hpp": "dbef8a13d0fa4333b69d4f87fd13fa512b48d2cf62b4d8597ae3c3eed281a1c2",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\transpose_impl.hpp": "426344f2c84ba65c490e2b18ef4f9c8ce0dc19352a638dcacd35c8c501da08c0",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\transpose_secpar_impl.hpp": "166cba09f054eb2e61182f1ebeff1d48440887e34f3f75e1f048061475949dcd",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\block.hpp": "fc2c67397892019607fb37a09dc1bc330b52bb7ce6a4356111aabedbd8b569ab",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\constants.hpp": "009442d460c143484cff73a81c0f9797d9e9c1d4ac23c2567eb3b76dd0c16d87",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\debug.hpp": "e1411eb76f9691c09264a6c3678812ba7c4e2b02897ad2b5a3ceb8429266c269",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest.cpp": "a5bd97ca069caa92f94e0513adf1530f4362be14ae8b755d9512955ae4077d9f",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest.hpp": "1dc08419740a7441128da2754bf8ef73389dd9c9a2d7f4a317c4db3cec993403",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest.inc": "96bb384c2c26b3d9fdcf76ea623e98b5f5cf39e1f709fcfcefe5b0190c343b8b",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest_keys.hpp": "080a197434290f3e4e4c8c203201e567ead1834d8fc0a56ebfa6d7602c7b7ef0",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest_keys.inc": "a4180f23f14cd4f02c74481989c87317f1dbf964b68320068012ec42ed026bb2",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\gfsmall.hpp": "5b993957e3e2698a5c935f672fa9e1ee2c6021bce2005f0456da7989cd61b72c",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\hash.hpp": "baca00183802507b49458be23b26f2bcbe547d35b610073b76598923f476d909",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\LICENSE": "168677c34d83c94a16dd8d9f6efe957f9883d06120150da7b2b3726885b74ed9",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\meson.build": "1641f55c03a4e54176ef2239f3a5b65803d4681747585dd39ffedfd7e77a7a53",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\owf_proof.cpp": "d6e65015a3842579afeebd42a0b1a27002d35502c7d51ddb410f1fda4ef17544",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\owf_proof.hpp": "48761d24ecaad50f7f57e3487f6924668a58c13b17dcf59b46d6df2d70548afc",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\owf_proof.inc": "cb4716062942fa42029b3d7fa83102258fa1ebab127ea0b4fad0b54ed8b5d2ab",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\owf_proof_tools.hpp": "0a7f210f0fa31c3ae43e99bbd7745c64d465bbee277be463f0720997af7f3b68",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\parameters.hpp": "9566c9b1efb1a7015220eee0e83e7fcc8b8ea465820af7a5eb9c7869e5b881c7",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\poly2d.hpp": "319080a1b487dc0d5c8c4c3d3049baefe4468ad455b90764112423ce3bb22081",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\polynomials.hpp": "2b242bfff6c276cdd2e824e2aa2f17b6f6df657284463cf9d1dc252ce83b7f34",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\polynomials_constants.cpp": "ee3600abba807ce68eb5dc85440107e42cc76be0fe39bddebea0c46ad7229ac8",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\polynomials_constants.hpp": "438e2ba2ecf27527f8f11277286fa9b008562073431552cc84c497510b18a99c",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\prgs.hpp": "6ea8e06c065d7a5f6d981d6a730eaaad266f6f48471a4638123c76d214c394eb",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\quicksilver.hpp": "283d9e6eecbfb89f8e58ce78ab7969801c4894ca2648f61407f30b17b1621132",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\rain_kat.hpp": "39a44f09aec94bcfd72d0096118f31f3453beb1c25509dbab984a6d41f50e7dc",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\rain_owf.hpp": "94563f133e514d04a8d786eaa4c504d11c27fa0eb546e0ebe1dc4c99f19260ec",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\rain_params.hpp": "3a6d1240faf8da930d1e56b59de226d76aeb80520449644079ccc7a7e2a277e1",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\RAIN_PATCHES.json": "f439bb0b7c48d1ca459e4d325612b46d2385667fd9f48a6d416e671e21f933e4",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\rain_test.cpp": "f7c6ce1f47ded95774af14876a1136593deaf72d77940583ace92c66c25eaf5b",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\randomness.h": "c9afde602eb3aee0b3274475286d91508653a248bef3b3e3e3e0b48ed6bde625",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\randomness_os.c": "d6cbdef69f8e005721b8b4c6140b0d070c7dea65284778c2c2c53e91fe476aed",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\randomness_randombytes.c": "8d8f7c4b15bc7a234039f0a25981ffcce8f1c5a4436b68bc4e8ede3e1af44d44",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\README.md": "5fa1ea3265b9108b1a9adfd5b1978ad673b9869119ac2e758d110add8b2638f6",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\sha3\\KeccakHashtimes4.c": "917b8590ff4cbd6939a1a6df290e053c6ae4e0a0b8782c9d7e407fed126242c7",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\sha3\\KeccakHashtimes4.h": "c760f567ee44494b7be3acd3c30803ee14b820f7084b4ef5ed8f99090c50e1d8",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\sha3\\KeccakSpongetimes4.c": "434d38dc37d80c0a8c59e73ce6445606e10a258dd0a5704d703febfb06344b50",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\sha3\\KeccakSpongetimes4.h": "8ca80328f1ebbf93e93ad6c10f8ae75c0ea343f93a3e60d23012c10c290515be",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\sha3\\KeccakSpongetimes4.inc": "f39d6eefd8b83e6b9cca7a2f36a4a3d98008fc970e15c88be018ae5bdce7ff25",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\small_vole.cpp": "e5853eb3e248d6083b12eba2c99c8803eb0da7d6d3ac79565c22ef4fa5958d55",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\small_vole.hpp": "ab60b612d72cf5cf17d4c2e160b0bac3f5a323e8eb89eca6be470db395ce4c65",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\small_vole.inc": "8323eb103875052369275daa95d597444b288d19faa111933280000a77c42ed0",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\subprojects\\catch2.wrap": "2bb58cf4758a2a0ac766a487181ac5374b1f35943eab1f30786794fff7c7a40c",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\subprojects\\packagefiles\\xkcp\\config.h": "6fe920f28d691971b99bab67b4d4feec01c4c8d5273e55e1a442401135465a14",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\subprojects\\packagefiles\\xkcp\\meson.build": "615f59edbdea5c86e5005c2dc0df34c6d202b76f4ed7a0d9da3aa67486906b9d",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\subprojects\\xkcp.wrap": "760dcf26e53f6e578c2383a5be8b3ac456d0fff21b9128de79e14aea2d73420c",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\bavc_tvs_from_ref.hpp": "25c75f2e87bc7d98ebdc47cd96dce7897fe43bcf545584af93079333ae6d614e",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\bench_api.cpp": "94f809555c133b22f55b24f63ba54465866138482282e54d39d577489ba41c79",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\bench_components.cpp": "a2be8731992b08b6e754f37b41d7ff87476d2d196c1d4f75e2817d69599c0713",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\bench_leaf_hash.cpp": "3fb47b368df3f624ff39b45ca92299e45abf7f78d73371f9411eef3e0c1c7442",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\bench_variants.cpp": "859e3d778d5f530e5c0f800efbe6c78e97883388f0ef42b0ed637e12222a5db1",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\meson.build": "299fb54c186b1fc118c00bdb086b9f368cc06d511b9f3f86dd3ec35b5b1f58ca",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test.hpp": "a0717d3f7db733fa7f945dae1a330b95020791a52e779a7301d8f0f9b0434210",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_aes.cpp": "ba43be658a2884d3e2de12849cc90f1bf7c8e943bdcf36104f6fd4ccc4220606",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_aes_tvs.cpp": "376749e50aa8d35b509a6bf8b3a4e2e5724a7d607d7d06b334d7c0f9cb350724",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_aes_tvs.hpp": "fe365d3644886f6f27d9a006d789109a870ee0769d438795bb3a95ae079a5d82",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_bavc_tvs.cpp": "fecb50426e6e2f150b9c2bdbeb205dd3d84bc2c0c85d5726e9f57e1576fafb6f",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_bavc_tvs.hpp": "c8291aaabadd517af7c3491986e31e44436a477cbbed3f976ed07880d33590a3",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest.cpp": "3d6b4d0c64b70479c66e8baa7fec82a224415be0c2922f033c4f688885fa5d84",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest_experimental.cpp": "455bca803bb9c088b273f046d649e8e9fff26ebeaa173611abda9a875f634d03",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest_tvs.cpp": "b0f90b071f462f56b8b6e4e962b375d93989d18e03a8ad6ec45bb8da4ed85f61",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest_tvs.hpp": "41715f31461844e98ad825aa0f6097d9fe1df567946d2042275bd7d0e97aba91",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest_v2_tvs.cpp": "5891d75f40c8a6ff5f9a863eff956c9817652906ed7d8a7bb00a6d9f94115980",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest_v2_tvs.hpp": "5566e25900dbd53058c29f8b6745156f4e2cb626b16890c728533756064a399e",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_gfsmall.cpp": "235d70fa1759cff546155b3ea5106616d71aa5de0ff0a2fdf7452e5df45f0c50",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_gfsmall_tvs.cpp": "3b8fe5a0e15833a755a355a69ab01e54efd87ca4910d64eebbb432cc67986f2d",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_gfsmall_tvs.hpp": "21c73ecf0f15a3a8f15ae9223bdfdd385891895a3880dd89f306e6e402c1667e",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_owf_proof.cpp": "06c86b48dfca103632e916607f061303d6dac7cde458708092a4a79e9c1d6575",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_owf_proof_tools.cpp": "13cef66c36c13e105646f119852ca38e1b3c0b2ecda1b44103f5e8fae03be224",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_parameters.cpp": "07699621df5ca2dc2c1951a1bec05321fa6a0bd986db6272a503e9fa4ffa72f5",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_polynomials.cpp": "7a8bf89fea123f502d80613bd3d5793c6154e2792337ea25c0803e7c44319b4f",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_prg.cpp": "c89eaf0b6f0d62ceeaed44597ae310f1fef91559c19ebcfcfea4ee3c84f55fbd",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_prg_tvs.cpp": "70585354dd00327a47528c67eaf985bd327a13513554cb572dc07cbf818e9f8e",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_prg_tvs.hpp": "067afe487182ada890307fa7aa8ef80d8429192f91a3415fe68946f697cf3bca",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_quicksilver.cpp": "2533880243f8c956514d626faf3735727344d5df07d4127be0a47dca347864ab",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_small_vole.cpp": "461240f122f62f59205f6eb1fc85b083c42f4291981ef903aae39089681d42c8",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_transpose.cpp": "48feed97038499c7298694f304eb7f753701e3e2b318bdc6552efd704d5a80b5",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_universal_hash.cpp": "1cf13c3ec27e6f872bafbf6edfd0c9267e1bf1484aa75ef8e44adbf92b81ac0c",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vector_com.cpp": "f3e410125871a9db835cc271e275c98328cf3bd281f35914b1978d2e222bea5f",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vole_commit.cpp": "97322f7b2ef9c8276e12d5dc2317f1109c8f4d2d19f020474e027ab44c4e2af3",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vole_commit_tvs.cpp": "f2f219f3cd3df11537f094a3d9b125fbbb13d26b208e5a72dda6802e637ada75",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vole_commit_tvs.hpp": "895bbf1d029e9e003318ab7db4200581b6ab52f248fc4a312888a1b654cd68d3",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vole_commit_tvs_v2.cpp": "ee0091b3f393095e49dfe562c8e4e1cc19e18ff92a35142b82a0fcaef60a0e30",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vole_commit_tvs_v2.hpp": "ff533cceb9c9306b321a0b1bb3a667e9f16d831cee8278b31902983e4df49d7a",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_witness.cpp": "758537a64152bc43ee9f1787497a98c61d94d025f5b94ed92111eeb3d3658e59",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_witness.hpp": "c76e0ae563ea295248703795d3b79436c6abc189d1fb9618ef4de5a630f20dac",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\vole_tvs_from_ref.hpp": "a0254716b15b38c8e3b8e20b159f6bd036c4b7cdb6f8b7ba6c30e04a83f9e877",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\api_test.c": "0483b2fa059796ea4edcd2384c836918a827dea24fab74f2cf5cd06e60fe1d65",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\Makefile": "2bc471474503d201439ce42db4a44eca53e8229b8fde91174690199f56f089ec",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\PQCgenKAT_sign.c": "05aedaa63617b15614012598905348b58d6e1b4b7996b4d9022d03c6e0af9250",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\prepare_nist.py": "568bdc19ca3251f05bc70fcbcf4e708a8ad640cb9237aff90fca5df1984e639a",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\rng.c": "2cc42477d95648f6f4900ce9906bb8840990290a410fa5206caed58663b6d5cd",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\rng.h": "df44ce6c84abd83fed1f4966fba667856de38227d15fe98f4c0a650b21a0cd5e",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\transpose.hpp": "11ceed69bc88e500aa7efa2ea633e4ee586a076894c8c31d5d47b00ae1f09093",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\transpose_secpar.hpp": "ffa3a7595d07fe7c2a5b15335ba7f7471f4f1c1cc0245141777c74549aa8981f",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\universal_hash.hpp": "cf0aea239d7bd38b174cd016f1c53f01e9be1f9cfa2a0b881b1135cba773110c",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\util.hpp": "5739406e7831ec831390da58d8e52ab803c5caac85c228612e7829469696a7d3",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vector_com.cpp": "7347c1b321b45bf7c573bb4c0146aa98566f4d392aa06fb8408b81bbb0f06826",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vector_com.hpp": "74a94c657be0fc99ab748c79ffbf9c9cddc44ccd5b5f6de469501e0f303da251",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vector_com.inc": "592e535f23ce6c940d99459355871918f0b2abe1277a58a0e82b2fa31f5ca56d",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_check.hpp": "72e4928da9cb00a032364901c5fb61633838989f059c89f5833213e77a1db0e4",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_commit.cpp": "f9faf39427167e201462dd654cf35eac578ba926a25621c6d3ad7c610f624f3a",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_commit.hpp": "9e30d4064eef2106c38cbb49a68ddfa5d610f04d3cc70e2c1897c2678189310e",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_commit.inc": "4b66fb8beda8b02f7895313712af58511696234fb17731ebd2bb8ebbb9f0c4ac",
+    "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_key_index_permutation.hpp": "15b6782f3ca75978f6a839f4763d4a371b5e401e43a44b0a669742238c789e9d",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\parameters.hpp": "d31e0f884a33d9b132d24c869671a867cfea37ea0fa76a5d28c3e43e68597b6f",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\constants.hpp": "b57ab9f737e9ad8d467a6b89066bdd16d390680773d3eb1b533dfda2ffaf8929",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\faest_keys.inc": "12df356942844f97355be10e3bf624092ba7b0d9d493c35707c7b92016418598",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\faest_keys.hpp": "41c2193aa33a3355199ccf297a964e949ed4adb6b501fc02389298905ec354f4",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\owf_proof.inc": "f76f51a27520671b42b57cb105317e6713aaf4089f0acd5ca02b2cb5cffb8e56",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\owf_proof.hpp": "48761d24ecaad50f7f57e3487f6924668a58c13b17dcf59b46d6df2d70548afc",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\vole_check.hpp": "72e4928da9cb00a032364901c5fb61633838989f059c89f5833213e77a1db0e4",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\quicksilver.hpp": "ec1e78c066b59dadaadc4d1938639f0e4cc9330e64a9ae95000c31fcafd6a6ce",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\hash.hpp": "baca00183802507b49458be23b26f2bcbe547d35b610073b76598923f476d909",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\prgs.hpp": "6ea8e06c065d7a5f6d981d6a730eaaad266f6f48471a4638123c76d214c394eb",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\vector_com.hpp": "74a94c657be0fc99ab748c79ffbf9c9cddc44ccd5b5f6de469501e0f303da251",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\vector_com.inc": "98a6f0479b6d0fad8146364c2154055226b6ec36dd02fe0018c65ba864eba742",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\vole_commit.hpp": "9e30d4064eef2106c38cbb49a68ddfa5d610f04d3cc70e2c1897c2678189310e",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\vole_commit.inc": "5d995a150e437c8c6d5b90b953f95c77eb42bd369c15c35727ee96eaa2234413",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\small_vole.inc": "8323eb103875052369275daa95d597444b288d19faa111933280000a77c42ed0",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\faest.inc": "878ea49bd71fd704b95310ac2c07273abef4f06ba517d4279840da85559b4ac2",
+    "<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\faest.hpp": "1dc08419740a7441128da2754bf8ef73389dd9c9a2d7f4a317c4db3cec993403",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\资料\\rFAEST_2025-1077_作者版.pdf": "515cd5949e714df7cadab994528462f3f0dba6e559914c77a1d766aab2ea5646",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\类别1核验_20261015\\原始数据\\输入快照.json": "b2d08bed23822abab1fe61b7a42d15e80d6732f9a131aa6214161a308138eb43",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\等强核验_rFAEST128_20261015\\独立核对\\组件与参数_证据.json": "85117fdd437207dfae8a6d019e8aa282583c302f45a577c5726209d351b95d66",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\P0-3_Lemma3.6_反例严格核验.md": "b2dd21261e5262d84a57bc5d6c8493d77d3a39edf5d4271ba25749b9af1ee091",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\类别1核验_20261015\\Rain分析\\Rain128_类别1核验.md": "66efcf747c689b091ea5ccc9da6477ad970ce555f255b3277274f7ee1f94f34b"
+  },
+  "scope": "classical single-parameter single-public-key; exact parameter counts and local conditional bound comparison",
+  "parameters": [
+    {
+      "name": "ref_f",
+      "tau": 16,
+      "g": 8,
+      "D": 120,
+      "B_bytes": 5,
+      "k_low": 7,
+      "n_low": 8,
+      "k_high": 8,
+      "n_high": 8,
+      "N_total": 3072,
+      "N_max": 256,
+      "witness_bits": 960,
+      "QS_degree": 3,
+      "constraints": 241,
+      "LQS": 1216,
+      "VHash_bits": 168,
+      "L_bits": 1384,
+      "tape_AES_blocks": 11,
+      "signature_bytes": 4980,
+      "sign_AES": 42992,
+      "verify_AES": 42560,
+      "h1_input_bytes": 2676,
+      "h2_input_bytes": 2918,
+      "h3_input_bytes": 109,
+      "hybrid_path": 152,
+      "V_padded_blocks_128": 10,
+      "V_root_product": 171,
+      "Z_root_product": 57600,
+      "secret_domain_log2_display": 127.58496250072116,
+      "secret_domain_scope": "exactly 3*2^126 accepted secrets",
+      "local_coefficients": {
+        "V_single": {
+          "numerator": "16777387",
+          "denominator": "6277101735386680763835789423207666416102355444464034512896",
+          "log2_display": -167.9999852955583
+        },
+        "V_pair_list": {
+          "numerator": "251660805",
+          "denominator": "784637716923335095479473677900958302012794430558004314112",
+          "log2_display": -161.09309469994977
+        },
+        "Z_single": {
+          "numerator": "72057594037928161",
+          "denominator": "24519928653854221733733552434404946937899825954937634816",
+          "log2_display": -128.0
+        },
+        "fixed_target": {
+          "numerator": "1",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -128.0
+        },
+        "qs_roots": {
+          "numerator": "3",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -126.41503749927884
+        },
+        "conservative_challenge": {
+          "numerator": "1",
+          "denominator": "85070591730234615865843651857942052864",
+          "log2_display": -126.0
+        }
+      }
+    },
+    {
+      "name": "ref_s",
+      "tau": 11,
+      "g": 10,
+      "D": 118,
+      "B_bytes": 6,
+      "k_low": 10,
+      "n_low": 3,
+      "k_high": 11,
+      "n_high": 8,
+      "N_total": 19456,
+      "N_max": 2048,
+      "witness_bits": 960,
+      "QS_degree": 3,
+      "constraints": 241,
+      "LQS": 1216,
+      "VHash_bits": 176,
+      "L_bits": 1392,
+      "tape_AES_blocks": 11,
+      "signature_bytes": 4014,
+      "sign_AES": 272373,
+      "verify_AES": 272005,
+      "h1_input_bytes": 1821,
+      "h2_input_bytes": 3047,
+      "h3_input_bytes": 109,
+      "hybrid_path": 140,
+      "V_padded_blocks_128": 10,
+      "V_root_product": 171,
+      "Z_root_product": 57600,
+      "secret_domain_log2_display": 127.58496250072116,
+      "secret_domain_scope": "exactly 3*2^126 accepted secrets",
+      "local_coefficients": {
+        "V_single": {
+          "numerator": "65707",
+          "denominator": "6277101735386680763835789423207666416102355444464034512896",
+          "log2_display": -175.99624054629058
+        },
+        "V_pair_list": {
+          "numerator": "3613885",
+          "denominator": "6277101735386680763835789423207666416102355444464034512896",
+          "log2_display": -170.2148808327659
+        },
+        "Z_single": {
+          "numerator": "72057594037928161",
+          "denominator": "24519928653854221733733552434404946937899825954937634816",
+          "log2_display": -128.0
+        },
+        "fixed_target": {
+          "numerator": "1",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -128.0
+        },
+        "qs_roots": {
+          "numerator": "3",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -126.41503749927884
+        },
+        "conservative_challenge": {
+          "numerator": "1",
+          "denominator": "85070591730234615865843651857942052864",
+          "log2_display": -126.0
+        }
+      }
+    },
+    {
+      "name": "rain3_fast",
+      "tau": 21,
+      "g": 5,
+      "D": 123,
+      "B_bytes": 6,
+      "k_low": 5,
+      "n_low": 3,
+      "k_high": 6,
+      "n_high": 18,
+      "N_total": 1248,
+      "N_max": 64,
+      "witness_bits": 384,
+      "QS_degree": 2,
+      "constraints": 3,
+      "LQS": 512,
+      "VHash_bits": 176,
+      "L_bits": 688,
+      "tape_AES_blocks": 6,
+      "signature_bytes": 4146,
+      "sign_AES": 11211,
+      "verify_AES": 10818,
+      "h1_input_bytes": 1801,
+      "h2_input_bytes": 2975,
+      "h3_input_bytes": 93,
+      "hybrid_path": 165,
+      "V_padded_blocks_128": 4,
+      "V_root_product": 21,
+      "Z_root_product": 4,
+      "secret_domain_log2_display": 128.0,
+      "secret_domain_scope": "unshrunk K; joint (P,K) rejection TV<=R/2^128",
+      "local_coefficients": {
+        "V_single": {
+          "numerator": "65557",
+          "denominator": "6277101735386680763835789423207666416102355444464034512896",
+          "log2_display": -175.9995377846854
+        },
+        "V_pair_list": {
+          "numerator": "6883485",
+          "denominator": "3138550867693340381917894711603833208051177722232017256448",
+          "log2_display": -168.2852922670193
+        },
+        "Z_single": {
+          "numerator": "4611686018427387905",
+          "denominator": "1569275433846670190958947355801916604025588861116008628224",
+          "log2_display": -128.0
+        },
+        "fixed_target": {
+          "numerator": "1",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -128.0
+        },
+        "qs_roots": {
+          "numerator": "1",
+          "denominator": "170141183460469231731687303715884105728",
+          "log2_display": -127.0
+        },
+        "conservative_challenge": {
+          "numerator": "3",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -126.41503749927884
+        }
+      }
+    },
+    {
+      "name": "rain3_bal",
+      "tau": 17,
+      "g": 7,
+      "D": 121,
+      "B_bytes": 6,
+      "k_low": 7,
+      "n_low": 15,
+      "k_high": 8,
+      "n_high": 2,
+      "N_total": 2432,
+      "N_max": 256,
+      "witness_bits": 384,
+      "QS_degree": 2,
+      "constraints": 3,
+      "LQS": 512,
+      "VHash_bits": 176,
+      "L_bits": 688,
+      "tape_AES_blocks": 6,
+      "signature_bytes": 3706,
+      "sign_AES": 21871,
+      "verify_AES": 21510,
+      "h1_input_bytes": 1457,
+      "h2_input_bytes": 2975,
+      "h3_input_bytes": 93,
+      "hybrid_path": 155,
+      "V_padded_blocks_128": 4,
+      "V_root_product": 21,
+      "Z_root_product": 4,
+      "secret_domain_log2_display": 128.0,
+      "secret_domain_scope": "unshrunk K; joint (P,K) rejection TV<=R/2^128",
+      "local_coefficients": {
+        "V_single": {
+          "numerator": "65557",
+          "denominator": "6277101735386680763835789423207666416102355444464034512896",
+          "log2_display": -175.9995377846854
+        },
+        "V_pair_list": {
+          "numerator": "1114469",
+          "denominator": "784637716923335095479473677900958302012794430558004314112",
+          "log2_display": -168.91207494343507
+        },
+        "Z_single": {
+          "numerator": "4611686018427387905",
+          "denominator": "1569275433846670190958947355801916604025588861116008628224",
+          "log2_display": -128.0
+        },
+        "fixed_target": {
+          "numerator": "1",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -128.0
+        },
+        "qs_roots": {
+          "numerator": "1",
+          "denominator": "170141183460469231731687303715884105728",
+          "log2_display": -127.0
+        },
+        "conservative_challenge": {
+          "numerator": "3",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -126.41503749927884
+        }
+      }
+    },
+    {
+      "name": "rain3_short",
+      "tau": 11,
+      "g": 12,
+      "D": 116,
+      "B_bytes": 6,
+      "k_low": 10,
+      "n_low": 5,
+      "k_high": 11,
+      "n_high": 6,
+      "N_total": 17408,
+      "N_max": 2048,
+      "witness_bits": 384,
+      "QS_degree": 2,
+      "constraints": 3,
+      "LQS": 512,
+      "VHash_bits": 176,
+      "L_bits": 688,
+      "tape_AES_blocks": 6,
+      "signature_bytes": 3014,
+      "sign_AES": 156661,
+      "verify_AES": 156352,
+      "h1_input_bytes": 941,
+      "h2_input_bytes": 2975,
+      "h3_input_bytes": 93,
+      "hybrid_path": 138,
+      "V_padded_blocks_128": 4,
+      "V_root_product": 21,
+      "Z_root_product": 4,
+      "secret_domain_log2_display": 128.0,
+      "secret_domain_scope": "unshrunk K; joint (P,K) rejection TV<=R/2^128",
+      "local_coefficients": {
+        "V_single": {
+          "numerator": "65557",
+          "denominator": "6277101735386680763835789423207666416102355444464034512896",
+          "log2_display": -175.9995377846854
+        },
+        "V_pair_list": {
+          "numerator": "3605635",
+          "denominator": "6277101735386680763835789423207666416102355444464034512896",
+          "log2_display": -170.21817807116076
+        },
+        "Z_single": {
+          "numerator": "4611686018427387905",
+          "denominator": "1569275433846670190958947355801916604025588861116008628224",
+          "log2_display": -128.0
+        },
+        "fixed_target": {
+          "numerator": "1",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -128.0
+        },
+        "qs_roots": {
+          "numerator": "1",
+          "denominator": "170141183460469231731687303715884105728",
+          "log2_display": -127.0
+        },
+        "conservative_challenge": {
+          "numerator": "3",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -126.41503749927884
+        }
+      }
+    },
+    {
+      "name": "rain4_fast",
+      "tau": 18,
+      "g": 6,
+      "D": 122,
+      "B_bytes": 6,
+      "k_low": 6,
+      "n_low": 4,
+      "k_high": 7,
+      "n_high": 14,
+      "N_total": 2048,
+      "N_max": 128,
+      "witness_bits": 512,
+      "QS_degree": 2,
+      "constraints": 4,
+      "LQS": 640,
+      "VHash_bits": 176,
+      "L_bits": 816,
+      "tape_AES_blocks": 7,
+      "signature_bytes": 4112,
+      "sign_AES": 20462,
+      "verify_AES": 20074,
+      "h1_input_bytes": 1815,
+      "h2_input_bytes": 2991,
+      "h3_input_bytes": 93,
+      "hybrid_path": 158,
+      "V_padded_blocks_128": 5,
+      "V_root_product": 36,
+      "Z_root_product": 9,
+      "secret_domain_log2_display": 128.0,
+      "secret_domain_scope": "unshrunk K; joint (P,K) rejection TV<=R/2^128",
+      "local_coefficients": {
+        "V_single": {
+          "numerator": "16393",
+          "denominator": "1569275433846670190958947355801916604025588861116008628224",
+          "log2_display": -175.9992077215307
+        },
+        "V_pair_list": {
+          "numerator": "2508129",
+          "denominator": "1569275433846670190958947355801916604025588861116008628224",
+          "log2_display": -168.74181987883804
+        },
+        "Z_single": {
+          "numerator": "18446744073709551625",
+          "denominator": "6277101735386680763835789423207666416102355444464034512896",
+          "log2_display": -128.0
+        },
+        "fixed_target": {
+          "numerator": "1",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -128.0
+        },
+        "qs_roots": {
+          "numerator": "1",
+          "denominator": "170141183460469231731687303715884105728",
+          "log2_display": -127.0
+        },
+        "conservative_challenge": {
+          "numerator": "3",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -126.41503749927884
+        }
+      }
+    },
+    {
+      "name": "rain4_bal",
+      "tau": 18,
+      "g": 8,
+      "D": 120,
+      "B_bytes": 6,
+      "k_low": 6,
+      "n_low": 6,
+      "k_high": 7,
+      "n_high": 12,
+      "N_total": 1920,
+      "N_max": 128,
+      "witness_bits": 512,
+      "QS_degree": 2,
+      "constraints": 4,
+      "LQS": 640,
+      "VHash_bits": 176,
+      "L_bits": 816,
+      "tape_AES_blocks": 7,
+      "signature_bytes": 4080,
+      "sign_AES": 19182,
+      "verify_AES": 18798,
+      "h1_input_bytes": 1815,
+      "h2_input_bytes": 2991,
+      "h3_input_bytes": 93,
+      "hybrid_path": 156,
+      "V_padded_blocks_128": 5,
+      "V_root_product": 36,
+      "Z_root_product": 9,
+      "secret_domain_log2_display": 128.0,
+      "secret_domain_scope": "unshrunk K; joint (P,K) rejection TV<=R/2^128",
+      "local_coefficients": {
+        "V_single": {
+          "numerator": "16393",
+          "denominator": "1569275433846670190958947355801916604025588861116008628224",
+          "log2_display": -175.9992077215307
+        },
+        "V_pair_list": {
+          "numerator": "2508129",
+          "denominator": "1569275433846670190958947355801916604025588861116008628224",
+          "log2_display": -168.74181987883804
+        },
+        "Z_single": {
+          "numerator": "18446744073709551625",
+          "denominator": "6277101735386680763835789423207666416102355444464034512896",
+          "log2_display": -128.0
+        },
+        "fixed_target": {
+          "numerator": "1",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -128.0
+        },
+        "qs_roots": {
+          "numerator": "1",
+          "denominator": "170141183460469231731687303715884105728",
+          "log2_display": -127.0
+        },
+        "conservative_challenge": {
+          "numerator": "3",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -126.41503749927884
+        }
+      }
+    },
+    {
+      "name": "rain4_short",
+      "tau": 11,
+      "g": 12,
+      "D": 116,
+      "B_bytes": 6,
+      "k_low": 10,
+      "n_low": 5,
+      "k_high": 11,
+      "n_high": 6,
+      "N_total": 17408,
+      "N_max": 2048,
+      "witness_bits": 512,
+      "QS_degree": 2,
+      "constraints": 4,
+      "LQS": 640,
+      "VHash_bits": 176,
+      "L_bits": 816,
+      "tape_AES_blocks": 7,
+      "signature_bytes": 3190,
+      "sign_AES": 174069,
+      "verify_AES": 173749,
+      "h1_input_bytes": 1101,
+      "h2_input_bytes": 2991,
+      "h3_input_bytes": 93,
+      "hybrid_path": 138,
+      "V_padded_blocks_128": 5,
+      "V_root_product": 36,
+      "Z_root_product": 9,
+      "secret_domain_log2_display": 128.0,
+      "secret_domain_scope": "unshrunk K; joint (P,K) rejection TV<=R/2^128",
+      "local_coefficients": {
+        "V_single": {
+          "numerator": "16393",
+          "denominator": "1569275433846670190958947355801916604025588861116008628224",
+          "log2_display": -175.9992077215307
+        },
+        "V_pair_list": {
+          "numerator": "901615",
+          "denominator": "1569275433846670190958947355801916604025588861116008628224",
+          "log2_display": -170.21784800800603
+        },
+        "Z_single": {
+          "numerator": "18446744073709551625",
+          "denominator": "6277101735386680763835789423207666416102355444464034512896",
+          "log2_display": -128.0
+        },
+        "fixed_target": {
+          "numerator": "1",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -128.0
+        },
+        "qs_roots": {
+          "numerator": "1",
+          "denominator": "170141183460469231731687303715884105728",
+          "log2_display": -127.0
+        },
+        "conservative_challenge": {
+          "numerator": "3",
+          "denominator": "340282366920938463463374607431768211456",
+          "log2_display": -126.41503749927884
+        }
+      }
+    }
+  ],
+  "local_comparisons": [
+    {
+      "name": "rain3_fast",
+      "comparator": "ref_f",
+      "ratios": {
+        "V_single": {
+          "numerator": "65557",
+          "denominator": "16777387",
+          "log2_display": -7.999552489127119
+        },
+        "V_pair_list": {
+          "numerator": "458899",
+          "denominator": "67109548",
+          "log2_display": -7.192197567069517
+        },
+        "Z_single": {
+          "numerator": "4611686018427387905",
+          "denominator": "4611686018427402304",
+          "log2_display": -7.105427357601002e-15
+        },
+        "fixed_target": {
+          "numerator": "1",
+          "denominator": "1",
+          "log2_display": 0.0
+        },
+        "qs_roots": {
+          "numerator": "2",
+          "denominator": "3",
+          "log2_display": -0.5849625007211561
+        },
+        "conservative_challenge": {
+          "numerator": "3",
+          "denominator": "4",
+          "log2_display": -0.4150374992788439
+        }
+      },
+      "implication": "local fixed-difference/residual lemmas only; extraction/OWF/hiding not included"
+    },
+    {
+      "name": "rain3_bal",
+      "comparator": "ref_f",
+      "ratios": {
+        "V_single": {
+          "numerator": "65557",
+          "denominator": "16777387",
+          "log2_display": -7.999552489127119
+        },
+        "V_pair_list": {
+          "numerator": "1114469",
+          "denominator": "251660805",
+          "log2_display": -7.818980243485299
+        },
+        "Z_single": {
+          "numerator": "4611686018427387905",
+          "denominator": "4611686018427402304",
+          "log2_display": -7.105427357601002e-15
+        },
+        "fixed_target": {
+          "numerator": "1",
+          "denominator": "1",
+          "log2_display": 0.0
+        },
+        "qs_roots": {
+          "numerator": "2",
+          "denominator": "3",
+          "log2_display": -0.5849625007211561
+        },
+        "conservative_challenge": {
+          "numerator": "3",
+          "denominator": "4",
+          "log2_display": -0.4150374992788439
+        }
+      },
+      "implication": "local fixed-difference/residual lemmas only; extraction/OWF/hiding not included"
+    },
+    {
+      "name": "rain3_short",
+      "comparator": "ref_s",
+      "ratios": {
+        "V_single": {
+          "numerator": "65557",
+          "denominator": "65707",
+          "log2_display": -0.003297238394839752
+        },
+        "V_pair_list": {
+          "numerator": "65557",
+          "denominator": "65707",
+          "log2_display": -0.003297238394839752
+        },
+        "Z_single": {
+          "numerator": "4611686018427387905",
+          "denominator": "4611686018427402304",
+          "log2_display": -7.105427357601002e-15
+        },
+        "fixed_target": {
+          "numerator": "1",
+          "denominator": "1",
+          "log2_display": 0.0
+        },
+        "qs_roots": {
+          "numerator": "2",
+          "denominator": "3",
+          "log2_display": -0.5849625007211561
+        },
+        "conservative_challenge": {
+          "numerator": "3",
+          "denominator": "4",
+          "log2_display": -0.4150374992788439
+        }
+      },
+      "implication": "local fixed-difference/residual lemmas only; extraction/OWF/hiding not included"
+    },
+    {
+      "name": "rain4_fast",
+      "comparator": "ref_f",
+      "ratios": {
+        "V_single": {
+          "numerator": "65572",
+          "denominator": "16777387",
+          "log2_display": -7.999222425972398
+        },
+        "V_pair_list": {
+          "numerator": "836043",
+          "denominator": "167773870",
+          "log2_display": -7.648725178888267
+        },
+        "Z_single": {
+          "numerator": "18446744073709551625",
+          "denominator": "18446744073709609216",
+          "log2_display": 0.0
+        },
+        "fixed_target": {
+          "numerator": "1",
+          "denominator": "1",
+          "log2_display": 0.0
+        },
+        "qs_roots": {
+          "numerator": "2",
+          "denominator": "3",
+          "log2_display": -0.5849625007211561
+        },
+        "conservative_challenge": {
+          "numerator": "3",
+          "denominator": "4",
+          "log2_display": -0.4150374992788439
+        }
+      },
+      "implication": "local fixed-difference/residual lemmas only; extraction/OWF/hiding not included"
+    },
+    {
+      "name": "rain4_bal",
+      "comparator": "ref_f",
+      "ratios": {
+        "V_single": {
+          "numerator": "65572",
+          "denominator": "16777387",
+          "log2_display": -7.999222425972398
+        },
+        "V_pair_list": {
+          "numerator": "836043",
+          "denominator": "167773870",
+          "log2_display": -7.648725178888267
+        },
+        "Z_single": {
+          "numerator": "18446744073709551625",
+          "denominator": "18446744073709609216",
+          "log2_display": 0.0
+        },
+        "fixed_target": {
+          "numerator": "1",
+          "denominator": "1",
+          "log2_display": 0.0
+        },
+        "qs_roots": {
+          "numerator": "2",
+          "denominator": "3",
+          "log2_display": -0.5849625007211561
+        },
+        "conservative_challenge": {
+          "numerator": "3",
+          "denominator": "4",
+          "log2_display": -0.4150374992788439
+        }
+      },
+      "implication": "local fixed-difference/residual lemmas only; extraction/OWF/hiding not included"
+    },
+    {
+      "name": "rain4_short",
+      "comparator": "ref_s",
+      "ratios": {
+        "V_single": {
+          "numerator": "65572",
+          "denominator": "65707",
+          "log2_display": -0.0029671752401192464
+        },
+        "V_pair_list": {
+          "numerator": "65572",
+          "denominator": "65707",
+          "log2_display": -0.0029671752401192464
+        },
+        "Z_single": {
+          "numerator": "18446744073709551625",
+          "denominator": "18446744073709609216",
+          "log2_display": 0.0
+        },
+        "fixed_target": {
+          "numerator": "1",
+          "denominator": "1",
+          "log2_display": 0.0
+        },
+        "qs_roots": {
+          "numerator": "2",
+          "denominator": "3",
+          "log2_display": -0.5849625007211561
+        },
+        "conservative_challenge": {
+          "numerator": "3",
+          "denominator": "4",
+          "log2_display": -0.4150374992788439
+        }
+      },
+      "implication": "local fixed-difference/residual lemmas only; extraction/OWF/hiding not included"
+    }
+  ],
+  "paper_sensitivity": [
+    {
+      "name": "ref_f",
+      "status": "UNESTABLISHED_FOR_SOURCE__FORMULA_SENSITIVITY_ONLY",
+      "Q_times_V": {
+        "numerator": "549778194603",
+        "denominator": "365375409332725729550921208179070754913983135744",
+        "log2_display": -118.99994126867146
+      },
+      "QP_squared_times_coll2": {
+        "numerator": "1",
+        "denominator": "27606985387162255149739023449108101809804435888681546220650096895197184",
+        "log2_display": -234.0
+      },
+      "Qsum_times_fourxor": {
+        "numerator": "1",
+        "denominator": "167423219872854268898191413915625282900219501828989626163085998182867351738271269139562246689952477832436667643367679191435491450889424069312259024604665231311477621481628609147204290704099549091843034096141351171618467832303105743111961624157454108040174944963852221369694216119572256044331338563584",
+        "log2_display": -994.0
+      },
+      "hiding_path_count": 152,
+      "printed_PRG_first_coefficient": 29792
+    },
+    {
+      "name": "ref_s",
+      "status": "UNESTABLISHED_FOR_SOURCE__FORMULA_SENSITIVITY_ONLY",
+      "Q_times_V": {
+        "numerator": "16283443033",
+        "denominator": "91343852333181432387730302044767688728495783936",
+        "log2_display": -122.07731327035201
+      },
+      "QP_squared_times_coll2": {
+        "numerator": "1",
+        "denominator": "431359146674410236714672241392314090778194310760649159697657763987456",
+        "log2_display": -228.0
+      },
+      "Qsum_times_fourxor": {
+        "numerator": "1",
+        "denominator": "2615987810513347951534240842431645045315929716077962908798218721607302370910488580305660104530507466131822931927619987366179553920147251083004047259447894239241837835650447017925067042251555454560047407752208612056538559879736027236124400377460220438127733515060190958901472126868316500692677165056",
+        "log2_display": -988.0
+      },
+      "hiding_path_count": 140,
+      "printed_PRG_first_coefficient": 27440
+    },
+    {
+      "name": "rain3_fast",
+      "status": "UNESTABLISHED_FOR_SOURCE__FORMULA_SENSITIVITY_ONLY",
+      "Q_times_V": {
+        "numerator": "59210361273",
+        "denominator": "93536104789177786765035829293842113257979682750464",
+        "log2_display": -130.2148693947113
+      },
+      "QP_squared_times_coll2": {
+        "numerator": "1",
+        "denominator": "441711766194596082395824375185729628956870974218904739530401550323154944",
+        "log2_display": -238.0
+      },
+      "Qsum_times_fourxor": {
+        "numerator": "1",
+        "denominator": "18788340662190665823115844774314696219005460391266558965658327772257672200916867547709591987078149624255479808",
+        "log2_display": -363.0
+      },
+      "hiding_path_count": 165,
+      "printed_PRG_first_coefficient": 13365
+    },
+    {
+      "name": "rain3_bal",
+      "status": "UNESTABLISHED_FOR_SOURCE__FORMULA_SENSITIVITY_ONLY",
+      "Q_times_V": {
+        "numerator": "38802467173",
+        "denominator": "5846006549323611672814739330865132078623730171904",
+        "log2_display": -126.82457066507757
+      },
+      "QP_squared_times_coll2": {
+        "numerator": "1",
+        "denominator": "27606985387162255149739023449108101809804435888681546220650096895197184",
+        "log2_display": -234.0
+      },
+      "Qsum_times_fourxor": {
+        "numerator": "1",
+        "denominator": "1174271291386916613944740298394668513687841274454159935353645485766104512557304221731849499192384351515967488",
+        "log2_display": -359.0
+      },
+      "hiding_path_count": 155,
+      "printed_PRG_first_coefficient": 12555
+    },
+    {
+      "name": "rain3_short",
+      "status": "UNESTABLISHED_FOR_SOURCE__FORMULA_SENSITIVITY_ONLY",
+      "Q_times_V": {
+        "numerator": "16246270183",
+        "denominator": "91343852333181432387730302044767688728495783936",
+        "log2_display": -122.08061050874684
+      },
+      "QP_squared_times_coll2": {
+        "numerator": "1",
+        "denominator": "431359146674410236714672241392314090778194310760649159697657763987456",
+        "log2_display": -228.0
+      },
+      "Qsum_times_fourxor": {
+        "numerator": "1",
+        "denominator": "18347988927920572092886567162416695526372519913346248989900710715095383008707878464560148424881005492436992",
+        "log2_display": -353.0
+      },
+      "hiding_path_count": 138,
+      "printed_PRG_first_coefficient": 11178
+    },
+    {
+      "name": "rain4_fast",
+      "status": "UNESTABLISHED_FOR_SOURCE__FORMULA_SENSITIVITY_ONLY",
+      "Q_times_V": {
+        "numerator": "5438951505",
+        "denominator": "2923003274661805836407369665432566039311865085952",
+        "log2_display": -128.6593185835692
+      },
+      "QP_squared_times_coll2": {
+        "numerator": "1",
+        "denominator": "110427941548649020598956093796432407239217743554726184882600387580788736",
+        "log2_display": -236.0
+      },
+      "Qsum_times_fourxor": {
+        "numerator": "1",
+        "denominator": "799167628880894011233688890827050574271641124522232614619944181664095165137859998750798362384253944616915694367080095461234681773897801038410285056",
+        "log2_display": -488.0
+      },
+      "hiding_path_count": 158,
+      "printed_PRG_first_coefficient": 15800
+    },
+    {
+      "name": "rain4_bal",
+      "status": "UNESTABLISHED_FOR_SOURCE__FORMULA_SENSITIVITY_ONLY",
+      "Q_times_V": {
+        "numerator": "5438951505",
+        "denominator": "2923003274661805836407369665432566039311865085952",
+        "log2_display": -128.6593185835692
+      },
+      "QP_squared_times_coll2": {
+        "numerator": "1",
+        "denominator": "110427941548649020598956093796432407239217743554726184882600387580788736",
+        "log2_display": -236.0
+      },
+      "Qsum_times_fourxor": {
+        "numerator": "1",
+        "denominator": "799167628880894011233688890827050574271641124522232614619944181664095165137859998750798362384253944616915694367080095461234681773897801038410285056",
+        "log2_display": -488.0
+      },
+      "hiding_path_count": 156,
+      "printed_PRG_first_coefficient": 15600
+    },
+    {
+      "name": "rain4_short",
+      "status": "UNESTABLISHED_FOR_SOURCE__FORMULA_SENSITIVITY_ONLY",
+      "Q_times_V": {
+        "numerator": "4062496867",
+        "denominator": "22835963083295358096932575511191922182123945984",
+        "log2_display": -122.08028044559214
+      },
+      "QP_squared_times_coll2": {
+        "numerator": "1",
+        "denominator": "431359146674410236714672241392314090778194310760649159697657763987456",
+        "log2_display": -228.0
+      },
+      "Qsum_times_fourxor": {
+        "numerator": "1",
+        "denominator": "3121748550315992231381597229793166305748598142664971150859156959625371738819765620120306103063491971159826931121406622895447975679288285306290176",
+        "log2_display": -480.0
+      },
+      "hiding_path_count": 138,
+      "printed_PRG_first_coefficient": 13800
+    }
+  ],
+  "component_PRG_refutation": [
+    {
+      "name": "ref_f",
+      "QI": "1",
+      "QP": "1267650600228229401496703205376",
+      "rigorous_lower": {
+        "numerator": "268435455",
+        "denominator": "72057594037927936",
+        "log2_display": -28.000000005374456
+      },
+      "rigorous_upper": {
+        "numerator": "1",
+        "denominator": "268435456",
+        "log2_display": -28.0
+      },
+      "printed_upper": {
+        "numerator": "16673835987999538911302961574633564799025",
+        "denominator": "28948022309329048855892746252171976963317496166410141009864396001978282409984",
+        "log2_display": -120.38529015511702
+      },
+      "ratio_lower_to_printed": {
+        "numerator": "7189319084457869874261366097505866640617195137307436098581082144768",
+        "denominator": "1111589065866635927420197438308904319935",
+        "log2_display": 92.38529014974253
+      },
+      "scope": "component PRG distinguishing only; not signature forgery; prior counterexample reused"
+    },
+    {
+      "name": "ref_s",
+      "QI": "1",
+      "QP": "1267650600228229401496703205376",
+      "rigorous_lower": {
+        "numerator": "268435455",
+        "denominator": "72057594037927936",
+        "log2_display": -28.000000005374456
+      },
+      "rigorous_upper": {
+        "numerator": "1",
+        "denominator": "268435456",
+        "log2_display": -28.0
+      },
+      "printed_upper": {
+        "numerator": "16673835987999538911302961574633564799025",
+        "denominator": "28948022309329048855892746252171976963317496166410141009864396001978282409984",
+        "log2_display": -120.38529015511702
+      },
+      "ratio_lower_to_printed": {
+        "numerator": "7189319084457869874261366097505866640617195137307436098581082144768",
+        "denominator": "1111589065866635927420197438308904319935",
+        "log2_display": 92.38529014974253
+      },
+      "scope": "component PRG distinguishing only; not signature forgery; prior counterexample reused"
+    },
+    {
+      "name": "rain3_fast",
+      "QI": "1",
+      "QP": "1267650600228229401496703205376",
+      "rigorous_lower": {
+        "numerator": "268435455",
+        "denominator": "72057594037927936",
+        "log2_display": -28.000000005374456
+      },
+      "rigorous_upper": {
+        "numerator": "1",
+        "denominator": "268435456",
+        "log2_display": -28.0
+      },
+      "printed_upper": {
+        "numerator": "27562871743413726344641472428913882824785",
+        "denominator": "115792089237316195423570985008687907853269984665640564039457584007913129639936",
+        "log2_display": -121.66014999592105
+      },
+      "ratio_lower_to_printed": {
+        "numerator": "28757276337831479497045464390023466562468780549229744394324328579072",
+        "denominator": "1837524782894248422976098161927592188319",
+        "log2_display": 93.66014999054659
+      },
+      "scope": "component PRG distinguishing only; not signature forgery; prior counterexample reused"
+    },
+    {
+      "name": "rain3_bal",
+      "QI": "1",
+      "QP": "1267650600228229401496703205376",
+      "rigorous_lower": {
+        "numerator": "268435455",
+        "denominator": "72057594037927936",
+        "log2_display": -28.000000005374456
+      },
+      "rigorous_upper": {
+        "numerator": "1",
+        "denominator": "268435456",
+        "log2_display": -28.0
+      },
+      "printed_upper": {
+        "numerator": "27562871743413726344641472428913882824785",
+        "denominator": "115792089237316195423570985008687907853269984665640564039457584007913129639936",
+        "log2_display": -121.66014999592105
+      },
+      "ratio_lower_to_printed": {
+        "numerator": "28757276337831479497045464390023466562468780549229744394324328579072",
+        "denominator": "1837524782894248422976098161927592188319",
+        "log2_display": 93.66014999054659
+      },
+      "scope": "component PRG distinguishing only; not signature forgery; prior counterexample reused"
+    },
+    {
+      "name": "rain3_short",
+      "QI": "1",
+      "QP": "1267650600228229401496703205376",
+      "rigorous_lower": {
+        "numerator": "268435455",
+        "denominator": "72057594037927936",
+        "log2_display": -28.000000005374456
+      },
+      "rigorous_upper": {
+        "numerator": "1",
+        "denominator": "268435456",
+        "log2_display": -28.0
+      },
+      "printed_upper": {
+        "numerator": "27562871743413726344641472428913882824785",
+        "denominator": "115792089237316195423570985008687907853269984665640564039457584007913129639936",
+        "log2_display": -121.66014999592105
+      },
+      "ratio_lower_to_printed": {
+        "numerator": "28757276337831479497045464390023466562468780549229744394324328579072",
+        "denominator": "1837524782894248422976098161927592188319",
+        "log2_display": 93.66014999054659
+      },
+      "scope": "component PRG distinguishing only; not signature forgery; prior counterexample reused"
+    },
+    {
+      "name": "rain4_fast",
+      "QI": "1",
+      "QP": "1267650600228229401496703205376",
+      "rigorous_lower": {
+        "numerator": "268435455",
+        "denominator": "72057594037927936",
+        "log2_display": -28.000000005374456
+      },
+      "rigorous_upper": {
+        "numerator": "1",
+        "denominator": "268435456",
+        "log2_display": -28.0
+      },
+      "printed_upper": {
+        "numerator": "8507059179361714587725512193277721313305",
+        "denominator": "28948022309329048855892746252171976963317496166410141009864396001978282409984",
+        "log2_display": -121.35614380915038
+      },
+      "ratio_lower_to_printed": {
+        "numerator": "21567957253373609622784098292517599921851585411922308295743246434304",
+        "denominator": "1701411835872342917545102438655544262661",
+        "log2_display": 93.35614380377592
+      },
+      "scope": "component PRG distinguishing only; not signature forgery; prior counterexample reused"
+    },
+    {
+      "name": "rain4_bal",
+      "QI": "1",
+      "QP": "1267650600228229401496703205376",
+      "rigorous_lower": {
+        "numerator": "268435455",
+        "denominator": "72057594037927936",
+        "log2_display": -28.000000005374456
+      },
+      "rigorous_upper": {
+        "numerator": "1",
+        "denominator": "268435456",
+        "log2_display": -28.0
+      },
+      "printed_upper": {
+        "numerator": "8507059179361714587725512193277721313305",
+        "denominator": "28948022309329048855892746252171976963317496166410141009864396001978282409984",
+        "log2_display": -121.35614380915038
+      },
+      "ratio_lower_to_printed": {
+        "numerator": "21567957253373609622784098292517599921851585411922308295743246434304",
+        "denominator": "1701411835872342917545102438655544262661",
+        "log2_display": 93.35614380377592
+      },
+      "scope": "component PRG distinguishing only; not signature forgery; prior counterexample reused"
+    },
+    {
+      "name": "rain4_short",
+      "QI": "1",
+      "QP": "1267650600228229401496703205376",
+      "rigorous_lower": {
+        "numerator": "268435455",
+        "denominator": "72057594037927936",
+        "log2_display": -28.000000005374456
+      },
+      "rigorous_upper": {
+        "numerator": "1",
+        "denominator": "268435456",
+        "log2_display": -28.0
+      },
+      "printed_upper": {
+        "numerator": "8507059179361714587725512193277721313305",
+        "denominator": "28948022309329048855892746252171976963317496166410141009864396001978282409984",
+        "log2_display": -121.35614380915038
+      },
+      "ratio_lower_to_printed": {
+        "numerator": "21567957253373609622784098292517599921851585411922308295743246434304",
+        "denominator": "1701411835872342917545102438655544262661",
+        "log2_display": 93.35614380377592
+      },
+      "scope": "component PRG distinguishing only; not signature forgery; prior counterexample reused"
+    }
+  ],
+  "checks": [
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_00b_六组参数补充映射.md",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_01_P01_在线PPT提取器与正确性.md",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_02_P01_坏事件与自适应分析.md",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_03_P02_H3_ROM与无私钥模拟.md",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_04_独立反驳审查.md",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_05_EUFCMA_最终账本.md",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做04\\review_gate.json",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做05\\R1_精确账本\\ledger.json",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\.clang-format",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\.gitattributes",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\.gitignore",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\aes.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\aes_defs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\all.inc",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\api.cpp.in",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\api.h.in",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\api.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\aes_impl.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\aes_impl.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\block_impl.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\constants_impl.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\gfsmall_impl.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\polynomials_impl.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\transpose_impl.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\transpose_secpar_impl.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\block.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\constants.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\debug.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest.inc",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest_keys.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest_keys.inc",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\gfsmall.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\hash.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\LICENSE",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\meson.build",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\owf_proof.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\owf_proof.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\owf_proof.inc",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\owf_proof_tools.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\parameters.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\poly2d.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\polynomials.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\polynomials_constants.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\polynomials_constants.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\prgs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\quicksilver.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\rain_kat.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\rain_owf.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\rain_params.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\RAIN_PATCHES.json",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\rain_test.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\randomness.h",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\randomness_os.c",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\randomness_randombytes.c",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\README.md",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\sha3\\KeccakHashtimes4.c",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\sha3\\KeccakHashtimes4.h",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\sha3\\KeccakSpongetimes4.c",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\sha3\\KeccakSpongetimes4.h",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\sha3\\KeccakSpongetimes4.inc",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\small_vole.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\small_vole.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\small_vole.inc",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\subprojects\\catch2.wrap",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\subprojects\\packagefiles\\xkcp\\config.h",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\subprojects\\packagefiles\\xkcp\\meson.build",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\subprojects\\xkcp.wrap",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\bavc_tvs_from_ref.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\bench_api.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\bench_components.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\bench_leaf_hash.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\bench_variants.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\meson.build",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_aes.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_aes_tvs.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_aes_tvs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_bavc_tvs.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_bavc_tvs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest_experimental.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest_tvs.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest_tvs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest_v2_tvs.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest_v2_tvs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_gfsmall.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_gfsmall_tvs.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_gfsmall_tvs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_owf_proof.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_owf_proof_tools.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_parameters.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_polynomials.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_prg.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_prg_tvs.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_prg_tvs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_quicksilver.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_small_vole.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_transpose.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_universal_hash.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vector_com.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vole_commit.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vole_commit_tvs.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vole_commit_tvs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vole_commit_tvs_v2.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vole_commit_tvs_v2.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_witness.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_witness.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\vole_tvs_from_ref.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\api_test.c",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\Makefile",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\PQCgenKAT_sign.c",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\prepare_nist.py",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\rng.c",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\rng.h",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\transpose.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\transpose_secpar.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\universal_hash.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\util.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vector_com.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vector_com.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vector_com.inc",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_check.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_commit.cpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_commit.hpp",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_commit.inc",
+      "pass_": true
+    },
+    {
+      "label": "frozen:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_key_index_permutation.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\parameters.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\parameters.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\constants.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\constants.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\faest_keys.inc",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest_keys.inc",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\faest_keys.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest_keys.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\owf_proof.inc",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\owf_proof.inc",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\owf_proof.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\owf_proof.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\vole_check.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_check.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\quicksilver.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\quicksilver.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\hash.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\hash.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\prgs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\prgs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\vector_com.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vector_com.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\vector_com.inc",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vector_com.inc",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\vole_commit.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_commit.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\vole_commit.inc",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_commit.inc",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\small_vole.inc",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\small_vole.inc",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\faest.inc",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest.inc",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\faest.hpp",
+      "pass_": true
+    },
+    {
+      "label": "component:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest.hpp",
+      "pass_": true
+    },
+    {
+      "label": "paper identity",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:name",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:tau",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:g",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:D",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:B_bytes",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:k_low",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:n_low",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:k_high",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:n_high",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:N_total",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:N_max",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:witness_bits",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:QS_degree",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:constraints",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:LQS",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:VHash_bits",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:L_bits",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:tape_AES_blocks",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:signature_bytes",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:sign_AES",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:verify_AES",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:h1_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:h2_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:h3_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "ref_f:hybrid_path",
+      "pass_": true
+    },
+    {
+      "label": "ref_f: challenge dimension",
+      "pass_": true
+    },
+    {
+      "label": "ref_f: source API bytes integral",
+      "pass_": true
+    },
+    {
+      "label": "ref_f: lemma premise at QI=1, QP=2^100",
+      "pass_": true
+    },
+    {
+      "label": "ref_f: PRG printed bound contradicted",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:name",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:tau",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:g",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:D",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:B_bytes",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:k_low",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:n_low",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:k_high",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:n_high",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:N_total",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:N_max",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:witness_bits",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:QS_degree",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:constraints",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:LQS",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:VHash_bits",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:L_bits",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:tape_AES_blocks",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:signature_bytes",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:sign_AES",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:verify_AES",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:h1_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:h2_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:h3_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "ref_s:hybrid_path",
+      "pass_": true
+    },
+    {
+      "label": "ref_s: challenge dimension",
+      "pass_": true
+    },
+    {
+      "label": "ref_s: source API bytes integral",
+      "pass_": true
+    },
+    {
+      "label": "ref_s: lemma premise at QI=1, QP=2^100",
+      "pass_": true
+    },
+    {
+      "label": "ref_s: PRG printed bound contradicted",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:name",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:tau",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:g",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:D",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:B_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:k_low",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:n_low",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:k_high",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:n_high",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:N_total",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:N_max",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:witness_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:QS_degree",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:constraints",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:LQS",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:VHash_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:L_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:tape_AES_blocks",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:signature_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:sign_AES",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:verify_AES",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:h1_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:h2_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:h3_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast:hybrid_path",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast: challenge dimension",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast: source API bytes integral",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast: lemma premise at QI=1, QP=2^100",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast: PRG printed bound contradicted",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:name",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:tau",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:g",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:D",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:B_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:k_low",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:n_low",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:k_high",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:n_high",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:N_total",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:N_max",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:witness_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:QS_degree",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:constraints",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:LQS",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:VHash_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:L_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:tape_AES_blocks",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:signature_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:sign_AES",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:verify_AES",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:h1_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:h2_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:h3_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal:hybrid_path",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal: challenge dimension",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal: source API bytes integral",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal: lemma premise at QI=1, QP=2^100",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal: PRG printed bound contradicted",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:name",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:tau",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:g",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:D",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:B_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:k_low",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:n_low",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:k_high",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:n_high",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:N_total",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:N_max",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:witness_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:QS_degree",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:constraints",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:LQS",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:VHash_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:L_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:tape_AES_blocks",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:signature_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:sign_AES",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:verify_AES",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:h1_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:h2_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:h3_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short:hybrid_path",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short: challenge dimension",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short: source API bytes integral",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short: lemma premise at QI=1, QP=2^100",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short: PRG printed bound contradicted",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:name",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:tau",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:g",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:D",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:B_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:k_low",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:n_low",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:k_high",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:n_high",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:N_total",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:N_max",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:witness_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:QS_degree",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:constraints",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:LQS",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:VHash_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:L_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:tape_AES_blocks",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:signature_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:sign_AES",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:verify_AES",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:h1_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:h2_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:h3_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast:hybrid_path",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast: challenge dimension",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast: source API bytes integral",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast: lemma premise at QI=1, QP=2^100",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast: PRG printed bound contradicted",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:name",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:tau",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:g",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:D",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:B_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:k_low",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:n_low",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:k_high",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:n_high",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:N_total",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:N_max",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:witness_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:QS_degree",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:constraints",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:LQS",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:VHash_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:L_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:tape_AES_blocks",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:signature_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:sign_AES",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:verify_AES",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:h1_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:h2_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:h3_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal:hybrid_path",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal: challenge dimension",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal: source API bytes integral",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal: lemma premise at QI=1, QP=2^100",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal: PRG printed bound contradicted",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:name",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:tau",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:g",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:D",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:B_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:k_low",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:n_low",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:k_high",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:n_high",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:N_total",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:N_max",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:witness_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:QS_degree",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:constraints",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:LQS",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:VHash_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:L_bits",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:tape_AES_blocks",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:signature_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:sign_AES",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:verify_AES",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:h1_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:h2_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:h3_input_bytes",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short:hybrid_path",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short: challenge dimension",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short: source API bytes integral",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short: lemma premise at QI=1, QP=2^100",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short: PRG printed bound contradicted",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast: local coefficient <= ref_f:V_single",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast: local coefficient <= ref_f:V_pair_list",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast: local coefficient <= ref_f:Z_single",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast: local coefficient <= ref_f:fixed_target",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast: local coefficient <= ref_f:qs_roots",
+      "pass_": true
+    },
+    {
+      "label": "rain3_fast: local coefficient <= ref_f:conservative_challenge",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal: local coefficient <= ref_f:V_single",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal: local coefficient <= ref_f:V_pair_list",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal: local coefficient <= ref_f:Z_single",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal: local coefficient <= ref_f:fixed_target",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal: local coefficient <= ref_f:qs_roots",
+      "pass_": true
+    },
+    {
+      "label": "rain3_bal: local coefficient <= ref_f:conservative_challenge",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short: local coefficient <= ref_s:V_single",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short: local coefficient <= ref_s:V_pair_list",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short: local coefficient <= ref_s:Z_single",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short: local coefficient <= ref_s:fixed_target",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short: local coefficient <= ref_s:qs_roots",
+      "pass_": true
+    },
+    {
+      "label": "rain3_short: local coefficient <= ref_s:conservative_challenge",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast: local coefficient <= ref_f:V_single",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast: local coefficient <= ref_f:V_pair_list",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast: local coefficient <= ref_f:Z_single",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast: local coefficient <= ref_f:fixed_target",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast: local coefficient <= ref_f:qs_roots",
+      "pass_": true
+    },
+    {
+      "label": "rain4_fast: local coefficient <= ref_f:conservative_challenge",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal: local coefficient <= ref_f:V_single",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal: local coefficient <= ref_f:V_pair_list",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal: local coefficient <= ref_f:Z_single",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal: local coefficient <= ref_f:fixed_target",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal: local coefficient <= ref_f:qs_roots",
+      "pass_": true
+    },
+    {
+      "label": "rain4_bal: local coefficient <= ref_f:conservative_challenge",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short: local coefficient <= ref_s:V_single",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short: local coefficient <= ref_s:V_pair_list",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short: local coefficient <= ref_s:Z_single",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short: local coefficient <= ref_s:fixed_target",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short: local coefficient <= ref_s:qs_roots",
+      "pass_": true
+    },
+    {
+      "label": "rain4_short: local coefficient <= ref_s:conservative_challenge",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_00b_六组参数补充映射.md",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_01_P01_在线PPT提取器与正确性.md",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_02_P01_坏事件与自适应分析.md",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_03_P02_H3_ROM与无私钥模拟.md",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_04_独立反驳审查.md",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_05_EUFCMA_最终账本.md",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做04\\review_gate.json",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做05\\R1_精确账本\\ledger.json",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\.clang-format",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\.gitattributes",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\.gitignore",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\aes.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\aes_defs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\all.inc",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\api.cpp.in",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\api.h.in",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\api.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\aes_impl.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\aes_impl.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\block_impl.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\constants_impl.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\gfsmall_impl.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\polynomials_impl.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\transpose_impl.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\avx2\\transpose_secpar_impl.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\block.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\constants.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\debug.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest.inc",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest_keys.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest_keys.inc",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\gfsmall.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\hash.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\LICENSE",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\meson.build",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\owf_proof.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\owf_proof.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\owf_proof.inc",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\owf_proof_tools.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\parameters.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\poly2d.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\polynomials.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\polynomials_constants.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\polynomials_constants.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\prgs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\quicksilver.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\rain_kat.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\rain_owf.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\rain_params.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\RAIN_PATCHES.json",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\rain_test.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\randomness.h",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\randomness_os.c",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\randomness_randombytes.c",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\README.md",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\sha3\\KeccakHashtimes4.c",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\sha3\\KeccakHashtimes4.h",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\sha3\\KeccakSpongetimes4.c",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\sha3\\KeccakSpongetimes4.h",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\sha3\\KeccakSpongetimes4.inc",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\small_vole.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\small_vole.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\small_vole.inc",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\subprojects\\catch2.wrap",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\subprojects\\packagefiles\\xkcp\\config.h",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\subprojects\\packagefiles\\xkcp\\meson.build",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\subprojects\\xkcp.wrap",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\bavc_tvs_from_ref.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\bench_api.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\bench_components.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\bench_leaf_hash.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\bench_variants.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\meson.build",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_aes.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_aes_tvs.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_aes_tvs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_bavc_tvs.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_bavc_tvs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest_experimental.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest_tvs.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest_tvs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest_v2_tvs.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_faest_v2_tvs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_gfsmall.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_gfsmall_tvs.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_gfsmall_tvs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_owf_proof.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_owf_proof_tools.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_parameters.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_polynomials.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_prg.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_prg_tvs.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_prg_tvs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_quicksilver.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_small_vole.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_transpose.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_universal_hash.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vector_com.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vole_commit.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vole_commit_tvs.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vole_commit_tvs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vole_commit_tvs_v2.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_vole_commit_tvs_v2.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_witness.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\test_witness.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\test\\vole_tvs_from_ref.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\api_test.c",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\Makefile",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\PQCgenKAT_sign.c",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\prepare_nist.py",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\rng.c",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\tools\\rng.h",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\transpose.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\transpose_secpar.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\universal_hash.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\util.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vector_com.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vector_com.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vector_com.inc",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_check.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_commit.cpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_commit.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_commit.inc",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vole_key_index_permutation.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\parameters.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\constants.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\faest_keys.inc",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\faest_keys.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\owf_proof.inc",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\owf_proof.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\vole_check.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\quicksilver.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\hash.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\prgs.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\vector_com.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\vector_com.inc",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\vole_commit.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\vole_commit.inc",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\small_vole.inc",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\faest.inc",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\rfaest\\rFAEST\\faest.hpp",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\资料\\rFAEST_2025-1077_作者版.pdf",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\类别1核验_20261015\\原始数据\\输入快照.json",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\等强核验_rFAEST128_20261015\\独立核对\\组件与参数_证据.json",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\P0-3_Lemma3.6_反例严格核验.md",
+      "pass_": true
+    },
+    {
+      "label": "unchanged at exit:<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\类别1核验_20261015\\Rain分析\\Rain128_类别1核验.md",
+      "pass_": true
+    }
+  ],
+  "check_count": 581,
+  "all_checks_passed": true,
+  "full_signature_equivalence": "OPEN",
+  "full_forgery_below_nominal128": "NOT_ESTABLISHED",
+  "Rain_concrete_OWF_advantage": null,
+  "resources": {
+    "workload_wall_seconds": 0.26057269994635135,
+    "process_cpu_seconds": 0.125,
+    "process_limit": 1,
+    "processor_affinity": "0x1",
+    "processes": 1,
+    "elapsed_seconds": 0.105688,
+    "budget_seconds": 60,
+    "memory_limit_bytes": 536870912,
+    "peak_memory_bytes": 30593024,
+    "memory_metric": "max(peak working set, peak pagefile, private bytes)",
+    "enforcement": "cooperative checks per hash chunk, test group, and case",
+    "accounting_scope": "script body up to snapshot; excludes final output writing/process startup/exit; no native protocol execution"
+  }
+}

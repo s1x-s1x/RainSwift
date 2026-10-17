@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "cases": 24,
+  "boundary_checks": 2078,
+  "native_count_records": 12,
+  "resource_usage": {
+    "processes": 1,
+    "elapsed_seconds": 0.182987,
+    "budget_seconds": 120,
+    "memory_limit_bytes": 536870912,
+    "peak_memory_bytes": 34910208,
+    "memory_metric": "max(peak working set, peak pagefile, private bytes)",
+    "enforcement": "cooperative checks per hash chunk, test group, and case"
+  },
+  "output": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做05\\R1_精确账本",
+  "ledger_sha256": "ffe907b341f641a0812d1b14ed988dc72d32f26809013febde502a0b7f4fd92f",
+  "end_utc": "2026-10-14T16:18:07.679894+00:00"
+}

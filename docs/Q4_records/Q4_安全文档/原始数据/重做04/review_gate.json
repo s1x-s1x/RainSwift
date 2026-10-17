@@ -1,0 +1,94 @@
+{
+  "schema": "q4-review-gate-v1",
+  "status": "PASS",
+  "review_kind": "internal_ai",
+  "approved_at_utc": "2026-10-14T14:22:26.263384+00:00",
+  "scope": "fixed single parameter and public key; classical ROM and ideal cipher; conditional auxiliary-IC Rain OWF reduction; numeric strength separate",
+  "stages": {
+    "00b": "PASS",
+    "01": "PASS",
+    "02": "PASS",
+    "03": "PASS",
+    "04": "PASS"
+  },
+  "files": [
+    {
+      "id": "00b",
+      "path": "Q4_重做_00b_六组参数补充映射.md",
+      "sha256": "6354ad7688aee0f0bceef3c56d0195c6ed92f6d45ddbc16fc0af69129aee30e1"
+    },
+    {
+      "id": "01",
+      "path": "Q4_重做_01_P01_在线PPT提取器与正确性.md",
+      "sha256": "453e11c2dfb3a300720019bd045e024f01b612604255051b47d51f97af8e9060"
+    },
+    {
+      "id": "02",
+      "path": "Q4_重做_02_P01_坏事件与自适应分析.md",
+      "sha256": "a7ec740da63ac5660caa56d3d1273636d333237e034665fd2dd04e7b601bc36e"
+    },
+    {
+      "id": "03",
+      "path": "Q4_重做_03_P02_H3_ROM与无私钥模拟.md",
+      "sha256": "949f4d9ba04d3d4943d1d8533e76c5bec980c2720d6cf07348c2c7f007785619"
+    },
+    {
+      "id": "review_p01_initial",
+      "path": "研究札记_20261014/独立审查/P01/P01_内部独立反驳审查_v1.md",
+      "sha256": "d74695a179185496ec726d6d4e0b868f5e3836f43628a54cc1a104774bc4e2ac"
+    },
+    {
+      "id": "review_p01",
+      "path": "研究札记_20261014/独立审查/P01/P01_最终接口追加审查_v2.md",
+      "sha256": "d7cf09a45cb5f779c02736f0247aab2a4ed5c3ecfa41e14ab5d6f89aa723604d"
+    },
+    {
+      "id": "review_p02",
+      "path": "研究札记_20261014/独立审查/P02/P02_内部独立反驳审查_v1.md",
+      "sha256": "3c837f776fb60ef2db45ee527c837a86d19cfb343d0416687af42308cb2401a9"
+    },
+    {
+      "id": "review_p02_manifest",
+      "path": "研究札记_20261014/独立审查/P02/P02_审查输入_SHA256_v1.json",
+      "sha256": "154edf251a1463be10de128fa509ae9aa6853d0a4a7f1f23fa80b8bb40d2a7fd"
+    },
+    {
+      "id": "simulator",
+      "path": "研究札记_20261014/H3模拟/pk_only_simulator.py",
+      "sha256": "f77c1e598a2148b9b64de75f74832dc1879988f063af9adb22d214f5885ad205"
+    },
+    {
+      "id": "simulator_native",
+      "path": "研究札记_20261014/H3模拟/pk_only_native.cpp",
+      "sha256": "ca9492d9d90cf34469102d60ea2e5c1d3b4c6c01443be5b48474958996df9b4e"
+    },
+    {
+      "id": "sim_R3",
+      "path": "研究札记_20261014/H3模拟/运行_R3/summary.json",
+      "sha256": "408e5841290fe4253ef2771a1dd94a6ce6b4e0c1959c1a444a74d46120306ef4"
+    },
+    {
+      "id": "r6_counts",
+      "path": "原始数据/重做00b/R6_六组AES调用计数/run_metadata.json",
+      "sha256": "f567016328f9fbcae9c117e5fb6d3e200555f940a0567399f9eadf859767579a"
+    },
+    {
+      "id": "source_manifest_00b",
+      "path": "原始数据/重做00b/R5_六组映射与见证/source_sha256_before.json",
+      "sha256": "f0c9c1d183c878a5c26080d46c9efcab8a3b425e827cd3ea981ee09de6d1bf9a"
+    },
+    {
+      "id": "source_check_04",
+      "path": "原始数据/重做04/冻结源码校验.json",
+      "sha256": "f6f927b1cc38c7a02cb2b26273eabb441dfa34c7e01588dc488bbdd2fdb0149f"
+    },
+    {
+      "id": "04",
+      "path": "Q4_重做_04_独立反驳审查.md",
+      "sha256": "38bf430c29d71565aa66761ec559fb92bd3928a887f1caa1fda70d2df728b0bb"
+    }
+  ],
+  "source_check_status": "120 unchanged files",
+  "unresolved_critical_proof_findings": 0,
+  "external_peer_review": false
+}

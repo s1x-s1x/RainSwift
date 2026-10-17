@@ -1,0 +1,1087 @@
+{
+  "status": "PASS",
+  "checks": 132,
+  "failed": 0,
+  "stage": "00b source/protocol mapping only; no security conclusion",
+  "timestamp_utc": "2026-10-14T11:29:31.980417+00:00",
+  "elapsed_seconds": 0.115,
+  "inputs": {
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R0_Rain3回归\\r00_dump.json": "1deb2aa92d4462efd3309761494c10086e10af703734be390d45dbcd0dddeb26",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\r00b_dump.json": "25afea1ac434b6f663cfa3b1ad8b2e42952db4338f9e2b00ffc74403c7f8486c",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q1_实例冻结\\Q1_冻结参数.json": "0b849bfbc1fe64b39165c509961d375629e075ef146983983ea9431734598dad",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\脚本\\重做00b\\audit_six_sets.py": "d4792526a6f28d1991f8ab5a62bb4ba8f7f7dd54c1bda26adabeaf529aa60cb4"
+  },
+  "source_files": 120,
+  "tables": [
+    {
+      "set": "rain3_fast",
+      "R": 3,
+      "tau": 21,
+      "w": 5,
+      "D": 123,
+      "heights": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        5,
+        5,
+        5
+      ],
+      "leaves_per_tree": [
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        32,
+        32,
+        32
+      ],
+      "N_total": 1248,
+      "N_max": 64,
+      "witness_bits": 384,
+      "qs_rows": 512,
+      "vole_rows": 688,
+      "tape_AES_blocks": 6,
+      "storage_bytes": 96,
+      "logical_tape_bytes": 86,
+      "corrections_bytes": 1720,
+      "open_bytes": 2304,
+      "signature_bytes": 4146,
+      "h_leaf_input_lengths": [
+        513,
+        1025
+      ],
+      "h_com_input_length": 673,
+      "chall1_input_length": 1801,
+      "chall2_input_length": 2975,
+      "chall3_input_length": 93,
+      "max_structural_tweak": 164,
+      "sign_AES_logical_calls": 11211,
+      "verify_AES_logical_calls": 10797,
+      "verify_AES_executed_calls": 10818,
+      "verify_discarded_zero_key_commitment_calls": 21,
+      "cases": 4
+    },
+    {
+      "set": "rain3_bal",
+      "R": 3,
+      "tau": 17,
+      "w": 7,
+      "D": 121,
+      "heights": [
+        8,
+        8,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "leaves_per_tree": [
+        256,
+        256,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+      ],
+      "N_total": 2432,
+      "N_max": 256,
+      "witness_bits": 384,
+      "qs_rows": 512,
+      "vole_rows": 688,
+      "tape_AES_blocks": 6,
+      "storage_bytes": 96,
+      "logical_tape_bytes": 86,
+      "corrections_bytes": 1376,
+      "open_bytes": 2208,
+      "signature_bytes": 3706,
+      "h_leaf_input_lengths": [
+        2049,
+        4097
+      ],
+      "h_com_input_length": 545,
+      "chall1_input_length": 1457,
+      "chall2_input_length": 2975,
+      "chall3_input_length": 93,
+      "max_structural_tweak": 154,
+      "sign_AES_logical_calls": 21871,
+      "verify_AES_logical_calls": 21493,
+      "verify_AES_executed_calls": 21510,
+      "verify_discarded_zero_key_commitment_calls": 17,
+      "cases": 3
+    },
+    {
+      "set": "rain3_short",
+      "R": 3,
+      "tau": 11,
+      "w": 12,
+      "D": 116,
+      "heights": [
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "leaves_per_tree": [
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "N_total": 17408,
+      "N_max": 2048,
+      "witness_bits": 384,
+      "qs_rows": 512,
+      "vole_rows": 688,
+      "tape_AES_blocks": 6,
+      "storage_bytes": 96,
+      "logical_tape_bytes": 86,
+      "corrections_bytes": 860,
+      "open_bytes": 2032,
+      "signature_bytes": 3014,
+      "h_leaf_input_lengths": [
+        16385,
+        32769
+      ],
+      "h_com_input_length": 353,
+      "chall1_input_length": 941,
+      "chall2_input_length": 2975,
+      "chall3_input_length": 93,
+      "max_structural_tweak": 137,
+      "sign_AES_logical_calls": 156661,
+      "verify_AES_logical_calls": 156341,
+      "verify_AES_executed_calls": 156352,
+      "verify_discarded_zero_key_commitment_calls": 11,
+      "cases": 2
+    },
+    {
+      "set": "rain4_fast",
+      "R": 4,
+      "tau": 18,
+      "w": 6,
+      "D": 122,
+      "heights": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        6,
+        6,
+        6,
+        6
+      ],
+      "leaves_per_tree": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        64,
+        64,
+        64,
+        64
+      ],
+      "N_total": 2048,
+      "N_max": 128,
+      "witness_bits": 512,
+      "qs_rows": 640,
+      "vole_rows": 816,
+      "tape_AES_blocks": 7,
+      "storage_bytes": 112,
+      "logical_tape_bytes": 102,
+      "corrections_bytes": 1734,
+      "open_bytes": 2240,
+      "signature_bytes": 4112,
+      "h_leaf_input_lengths": [
+        1025,
+        2049
+      ],
+      "h_com_input_length": 577,
+      "chall1_input_length": 1815,
+      "chall2_input_length": 2991,
+      "chall3_input_length": 93,
+      "max_structural_tweak": 157,
+      "sign_AES_logical_calls": 20462,
+      "verify_AES_logical_calls": 20056,
+      "verify_AES_executed_calls": 20074,
+      "verify_discarded_zero_key_commitment_calls": 18,
+      "cases": 3
+    },
+    {
+      "set": "rain4_bal",
+      "R": 4,
+      "tau": 18,
+      "w": 8,
+      "D": 120,
+      "heights": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "leaves_per_tree": [
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64
+      ],
+      "N_total": 1920,
+      "N_max": 128,
+      "witness_bits": 512,
+      "qs_rows": 640,
+      "vole_rows": 816,
+      "tape_AES_blocks": 7,
+      "storage_bytes": 112,
+      "logical_tape_bytes": 102,
+      "corrections_bytes": 1734,
+      "open_bytes": 2208,
+      "signature_bytes": 4080,
+      "h_leaf_input_lengths": [
+        1025,
+        2049
+      ],
+      "h_com_input_length": 577,
+      "chall1_input_length": 1815,
+      "chall2_input_length": 2991,
+      "chall3_input_length": 93,
+      "max_structural_tweak": 155,
+      "sign_AES_logical_calls": 19182,
+      "verify_AES_logical_calls": 18780,
+      "verify_AES_executed_calls": 18798,
+      "verify_discarded_zero_key_commitment_calls": 18,
+      "cases": 3
+    },
+    {
+      "set": "rain4_short",
+      "R": 4,
+      "tau": 11,
+      "w": 12,
+      "D": 116,
+      "heights": [
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "leaves_per_tree": [
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        2048,
+        1024,
+        1024,
+        1024,
+        1024,
+        1024
+      ],
+      "N_total": 17408,
+      "N_max": 2048,
+      "witness_bits": 512,
+      "qs_rows": 640,
+      "vole_rows": 816,
+      "tape_AES_blocks": 7,
+      "storage_bytes": 112,
+      "logical_tape_bytes": 102,
+      "corrections_bytes": 1020,
+      "open_bytes": 2032,
+      "signature_bytes": 3190,
+      "h_leaf_input_lengths": [
+        16385,
+        32769
+      ],
+      "h_com_input_length": 353,
+      "chall1_input_length": 1101,
+      "chall2_input_length": 2991,
+      "chall3_input_length": 93,
+      "max_structural_tweak": 137,
+      "sign_AES_logical_calls": 174069,
+      "verify_AES_logical_calls": 173738,
+      "verify_AES_executed_calls": 173749,
+      "verify_discarded_zero_key_commitment_calls": 11,
+      "cases": 3
+    }
+  ],
+  "records": [
+    {
+      "check": "all six exact AES-CTR/GGM template specializations present",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Rain uses B_bytes=6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "active leaf-hash specialization explicitly ignores small_tweak",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen source PSI equals Q1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen source RC_P3 equals Q1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen source MC_P3 equals Q1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen source RC_P4 equals Q1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen source MC_P4 equals Q1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "18 native instances, six parameter names",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast: root/tree-depth/commit/tape role tweaks disjoint within fixed IV",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast: Q1 frozen leaves and signature bytes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast: two tag-01 hash roles have disjoint input lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast: includes randomized and deterministic native cases",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#0: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#0: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#0: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#0: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#0: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#0: actual mask rows are identity at independently computed offset",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#1: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#1: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#1: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#1: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#1: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#2: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#2: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#2: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#2: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#2: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#3det: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#3det: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#3det: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#3det: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_fast#3det: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal: root/tree-depth/commit/tape role tweaks disjoint within fixed IV",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal: Q1 frozen leaves and signature bytes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal: two tag-01 hash roles have disjoint input lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal: includes randomized and deterministic native cases",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#0: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#0: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#0: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#0: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#0: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#0: actual mask rows are identity at independently computed offset",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#1: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#1: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#1: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#1: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#1: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#2det: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#2det: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#2det: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#2det: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_bal#2det: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_short: root/tree-depth/commit/tape role tweaks disjoint within fixed IV",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_short: Q1 frozen leaves and signature bytes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_short: two tag-01 hash roles have disjoint input lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_short: includes randomized and deterministic native cases",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_short#0: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_short#0: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_short#0: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_short#0: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_short#0: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_short#0: actual mask rows are identity at independently computed offset",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_short#1det: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_short#1det: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_short#1det: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_short#1det: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain3_short#1det: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast: root/tree-depth/commit/tape role tweaks disjoint within fixed IV",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast: Q1 frozen leaves and signature bytes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast: two tag-01 hash roles have disjoint input lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast: includes randomized and deterministic native cases",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#0: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#0: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#0: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#0: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#0: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#0: actual mask rows are identity at independently computed offset",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#1: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#1: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#1: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#1: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#1: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#2det: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#2det: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#2det: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#2det: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_fast#2det: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal: root/tree-depth/commit/tape role tweaks disjoint within fixed IV",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal: Q1 frozen leaves and signature bytes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal: two tag-01 hash roles have disjoint input lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal: includes randomized and deterministic native cases",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#0: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#0: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#0: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#0: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#0: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#0: actual mask rows are identity at independently computed offset",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#1: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#1: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#1: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#1: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#1: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#2det: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#2det: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#2det: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#2det: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_bal#2det: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short: root/tree-depth/commit/tape role tweaks disjoint within fixed IV",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short: Q1 frozen leaves and signature bytes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short: two tag-01 hash roles have disjoint input lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short: includes randomized and deterministic native cases",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#0: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#0: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#0: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#0: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#0: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#0: actual mask rows are identity at independently computed offset",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#1: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#1: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#1: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#1: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#1: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#2det: compiled constants equal independently derived dimensions",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#2det: independent Rain forward equals public key",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#2det: witness is polynomial-basis k,y0,...,y_(R-2)",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#2det: every one of R nonzero inverse constraints x_r*y_r=1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rain4_short#2det: serialized hash and column lengths",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all six sets: tag-01 leaf/outer hash roles length-separated",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all frozen source paths and bytes unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native Rain4 build source hashes equal current frozen source",
+      "pass": true,
+      "detail": null
+    }
+  ]
+}

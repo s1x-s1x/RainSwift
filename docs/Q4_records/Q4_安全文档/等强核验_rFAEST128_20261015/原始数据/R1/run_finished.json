@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checks": 581,
+  "result_sha256": "95d51a32392ebc88bc3e9eba33c3efd37d7e689735ff5a397be846a20aafa8db",
+  "workload_wall_seconds": 0.26057269994635135,
+  "process_cpu_seconds": 0.125,
+  "resources": {
+    "workload_wall_seconds": 0.26057269994635135,
+    "process_cpu_seconds": 0.125,
+    "process_limit": 1,
+    "processor_affinity": "0x1",
+    "processes": 1,
+    "elapsed_seconds": 0.105688,
+    "budget_seconds": 60,
+    "memory_limit_bytes": 536870912,
+    "peak_memory_bytes": 30593024,
+    "memory_metric": "max(peak working set, peak pagefile, private bytes)",
+    "enforcement": "cooperative checks per hash chunk, test group, and case",
+    "accounting_scope": "script body up to snapshot; excludes final output writing/process startup/exit; no native protocol execution"
+  },
+  "finished_utc": "2026-10-14T19:44:12.592371+00:00",
+  "full_signature_equivalence": "OPEN"
+}

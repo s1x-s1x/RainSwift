@@ -1,0 +1,1018 @@
+{
+  "Reviewer": "refutation_p02",
+  "Kind": "AI internal independent review; file verification only",
+  "Created": "2026-10-14T22:02:53.6437678+08:00",
+  "Scope": "fixed six instances separately, full keyspace, B_bytes=6; classical ROM and ideal cipher; no P0-4 computation",
+  "Inputs": [
+    {
+      "Path": "<工作区>\\比赛资料\\任务书\\Q4_P01_P02_安全证明推倒重做_执行任务书.md",
+      "Bytes": 18504,
+      "SHA256": "13b944be359bd328a7905e85cfd8a6fc0cb5aaedb023724449893f2463c54587"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_00b_六组参数补充映射.md",
+      "Bytes": 26922,
+      "SHA256": "6354ad7688aee0f0bceef3c56d0195c6ed92f6d45ddbc16fc0af69129aee30e1"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_01_P01_在线PPT提取器与正确性.md",
+      "Bytes": 17483,
+      "SHA256": "453e11c2dfb3a300720019bd045e024f01b612604255051b47d51f97af8e9060"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_02_P01_坏事件与自适应分析.md",
+      "Bytes": 15435,
+      "SHA256": "a7ec740da63ac5660caa56d3d1273636d333237e034665fd2dd04e7b601bc36e"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\Q4_重做_03_P02_H3_ROM与无私钥模拟.md",
+      "Bytes": 21533,
+      "SHA256": "949f4d9ba04d3d4943d1d8533e76c5bec980c2720d6cf07348c2c7f007785619"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\资料\\rFAEST_2025-1077_作者版.pdf",
+      "Bytes": 792565,
+      "SHA256": "515cd5949e714df7cadab994528462f3f0dba6e559914c77a1d766aab2ea5646"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\资料\\faest-spec-v2.0.pdf",
+      "Bytes": 1237694,
+      "SHA256": "37ab53a919b1aca9ac90771519a0caa08592eb4cb2a0e3bc118b5e3014b52dad"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest.inc",
+      "Bytes": 11957,
+      "SHA256": "96bb384c2c26b3d9fdcf76ea623e98b5f5cf39e1f709fcfcefe5b0190c343b8b"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\api.hpp",
+      "Bytes": 2242,
+      "SHA256": "907d80abf9cfec2868225820e34b2c4828f7dcde3a896724ac0fb4aba85f76da"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\faest_keys.inc",
+      "Bytes": 15573,
+      "SHA256": "a4180f23f14cd4f02c74481989c87317f1dbf964b68320068012ec42ed026bb2"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\vector_com.inc",
+      "Bytes": 49654,
+      "SHA256": "592e535f23ce6c940d99459355871918f0b2abe1277a58a0e82b2fa31f5ca56d"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\quicksilver.hpp",
+      "Bytes": 31087,
+      "SHA256": "283d9e6eecbfb89f8e58ce78ab7969801c4894ca2648f61407f30b17b1621132"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\源码\\rain-voleith\\parameters.hpp",
+      "Bytes": 14474,
+      "SHA256": "9566c9b1efb1a7015220eee0e83e7fcc8b8ea465820af7a5eb9c7869e5b881c7"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\pk_only_simulator.py",
+      "Bytes": 11727,
+      "SHA256": "f77c1e598a2148b9b64de75f74832dc1879988f063af9adb22d214f5885ad205"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\pk_only_simulator.py.R2.py.bak",
+      "Bytes": 11737,
+      "SHA256": "797cd20a5927b071bc459a58f688d69ed676ec81a4b4517ec8ebbc45ba4a70b5"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\pk_only_native.cpp",
+      "Bytes": 5487,
+      "SHA256": "ca9492d9d90cf34469102d60ea2e5c1d3b4c6c01443be5b48474958996df9b4e"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\build_pk_only_native.py",
+      "Bytes": 2568,
+      "SHA256": "808d84fecfb4574fc5e97ab5077da0ef04d33b409d754bcfecf148f69041a94f"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\H3与无私钥模拟_完整研究稿.md",
+      "Bytes": 22744,
+      "SHA256": "f5ea267fceb77ef72d57365f73bcb91e96c21ab958d07e255d8095c7d6eadcce"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\native_build\\pk_only_native.dll",
+      "Bytes": 865792,
+      "SHA256": "15c24627228ca98d6439ae80a83a1a78cab78f0ae8452e70a6c7ca23bbdde05c"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\native_build\\build_record.json",
+      "Bytes": 16879,
+      "SHA256": "1488a71d0676470837be0cca552e234370e3a22d48dcc268d86f4cfb77329b41"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\交付SHA256_R3.txt",
+      "Bytes": 659,
+      "SHA256": "2802e6c8fb970e2eabe3d7e6bc634b181607218670b16be7f63fc899c0d4632e"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\运行_R3\\SHA256SUMS.txt",
+      "Bytes": 1100,
+      "SHA256": "1eabd76d81cb7e7a0c573470882758e9e1fc9fff092df445521076698a293c76"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\独立审查\\P02\\P02_初审问题与反例_v1.md",
+      "Bytes": 6370,
+      "SHA256": "4d7db42de2b48c8fab9cffd1726db162b51a7b2f09936de39bb252908b885bf8"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\独立审查\\P02\\反例尝试_联合掩码与grinding.py",
+      "Bytes": 5193,
+      "SHA256": "e47f85b1e10b46b04577669a21e944f9341be06c617d9a15aa1dda0a40f2a3bc"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\独立审查\\P02\\原始数据\\联合掩码与grinding_20261014.json",
+      "Bytes": 1337,
+      "SHA256": "ab6efc9b17a9b6eb4c15d0039e5b61f635573704469ba09c9d9cd9e68e91dcfb"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\独立审查\\P02\\原文页图\\rFAEST_2025-1077_作者版_p20.png",
+      "Bytes": 195780,
+      "SHA256": "417dbd56681a7bfbb6fbf938c3def5d1744fee61c3860132dd45c185d86be676"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\独立审查\\P02\\原文页图\\faest-spec-v2.0_p94.png",
+      "Bytes": 180141,
+      "SHA256": "17b642da7a8c95962e568e38a37e8936db01332b2a3a954233a87aa8b1e9f244"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\独立审查\\P02\\原文页图\\faest-spec-v2.0_p95.png",
+      "Bytes": 149946,
+      "SHA256": "8e998c244d6de77965c43bd5284743ac71e6fd47378d2a393efe79ac29cce01a"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\运行_R3\\rain3_bal.json",
+      "Bytes": 70510,
+      "SHA256": "4de8ee2a49e3ed923f3a13905590dee58df400dc669e9fd1c78cbe66fa95df4d"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\运行_R3\\rain3_bal.rom.json",
+      "Bytes": 637815,
+      "SHA256": "9df9cf82ce6c8377f919ed97a482a5b972628f898efdf6bbd60db2e4a9964b3f"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\运行_R3\\rain3_fast.json",
+      "Bytes": 76776,
+      "SHA256": "30e04d1b9fa1e6239191d62ca9e3fb23cab02d68a3ac5d5c90b009bd3346183b"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\运行_R3\\rain3_fast.rom.json",
+      "Bytes": 398777,
+      "SHA256": "cac1735353fa113bdfc32f73b685494d930f8cea35a7704af35964769ba25bea"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\运行_R3\\rain3_short.json",
+      "Bytes": 60867,
+      "SHA256": "bf5a03cab541d2820bd34b485692ee8558554d47809904147905b310b89579c3"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\运行_R3\\rain3_short.rom.json",
+      "Bytes": 6815631,
+      "SHA256": "edcbb0dce55d2d901a8641024fa77b6939ac10b0666ec79d62d1d27352aff829"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\运行_R3\\rain4_bal.json",
+      "Bytes": 76499,
+      "SHA256": "ba201cf9d6c5fd0d8e97b448187cdbe08301739a2e972a78ec08f50ed5e34c03"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\运行_R3\\rain4_bal.rom.json",
+      "Bytes": 717469,
+      "SHA256": "5176039079e5b9a138baffaa443ac942cd7f81ea3d8c842d2de2882a32ccd157"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\运行_R3\\rain4_fast.json",
+      "Bytes": 76746,
+      "SHA256": "12608ca598519b72170e41c8f182445b6ad12f2b45a9e51133a0ebcd0e048074"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\运行_R3\\rain4_fast.rom.json",
+      "Bytes": 509665,
+      "SHA256": "2ed664fdcb3e5beb0503e3d1539bc5bf545ebbd4d9cacdebee28246d1711f111"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\运行_R3\\rain4_short.json",
+      "Bytes": 63689,
+      "SHA256": "024fbc5c386a2c90fdaa89f26e5fc8199794030548cedc4cff112d7ae6cf95be"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\运行_R3\\rain4_short.rom.json",
+      "Bytes": 8461033,
+      "SHA256": "9bf53a4a056ce11520070410a6ad5920e22c4b12a4d83d1c78cf09370d77007a"
+    },
+    {
+      "Path": "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\研究札记_20261014\\H3模拟\\运行_R3\\summary.json",
+      "Bytes": 7077,
+      "SHA256": "408e5841290fe4253ef2771a1dd94a6ce6b4e0c1959c1a444a74d46120306ef4"
+    }
+  ],
+  "R3ManifestChecks": [
+    {
+      "File": "rain3_bal.json",
+      "Expected": "4de8ee2a49e3ed923f3a13905590dee58df400dc669e9fd1c78cbe66fa95df4d",
+      "Actual": "4de8ee2a49e3ed923f3a13905590dee58df400dc669e9fd1c78cbe66fa95df4d",
+      "Pass": true
+    },
+    {
+      "File": "rain3_bal.rom.json",
+      "Expected": "9df9cf82ce6c8377f919ed97a482a5b972628f898efdf6bbd60db2e4a9964b3f",
+      "Actual": "9df9cf82ce6c8377f919ed97a482a5b972628f898efdf6bbd60db2e4a9964b3f",
+      "Pass": true
+    },
+    {
+      "File": "rain3_fast.json",
+      "Expected": "30e04d1b9fa1e6239191d62ca9e3fb23cab02d68a3ac5d5c90b009bd3346183b",
+      "Actual": "30e04d1b9fa1e6239191d62ca9e3fb23cab02d68a3ac5d5c90b009bd3346183b",
+      "Pass": true
+    },
+    {
+      "File": "rain3_fast.rom.json",
+      "Expected": "cac1735353fa113bdfc32f73b685494d930f8cea35a7704af35964769ba25bea",
+      "Actual": "cac1735353fa113bdfc32f73b685494d930f8cea35a7704af35964769ba25bea",
+      "Pass": true
+    },
+    {
+      "File": "rain3_short.json",
+      "Expected": "bf5a03cab541d2820bd34b485692ee8558554d47809904147905b310b89579c3",
+      "Actual": "bf5a03cab541d2820bd34b485692ee8558554d47809904147905b310b89579c3",
+      "Pass": true
+    },
+    {
+      "File": "rain3_short.rom.json",
+      "Expected": "edcbb0dce55d2d901a8641024fa77b6939ac10b0666ec79d62d1d27352aff829",
+      "Actual": "edcbb0dce55d2d901a8641024fa77b6939ac10b0666ec79d62d1d27352aff829",
+      "Pass": true
+    },
+    {
+      "File": "rain4_bal.json",
+      "Expected": "ba201cf9d6c5fd0d8e97b448187cdbe08301739a2e972a78ec08f50ed5e34c03",
+      "Actual": "ba201cf9d6c5fd0d8e97b448187cdbe08301739a2e972a78ec08f50ed5e34c03",
+      "Pass": true
+    },
+    {
+      "File": "rain4_bal.rom.json",
+      "Expected": "5176039079e5b9a138baffaa443ac942cd7f81ea3d8c842d2de2882a32ccd157",
+      "Actual": "5176039079e5b9a138baffaa443ac942cd7f81ea3d8c842d2de2882a32ccd157",
+      "Pass": true
+    },
+    {
+      "File": "rain4_fast.json",
+      "Expected": "12608ca598519b72170e41c8f182445b6ad12f2b45a9e51133a0ebcd0e048074",
+      "Actual": "12608ca598519b72170e41c8f182445b6ad12f2b45a9e51133a0ebcd0e048074",
+      "Pass": true
+    },
+    {
+      "File": "rain4_fast.rom.json",
+      "Expected": "2ed664fdcb3e5beb0503e3d1539bc5bf545ebbd4d9cacdebee28246d1711f111",
+      "Actual": "2ed664fdcb3e5beb0503e3d1539bc5bf545ebbd4d9cacdebee28246d1711f111",
+      "Pass": true
+    },
+    {
+      "File": "rain4_short.json",
+      "Expected": "024fbc5c386a2c90fdaa89f26e5fc8199794030548cedc4cff112d7ae6cf95be",
+      "Actual": "024fbc5c386a2c90fdaa89f26e5fc8199794030548cedc4cff112d7ae6cf95be",
+      "Pass": true
+    },
+    {
+      "File": "rain4_short.rom.json",
+      "Expected": "9bf53a4a056ce11520070410a6ad5920e22c4b12a4d83d1c78cf09370d77007a",
+      "Actual": "9bf53a4a056ce11520070410a6ad5920e22c4b12a4d83d1c78cf09370d77007a",
+      "Pass": true
+    },
+    {
+      "File": "summary.json",
+      "Expected": "408e5841290fe4253ef2771a1dd94a6ce6b4e0c1959c1a444a74d46120306ef4",
+      "Actual": "408e5841290fe4253ef2771a1dd94a6ce6b4e0c1959c1a444a74d46120306ef4",
+      "Pass": true
+    }
+  ],
+  "FrozenSourceAgainstNativeBuild": [
+    {
+      "File": ".clang-format",
+      "Expected": "ad1e91437272c8f80bf39e8ebdbdbb01cc48ef2e3a65d4ea11aa6408733a9443",
+      "Actual": "ad1e91437272c8f80bf39e8ebdbdbb01cc48ef2e3a65d4ea11aa6408733a9443",
+      "Pass": true
+    },
+    {
+      "File": ".gitattributes",
+      "Expected": "be85c70b007d05c4443905c463d38d339cae60a05636f906ad118781439e8a9d",
+      "Actual": "be85c70b007d05c4443905c463d38d339cae60a05636f906ad118781439e8a9d",
+      "Pass": true
+    },
+    {
+      "File": ".gitignore",
+      "Expected": "56f2d6b63f624dd6ff6ea5524119d4e739bcb797949980d4998058958e430a3a",
+      "Actual": "56f2d6b63f624dd6ff6ea5524119d4e739bcb797949980d4998058958e430a3a",
+      "Pass": true
+    },
+    {
+      "File": "aes.hpp",
+      "Expected": "8279f8b18f1e1b52990edd88824160d4cfd9eaf26281e6b39b8b9447180dcde7",
+      "Actual": "8279f8b18f1e1b52990edd88824160d4cfd9eaf26281e6b39b8b9447180dcde7",
+      "Pass": true
+    },
+    {
+      "File": "aes_defs.hpp",
+      "Expected": "5df8a01dac1e8dcb77597f8bedb533cba2c42e1fa4368fe1962eee1a916e1e05",
+      "Actual": "5df8a01dac1e8dcb77597f8bedb533cba2c42e1fa4368fe1962eee1a916e1e05",
+      "Pass": true
+    },
+    {
+      "File": "all.inc",
+      "Expected": "43a72427620940f38870721cc7174dfc5e82136573dcdb4f020a84dfca8dfe5c",
+      "Actual": "43a72427620940f38870721cc7174dfc5e82136573dcdb4f020a84dfca8dfe5c",
+      "Pass": true
+    },
+    {
+      "File": "api.cpp.in",
+      "Expected": "09adb484dd296a48dd42923cf35c54e67833751ca89a098f20e1e0701a3ac31f",
+      "Actual": "09adb484dd296a48dd42923cf35c54e67833751ca89a098f20e1e0701a3ac31f",
+      "Pass": true
+    },
+    {
+      "File": "api.h.in",
+      "Expected": "3375c9eccf9ce1e424408cc1f652ccdfc2343321f687b0f53e98171c59c2c49b",
+      "Actual": "3375c9eccf9ce1e424408cc1f652ccdfc2343321f687b0f53e98171c59c2c49b",
+      "Pass": true
+    },
+    {
+      "File": "api.hpp",
+      "Expected": "907d80abf9cfec2868225820e34b2c4828f7dcde3a896724ac0fb4aba85f76da",
+      "Actual": "907d80abf9cfec2868225820e34b2c4828f7dcde3a896724ac0fb4aba85f76da",
+      "Pass": true
+    },
+    {
+      "File": "block.hpp",
+      "Expected": "fc2c67397892019607fb37a09dc1bc330b52bb7ce6a4356111aabedbd8b569ab",
+      "Actual": "fc2c67397892019607fb37a09dc1bc330b52bb7ce6a4356111aabedbd8b569ab",
+      "Pass": true
+    },
+    {
+      "File": "constants.hpp",
+      "Expected": "009442d460c143484cff73a81c0f9797d9e9c1d4ac23c2567eb3b76dd0c16d87",
+      "Actual": "009442d460c143484cff73a81c0f9797d9e9c1d4ac23c2567eb3b76dd0c16d87",
+      "Pass": true
+    },
+    {
+      "File": "debug.hpp",
+      "Expected": "e1411eb76f9691c09264a6c3678812ba7c4e2b02897ad2b5a3ceb8429266c269",
+      "Actual": "e1411eb76f9691c09264a6c3678812ba7c4e2b02897ad2b5a3ceb8429266c269",
+      "Pass": true
+    },
+    {
+      "File": "faest.cpp",
+      "Expected": "a5bd97ca069caa92f94e0513adf1530f4362be14ae8b755d9512955ae4077d9f",
+      "Actual": "a5bd97ca069caa92f94e0513adf1530f4362be14ae8b755d9512955ae4077d9f",
+      "Pass": true
+    },
+    {
+      "File": "faest.hpp",
+      "Expected": "1dc08419740a7441128da2754bf8ef73389dd9c9a2d7f4a317c4db3cec993403",
+      "Actual": "1dc08419740a7441128da2754bf8ef73389dd9c9a2d7f4a317c4db3cec993403",
+      "Pass": true
+    },
+    {
+      "File": "faest.inc",
+      "Expected": "96bb384c2c26b3d9fdcf76ea623e98b5f5cf39e1f709fcfcefe5b0190c343b8b",
+      "Actual": "96bb384c2c26b3d9fdcf76ea623e98b5f5cf39e1f709fcfcefe5b0190c343b8b",
+      "Pass": true
+    },
+    {
+      "File": "faest_keys.hpp",
+      "Expected": "080a197434290f3e4e4c8c203201e567ead1834d8fc0a56ebfa6d7602c7b7ef0",
+      "Actual": "080a197434290f3e4e4c8c203201e567ead1834d8fc0a56ebfa6d7602c7b7ef0",
+      "Pass": true
+    },
+    {
+      "File": "faest_keys.inc",
+      "Expected": "a4180f23f14cd4f02c74481989c87317f1dbf964b68320068012ec42ed026bb2",
+      "Actual": "a4180f23f14cd4f02c74481989c87317f1dbf964b68320068012ec42ed026bb2",
+      "Pass": true
+    },
+    {
+      "File": "gfsmall.hpp",
+      "Expected": "5b993957e3e2698a5c935f672fa9e1ee2c6021bce2005f0456da7989cd61b72c",
+      "Actual": "5b993957e3e2698a5c935f672fa9e1ee2c6021bce2005f0456da7989cd61b72c",
+      "Pass": true
+    },
+    {
+      "File": "hash.hpp",
+      "Expected": "baca00183802507b49458be23b26f2bcbe547d35b610073b76598923f476d909",
+      "Actual": "baca00183802507b49458be23b26f2bcbe547d35b610073b76598923f476d909",
+      "Pass": true
+    },
+    {
+      "File": "LICENSE",
+      "Expected": "168677c34d83c94a16dd8d9f6efe957f9883d06120150da7b2b3726885b74ed9",
+      "Actual": "168677c34d83c94a16dd8d9f6efe957f9883d06120150da7b2b3726885b74ed9",
+      "Pass": true
+    },
+    {
+      "File": "meson.build",
+      "Expected": "1641f55c03a4e54176ef2239f3a5b65803d4681747585dd39ffedfd7e77a7a53",
+      "Actual": "1641f55c03a4e54176ef2239f3a5b65803d4681747585dd39ffedfd7e77a7a53",
+      "Pass": true
+    },
+    {
+      "File": "owf_proof.cpp",
+      "Expected": "d6e65015a3842579afeebd42a0b1a27002d35502c7d51ddb410f1fda4ef17544",
+      "Actual": "d6e65015a3842579afeebd42a0b1a27002d35502c7d51ddb410f1fda4ef17544",
+      "Pass": true
+    },
+    {
+      "File": "owf_proof.hpp",
+      "Expected": "48761d24ecaad50f7f57e3487f6924668a58c13b17dcf59b46d6df2d70548afc",
+      "Actual": "48761d24ecaad50f7f57e3487f6924668a58c13b17dcf59b46d6df2d70548afc",
+      "Pass": true
+    },
+    {
+      "File": "owf_proof.inc",
+      "Expected": "cb4716062942fa42029b3d7fa83102258fa1ebab127ea0b4fad0b54ed8b5d2ab",
+      "Actual": "cb4716062942fa42029b3d7fa83102258fa1ebab127ea0b4fad0b54ed8b5d2ab",
+      "Pass": true
+    },
+    {
+      "File": "owf_proof_tools.hpp",
+      "Expected": "0a7f210f0fa31c3ae43e99bbd7745c64d465bbee277be463f0720997af7f3b68",
+      "Actual": "0a7f210f0fa31c3ae43e99bbd7745c64d465bbee277be463f0720997af7f3b68",
+      "Pass": true
+    },
+    {
+      "File": "parameters.hpp",
+      "Expected": "9566c9b1efb1a7015220eee0e83e7fcc8b8ea465820af7a5eb9c7869e5b881c7",
+      "Actual": "9566c9b1efb1a7015220eee0e83e7fcc8b8ea465820af7a5eb9c7869e5b881c7",
+      "Pass": true
+    },
+    {
+      "File": "poly2d.hpp",
+      "Expected": "319080a1b487dc0d5c8c4c3d3049baefe4468ad455b90764112423ce3bb22081",
+      "Actual": "319080a1b487dc0d5c8c4c3d3049baefe4468ad455b90764112423ce3bb22081",
+      "Pass": true
+    },
+    {
+      "File": "polynomials.hpp",
+      "Expected": "2b242bfff6c276cdd2e824e2aa2f17b6f6df657284463cf9d1dc252ce83b7f34",
+      "Actual": "2b242bfff6c276cdd2e824e2aa2f17b6f6df657284463cf9d1dc252ce83b7f34",
+      "Pass": true
+    },
+    {
+      "File": "polynomials_constants.cpp",
+      "Expected": "ee3600abba807ce68eb5dc85440107e42cc76be0fe39bddebea0c46ad7229ac8",
+      "Actual": "ee3600abba807ce68eb5dc85440107e42cc76be0fe39bddebea0c46ad7229ac8",
+      "Pass": true
+    },
+    {
+      "File": "polynomials_constants.hpp",
+      "Expected": "438e2ba2ecf27527f8f11277286fa9b008562073431552cc84c497510b18a99c",
+      "Actual": "438e2ba2ecf27527f8f11277286fa9b008562073431552cc84c497510b18a99c",
+      "Pass": true
+    },
+    {
+      "File": "prgs.hpp",
+      "Expected": "6ea8e06c065d7a5f6d981d6a730eaaad266f6f48471a4638123c76d214c394eb",
+      "Actual": "6ea8e06c065d7a5f6d981d6a730eaaad266f6f48471a4638123c76d214c394eb",
+      "Pass": true
+    },
+    {
+      "File": "quicksilver.hpp",
+      "Expected": "283d9e6eecbfb89f8e58ce78ab7969801c4894ca2648f61407f30b17b1621132",
+      "Actual": "283d9e6eecbfb89f8e58ce78ab7969801c4894ca2648f61407f30b17b1621132",
+      "Pass": true
+    },
+    {
+      "File": "rain_kat.hpp",
+      "Expected": "39a44f09aec94bcfd72d0096118f31f3453beb1c25509dbab984a6d41f50e7dc",
+      "Actual": "39a44f09aec94bcfd72d0096118f31f3453beb1c25509dbab984a6d41f50e7dc",
+      "Pass": true
+    },
+    {
+      "File": "rain_owf.hpp",
+      "Expected": "94563f133e514d04a8d786eaa4c504d11c27fa0eb546e0ebe1dc4c99f19260ec",
+      "Actual": "94563f133e514d04a8d786eaa4c504d11c27fa0eb546e0ebe1dc4c99f19260ec",
+      "Pass": true
+    },
+    {
+      "File": "rain_params.hpp",
+      "Expected": "3a6d1240faf8da930d1e56b59de226d76aeb80520449644079ccc7a7e2a277e1",
+      "Actual": "3a6d1240faf8da930d1e56b59de226d76aeb80520449644079ccc7a7e2a277e1",
+      "Pass": true
+    },
+    {
+      "File": "RAIN_PATCHES.json",
+      "Expected": "f439bb0b7c48d1ca459e4d325612b46d2385667fd9f48a6d416e671e21f933e4",
+      "Actual": "f439bb0b7c48d1ca459e4d325612b46d2385667fd9f48a6d416e671e21f933e4",
+      "Pass": true
+    },
+    {
+      "File": "rain_test.cpp",
+      "Expected": "f7c6ce1f47ded95774af14876a1136593deaf72d77940583ace92c66c25eaf5b",
+      "Actual": "f7c6ce1f47ded95774af14876a1136593deaf72d77940583ace92c66c25eaf5b",
+      "Pass": true
+    },
+    {
+      "File": "randomness.h",
+      "Expected": "c9afde602eb3aee0b3274475286d91508653a248bef3b3e3e3e0b48ed6bde625",
+      "Actual": "c9afde602eb3aee0b3274475286d91508653a248bef3b3e3e3e0b48ed6bde625",
+      "Pass": true
+    },
+    {
+      "File": "randomness_os.c",
+      "Expected": "d6cbdef69f8e005721b8b4c6140b0d070c7dea65284778c2c2c53e91fe476aed",
+      "Actual": "d6cbdef69f8e005721b8b4c6140b0d070c7dea65284778c2c2c53e91fe476aed",
+      "Pass": true
+    },
+    {
+      "File": "randomness_randombytes.c",
+      "Expected": "8d8f7c4b15bc7a234039f0a25981ffcce8f1c5a4436b68bc4e8ede3e1af44d44",
+      "Actual": "8d8f7c4b15bc7a234039f0a25981ffcce8f1c5a4436b68bc4e8ede3e1af44d44",
+      "Pass": true
+    },
+    {
+      "File": "README.md",
+      "Expected": "5fa1ea3265b9108b1a9adfd5b1978ad673b9869119ac2e758d110add8b2638f6",
+      "Actual": "5fa1ea3265b9108b1a9adfd5b1978ad673b9869119ac2e758d110add8b2638f6",
+      "Pass": true
+    },
+    {
+      "File": "small_vole.cpp",
+      "Expected": "e5853eb3e248d6083b12eba2c99c8803eb0da7d6d3ac79565c22ef4fa5958d55",
+      "Actual": "e5853eb3e248d6083b12eba2c99c8803eb0da7d6d3ac79565c22ef4fa5958d55",
+      "Pass": true
+    },
+    {
+      "File": "small_vole.hpp",
+      "Expected": "ab60b612d72cf5cf17d4c2e160b0bac3f5a323e8eb89eca6be470db395ce4c65",
+      "Actual": "ab60b612d72cf5cf17d4c2e160b0bac3f5a323e8eb89eca6be470db395ce4c65",
+      "Pass": true
+    },
+    {
+      "File": "small_vole.inc",
+      "Expected": "8323eb103875052369275daa95d597444b288d19faa111933280000a77c42ed0",
+      "Actual": "8323eb103875052369275daa95d597444b288d19faa111933280000a77c42ed0",
+      "Pass": true
+    },
+    {
+      "File": "transpose.hpp",
+      "Expected": "11ceed69bc88e500aa7efa2ea633e4ee586a076894c8c31d5d47b00ae1f09093",
+      "Actual": "11ceed69bc88e500aa7efa2ea633e4ee586a076894c8c31d5d47b00ae1f09093",
+      "Pass": true
+    },
+    {
+      "File": "transpose_secpar.hpp",
+      "Expected": "ffa3a7595d07fe7c2a5b15335ba7f7471f4f1c1cc0245141777c74549aa8981f",
+      "Actual": "ffa3a7595d07fe7c2a5b15335ba7f7471f4f1c1cc0245141777c74549aa8981f",
+      "Pass": true
+    },
+    {
+      "File": "universal_hash.hpp",
+      "Expected": "cf0aea239d7bd38b174cd016f1c53f01e9be1f9cfa2a0b881b1135cba773110c",
+      "Actual": "cf0aea239d7bd38b174cd016f1c53f01e9be1f9cfa2a0b881b1135cba773110c",
+      "Pass": true
+    },
+    {
+      "File": "util.hpp",
+      "Expected": "5739406e7831ec831390da58d8e52ab803c5caac85c228612e7829469696a7d3",
+      "Actual": "5739406e7831ec831390da58d8e52ab803c5caac85c228612e7829469696a7d3",
+      "Pass": true
+    },
+    {
+      "File": "vector_com.cpp",
+      "Expected": "7347c1b321b45bf7c573bb4c0146aa98566f4d392aa06fb8408b81bbb0f06826",
+      "Actual": "7347c1b321b45bf7c573bb4c0146aa98566f4d392aa06fb8408b81bbb0f06826",
+      "Pass": true
+    },
+    {
+      "File": "vector_com.hpp",
+      "Expected": "74a94c657be0fc99ab748c79ffbf9c9cddc44ccd5b5f6de469501e0f303da251",
+      "Actual": "74a94c657be0fc99ab748c79ffbf9c9cddc44ccd5b5f6de469501e0f303da251",
+      "Pass": true
+    },
+    {
+      "File": "vector_com.inc",
+      "Expected": "592e535f23ce6c940d99459355871918f0b2abe1277a58a0e82b2fa31f5ca56d",
+      "Actual": "592e535f23ce6c940d99459355871918f0b2abe1277a58a0e82b2fa31f5ca56d",
+      "Pass": true
+    },
+    {
+      "File": "vole_check.hpp",
+      "Expected": "72e4928da9cb00a032364901c5fb61633838989f059c89f5833213e77a1db0e4",
+      "Actual": "72e4928da9cb00a032364901c5fb61633838989f059c89f5833213e77a1db0e4",
+      "Pass": true
+    },
+    {
+      "File": "vole_commit.cpp",
+      "Expected": "f9faf39427167e201462dd654cf35eac578ba926a25621c6d3ad7c610f624f3a",
+      "Actual": "f9faf39427167e201462dd654cf35eac578ba926a25621c6d3ad7c610f624f3a",
+      "Pass": true
+    },
+    {
+      "File": "vole_commit.hpp",
+      "Expected": "9e30d4064eef2106c38cbb49a68ddfa5d610f04d3cc70e2c1897c2678189310e",
+      "Actual": "9e30d4064eef2106c38cbb49a68ddfa5d610f04d3cc70e2c1897c2678189310e",
+      "Pass": true
+    },
+    {
+      "File": "vole_commit.inc",
+      "Expected": "4b66fb8beda8b02f7895313712af58511696234fb17731ebd2bb8ebbb9f0c4ac",
+      "Actual": "4b66fb8beda8b02f7895313712af58511696234fb17731ebd2bb8ebbb9f0c4ac",
+      "Pass": true
+    },
+    {
+      "File": "vole_key_index_permutation.hpp",
+      "Expected": "15b6782f3ca75978f6a839f4763d4a371b5e401e43a44b0a669742238c789e9d",
+      "Actual": "15b6782f3ca75978f6a839f4763d4a371b5e401e43a44b0a669742238c789e9d",
+      "Pass": true
+    },
+    {
+      "File": "avx2\\aes_impl.cpp",
+      "Expected": "89ce12a897ddf6f11e986d7be6df05003ec47ce859884604133afdcb140ff6c1",
+      "Actual": "89ce12a897ddf6f11e986d7be6df05003ec47ce859884604133afdcb140ff6c1",
+      "Pass": true
+    },
+    {
+      "File": "avx2\\aes_impl.hpp",
+      "Expected": "2945906ecca698f22ef170a675902f3ce9ea4293b063b54a47218fe1eb43909c",
+      "Actual": "2945906ecca698f22ef170a675902f3ce9ea4293b063b54a47218fe1eb43909c",
+      "Pass": true
+    },
+    {
+      "File": "avx2\\block_impl.hpp",
+      "Expected": "1a32b74c489593fb37ecb18c3eb0ea61bba56fe5247b68ffee8ca41167a8055a",
+      "Actual": "1a32b74c489593fb37ecb18c3eb0ea61bba56fe5247b68ffee8ca41167a8055a",
+      "Pass": true
+    },
+    {
+      "File": "avx2\\constants_impl.hpp",
+      "Expected": "26be84b6f0135d41f4b336e35d9d58d573f11354ebdf599fc462057ef1957744",
+      "Actual": "26be84b6f0135d41f4b336e35d9d58d573f11354ebdf599fc462057ef1957744",
+      "Pass": true
+    },
+    {
+      "File": "avx2\\gfsmall_impl.hpp",
+      "Expected": "39b8171bc33f4dcb2d105043b000d429be7259f025db46741d8ac0ec9fa56a82",
+      "Actual": "39b8171bc33f4dcb2d105043b000d429be7259f025db46741d8ac0ec9fa56a82",
+      "Pass": true
+    },
+    {
+      "File": "avx2\\polynomials_impl.hpp",
+      "Expected": "dbef8a13d0fa4333b69d4f87fd13fa512b48d2cf62b4d8597ae3c3eed281a1c2",
+      "Actual": "dbef8a13d0fa4333b69d4f87fd13fa512b48d2cf62b4d8597ae3c3eed281a1c2",
+      "Pass": true
+    },
+    {
+      "File": "avx2\\transpose_impl.hpp",
+      "Expected": "426344f2c84ba65c490e2b18ef4f9c8ce0dc19352a638dcacd35c8c501da08c0",
+      "Actual": "426344f2c84ba65c490e2b18ef4f9c8ce0dc19352a638dcacd35c8c501da08c0",
+      "Pass": true
+    },
+    {
+      "File": "avx2\\transpose_secpar_impl.hpp",
+      "Expected": "166cba09f054eb2e61182f1ebeff1d48440887e34f3f75e1f048061475949dcd",
+      "Actual": "166cba09f054eb2e61182f1ebeff1d48440887e34f3f75e1f048061475949dcd",
+      "Pass": true
+    },
+    {
+      "File": "sha3\\KeccakHashtimes4.c",
+      "Expected": "917b8590ff4cbd6939a1a6df290e053c6ae4e0a0b8782c9d7e407fed126242c7",
+      "Actual": "917b8590ff4cbd6939a1a6df290e053c6ae4e0a0b8782c9d7e407fed126242c7",
+      "Pass": true
+    },
+    {
+      "File": "sha3\\KeccakHashtimes4.h",
+      "Expected": "c760f567ee44494b7be3acd3c30803ee14b820f7084b4ef5ed8f99090c50e1d8",
+      "Actual": "c760f567ee44494b7be3acd3c30803ee14b820f7084b4ef5ed8f99090c50e1d8",
+      "Pass": true
+    },
+    {
+      "File": "sha3\\KeccakSpongetimes4.c",
+      "Expected": "434d38dc37d80c0a8c59e73ce6445606e10a258dd0a5704d703febfb06344b50",
+      "Actual": "434d38dc37d80c0a8c59e73ce6445606e10a258dd0a5704d703febfb06344b50",
+      "Pass": true
+    },
+    {
+      "File": "sha3\\KeccakSpongetimes4.h",
+      "Expected": "8ca80328f1ebbf93e93ad6c10f8ae75c0ea343f93a3e60d23012c10c290515be",
+      "Actual": "8ca80328f1ebbf93e93ad6c10f8ae75c0ea343f93a3e60d23012c10c290515be",
+      "Pass": true
+    },
+    {
+      "File": "sha3\\KeccakSpongetimes4.inc",
+      "Expected": "f39d6eefd8b83e6b9cca7a2f36a4a3d98008fc970e15c88be018ae5bdce7ff25",
+      "Actual": "f39d6eefd8b83e6b9cca7a2f36a4a3d98008fc970e15c88be018ae5bdce7ff25",
+      "Pass": true
+    },
+    {
+      "File": "subprojects\\catch2.wrap",
+      "Expected": "2bb58cf4758a2a0ac766a487181ac5374b1f35943eab1f30786794fff7c7a40c",
+      "Actual": "2bb58cf4758a2a0ac766a487181ac5374b1f35943eab1f30786794fff7c7a40c",
+      "Pass": true
+    },
+    {
+      "File": "subprojects\\xkcp.wrap",
+      "Expected": "760dcf26e53f6e578c2383a5be8b3ac456d0fff21b9128de79e14aea2d73420c",
+      "Actual": "760dcf26e53f6e578c2383a5be8b3ac456d0fff21b9128de79e14aea2d73420c",
+      "Pass": true
+    },
+    {
+      "File": "test\\bavc_tvs_from_ref.hpp",
+      "Expected": "25c75f2e87bc7d98ebdc47cd96dce7897fe43bcf545584af93079333ae6d614e",
+      "Actual": "25c75f2e87bc7d98ebdc47cd96dce7897fe43bcf545584af93079333ae6d614e",
+      "Pass": true
+    },
+    {
+      "File": "test\\bench_api.cpp",
+      "Expected": "94f809555c133b22f55b24f63ba54465866138482282e54d39d577489ba41c79",
+      "Actual": "94f809555c133b22f55b24f63ba54465866138482282e54d39d577489ba41c79",
+      "Pass": true
+    },
+    {
+      "File": "test\\bench_components.cpp",
+      "Expected": "a2be8731992b08b6e754f37b41d7ff87476d2d196c1d4f75e2817d69599c0713",
+      "Actual": "a2be8731992b08b6e754f37b41d7ff87476d2d196c1d4f75e2817d69599c0713",
+      "Pass": true
+    },
+    {
+      "File": "test\\bench_leaf_hash.cpp",
+      "Expected": "3fb47b368df3f624ff39b45ca92299e45abf7f78d73371f9411eef3e0c1c7442",
+      "Actual": "3fb47b368df3f624ff39b45ca92299e45abf7f78d73371f9411eef3e0c1c7442",
+      "Pass": true
+    },
+    {
+      "File": "test\\bench_variants.cpp",
+      "Expected": "859e3d778d5f530e5c0f800efbe6c78e97883388f0ef42b0ed637e12222a5db1",
+      "Actual": "859e3d778d5f530e5c0f800efbe6c78e97883388f0ef42b0ed637e12222a5db1",
+      "Pass": true
+    },
+    {
+      "File": "test\\meson.build",
+      "Expected": "299fb54c186b1fc118c00bdb086b9f368cc06d511b9f3f86dd3ec35b5b1f58ca",
+      "Actual": "299fb54c186b1fc118c00bdb086b9f368cc06d511b9f3f86dd3ec35b5b1f58ca",
+      "Pass": true
+    },
+    {
+      "File": "test\\test.hpp",
+      "Expected": "a0717d3f7db733fa7f945dae1a330b95020791a52e779a7301d8f0f9b0434210",
+      "Actual": "a0717d3f7db733fa7f945dae1a330b95020791a52e779a7301d8f0f9b0434210",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_aes.cpp",
+      "Expected": "ba43be658a2884d3e2de12849cc90f1bf7c8e943bdcf36104f6fd4ccc4220606",
+      "Actual": "ba43be658a2884d3e2de12849cc90f1bf7c8e943bdcf36104f6fd4ccc4220606",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_aes_tvs.cpp",
+      "Expected": "376749e50aa8d35b509a6bf8b3a4e2e5724a7d607d7d06b334d7c0f9cb350724",
+      "Actual": "376749e50aa8d35b509a6bf8b3a4e2e5724a7d607d7d06b334d7c0f9cb350724",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_aes_tvs.hpp",
+      "Expected": "fe365d3644886f6f27d9a006d789109a870ee0769d438795bb3a95ae079a5d82",
+      "Actual": "fe365d3644886f6f27d9a006d789109a870ee0769d438795bb3a95ae079a5d82",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_bavc_tvs.cpp",
+      "Expected": "fecb50426e6e2f150b9c2bdbeb205dd3d84bc2c0c85d5726e9f57e1576fafb6f",
+      "Actual": "fecb50426e6e2f150b9c2bdbeb205dd3d84bc2c0c85d5726e9f57e1576fafb6f",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_bavc_tvs.hpp",
+      "Expected": "c8291aaabadd517af7c3491986e31e44436a477cbbed3f976ed07880d33590a3",
+      "Actual": "c8291aaabadd517af7c3491986e31e44436a477cbbed3f976ed07880d33590a3",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_faest.cpp",
+      "Expected": "3d6b4d0c64b70479c66e8baa7fec82a224415be0c2922f033c4f688885fa5d84",
+      "Actual": "3d6b4d0c64b70479c66e8baa7fec82a224415be0c2922f033c4f688885fa5d84",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_faest_experimental.cpp",
+      "Expected": "455bca803bb9c088b273f046d649e8e9fff26ebeaa173611abda9a875f634d03",
+      "Actual": "455bca803bb9c088b273f046d649e8e9fff26ebeaa173611abda9a875f634d03",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_faest_tvs.cpp",
+      "Expected": "b0f90b071f462f56b8b6e4e962b375d93989d18e03a8ad6ec45bb8da4ed85f61",
+      "Actual": "b0f90b071f462f56b8b6e4e962b375d93989d18e03a8ad6ec45bb8da4ed85f61",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_faest_tvs.hpp",
+      "Expected": "41715f31461844e98ad825aa0f6097d9fe1df567946d2042275bd7d0e97aba91",
+      "Actual": "41715f31461844e98ad825aa0f6097d9fe1df567946d2042275bd7d0e97aba91",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_faest_v2_tvs.cpp",
+      "Expected": "5891d75f40c8a6ff5f9a863eff956c9817652906ed7d8a7bb00a6d9f94115980",
+      "Actual": "5891d75f40c8a6ff5f9a863eff956c9817652906ed7d8a7bb00a6d9f94115980",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_faest_v2_tvs.hpp",
+      "Expected": "5566e25900dbd53058c29f8b6745156f4e2cb626b16890c728533756064a399e",
+      "Actual": "5566e25900dbd53058c29f8b6745156f4e2cb626b16890c728533756064a399e",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_gfsmall.cpp",
+      "Expected": "235d70fa1759cff546155b3ea5106616d71aa5de0ff0a2fdf7452e5df45f0c50",
+      "Actual": "235d70fa1759cff546155b3ea5106616d71aa5de0ff0a2fdf7452e5df45f0c50",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_gfsmall_tvs.cpp",
+      "Expected": "3b8fe5a0e15833a755a355a69ab01e54efd87ca4910d64eebbb432cc67986f2d",
+      "Actual": "3b8fe5a0e15833a755a355a69ab01e54efd87ca4910d64eebbb432cc67986f2d",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_gfsmall_tvs.hpp",
+      "Expected": "21c73ecf0f15a3a8f15ae9223bdfdd385891895a3880dd89f306e6e402c1667e",
+      "Actual": "21c73ecf0f15a3a8f15ae9223bdfdd385891895a3880dd89f306e6e402c1667e",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_owf_proof.cpp",
+      "Expected": "06c86b48dfca103632e916607f061303d6dac7cde458708092a4a79e9c1d6575",
+      "Actual": "06c86b48dfca103632e916607f061303d6dac7cde458708092a4a79e9c1d6575",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_owf_proof_tools.cpp",
+      "Expected": "13cef66c36c13e105646f119852ca38e1b3c0b2ecda1b44103f5e8fae03be224",
+      "Actual": "13cef66c36c13e105646f119852ca38e1b3c0b2ecda1b44103f5e8fae03be224",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_parameters.cpp",
+      "Expected": "07699621df5ca2dc2c1951a1bec05321fa6a0bd986db6272a503e9fa4ffa72f5",
+      "Actual": "07699621df5ca2dc2c1951a1bec05321fa6a0bd986db6272a503e9fa4ffa72f5",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_polynomials.cpp",
+      "Expected": "7a8bf89fea123f502d80613bd3d5793c6154e2792337ea25c0803e7c44319b4f",
+      "Actual": "7a8bf89fea123f502d80613bd3d5793c6154e2792337ea25c0803e7c44319b4f",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_prg.cpp",
+      "Expected": "c89eaf0b6f0d62ceeaed44597ae310f1fef91559c19ebcfcfea4ee3c84f55fbd",
+      "Actual": "c89eaf0b6f0d62ceeaed44597ae310f1fef91559c19ebcfcfea4ee3c84f55fbd",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_prg_tvs.cpp",
+      "Expected": "70585354dd00327a47528c67eaf985bd327a13513554cb572dc07cbf818e9f8e",
+      "Actual": "70585354dd00327a47528c67eaf985bd327a13513554cb572dc07cbf818e9f8e",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_prg_tvs.hpp",
+      "Expected": "067afe487182ada890307fa7aa8ef80d8429192f91a3415fe68946f697cf3bca",
+      "Actual": "067afe487182ada890307fa7aa8ef80d8429192f91a3415fe68946f697cf3bca",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_quicksilver.cpp",
+      "Expected": "2533880243f8c956514d626faf3735727344d5df07d4127be0a47dca347864ab",
+      "Actual": "2533880243f8c956514d626faf3735727344d5df07d4127be0a47dca347864ab",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_small_vole.cpp",
+      "Expected": "461240f122f62f59205f6eb1fc85b083c42f4291981ef903aae39089681d42c8",
+      "Actual": "461240f122f62f59205f6eb1fc85b083c42f4291981ef903aae39089681d42c8",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_transpose.cpp",
+      "Expected": "48feed97038499c7298694f304eb7f753701e3e2b318bdc6552efd704d5a80b5",
+      "Actual": "48feed97038499c7298694f304eb7f753701e3e2b318bdc6552efd704d5a80b5",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_universal_hash.cpp",
+      "Expected": "1cf13c3ec27e6f872bafbf6edfd0c9267e1bf1484aa75ef8e44adbf92b81ac0c",
+      "Actual": "1cf13c3ec27e6f872bafbf6edfd0c9267e1bf1484aa75ef8e44adbf92b81ac0c",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_vector_com.cpp",
+      "Expected": "f3e410125871a9db835cc271e275c98328cf3bd281f35914b1978d2e222bea5f",
+      "Actual": "f3e410125871a9db835cc271e275c98328cf3bd281f35914b1978d2e222bea5f",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_vole_commit.cpp",
+      "Expected": "97322f7b2ef9c8276e12d5dc2317f1109c8f4d2d19f020474e027ab44c4e2af3",
+      "Actual": "97322f7b2ef9c8276e12d5dc2317f1109c8f4d2d19f020474e027ab44c4e2af3",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_vole_commit_tvs.cpp",
+      "Expected": "f2f219f3cd3df11537f094a3d9b125fbbb13d26b208e5a72dda6802e637ada75",
+      "Actual": "f2f219f3cd3df11537f094a3d9b125fbbb13d26b208e5a72dda6802e637ada75",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_vole_commit_tvs.hpp",
+      "Expected": "895bbf1d029e9e003318ab7db4200581b6ab52f248fc4a312888a1b654cd68d3",
+      "Actual": "895bbf1d029e9e003318ab7db4200581b6ab52f248fc4a312888a1b654cd68d3",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_vole_commit_tvs_v2.cpp",
+      "Expected": "ee0091b3f393095e49dfe562c8e4e1cc19e18ff92a35142b82a0fcaef60a0e30",
+      "Actual": "ee0091b3f393095e49dfe562c8e4e1cc19e18ff92a35142b82a0fcaef60a0e30",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_vole_commit_tvs_v2.hpp",
+      "Expected": "ff533cceb9c9306b321a0b1bb3a667e9f16d831cee8278b31902983e4df49d7a",
+      "Actual": "ff533cceb9c9306b321a0b1bb3a667e9f16d831cee8278b31902983e4df49d7a",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_witness.cpp",
+      "Expected": "758537a64152bc43ee9f1787497a98c61d94d025f5b94ed92111eeb3d3658e59",
+      "Actual": "758537a64152bc43ee9f1787497a98c61d94d025f5b94ed92111eeb3d3658e59",
+      "Pass": true
+    },
+    {
+      "File": "test\\test_witness.hpp",
+      "Expected": "c76e0ae563ea295248703795d3b79436c6abc189d1fb9618ef4de5a630f20dac",
+      "Actual": "c76e0ae563ea295248703795d3b79436c6abc189d1fb9618ef4de5a630f20dac",
+      "Pass": true
+    },
+    {
+      "File": "test\\vole_tvs_from_ref.hpp",
+      "Expected": "a0254716b15b38c8e3b8e20b159f6bd036c4b7cdb6f8b7ba6c30e04a83f9e877",
+      "Actual": "a0254716b15b38c8e3b8e20b159f6bd036c4b7cdb6f8b7ba6c30e04a83f9e877",
+      "Pass": true
+    },
+    {
+      "File": "tools\\api_test.c",
+      "Expected": "0483b2fa059796ea4edcd2384c836918a827dea24fab74f2cf5cd06e60fe1d65",
+      "Actual": "0483b2fa059796ea4edcd2384c836918a827dea24fab74f2cf5cd06e60fe1d65",
+      "Pass": true
+    },
+    {
+      "File": "tools\\Makefile",
+      "Expected": "2bc471474503d201439ce42db4a44eca53e8229b8fde91174690199f56f089ec",
+      "Actual": "2bc471474503d201439ce42db4a44eca53e8229b8fde91174690199f56f089ec",
+      "Pass": true
+    },
+    {
+      "File": "tools\\PQCgenKAT_sign.c",
+      "Expected": "05aedaa63617b15614012598905348b58d6e1b4b7996b4d9022d03c6e0af9250",
+      "Actual": "05aedaa63617b15614012598905348b58d6e1b4b7996b4d9022d03c6e0af9250",
+      "Pass": true
+    },
+    {
+      "File": "tools\\prepare_nist.py",
+      "Expected": "568bdc19ca3251f05bc70fcbcf4e708a8ad640cb9237aff90fca5df1984e639a",
+      "Actual": "568bdc19ca3251f05bc70fcbcf4e708a8ad640cb9237aff90fca5df1984e639a",
+      "Pass": true
+    },
+    {
+      "File": "tools\\rng.c",
+      "Expected": "2cc42477d95648f6f4900ce9906bb8840990290a410fa5206caed58663b6d5cd",
+      "Actual": "2cc42477d95648f6f4900ce9906bb8840990290a410fa5206caed58663b6d5cd",
+      "Pass": true
+    },
+    {
+      "File": "tools\\rng.h",
+      "Expected": "df44ce6c84abd83fed1f4966fba667856de38227d15fe98f4c0a650b21a0cd5e",
+      "Actual": "df44ce6c84abd83fed1f4966fba667856de38227d15fe98f4c0a650b21a0cd5e",
+      "Pass": true
+    },
+    {
+      "File": "subprojects\\packagefiles\\xkcp\\config.h",
+      "Expected": "6fe920f28d691971b99bab67b4d4feec01c4c8d5273e55e1a442401135465a14",
+      "Actual": "6fe920f28d691971b99bab67b4d4feec01c4c8d5273e55e1a442401135465a14",
+      "Pass": true
+    },
+    {
+      "File": "subprojects\\packagefiles\\xkcp\\meson.build",
+      "Expected": "615f59edbdea5c86e5005c2dc0df34c6d202b76f4ed7a0d9da3aa67486906b9d",
+      "Actual": "615f59edbdea5c86e5005c2dc0df34c6d202b76f4ed7a0d9da3aa67486906b9d",
+      "Pass": true
+    }
+  ],
+  "AllR3HashesMatch": true,
+  "AllFrozenSourceHashesMatch": true,
+  "Revision": "Final 01v4/02v2/03v4. H_s first-input detection cache and all-domain a1 count reviewed; previous snapshot retained as .before_hs_cache.bak."
+}

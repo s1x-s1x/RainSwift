@@ -1,0 +1,215 @@
+{
+  "start_utc": "2026-10-14T11:34:15.579693+00:00",
+  "budget_seconds": 120,
+  "cases": 6,
+  "steps": [
+    {
+      "label": "compile",
+      "argv": [
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\toolchain_zig013\\ziglang\\zig.exe",
+        "c++",
+        "-target",
+        "x86_64-windows-gnu",
+        "-std=c++23",
+        "-O1",
+        "-g0",
+        "-mavx2",
+        "-maes",
+        "-mpclmul",
+        "-msse4.1",
+        "-mbmi2",
+        "-I<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4",
+        "-I<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R6_六组AES调用计数\\instrumented_source",
+        "-I<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\xkcp_v2",
+        "-I<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\xkcp_v2\\lib\\common",
+        "-I<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\xkcp_v2\\lib\\low\\common",
+        "-I<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\xkcp_v2\\lib\\high\\Keccak",
+        "-I<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\xkcp_v2\\lib\\high\\Keccak\\FIPS202",
+        "-I<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\xkcp_v2\\lib\\low\\KeccakP-1600\\plain-64bits",
+        "-I<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\xkcp_v2\\lib\\low\\KeccakP-1600\\plain-64bits\\u6",
+        "-I<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\xkcp_v2\\lib\\low\\KeccakP-1600\\common",
+        "-I<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\xkcp_v2\\lib\\low\\KeccakP-1600-times2\\SIMD128",
+        "-I<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\xkcp_v2\\lib\\low\\KeccakP-1600-times2\\SIMD128\\SSSE3-u2",
+        "-I<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\xkcp_v2\\lib\\low\\KeccakP-1600-times4\\AVX2",
+        "-I<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\xkcp_v2\\lib\\low\\KeccakP-1600-times4\\AVX2\\u12",
+        "-I<工作区>\\迭代\\迭代028_P0基线与求解器\\资料\\sources\\xkcp_v2\\lib\\low\\KeccakP-1600-times8\\fallback-on4",
+        "-Wno-ignored-attributes",
+        "-include",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\windows_alloc.hpp",
+        "-include",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R6_六组AES调用计数\\counter_hook.hpp",
+        "-c",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R6_六组AES调用计数\\count_calls.cpp",
+        "-o",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R6_六组AES调用计数\\count_calls.o"
+      ],
+      "exit_code": 0,
+      "seconds": 12.891
+    },
+    {
+      "label": "link",
+      "argv": [
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\toolchain_zig013\\ziglang\\zig.exe",
+        "c++",
+        "-target",
+        "x86_64-windows-gnu",
+        "-O1",
+        "-g0",
+        "-mavx2",
+        "-maes",
+        "-mpclmul",
+        "-msse4.1",
+        "-mbmi2",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R6_六组AES调用计数\\count_calls.o",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\0_KeccakHash.o",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\1_KeccakSponge.o",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\2_KeccakP-1600-opt64.o",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\3_KeccakP-1600-times2-SIMD128.o",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\4_KeccakP-1600-times4-SIMD256.o",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\5_KeccakHashtimes4.o",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\6_KeccakSpongetimes4.o",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\7_aes_impl.o",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\8_polynomials_constants.o",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\9_vector_com.o",
+        "-o",
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R6_六组AES调用计数\\count_calls.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 0.306
+    },
+    {
+      "label": "run",
+      "argv": [
+        "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R6_六组AES调用计数\\count_calls.exe"
+      ],
+      "exit_code": 0,
+      "seconds": 0.181
+    }
+  ],
+  "source_files": 120,
+  "reused_objects": {
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\0_KeccakHash.o": "20784e53c36f91b8366b6c238dffc688a8f0fc8b46ddcbf6175ec0b79d556c49",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\1_KeccakSponge.o": "fcecb064fcc51529a2bf7a2785bf52dd4483c4aa65e56d439d55281568c5864c",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\2_KeccakP-1600-opt64.o": "1ec2b781d1e5044221bc56366c071974fe4f90cd5e0cc7f0ea5b376e7e4d169d",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\3_KeccakP-1600-times2-SIMD128.o": "8b1f4c6d2100250529858421ad4b66f1401161570708ec4c61961f4ae81c5b36",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\4_KeccakP-1600-times4-SIMD256.o": "f09569e6e9f9c94d793b74ebbd4297336166a48b294c8f24b749ef0a89ef876a",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\5_KeccakHashtimes4.o": "48f5e219d042e9543104441104379592d16bf9031e00973728a055a7f31cddae",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\6_KeccakSpongetimes4.o": "d10677c171a5e04690b0a12c992a54f4e38055963ffe417e1a201fd0f77e7436",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\7_aes_impl.o": "151cbf36b4f0456f8c4f18683f491577c683ccf950ba5ca22dec1082cd511e8b",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\8_polynomials_constants.o": "7fced558b840a2a187cb954141545751b5080cc80c6d74ce248e05dc22a636ca",
+    "<工作区>\\迭代\\迭代030_高把握方案\\Q4_安全文档\\原始数据\\重做00b\\R4_ZigRain4\\obj\\9_vector_com.o": "de6d4b6bc43f23f91ff555f37fe37454df750982cf6842434e13e325c19e7061"
+  },
+  "counts": [
+    {
+      "set": "rain3_fast",
+      "phase": "Sign",
+      "root": 21,
+      "tree": 2454,
+      "com": 1248,
+      "tape": 7488,
+      "pass": true
+    },
+    {
+      "set": "rain3_fast",
+      "phase": "Verify",
+      "root": 0,
+      "tree": 2208,
+      "com": 1248,
+      "tape": 7362,
+      "pass": true
+    },
+    {
+      "set": "rain3_bal",
+      "phase": "Sign",
+      "root": 17,
+      "tree": 4830,
+      "com": 2432,
+      "tape": 14592,
+      "pass": true
+    },
+    {
+      "set": "rain3_bal",
+      "phase": "Verify",
+      "root": 0,
+      "tree": 4588,
+      "com": 2432,
+      "tape": 14490,
+      "pass": true
+    },
+    {
+      "set": "rain3_short",
+      "phase": "Sign",
+      "root": 11,
+      "tree": 34794,
+      "com": 17408,
+      "tape": 104448,
+      "pass": true
+    },
+    {
+      "set": "rain3_short",
+      "phase": "Verify",
+      "root": 0,
+      "tree": 34562,
+      "com": 17408,
+      "tape": 104382,
+      "pass": true
+    },
+    {
+      "set": "rain4_fast",
+      "phase": "Sign",
+      "root": 18,
+      "tree": 4060,
+      "com": 2048,
+      "tape": 14336,
+      "pass": true
+    },
+    {
+      "set": "rain4_fast",
+      "phase": "Verify",
+      "root": 0,
+      "tree": 3816,
+      "com": 2048,
+      "tape": 14210,
+      "pass": true
+    },
+    {
+      "set": "rain4_bal",
+      "phase": "Sign",
+      "root": 18,
+      "tree": 3804,
+      "com": 1920,
+      "tape": 13440,
+      "pass": true
+    },
+    {
+      "set": "rain4_bal",
+      "phase": "Verify",
+      "root": 0,
+      "tree": 3564,
+      "com": 1920,
+      "tape": 13314,
+      "pass": true
+    },
+    {
+      "set": "rain4_short",
+      "phase": "Sign",
+      "root": 11,
+      "tree": 34794,
+      "com": 17408,
+      "tape": 121856,
+      "pass": true
+    },
+    {
+      "set": "rain4_short",
+      "phase": "Verify",
+      "root": 0,
+      "tree": 34562,
+      "com": 17408,
+      "tape": 121779,
+      "pass": true
+    }
+  ],
+  "status": "PASS",
+  "source_unchanged": true,
+  "elapsed_seconds": 13.557
+}

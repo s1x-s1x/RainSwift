@@ -31,7 +31,7 @@ the DLL, reproduces the KATs through it and runs the TLS test suite. Documentati
 
 ## 2. 安全性口径
 
-- **已给出（有条件）**：在经典随机预言模型下给出 EUF-CMA 条件证明，依赖明示的 Rain 原语计算假设。另有 128 档设计评估。层级与 rFAEST 作者的安全声明相同，见 [完整安全证明](docs/Q4_03_security_proof.md)、[Rain-128 原语依据](docs/Q4_01_Rain128_primitive.md)、[验收报告](docs/Q4_02_acceptance.md)。
+- **已给出（有条件）**：在经典随机预言模型下给出 EUF-CMA 条件证明，依赖明示的 Rain 原语计算假设。另有 128 档设计评估。层级与 rFAEST 作者的安全声明相同，见 [完整安全证明](docs/Q4_03_security_proof.md)、[Rain-128 原语依据](docs/Q4_01_Rain128_primitive.md)、[验收报告](docs/Q4_02_acceptance.md)；证明引用的分稿、内部审查与复算记录见 [docs/Q4_records/](docs/Q4_records/README.md)（内部 AI 审查，非外部同行评审）。
 - **未声称**：本仓库不声称“已证明 128 位安全”。严格的具体工作因子尚未建立，QROM、192／256 位档也未覆盖。Rain-3 的轮数余量小于 Rain-4，使用前请阅读原语依据中的风险说明。
 - **未评估**：常数时间与侧信道。本实现是研究原型，不建议用于生产环境。
 
@@ -113,7 +113,8 @@ docker run --rm rain-voleith taskset -c 2 ./build/rain_bench 501
 | `src/rain_kg.hpp`、`src/q5_kg_test.cpp` | 建钥专用的 Rain 正向计算（与原实现同一函数）及其差分测试、组件微基准 |
 | `src/examples/`、`src/bench/` | 使用示例、便捷测速 |
 | `KAT/` | 六组签名 KAT 与 SHA-256 |
-| `docs/` | Q2 验收、Q3 实测报告、Q4 安全证明、Q5 建钥优化（计划、组件测试、实测报告、汇总表、分析）等文档（中文）；文中指向作者内部记录的链接已改为文字标注 |
+| `docs/` | Q2 验收、Q3 实测报告、Q4 安全证明、Q5 建钥优化（计划、组件测试、实测报告、汇总表、分析）等文档（中文） |
+| `docs/Q4_records/` | Q4 证明引用的分稿、内部审查与复算记录（索引见其 README） |
 | `tls/` | 混合 TLS 1.3 应用：团队前期的 v9 实现接入 Rain-VOLEitH（见第 6 节） |
 | `verify.sh`、`Dockerfile`、`.github/workflows/` | 一键验证与持续集成（`verify.yml`：Linux 上的算法验证；`tls-windows.yml`：Windows 上的 TLS 接入验证） |
 
