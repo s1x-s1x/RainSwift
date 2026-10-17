@@ -29,6 +29,8 @@ the DLL, reproduces the KATs through it and runs the TLS test suite. Documentati
 
 同窗对照的建钥：rFAEST-EM-128f 约 1.17 µs，FAEST v3 EM-128f 约 1.18 µs；128s 对照约 1.22–1.23 µs。建钥优化前（Q3 主窗口），Rain 的建钥比 EM-AES 对照慢 5%–27%；优化只替换建钥中 Rain 正向计算的实现，所计算的函数不变，KAT 与签发、验签均不变（见第 3 节差分测试）。数值依赖机器，在其他机器上应在同一次运行内比较比值（见第 4 节）。
 
+**与 55 项同类方案及对照的综合速度数据。** 另有一套更大范围的实测数据，见 [docs/speed_data/](docs/speed_data/README.md)。它覆盖服务器原语 55 项，以及接入混合 TLS 1.3 后的笔记本原语与握手 41 项。这套数据以本项目实测为主，本项目缺失的项和短档签发用队友的实测，每行注明来源与测量环境。
+
 ## 2. 安全性口径
 
 - **已给出（有条件）**：在经典随机预言模型下给出 EUF-CMA 条件证明，依赖明示的 Rain 原语计算假设。另有 128 档设计评估。层级与 rFAEST 作者的安全声明相同，见 [完整安全证明](docs/Q4_03_security_proof.md)、[Rain-128 原语依据](docs/Q4_01_Rain128_primitive.md)、[验收报告](docs/Q4_02_acceptance.md)；证明引用的分稿、内部审查与复算记录见 [docs/Q4_records/](docs/Q4_records/README.md)（内部 AI 审查，非外部同行评审）。
@@ -115,6 +117,7 @@ docker run --rm rain-voleith taskset -c 2 ./build/rain_bench 501
 | `KAT/` | 六组签名 KAT 与 SHA-256 |
 | `docs/` | Q2 验收、Q3 实测报告、Q4 安全证明、Q5 建钥优化（计划、组件测试、实测报告、汇总表、分析）等文档（中文） |
 | `docs/Q4_records/` | Q4 证明引用的分稿、内部审查与复算记录（索引见其 README） |
+| `docs/speed_data/` | 55 项综合速度数据：服务器原语与笔记本 TLS 两张 CSV（来源与环境见其 README） |
 | `tls/` | 混合 TLS 1.3 应用：团队前期的 v9 实现接入 Rain-VOLEitH（见第 6 节） |
 | `verify.sh`、`Dockerfile`、`.github/workflows/` | 一键验证与持续集成（`verify.yml`：Linux 上的算法验证；`tls-windows.yml`：Windows 上的 TLS 接入验证） |
 
