@@ -64,6 +64,9 @@ template <typename P> struct faest_scheme
     static int crypto_sign_open(unsigned char* m, unsigned long long* mlen, const unsigned char* sm,
                                 unsigned long long smlen, const unsigned char* pk)
     {
+        // An input shorter than one signature cannot be valid; without this check the subtraction below underflows.
+        if (smlen < FAEST_SIGNATURE_BYTES<P>)
+            return -1;
         unsigned long long m_length = smlen - FAEST_SIGNATURE_BYTES<P>;
         if (!faest_verify<P>(sm + m_length, sm, m_length, pk))
             return -1;

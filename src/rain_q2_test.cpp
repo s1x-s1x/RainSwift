@@ -343,6 +343,17 @@ template <typename P, typename OTHER> static void t5()
                 meta<P>::name, SIG, accepted_flips, flips, (int) trunc, (int) extend, (int) chmsg, (int) chpk,
                 meta<OTHER>::name, (int) chset);
     for (size_t p : bad_pos) std::printf("T5 %-12s ACCEPTED FLIP at signature byte %zu (report to Q4, do not change expectation)\n", meta<P>::name, p);
+    // 输入短于一个签名：必须直接拒绝，且不改 mlen（修复前 smlen - SIG 下溢、越界读）
+    int short_rejected = 0;
+    const unsigned long long short_lens[] = {0, 1, SIG - 1};
+    for (unsigned long long len : short_lens)
+    {
+        mlen = 0xA5A5;
+        short_rejected += faest_scheme<P>::crypto_sign_open(m.data(), &mlen, sm.data() + MLEN, len, pk) != 0 && mlen == 0xA5A5;
+    }
+    CHECK(short_rejected == 3);
+    std::printf("T5 %-12s input shorter than a signature (smlen = 0, 1, %zu) rejected %d/3\n", meta<P>::name, SIG - 1,
+                short_rejected);
 }
 
 // ================================================================= T6：闭环
