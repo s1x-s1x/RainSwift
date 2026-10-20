@@ -1,0 +1,12 @@
+uname: Linux new 5.15.0-139-generic #149~20.04.1-Ubuntu SMP Wed Apr 16 08:29:56 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+cpu: Model name:                           AMD EPYC 7773X 64-Core Processor
+cpus: 256
+memory: 1.8Ti
+distro: Ubuntu 20.04.5 LTS
+glibc: ldd (Ubuntu GLIBC 2.31-0ubuntu9.18) 2.31
+system-gcc: gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+conda-gcc: x86_64-conda-linux-gnu-gcc (conda-forge gcc 14.4.0-7) 14.4.0
+python: Python 3.12.15
+slh-library: b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69  out/final-gate-1/native/libslhdsa_sm3.so
+rain-library: 492168e6189c24c020156ce64db23a5c02b8454ef5b6c592c1aef5a06784301b  tlsb/build/librain_voleith_tls.so
+pqcrypto-wheel: 7bc73c6d47650f583d2e4ecb5a333ca8c275f7eb9157195aee6637edc75e7170  wheels/pqcrypto-1.0.0-cp39-abi3-linux_x86_64.whl

@@ -1,0 +1,1513 @@
+{
+  "schema": "a15-ds-acceptance-v2",
+  "generated_at_utc": "2026-10-19T07:45:34.274419+00:00",
+  "command": [
+    "tools/ds_acceptance.py",
+    "--fixtures",
+    "fixtures/public-alt-chain",
+    "--library",
+    "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+    "--client-root",
+    "fixtures/public-alt-chain/slh-dsa-sm3-128-24/root.der",
+    "--output",
+    "../out/final-acceptance-full",
+    "--threads",
+    "8",
+    "--backend",
+    "2",
+    "--profile-set",
+    "full"
+  ],
+  "passed": true,
+  "profile_set": "full",
+  "required_profiles": [
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ],
+  "coverage_missing": [],
+  "client_root": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/fixtures/public-alt-chain/slh-dsa-sm3-128-24/root.der",
+  "client_root_source": "explicit --client-root",
+  "fixtures": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/fixtures/public-alt-chain",
+  "library": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+  "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+  "threads": 8,
+  "requested_backend": 2,
+  "policy": {
+    "library": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+    "backend": 2,
+    "threads": 8,
+    "require_native": true,
+    "force_python": false
+  },
+  "summary": {
+    "tests": 36,
+    "passed": 36,
+    "failed": 0,
+    "not_covered": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "name": "fixture-ml-dsa-44-provider",
+      "status": "passed",
+      "passed": true,
+      "stage": "fixture-verification",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "checked_edges": 2,
+        "verifiers": [
+          {
+            "algorithm": "ml-dsa-44",
+            "configured_backend": 2,
+            "configured_threads": 8,
+            "edge": 0,
+            "message_sha256": "d49626dd11d1cd8a1dd8f8205a7cc0d3190b01870426e125bd45a9fb46feb40c",
+            "mode": "provider",
+            "passed": true,
+            "public_key_sha256": "5a7aa399603215e31852354b1c19e43c3b6ca9c17b51e29b84e37e5d490ac640",
+            "signature_sha256": "1f95f3651b2071493c07fbf6ad45535b37bcd497ba7d66a48460b52448098ccd"
+          },
+          {
+            "algorithm": "ml-dsa-44",
+            "configured_backend": 2,
+            "configured_threads": 8,
+            "edge": 1,
+            "message_sha256": "e6a36dcef985cf8a5ea224c13623996101f029b77f728d5a3c78facd053972e6",
+            "mode": "provider",
+            "passed": true,
+            "public_key_sha256": "5bd3d062434b4423403fd104e0c197417673b08a2763328cacbe7daa2afaf631",
+            "signature_sha256": "4e9d2e875d47fc441236c00abc93f75b12689cf37517dcdec1e6d44e2d3a50f5"
+          }
+        ]
+      }
+    },
+    {
+      "name": "fixture-slh-dsa-sm3-128-24-native",
+      "status": "passed",
+      "passed": true,
+      "stage": "fixture-verification",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "checked_edges": 2,
+        "verifiers": [
+          {
+            "algorithm": "slh-dsa-sm3-128-24",
+            "backend": 2,
+            "configured_backend": 2,
+            "configured_threads": 8,
+            "edge": 0,
+            "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+            "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+            "message_sha256": "bc1a4afaaf552cbd489a07f9d9f60dc10827077e73a0ea8b03d9bf2a2a5f5a5d",
+            "mode": "native",
+            "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py",
+            "passed": true,
+            "public_key_sha256": "0142fabb249eaa508d0a02525f267f640f0812eb3670178ae664409937fababa",
+            "signature_sha256": "c40bfadce24f816b3446abd29cb6367e7417e5a8982d0d7f26543efb4650813b",
+            "threads": 8
+          },
+          {
+            "algorithm": "slh-dsa-sm3-128-24",
+            "backend": 2,
+            "configured_backend": 2,
+            "configured_threads": 8,
+            "edge": 1,
+            "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+            "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+            "message_sha256": "c313e9f7d59c79c77710d9c915f777cd97e5ba51791e1d69a8199d381a640542",
+            "mode": "native",
+            "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py",
+            "passed": true,
+            "public_key_sha256": "0631353368df87bad3ddeba35b2fbfbbd9fbaec0464261dfbd3b91b1ddaa0c8c",
+            "signature_sha256": "9cba4ff8def5ea6798b6c129030a40477f1d50221ead029406343e8b5676f5b7",
+            "threads": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "fixture-slh-dsa-sm3-128-24-python",
+      "status": "passed",
+      "passed": true,
+      "stage": "fixture-verification",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "checked_edges": 2,
+        "verifiers": [
+          {
+            "algorithm": "slh-dsa-sm3-128-24",
+            "configured_backend": 2,
+            "configured_threads": 8,
+            "edge": 0,
+            "message_sha256": "bc1a4afaaf552cbd489a07f9d9f60dc10827077e73a0ea8b03d9bf2a2a5f5a5d",
+            "mode": "python",
+            "passed": true,
+            "public_key_sha256": "0142fabb249eaa508d0a02525f267f640f0812eb3670178ae664409937fababa",
+            "reference_model_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/reference/slhdsa.py",
+            "signature_sha256": "c40bfadce24f816b3446abd29cb6367e7417e5a8982d0d7f26543efb4650813b"
+          },
+          {
+            "algorithm": "slh-dsa-sm3-128-24",
+            "configured_backend": 2,
+            "configured_threads": 8,
+            "edge": 1,
+            "message_sha256": "c313e9f7d59c79c77710d9c915f777cd97e5ba51791e1d69a8199d381a640542",
+            "mode": "python",
+            "passed": true,
+            "public_key_sha256": "0631353368df87bad3ddeba35b2fbfbbd9fbaec0464261dfbd3b91b1ddaa0c8c",
+            "reference_model_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/reference/slhdsa.py",
+            "signature_sha256": "9cba4ff8def5ea6798b6c129030a40477f1d50221ead029406343e8b5676f5b7"
+          }
+        ]
+      }
+    },
+    {
+      "name": "fixture-slh-dsa-sm3-128s-native",
+      "status": "passed",
+      "passed": true,
+      "stage": "fixture-verification",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "checked_edges": 2,
+        "verifiers": [
+          {
+            "algorithm": "slh-dsa-sm3-128s",
+            "backend": 2,
+            "configured_backend": 2,
+            "configured_threads": 8,
+            "edge": 0,
+            "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+            "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+            "message_sha256": "3aea69df53f75829141857518f3a3baca901c6688cd8f4c3893face0851ead40",
+            "mode": "native",
+            "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py",
+            "passed": true,
+            "public_key_sha256": "e5243c0e315cf34723c75416179fbc0ba5890d9e8fd26accc6e876192f020fd4",
+            "signature_sha256": "3b3f2657a6704310b339e3ab70e870def19e2fe88c01f5752f0c742c1a340ec5",
+            "threads": 8
+          },
+          {
+            "algorithm": "slh-dsa-sm3-128s",
+            "backend": 2,
+            "configured_backend": 2,
+            "configured_threads": 8,
+            "edge": 1,
+            "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+            "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+            "message_sha256": "7d630cf8664c8db2ba413a8693c2fe30f363b142bf6796a09c39528cb5b83a42",
+            "mode": "native",
+            "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py",
+            "passed": true,
+            "public_key_sha256": "7829c86ace48ae8b19a0aa21c0447202e7caaa4c5a412e4ef11141ebe41010c1",
+            "signature_sha256": "04369c1874dd2aa15e4625b27196fbed7207f3c3f057e2334e52fc7176ca07ef",
+            "threads": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "fixture-slh-dsa-sm3-128s-python",
+      "status": "passed",
+      "passed": true,
+      "stage": "fixture-verification",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "checked_edges": 2,
+        "verifiers": [
+          {
+            "algorithm": "slh-dsa-sm3-128s",
+            "configured_backend": 2,
+            "configured_threads": 8,
+            "edge": 0,
+            "message_sha256": "3aea69df53f75829141857518f3a3baca901c6688cd8f4c3893face0851ead40",
+            "mode": "python",
+            "passed": true,
+            "public_key_sha256": "e5243c0e315cf34723c75416179fbc0ba5890d9e8fd26accc6e876192f020fd4",
+            "reference_model_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/reference/slhdsa.py",
+            "signature_sha256": "3b3f2657a6704310b339e3ab70e870def19e2fe88c01f5752f0c742c1a340ec5"
+          },
+          {
+            "algorithm": "slh-dsa-sm3-128s",
+            "configured_backend": 2,
+            "configured_threads": 8,
+            "edge": 1,
+            "message_sha256": "7d630cf8664c8db2ba413a8693c2fe30f363b142bf6796a09c39528cb5b83a42",
+            "mode": "python",
+            "passed": true,
+            "public_key_sha256": "7829c86ace48ae8b19a0aa21c0447202e7caaa4c5a412e4ef11141ebe41010c1",
+            "reference_model_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/reference/slhdsa.py",
+            "signature_sha256": "04369c1874dd2aa15e4625b27196fbed7207f3c3f057e2334e52fc7176ca07ef"
+          }
+        ]
+      }
+    },
+    {
+      "name": "fixture-verification-rows",
+      "status": "passed",
+      "passed": true,
+      "stage": "fixture-verification",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "rows": 5,
+        "expected": 5,
+        "library_sha256": {
+          "base_tls/tls/__init__.py": "ee725a0df75f7b52e69b2ef24391904fb4c646d7b1a2fd9b2f124fd6d8f9272c",
+          "base_tls/tls/_deps.py": "888333570240aca0adf6f7e4c8d528e962fbabc0728e126eceeb6a6bc6bfb0eb",
+          "base_tls/tls/alt_chain.py": "45c67eb66ba1312c6495f61003ae025b13e9c724794eff0850a19c61a8f8bcc8",
+          "base_tls/tls/alt_fixtures.py": "a72f45764f853dceb6400498850c32ff97c4c9b29df475dba0629b79cd17bb02",
+          "base_tls/tls/alt_profiles.py": "f2d6c35e6a423b1f7c3362b2294361a4e8e14ac2635978536822c97ecfc2fb52",
+          "base_tls/tls/classical/__init__.py": "722c3dbd0902dfd9fdedb56a050e48ac03bdaeb8384584c5cd1e5833506f1733",
+          "base_tls/tls/classical/ecdh.py": "7751db31804d848f90df0c2d64aeaed019fbee4a9274d602f23582ec3e7f9e42",
+          "base_tls/tls/classical/signature.py": "6f3c1e44447359f9f914120158516a033195130b80cf423452016776c7de16aa",
+          "base_tls/tls/config.py": "fccd78e68f82419d7f889fa11e4d4805c5489b4d910eb565f2f77cd69da5daff",
+          "base_tls/tls/credentials.py": "6dbea615b16f2bb4ff097306e87a0a1860f30d4bab86618641b41b7d8c690fd8",
+          "base_tls/tls/der.py": "f64059dfb5b1e22b0d551306c2abf0d565a25685267471b65e196c9b4e50dd4a",
+          "base_tls/tls/errors.py": "7ee62437dbe66d2adc66b1fa6a9cf6a1ec89326bb139864a67127b4537c76272",
+          "base_tls/tls/handshake/__init__.py": "77442b7b2f4d40f238f9bd0e3b37e4c2c71f4471501c92b3cceb9960c687a3d5",
+          "base_tls/tls/handshake/certificate_verify.py": "5eb04d22f5b78965b503106ac016b852621508f748fcded0286de19b8b8e8911",
+          "base_tls/tls/handshake/client.py": "9a4fe5013da126ba5241d40ebbd3aadcd6de3cb95703707e366fab7c120bdc46",
+          "base_tls/tls/handshake/connection.py": "8c788374a1a39cca4fc9b9238f94f976ab8f818f9b279ae2b1171b049f4a0d54",
+          "base_tls/tls/handshake/messages.py": "9f7a242537f9a88cf397f9620b67bc0aefdd836f6f4f99dc7b3d312dd80be1c8",
+          "base_tls/tls/handshake/server.py": "e20feb4fbd687fde6f192815eac0e6c3bbfa89dc786e03b6daee69c570b34785",
+          "base_tls/tls/handshake/state.py": "771fbafdf83b0ff7d816369d60cbc4091eef372f1c4c3c2802cefe09c7e97e65",
+          "base_tls/tls/handshake/transcript.py": "a412311ab55e907da35b9ad4cbbeaa31cd8a4bf972957019c47317ef338c26f4",
+          "base_tls/tls/key_schedule/__init__.py": "c5ec7801ea5251a82d6291939c987b79a3f17a8a2e8e4b8730ad141af8270111",
+          "base_tls/tls/key_schedule/hkdf.py": "842d3b016f30789a601e4f3bb4983044f5e3cebb3482954016c3cbdc3632ffb3",
+          "base_tls/tls/metrics.py": "e2d60ce32a1adc68b8ee514d5ac6dfee0d7211044cd9d1d32ce72f08a4b9d0d4",
+          "base_tls/tls/pki.py": "e8862343223adf1babcfb5c2b1016aeb6788dde1b3cb08966c96eb9223358a22",
+          "base_tls/tls/pq/__init__.py": "853b44429829d09b043c02a60caa1ae371ffcb2e47c4149222aa72784cde55d2",
+          "base_tls/tls/pq/backends.py": "b0458bd4bef4390de0fe165ebd3fc9322d2d691de07e55d85c9fb4dd94ef591b",
+          "base_tls/tls/pq/kem.py": "189e22aff7a5802ca9f6bc08316a142aa0b8e9d613320cfcb1eb12d2eb45bdfd",
+          "base_tls/tls/pq/providers.py": "71162ad3aac3a4be079ee39413761db62035fa222d60073393e19b4614d77bcb",
+          "base_tls/tls/pq/signature.py": "fbb492230691c108e715fc104032eb6d522acf2ed7fd76c81586569bada872f5",
+          "base_tls/tls/pq/slhdsa_sm3.py": "c7824ea462f256a65dcc54680e7414f4c4db31aff8d444d7d82bd155c0713cfc",
+          "base_tls/tls/pq/wots_xmss.py": "c02c6fc9fbdf1f59b50e4a16fe653847718368f92d7f3b14bf6133c843083ef8",
+          "base_tls/tls/record/__init__.py": "e5aa5cd0cc826f79499a4dbb8a70edf0a64c5e0a75e7b62cf62d06c241baf0e5",
+          "base_tls/tls/record/aead.py": "c4cfa634a53ee375920bc489b7d440f95a7f823ee59ee22017bc1427412d6dcc",
+          "base_tls/tls/transport/__init__.py": "13c6c20533cdf27cf2adeaf1c0d19b6917921da445bc8273a4e961ecc8e6ddea",
+          "base_tls/tls/transport/shaper.py": "45ad1238485950485fc19b52ba34027e5842b57ba890d5765e7bd2a270b471a4",
+          "base_tls/tls/transport/tcp.py": "2ca1175c19c9cb17b4f8c33bf3ebff5d9dca2b3ccf0d3f752054024147e515ae",
+          "base_tls/tls/wire.py": "de232f22c2dcf778ca6e83d1adb20873df5c9bb1be6e5fc621e36a00c235b846",
+          "reference/__init__.py": "5b730d2dc9edbb15aaa49be4f85fe829fd5962f5234bf0f182052baf59d0df26",
+          "reference/acvp.py": "2da1387d9d68abcc4e2bbaf02710048fd83491277e116664ce32f0169aaad88e",
+          "reference/differential.py": "f6675752546d8755c9ef17f155576c6d74cedf12d1f68c25e4081850ef979dd9",
+          "reference/r1_evidence.py": "350c2b25c23258cf5d92e984f6dde7492fa93194f245d333349a4ad03cee0703",
+          "reference/selftest.py": "942c8083e3c6eacd55cff8436ba2e0f6a7a4d92b8add00049ea54298de546368",
+          "reference/slhdsa.py": "d7412bafb27d9e40b98a10eaf10faf24753007b0585099532fbaf628c717b043",
+          "reference/sm3.py": "43fb6d92afc803f4842bd06dfb00f813c7ed102f1b68d9115c3e0cd6497c2c8e",
+          "tools/alt_chain_fixtures.py": "9d0c2bcba649b57ef0c6a381b37b57ea8b90a8b5fe721853450894485bfd57e4",
+          "tools/native.py": "778a20a829d0f034f4a9852334d6f9480e66c41bfc76d0b891414cc0e2db6840",
+          "tools/signing_budget.py": "629425fc9764e2f7758a8c4927eff757cf3ec4ff3bc8970d50836d19fe7e6a50"
+        }
+      }
+    },
+    {
+      "name": "profile-coverage",
+      "status": "passed",
+      "passed": true,
+      "stage": "coverage",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "profile_set": "full",
+        "required": [
+          "P0",
+          "P1",
+          "P2",
+          "P3",
+          "P4"
+        ],
+        "available": [
+          "P0",
+          "P1",
+          "P2",
+          "P3",
+          "P4"
+        ],
+        "missing": []
+      }
+    },
+    {
+      "name": "e1-P0",
+      "status": "passed",
+      "passed": true,
+      "stage": "handshake",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "server_flight_bytes": 1147,
+        "alt_extension_bytes": 0
+      }
+    },
+    {
+      "name": "e1-P1",
+      "status": "passed",
+      "passed": true,
+      "stage": "handshake",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "server_flight_bytes": 3820,
+        "alt_extension_bytes": 0
+      }
+    },
+    {
+      "name": "e1-P2",
+      "status": "passed",
+      "passed": true,
+      "stage": "handshake",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "server_flight_bytes": 11674,
+        "alt_extension_bytes": 7854
+      }
+    },
+    {
+      "name": "e1-P3",
+      "status": "passed",
+      "passed": true,
+      "stage": "handshake",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "server_flight_bytes": 19699,
+        "alt_extension_bytes": 15854
+      }
+    },
+    {
+      "name": "e1-P4",
+      "status": "passed",
+      "passed": true,
+      "stage": "handshake",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "server_flight_bytes": 10095,
+        "alt_extension_bytes": 6267
+      }
+    },
+    {
+      "name": "e1-profiles",
+      "status": "passed",
+      "passed": true,
+      "stage": "handshake",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "profiles": [
+          "P0",
+          "P1",
+          "P2",
+          "P3",
+          "P4"
+        ],
+        "required": [
+          "P0",
+          "P1",
+          "P2",
+          "P3",
+          "P4"
+        ]
+      }
+    },
+    {
+      "name": "strict-p2-in-process",
+      "status": "passed",
+      "passed": true,
+      "stage": "handshake",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "checked_edges": 2,
+        "legacy_edges": 0,
+        "complete": true,
+        "algorithms": [
+          "slh-dsa-sm3-128-24",
+          "slh-dsa-sm3-128-24"
+        ],
+        "verifiers": [
+          {
+            "mode": "native",
+            "algorithm": "slh-dsa-sm3-128-24",
+            "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+            "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+            "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py",
+            "backend": 2,
+            "threads": 8,
+            "passed": true,
+            "edge": 0,
+            "public_key_sha256": "0142fabb249eaa508d0a02525f267f640f0812eb3670178ae664409937fababa",
+            "message_sha256": "bc1a4afaaf552cbd489a07f9d9f60dc10827077e73a0ea8b03d9bf2a2a5f5a5d",
+            "signature_sha256": "c40bfadce24f816b3446abd29cb6367e7417e5a8982d0d7f26543efb4650813b",
+            "configured_threads": 8,
+            "configured_backend": 2
+          },
+          {
+            "mode": "native",
+            "algorithm": "slh-dsa-sm3-128-24",
+            "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+            "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+            "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py",
+            "backend": 2,
+            "threads": 8,
+            "passed": true,
+            "edge": 1,
+            "public_key_sha256": "0631353368df87bad3ddeba35b2fbfbbd9fbaec0464261dfbd3b91b1ddaa0c8c",
+            "message_sha256": "c313e9f7d59c79c77710d9c915f777cd97e5ba51791e1d69a8199d381a640542",
+            "signature_sha256": "9cba4ff8def5ea6798b6c129030a40477f1d50221ead029406343e8b5676f5b7",
+            "configured_threads": 8,
+            "configured_backend": 2
+          }
+        ],
+        "certificate_verify": {
+          "classic_ok": true,
+          "pq_ok": true,
+          "accepted": true,
+          "pq_scheme": 3921
+        },
+        "application_ok": true,
+        "exporters_match": true,
+        "trusted_root_sha256": "56b5602e632845252f57380f5c16ae213a5d115d115cebe0ea40c5bdcce53ab1",
+        "chain_der_sha256": [
+          "feb07ef2eb3c2276eb4123f3ef6c7342d18bf4ddae3238ba397419dc26868f74",
+          "4826a72e1b702cfea2840a5d8abf1f7a19928031fe597688111b3ef1dcf69a56"
+        ],
+        "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+        "policy": null,
+        "handshake_bytes": 13038,
+        "server_flight_bytes": 11679,
+        "trusted_root_source": "fixtures/public-alt-chain/slh-dsa-sm3-128-24/root.der",
+        "predicate_reasons": []
+      }
+    },
+    {
+      "name": "strict-p2-loopback-tcp",
+      "status": "passed",
+      "passed": true,
+      "stage": "tcp",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "error": null,
+        "server_error": null,
+        "application_ok": true,
+        "exporters_match": true,
+        "checked_edges": 2,
+        "legacy_edges": 0,
+        "complete": true,
+        "algorithms": [
+          "slh-dsa-sm3-128-24",
+          "slh-dsa-sm3-128-24"
+        ],
+        "verifiers": [
+          {
+            "mode": "native",
+            "algorithm": "slh-dsa-sm3-128-24",
+            "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+            "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+            "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py",
+            "backend": 2,
+            "threads": 8,
+            "passed": true,
+            "edge": 0,
+            "public_key_sha256": "0142fabb249eaa508d0a02525f267f640f0812eb3670178ae664409937fababa",
+            "message_sha256": "bc1a4afaaf552cbd489a07f9d9f60dc10827077e73a0ea8b03d9bf2a2a5f5a5d",
+            "signature_sha256": "c40bfadce24f816b3446abd29cb6367e7417e5a8982d0d7f26543efb4650813b",
+            "configured_threads": 8,
+            "configured_backend": 2
+          },
+          {
+            "mode": "native",
+            "algorithm": "slh-dsa-sm3-128-24",
+            "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+            "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+            "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py",
+            "backend": 2,
+            "threads": 8,
+            "passed": true,
+            "edge": 1,
+            "public_key_sha256": "0631353368df87bad3ddeba35b2fbfbbd9fbaec0464261dfbd3b91b1ddaa0c8c",
+            "message_sha256": "c313e9f7d59c79c77710d9c915f777cd97e5ba51791e1d69a8199d381a640542",
+            "signature_sha256": "9cba4ff8def5ea6798b6c129030a40477f1d50221ead029406343e8b5676f5b7",
+            "configured_threads": 8,
+            "configured_backend": 2
+          }
+        ],
+        "certificate_verify_result": {
+          "classic_ok": true,
+          "pq_ok": true,
+          "accepted": true,
+          "pq_scheme": 3921
+        },
+        "certificate_verify_accepted": true,
+        "trusted_root_sha256": "56b5602e632845252f57380f5c16ae213a5d115d115cebe0ea40c5bdcce53ab1",
+        "client_waits": 2,
+        "waits_to_authenticated": 1,
+        "client_wall_ms": 67.3375716432929,
+        "server_wall_ms": 67.26226955652237,
+        "client_bytes_sent": 0,
+        "server_bytes_sent": 0,
+        "records": [
+          [
+            "ClientHello",
+            1306,
+            1
+          ],
+          [
+            "ServerHello",
+            1185,
+            1
+          ],
+          [
+            "EncryptedExtensions",
+            6,
+            1
+          ],
+          [
+            "Certificate",
+            9647,
+            1
+          ],
+          [
+            "CertificateVerify",
+            739,
+            1
+          ],
+          [
+            "Finished",
+            36,
+            1
+          ],
+          [
+            "Finished",
+            36,
+            1
+          ]
+        ],
+        "predicate_reasons": []
+      }
+    },
+    {
+      "name": "large-certificate-fragmentation",
+      "status": "passed",
+      "passed": true,
+      "stage": "tcp",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "certificate_records": 2,
+        "certificate_bytes": 17648,
+        "server_error": null,
+        "exporters_match": true
+      }
+    },
+    {
+      "name": "negative-root-replacement",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate_alt",
+      "detail": "HandshakeError: certificate_alt: configured algorithm differs from the local trust anchor",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate_alt",
+        "actual_stage": "certificate_alt",
+        "expected_reason_contains": "configured algorithm differs",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-unrelated-root-replacement",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate",
+      "detail": "HandshakeError: certificate: CN=A1-5 test intermediate is not signed by CN=unrelated root",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate",
+        "actual_stage": "certificate",
+        "expected_reason_contains": "not signed by",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-root-pq-key-replacement",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate_alt",
+      "detail": "HandshakeError: certificate_alt: alternative signature verification failed",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate_alt",
+        "actual_stage": "certificate_alt",
+        "expected_reason_contains": "alternative signature verification failed",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-leaf-alt-stripped",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate_alt",
+      "detail": "HandshakeError: certificate_alt: required alternative signature extensions are absent",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate_alt",
+        "actual_stage": "certificate_alt",
+        "expected_reason_contains": "required alternative signature extensions are absent",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-leaf-signature-corrupt",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate_alt",
+      "detail": "HandshakeError: certificate_alt: alternative signature verification failed",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate_alt",
+        "actual_stage": "certificate_alt",
+        "expected_reason_contains": "alternative signature verification failed",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-algorithm-oid-swap",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate_alt",
+      "detail": "HandshakeError: certificate_alt: alternative signature algorithm differs from issuer SPKI",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate_alt",
+        "actual_stage": "certificate_alt",
+        "expected_reason_contains": "alternative signature algorithm differs from issuer SPKI",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-cv-classical-signature",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate_verify",
+      "detail": "HandshakeError: certificate_verify: hybrid authentication failed: classical signature invalid",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate_verify",
+        "actual_stage": "certificate_verify",
+        "expected_reason_contains": "classical signature invalid",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-cv-pq-signature",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate_verify",
+      "detail": "HandshakeError: certificate_verify: hybrid authentication failed: post-quantum signature invalid",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate_verify",
+        "actual_stage": "certificate_verify",
+        "expected_reason_contains": "post-quantum signature invalid",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-cv-pq-absent",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate_verify",
+      "detail": "HandshakeError: certificate_verify: hybrid profile requires both signatures, but the PQ half is absent",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate_verify",
+        "actual_stage": "certificate_verify",
+        "expected_reason_contains": "PQ half is absent",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-native-library-missing",
+      "status": "passed",
+      "passed": true,
+      "stage": "BackendUnavailableError",
+      "detail": "BackendUnavailableError: certificate_alt: SLH native backend unavailable: OSError: /mnt1/lmy/lzl/ds-pq-chain-20261019/a15/build/does-not-exist/libslhdsa_sm3.so: cannot open shared object file: No such file or directory",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "BackendUnavailableError"
+        ],
+        "actual_error_type": "BackendUnavailableError",
+        "expected_stage": null,
+        "actual_stage": null,
+        "expected_reason_contains": "unavailable",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-invalid-native-image",
+      "status": "passed",
+      "passed": true,
+      "stage": "BackendUnavailableError",
+      "detail": "BackendUnavailableError: certificate_alt: SLH native backend unavailable: OSError: /mnt1/lmy/lzl/ds-pq-chain-20261019/a15/fixtures/public-alt-chain/slh-dsa-sm3-128-24/fixture.json: invalid ELF header",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "BackendUnavailableError"
+        ],
+        "actual_error_type": "BackendUnavailableError",
+        "expected_stage": null,
+        "actual_stage": null,
+        "expected_reason_contains": "unavailable",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-online-128-24-injection",
+      "status": "passed",
+      "passed": true,
+      "stage": "ValueError",
+      "detail": "ValueError: limited-use 128-24 is reserved for offline CA signing",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "ValueError"
+        ],
+        "actual_error_type": "ValueError",
+        "expected_stage": null,
+        "actual_stage": null,
+        "expected_reason_contains": "reserved for offline CA signing",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-flight-byte-budget",
+      "status": "passed",
+      "passed": true,
+      "stage": "server_flight",
+      "detail": "HandshakeError: server_flight: authenticated handshake flight exceeds byte budget",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "server_flight",
+        "actual_stage": "server_flight",
+        "expected_reason_contains": "exceeds byte budget",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-flight-truncated",
+      "status": "passed",
+      "passed": true,
+      "stage": "server_flight",
+      "detail": "HandshakeError: server_flight: truncated authenticated handshake flight",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "server_flight",
+        "actual_stage": "server_flight",
+        "expected_reason_contains": "truncated authenticated handshake flight",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "budget-unique-first",
+      "status": "passed",
+      "passed": true,
+      "stage": "budget",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "receipt": "b81247a770684b94b15fbcf2f310a99c",
+        "public_key_sha256": "630dcd2966c4336691125448bbb25b4ff412a49c732db2c8abc1b8581bd710dd"
+      }
+    },
+    {
+      "name": "budget-operation-identity-is-unique",
+      "status": "passed",
+      "passed": true,
+      "stage": "BudgetError",
+      "detail": "BudgetError: signing operation was already charged",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "BudgetError"
+        ],
+        "actual_error_type": "BudgetError",
+        "expected_stage": null,
+        "actual_stage": null,
+        "expected_reason_contains": "already charged",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "budget-unique-usage-remains-one",
+      "status": "passed",
+      "passed": true,
+      "stage": "budget",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "keys": [
+          {
+            "key_id": "8717000113770c0273f322a4f0de027b107771e28964fa7583f8c4298bca1901",
+            "algorithm": "slh-dsa-sm3-128-24",
+            "limit": 2,
+            "used": 1,
+            "remaining": 1,
+            "states": {
+              "reserved": 1
+            },
+            "count_reconciled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "budget-exhaustion-refuses-second",
+      "status": "passed",
+      "passed": true,
+      "stage": "BudgetError",
+      "detail": "BudgetError: signing budget exhausted; rotate the key",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "BudgetError"
+        ],
+        "actual_error_type": "BudgetError",
+        "expected_stage": null,
+        "actual_stage": null,
+        "expected_reason_contains": "exhausted",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "budget-reserve-failure-stops-sign",
+      "status": "passed",
+      "passed": true,
+      "stage": "BudgetError",
+      "detail": "BudgetError: exhausted",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "BudgetError"
+        ],
+        "actual_error_type": "BudgetError",
+        "expected_stage": null,
+        "actual_stage": null,
+        "expected_reason_contains": "exhausted",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "budget-refusal-left-sign-uncalled",
+      "status": "passed",
+      "passed": true,
+      "stage": "budget",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "sign_calls": 0
+      }
+    }
+  ],
+  "not_covered": [],
+  "phase_results": [
+    {
+      "phase": "fixture-verification",
+      "status": "passed"
+    },
+    {
+      "phase": "positive",
+      "status": "passed"
+    },
+    {
+      "phase": "strict-p2",
+      "status": "passed"
+    },
+    {
+      "phase": "tcp",
+      "status": "passed"
+    },
+    {
+      "phase": "negative",
+      "status": "passed"
+    }
+  ],
+  "phase_failures": [],
+  "environment": {
+    "executable": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/../out/baseline-1/venv/bin/python",
+    "version": "3.12.15 (main, Oct 13 2026, 16:52:04) [GCC 15.3.0]",
+    "platform": "linux",
+    "cwd": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15",
+    "pythonpath": null,
+    "sys_path": [
+      "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/third_party/py-acvp-pqc",
+      "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/base_tls",
+      "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15",
+      "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/base_tls",
+      "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15",
+      "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools",
+      "/mnt1/lmy/lzl/rain-bench-20261016/env/lib/python312.zip",
+      "/mnt1/lmy/lzl/rain-bench-20261016/env/lib/python3.12",
+      "/mnt1/lmy/lzl/rain-bench-20261016/env/lib/python3.12/lib-dynload",
+      "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/baseline-1/venv/lib/python3.12/site-packages",
+      "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/base_tls/.deps-falcon"
+    ]
+  },
+  "modules": {
+    "tls": {
+      "path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/base_tls/tls/__init__.py",
+      "sha256": "ee725a0df75f7b52e69b2ef24391904fb4c646d7b1a2fd9b2f124fd6d8f9272c"
+    },
+    "native_adapter": {
+      "path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py",
+      "sha256": "778a20a829d0f034f4a9852334d6f9480e66c41bfc76d0b891414cc0e2db6840",
+      "imported_file": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py"
+    },
+    "reference": {
+      "path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/reference/__init__.py",
+      "sha256": "5b730d2dc9edbb15aaa49be4f85fe829fd5962f5234bf0f182052baf59d0df26",
+      "imported_file": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/reference/__init__.py"
+    },
+    "fips205": {
+      "path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/third_party/py-acvp-pqc/fips205.py",
+      "sha256": "edb662306b0ccac88ee9669aed6256c27a547d9084e6e9cc2180ce92e9da3a22"
+    },
+    "acceptance_driver": {
+      "path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/ds_acceptance.py",
+      "sha256": "267f648452222737f3257cbdca642a7e7401a2c9997a420ff9ca1d2510d89e22"
+    }
+  },
+  "hashes": {
+    "source_before": {
+      "base_tls/tls/__init__.py": "ee725a0df75f7b52e69b2ef24391904fb4c646d7b1a2fd9b2f124fd6d8f9272c",
+      "base_tls/tls/_deps.py": "888333570240aca0adf6f7e4c8d528e962fbabc0728e126eceeb6a6bc6bfb0eb",
+      "base_tls/tls/alt_chain.py": "45c67eb66ba1312c6495f61003ae025b13e9c724794eff0850a19c61a8f8bcc8",
+      "base_tls/tls/alt_fixtures.py": "a72f45764f853dceb6400498850c32ff97c4c9b29df475dba0629b79cd17bb02",
+      "base_tls/tls/alt_profiles.py": "f2d6c35e6a423b1f7c3362b2294361a4e8e14ac2635978536822c97ecfc2fb52",
+      "base_tls/tls/classical/__init__.py": "722c3dbd0902dfd9fdedb56a050e48ac03bdaeb8384584c5cd1e5833506f1733",
+      "base_tls/tls/classical/ecdh.py": "7751db31804d848f90df0c2d64aeaed019fbee4a9274d602f23582ec3e7f9e42",
+      "base_tls/tls/classical/signature.py": "6f3c1e44447359f9f914120158516a033195130b80cf423452016776c7de16aa",
+      "base_tls/tls/config.py": "fccd78e68f82419d7f889fa11e4d4805c5489b4d910eb565f2f77cd69da5daff",
+      "base_tls/tls/credentials.py": "6dbea615b16f2bb4ff097306e87a0a1860f30d4bab86618641b41b7d8c690fd8",
+      "base_tls/tls/der.py": "f64059dfb5b1e22b0d551306c2abf0d565a25685267471b65e196c9b4e50dd4a",
+      "base_tls/tls/errors.py": "7ee62437dbe66d2adc66b1fa6a9cf6a1ec89326bb139864a67127b4537c76272",
+      "base_tls/tls/handshake/__init__.py": "77442b7b2f4d40f238f9bd0e3b37e4c2c71f4471501c92b3cceb9960c687a3d5",
+      "base_tls/tls/handshake/certificate_verify.py": "5eb04d22f5b78965b503106ac016b852621508f748fcded0286de19b8b8e8911",
+      "base_tls/tls/handshake/client.py": "9a4fe5013da126ba5241d40ebbd3aadcd6de3cb95703707e366fab7c120bdc46",
+      "base_tls/tls/handshake/connection.py": "8c788374a1a39cca4fc9b9238f94f976ab8f818f9b279ae2b1171b049f4a0d54",
+      "base_tls/tls/handshake/messages.py": "9f7a242537f9a88cf397f9620b67bc0aefdd836f6f4f99dc7b3d312dd80be1c8",
+      "base_tls/tls/handshake/server.py": "e20feb4fbd687fde6f192815eac0e6c3bbfa89dc786e03b6daee69c570b34785",
+      "base_tls/tls/handshake/state.py": "771fbafdf83b0ff7d816369d60cbc4091eef372f1c4c3c2802cefe09c7e97e65",
+      "base_tls/tls/handshake/transcript.py": "a412311ab55e907da35b9ad4cbbeaa31cd8a4bf972957019c47317ef338c26f4",
+      "base_tls/tls/key_schedule/__init__.py": "c5ec7801ea5251a82d6291939c987b79a3f17a8a2e8e4b8730ad141af8270111",
+      "base_tls/tls/key_schedule/hkdf.py": "842d3b016f30789a601e4f3bb4983044f5e3cebb3482954016c3cbdc3632ffb3",
+      "base_tls/tls/metrics.py": "e2d60ce32a1adc68b8ee514d5ac6dfee0d7211044cd9d1d32ce72f08a4b9d0d4",
+      "base_tls/tls/pki.py": "e8862343223adf1babcfb5c2b1016aeb6788dde1b3cb08966c96eb9223358a22",
+      "base_tls/tls/pq/__init__.py": "853b44429829d09b043c02a60caa1ae371ffcb2e47c4149222aa72784cde55d2",
+      "base_tls/tls/pq/backends.py": "b0458bd4bef4390de0fe165ebd3fc9322d2d691de07e55d85c9fb4dd94ef591b",
+      "base_tls/tls/pq/kem.py": "189e22aff7a5802ca9f6bc08316a142aa0b8e9d613320cfcb1eb12d2eb45bdfd",
+      "base_tls/tls/pq/providers.py": "71162ad3aac3a4be079ee39413761db62035fa222d60073393e19b4614d77bcb",
+      "base_tls/tls/pq/signature.py": "fbb492230691c108e715fc104032eb6d522acf2ed7fd76c81586569bada872f5",
+      "base_tls/tls/pq/slhdsa_sm3.py": "c7824ea462f256a65dcc54680e7414f4c4db31aff8d444d7d82bd155c0713cfc",
+      "base_tls/tls/pq/wots_xmss.py": "c02c6fc9fbdf1f59b50e4a16fe653847718368f92d7f3b14bf6133c843083ef8",
+      "base_tls/tls/record/__init__.py": "e5aa5cd0cc826f79499a4dbb8a70edf0a64c5e0a75e7b62cf62d06c241baf0e5",
+      "base_tls/tls/record/aead.py": "c4cfa634a53ee375920bc489b7d440f95a7f823ee59ee22017bc1427412d6dcc",
+      "base_tls/tls/transport/__init__.py": "13c6c20533cdf27cf2adeaf1c0d19b6917921da445bc8273a4e961ecc8e6ddea",
+      "base_tls/tls/transport/shaper.py": "45ad1238485950485fc19b52ba34027e5842b57ba890d5765e7bd2a270b471a4",
+      "base_tls/tls/transport/tcp.py": "2ca1175c19c9cb17b4f8c33bf3ebff5d9dca2b3ccf0d3f752054024147e515ae",
+      "base_tls/tls/wire.py": "de232f22c2dcf778ca6e83d1adb20873df5c9bb1be6e5fc621e36a00c235b846",
+      "base_tls/tools/audit_live_checks.py": "a7c275201c5af41bcdaccee65e4ad3a31a3f77a883c09defcbee3d42ae6b1b68",
+      "base_tls/tools/check_x509.py": "4be18e361178d0c8c49add460a1a786541675cdcf3bb2c4dce9edead70c0dfd9",
+      "base_tls/tools/dump_wire.py": "c50bb0db84874acc9577be03d011335e02d9030bca038551b39987d20538ab37",
+      "base_tls/tools/make_requirements_lock.py": "c19d951b36b1dab601907e1cbbdfd1c3ff2e576c6cf543192eaa16aeb679cbcc",
+      "base_tls/tools/make_source_patch.py": "805245cf16871d0a24672769620edbffb823162ec85c70d6e56159ecd2feea27",
+      "base_tls/tools/probe_pq.py": "4d69323d30c01e9bb23a92560b8c4fb96e483bf9174df1ea980732b364e06fb4",
+      "base_tls/tools/report_environment.py": "e2010fc74390687c8c3d7601d7410ce5547fa4953f2930a8b62bf376db10ba46",
+      "base_tls/tools/sandbox_pyfix/sitecustomize.py": "69c05c737d9f454094ca7cb91683b5cdd214e0bb3b3b56cbe8a7d7b85985ed2b",
+      "base_tls/tools/verify_dependency_lock.py": "d39bd14e698292bdd9cbf3a5c613363cbbcd9f9cd3d0e456f649d14d976d359d",
+      "c/fors_snapshot_20261004/include__slhdsa_sm3.h": "3db66ab03238caea0c2880c61875d2be3a6216de45c9aeb8d086e7b362ff243c",
+      "c/fors_snapshot_20261004/src__engine.c": "7d767a8b55ba81d62adfb1a29363c6471787cfbdcac335ed0ce5c98484188615",
+      "c/fors_snapshot_20261004/src__sm3.c": "5b165c63a7747fbad817459e1e4cbff4e884eab53ba5a14539b401a89db2d2dc",
+      "c/fors_snapshot_20261004/src__sm3.h": "a8eb36558ee2680ffb486c81430461406f8a6002a367d3187fa130e3e0d46761",
+      "c/fors_snapshot_20261004/src__sm3x8.c": "6d419a5e838c2402b5021b1bed6f8c4047402848ea2df234555cb210557e8f05",
+      "c/fors_snapshot_20261004/src__sm3x8.h": "94f3bef4ff710d6fff7d3e29633e390778ef0cfd2b4ab90084a01e497da43fc4",
+      "c/fors_snapshot_20261004/tests__test_avx2.c": "c97da4c1494073276977a166ba9df34d45bd304d56528c79df09bd6fd1e85a60",
+      "c/fors_snapshot_20261004/tests__test_fault.c": "248400cc2474fcfa9f441f12e8ece08a6c2ddcf6b3fed0692b1037a9dd61d745",
+      "c/fors_snapshot_20261004/tests__test_native.c": "e6452112bb3bfd4fd730c46301e8547e4dbba6b6cee248e42c11f129dace5723",
+      "c/fors_snapshot_20261004/tests__test_prehash.c": "f7c91d9e01ba8d82b4cd9ec50d7d3dad12c95ac3ebcc62f82d008d088c30e4c7",
+      "c/include/slhdsa_sm3.h": "dd3c12dd2ea439eab9bdd38fead74bd1bdae271588650c9fd1a8e511f52674c4",
+      "c/scalar_snapshot_20261004/include__slhdsa_sm3.h": "c84ef52141276d408b2f4b48155093c6e6011e69f0cfbc773006f68c9cab8cb5",
+      "c/scalar_snapshot_20261004/src__engine.c": "3dfd824ae1d619c041c7018f491c32e6fffd6a7138489c676301a7fe716d5acc",
+      "c/scalar_snapshot_20261004/src__sm3.c": "e655fbb8b8048230562beb03c8e0a0a0702acbed9a5a7e62862f0fcb8c374114",
+      "c/scalar_snapshot_20261004/src__sm3.h": "a00c3116686428ef9fbc7d4f7a9e88f066cf45ba39812fd7f17ec25ea70439b3",
+      "c/scalar_snapshot_20261004/tests__test_fault.c": "12e484882299aacc79f4b0732d80b49ee0d60c9f644fd53a6f6182a3fe9438aa",
+      "c/scalar_snapshot_20261004/tests__test_native.c": "4998f2cacc173249c76bdda2f3f880456016e7f83b42b5983201bfa7befb0739",
+      "c/scalar_snapshot_20261004/tests__test_review.c": "b906632f604a8b59abd32c76ab37a2b9b6c3f195dc8501db7971af72dc1f0e52",
+      "c/src/engine.c": "7071e8b410b3a19613c6ab8e525e97b1ba2fad37b79cb2cec3f7356b5bdfec99",
+      "c/src/fors_verify8.h": "f8d1c1223b7bb3d0bbba20e4cccc995e4b0001275ea9c0a2e4e0cbf322871b4e",
+      "c/src/secure_zero.h": "9ac49e9ece7575d338b8cec116cbacee394273392f2672af97af58266dca2b70",
+      "c/src/sm3.c": "1e2712dc6a2ac0f7f2950936acc37c08d80c69e39743ce211abbc5ed7142d20f",
+      "c/src/sm3.h": "a8eb36558ee2680ffb486c81430461406f8a6002a367d3187fa130e3e0d46761",
+      "c/src/sm3_cuda.h": "6354878a69a8c299688d8805de46a4b6adfecdf43560de04d6f081feabd18bf1",
+      "c/src/sm3_cuda_stub.c": "b5f2ccb7c8ca60e0eb8adf4609962ad0f5f6acbb109b22a799cc33e274a998f6",
+      "c/src/sm3x8.c": "41da8e709dd31d8ce126b5ea4bbf972ad57fcdc1565247a959f94f8001263b2e",
+      "c/src/sm3x8.h": "94f3bef4ff710d6fff7d3e29633e390778ef0cfd2b4ab90084a01e497da43fc4",
+      "c/src/wots_schedule8.h": "0b1a1a7da716961842a8aa981ad81dfc8506b9a0c8524ead44507c73b36b1194",
+      "c/tests/test_avx2.c": "8fa2c9478fec4a81accca00d9cec4b20257feec2d75aadec512aed574c37a9f5",
+      "c/tests/test_cuda.c": "6dee97e16a8f89832f6073f106c3b96202648c4d20de5b3ed23d51e61710e16b",
+      "c/tests/test_fault.c": "b40a103482ef8490756a765238a4fafadd703be6652a4fa91e219b7b91760d68",
+      "c/tests/test_native.c": "e6452112bb3bfd4fd730c46301e8547e4dbba6b6cee248e42c11f129dace5723",
+      "c/tests/test_prehash.c": "f7c91d9e01ba8d82b4cd9ec50d7d3dad12c95ac3ebcc62f82d008d088c30e4c7",
+      "c/tests/test_repair.c": "13833da787015ed9d0f76ce962707a3c0589c82466c78f898c658279915a5a35",
+      "c/tests/test_review.c": "b906632f604a8b59abd32c76ab37a2b9b6c3f195dc8501db7971af72dc1f0e52",
+      "c/tests/test_verify_scheduling.c": "5655fce0b06ef13bedae851df3814a3b3418af9b38eeb868263dab2fc82afa3b",
+      "c/tests/test_wots.c": "a9e79929776709535b365f5c0bd18853bb04c39c2b6ba5b33a81c204b6cbe413",
+      "reference/__init__.py": "5b730d2dc9edbb15aaa49be4f85fe829fd5962f5234bf0f182052baf59d0df26",
+      "reference/acvp.py": "2da1387d9d68abcc4e2bbaf02710048fd83491277e116664ce32f0169aaad88e",
+      "reference/differential.py": "f6675752546d8755c9ef17f155576c6d74cedf12d1f68c25e4081850ef979dd9",
+      "reference/evidence_sources/differential_2736be1.py": "2736be1ec5eb040a313b57901ff5d58ae6c423d78e5a79208b92d9c3cf7c66c1",
+      "reference/r1_evidence.py": "350c2b25c23258cf5d92e984f6dde7492fa93194f245d333349a4ad03cee0703",
+      "reference/selftest.py": "942c8083e3c6eacd55cff8436ba2e0f6a7a4d92b8add00049ea54298de546368",
+      "reference/slhdsa.py": "d7412bafb27d9e40b98a10eaf10faf24753007b0585099532fbaf628c717b043",
+      "reference/sm3.py": "43fb6d92afc803f4842bd06dfb00f813c7ed102f1b68d9115c3e0cd6497c2c8e",
+      "third_party/py-acvp-pqc/fips203.py": "f61f416cb50ea8897177a0912ab22eeaae4242a0654c1b755e6404ce996cf57e",
+      "third_party/py-acvp-pqc/fips204.py": "83bf547619dcb5c741f17731f40d6e073174844aaf68d693e552763e0e3d65ef",
+      "third_party/py-acvp-pqc/fips205.py": "edb662306b0ccac88ee9669aed6256c27a547d9084e6e9cc2180ce92e9da3a22",
+      "third_party/py-acvp-pqc/genvals_mldsa.py": "2d377aa7bb004ee2fb2985aeac5f2f3e834963ab3f63514b21aa6d51366ea7d6",
+      "third_party/py-acvp-pqc/genvals_mlkem.py": "dd3eea17d8ce35c29b3f368d56a82a89116bd51850d1be26597dda992a2cdbdd",
+      "third_party/py-acvp-pqc/genvals_slhdsa.py": "3eb0d48555b7b7949d2a28c1bb0aff9b4d1d69813444c7e2cfcb4b00217cf542",
+      "third_party/py-acvp-pqc/test_mldsa.py": "55b2b88b720308024ffb36dff5dc32ea62b3984eccbb04c718031502769c91b8",
+      "third_party/py-acvp-pqc/test_mlkem.py": "035ac1324e8086508ef4f4c1bd453779048a7dde9488f28089c1f2408c85b7e5",
+      "third_party/py-acvp-pqc/test_slhdsa.py": "706abf98b609e35dd4aec7d4a6b1bf8d75a183a85295ed3466a36f386fa98cdb",
+      "tools/alt_chain_fixtures.py": "9d0c2bcba649b57ef0c6a381b37b57ea8b90a8b5fe721853450894485bfd57e4",
+      "tools/audit_direct_sm3_words.py": "714f609cb3c5d4952619073e77327f2eb7481a9e0e02c7535278c1625faa930c",
+      "tools/audit_local_lifecycle.py": "ce897d41139377eecf886eea63983de8a5f6cdde471f459c5dd997a17eef0123",
+      "tools/audit_verify_optimization.py": "d5ca166b87e3c5a4fda92beaeb7bb0f9609957d98ebf7fe7211713f79180035d",
+      "tools/bench_cpu.py": "fac09840a52315b2f24cea8a855925d315c821f1bf99f5579e631fcb3fcc7417",
+      "tools/bench_cuda.py": "08ebf7cf44084958953c049d8ea6208be841bc00cae6a7b0ecc4cb6c118655b2",
+      "tools/bench_local_lifecycle.py": "b186a94b20202e5881f51be79bc99b5ed3d6c94ff0644d2081f831b2d6caa2a8",
+      "tools/bench_verify_optimization.py": "ad22b740bcb83dca3b3a36c65bb6c37a9fec317928e40208be7dce4c1ef5f63f",
+      "tools/bind_project_results.py": "6677b460c807dc4a719204699420bc83afd448593c83fe6be71901bdaf3b9329",
+      "tools/bootstrap_runtime.py": "c34325f87ad8ab239be3ad118371f1cbfaa71ce63f41d65c626e3f604c884ab2",
+      "tools/check_analysis.py": "e982997ada6cf12b04d3bb4292146d5e222501ca4b080cb5d3c969b134127ec0",
+      "tools/check_baseline.py": "42d75307e332c8a2af8a1dc78f468daaad4e46ad199ca95a935565809232a786",
+      "tools/check_cli_budget.py": "c68f2293ce542a42921f50bfc253b541878b8274fd5f783db6bdcec7c8b583c4",
+      "tools/check_counts.py": "58df7b4ff67a72f11bb2704a95aab928348fb74ce7e0787bb328235b74649984",
+      "tools/check_cuda.py": "4516f4311236de9cc5730762921c701259a21de9ef3e6b5e520f4e96d4544950",
+      "tools/check_cuda_release.py": "67057ffac6beafaa85fd479448dffe2d90f0fb03767b9cb292c0a68ebb0b54ed",
+      "tools/check_digest_native.py": "bea55c2f3f35d88065d2002e761018234af53a0e51985a7c308847bd157c9994",
+      "tools/check_kernel_network.py": "ed18fe8fe45609cc9a4bb3d193979eb16359fcac10e85a7cf5e8c544a28fe67f",
+      "tools/check_native_guards.py": "212505d8da6fa1454f1a2b299d82518406faa2140eea6d8079a22f8613ee40e0",
+      "tools/check_optimization.py": "866ea9fc8142b9bb257b35f0fead5be45ae98a888271f8cb5880b4eda3561c65",
+      "tools/check_real_resume.py": "a74c28b913807fc20eeb546b80b805ef8a1b2c157be2b7a2de4d81620043676d",
+      "tools/check_rng_native.py": "94e5fdf43bef7625b8da720e64990d0d1c2854d197745d42bbe86d23b065a84a",
+      "tools/check_verify_optimization_signing.py": "6d0051b4ee53d2fad0b182f3711037edcfe9c21b8b48599ede4663db5e0c661a",
+      "tools/cli.py": "80fa717e3ddc369f76dc89e6547272c1fbbd99c7d84840e837259965621349e3",
+      "tools/count_model.py": "6ac77e6b63e6cf9c03818c0e7d349012e16fafc5d1624e59da960564d97fc419",
+      "tools/demo_project.py": "b27f7a5dbb3c3553fab773e7777531842a91a3b8154829eb531fbfa9864ebd6e",
+      "tools/ds_acceptance.py": "267f648452222737f3257cbdca642a7e7401a2c9997a420ff9ca1d2510d89e22",
+      "tools/environment.py": "b7ff7b81c1e936636cb463642037c75370dfef9184b8ba5fc4adf9c636359cf5",
+      "tools/external_vectors.py": "c6eb4b30c70f4a994b8a0f508be6cd38c4516576a26c85f26ea582c40f910526",
+      "tools/freeze_cuda.py": "804d05e7e990ee063a6dc4e4dab86290931839f9a6ff7cd8cab4bd5a79cad8ca",
+      "tools/freeze_optimization.py": "d2e706e4e944f3e0d3e4af88d75ee860e0612709ce9a1c15795716ac4fe862b7",
+      "tools/fuzz_parsers.py": "1acac9dd62fa0a2fde2bfcf6ef4d985d690b64162e0882d9a6e4c163bed4b9cf",
+      "tools/generate_reference_vectors.py": "dc67bb0f22bf786d4592e16894480ee8115864d74fba969b17df70df2e3cadc4",
+      "tools/install_ca_verifier.py": "9ddf278fa72839ec9cdf741ca976f134ac176f01459694796116461b54bc8797",
+      "tools/install_falcon_provider.py": "e9f2955495804d9ed7fd054866fd0e301d87d7a023070938013e76adaec68e97",
+      "tools/make_tables.py": "77342e83a923475fb41c6792035ad88aa6eaf9714414494eebd88a01ce754068",
+      "tools/measure_cache_storage.py": "ff96608c07c97f281453dbd349e3a5f96f7f02368b976053766ec89fc9c72674",
+      "tools/native.py": "778a20a829d0f034f4a9852334d6f9480e66c41bfc76d0b891414cc0e2db6840",
+      "tools/package_local_lifecycle.py": "4d8b22c38ee46b292449ad3e7355f579eb5f4095b524228d6cb9c80e3af3200c",
+      "tools/package_stage1.py": "34fcde309c6e67a2ed16bda58a53853ccbad5d51dab8ce602630939413198ea4",
+      "tools/package_verify_optimization.py": "f0261397c73a71c98db2c2634a2bae1d06fed4e75b49314d1fd1a2c1dff9b829",
+      "tools/parameter_grid.py": "293f447acb29827ca84cee0471e40cfd94a1a57bc8b71be2747778765f498fd8",
+      "tools/plot_local_lifecycle.py": "7adab100509018464209ae4b5ee2e519cbe0724ed54dbc808e6abe233a2e78f0",
+      "tools/plot_verify_optimization.py": "308fb78dcc0df8b8094f7a4b2e80023e52d17eccec091a56c881b2a556ebb26a",
+      "tools/recheck_external.py": "162184345553b6e529baf9d79ec796f96477ebf8e8cbd8fc1f54f211e0070a94",
+      "tools/reproduce_project.py": "96a49c21c4e229a1070c21f2d3c3877a9c147f622919c8446f1fd1bae214d78e",
+      "tools/reproduce_verify_optimization.py": "1c7bb659e40117f86926072111b41db059d0e8357130af70dc1a794fe8b4a7e0",
+      "tools/run_ca_models.py": "b4415149e8749a69a68531562eefaf6b5dcceaf34d63d01d115a9d824779d19e",
+      "tools/run_ca_models_v2.py": "d60596d5820939d5b1c95b6b27b5791b39fd157f0c6b86a35aefe01f38a593e5",
+      "tools/run_cuda_native.py": "8febc7c366876f38c2d2b680887c8c7d317765b533680db153008acefec3ecc3",
+      "tools/run_native_stage2.py": "8187698d3d676abae99d5ec661a5b84dd73fd99056ddf3a9de48117e473ac885",
+      "tools/run_project_functional.py": "04085e7d046c0ec9facf44ff1dc1aa2de62462758f9d59e4ced2e156760f097a",
+      "tools/run_stage1.py": "80d5d68bebd4338fdd5994fd91245750f9357aa4b1a16250ed129a30e17fa2fc",
+      "tools/security_terms.py": "8a1ef5eb04282b3b552c6a72f7a97bb4d47f92e64b4ca933e7e3e7abf2d33cac",
+      "tools/signing_budget.py": "629425fc9764e2f7758a8c4927eff757cf3ec4ff3bc8970d50836d19fe7e6a50",
+      "tools/test_benchmark_rng_receipts.py": "359994135172b1d9fb272e5e33958d551034596741f016e3307ffa5f3cedbdda",
+      "tools/test_budget_repair.py": "69bc0e87cf9319084e7a82a011cef17edf4715b89dc64a94719316e7d4892724",
+      "tools/test_ca_models_v2.py": "7c0ecbfd5f611bd6193c081c47e7618a132e14f06e6c09096ffd93f74d4e300c",
+      "tools/test_cache_storage_headers.py": "eb7e088c452b6c77e790137ab4ed3332653d6d7e4df00d5487401f9e42e400d1",
+      "tools/test_lifecycle_package_bindings.py": "e32110ac0405a7158ffda09f23a46fc4b5c20b719f61f5074783bf59dcd04c61",
+      "tools/test_lifecycle_settlement.py": "49776de6e7d56e981efeb54505b341db7615133e5cac74ec0fee19e1755e1443",
+      "tools/test_native_boundaries.py": "ec48a334272a8077f7280e622142f68ce3b0eea22358f85cbb835566cd21c6c6",
+      "tools/test_native_digest_boundaries.py": "d14603084f8ca18ccb8a65f2f52e9d9c6f193428d5843b5f19860b282caf8b76",
+      "tools/test_workload_guard.py": "581364ad43e43c445a19c9b377fd5d2aac6fe311c837c60f9d08c945fe9709df",
+      "tools/workload_guard.py": "9fdb43eb26385852414f9a90c0fdbfa5e0c0b1269c05f621f378c302bf0eb6a5"
+    },
+    "source_after": {
+      "base_tls/tls/__init__.py": "ee725a0df75f7b52e69b2ef24391904fb4c646d7b1a2fd9b2f124fd6d8f9272c",
+      "base_tls/tls/_deps.py": "888333570240aca0adf6f7e4c8d528e962fbabc0728e126eceeb6a6bc6bfb0eb",
+      "base_tls/tls/alt_chain.py": "45c67eb66ba1312c6495f61003ae025b13e9c724794eff0850a19c61a8f8bcc8",
+      "base_tls/tls/alt_fixtures.py": "a72f45764f853dceb6400498850c32ff97c4c9b29df475dba0629b79cd17bb02",
+      "base_tls/tls/alt_profiles.py": "f2d6c35e6a423b1f7c3362b2294361a4e8e14ac2635978536822c97ecfc2fb52",
+      "base_tls/tls/classical/__init__.py": "722c3dbd0902dfd9fdedb56a050e48ac03bdaeb8384584c5cd1e5833506f1733",
+      "base_tls/tls/classical/ecdh.py": "7751db31804d848f90df0c2d64aeaed019fbee4a9274d602f23582ec3e7f9e42",
+      "base_tls/tls/classical/signature.py": "6f3c1e44447359f9f914120158516a033195130b80cf423452016776c7de16aa",
+      "base_tls/tls/config.py": "fccd78e68f82419d7f889fa11e4d4805c5489b4d910eb565f2f77cd69da5daff",
+      "base_tls/tls/credentials.py": "6dbea615b16f2bb4ff097306e87a0a1860f30d4bab86618641b41b7d8c690fd8",
+      "base_tls/tls/der.py": "f64059dfb5b1e22b0d551306c2abf0d565a25685267471b65e196c9b4e50dd4a",
+      "base_tls/tls/errors.py": "7ee62437dbe66d2adc66b1fa6a9cf6a1ec89326bb139864a67127b4537c76272",
+      "base_tls/tls/handshake/__init__.py": "77442b7b2f4d40f238f9bd0e3b37e4c2c71f4471501c92b3cceb9960c687a3d5",
+      "base_tls/tls/handshake/certificate_verify.py": "5eb04d22f5b78965b503106ac016b852621508f748fcded0286de19b8b8e8911",
+      "base_tls/tls/handshake/client.py": "9a4fe5013da126ba5241d40ebbd3aadcd6de3cb95703707e366fab7c120bdc46",
+      "base_tls/tls/handshake/connection.py": "8c788374a1a39cca4fc9b9238f94f976ab8f818f9b279ae2b1171b049f4a0d54",
+      "base_tls/tls/handshake/messages.py": "9f7a242537f9a88cf397f9620b67bc0aefdd836f6f4f99dc7b3d312dd80be1c8",
+      "base_tls/tls/handshake/server.py": "e20feb4fbd687fde6f192815eac0e6c3bbfa89dc786e03b6daee69c570b34785",
+      "base_tls/tls/handshake/state.py": "771fbafdf83b0ff7d816369d60cbc4091eef372f1c4c3c2802cefe09c7e97e65",
+      "base_tls/tls/handshake/transcript.py": "a412311ab55e907da35b9ad4cbbeaa31cd8a4bf972957019c47317ef338c26f4",
+      "base_tls/tls/key_schedule/__init__.py": "c5ec7801ea5251a82d6291939c987b79a3f17a8a2e8e4b8730ad141af8270111",
+      "base_tls/tls/key_schedule/hkdf.py": "842d3b016f30789a601e4f3bb4983044f5e3cebb3482954016c3cbdc3632ffb3",
+      "base_tls/tls/metrics.py": "e2d60ce32a1adc68b8ee514d5ac6dfee0d7211044cd9d1d32ce72f08a4b9d0d4",
+      "base_tls/tls/pki.py": "e8862343223adf1babcfb5c2b1016aeb6788dde1b3cb08966c96eb9223358a22",
+      "base_tls/tls/pq/__init__.py": "853b44429829d09b043c02a60caa1ae371ffcb2e47c4149222aa72784cde55d2",
+      "base_tls/tls/pq/backends.py": "b0458bd4bef4390de0fe165ebd3fc9322d2d691de07e55d85c9fb4dd94ef591b",
+      "base_tls/tls/pq/kem.py": "189e22aff7a5802ca9f6bc08316a142aa0b8e9d613320cfcb1eb12d2eb45bdfd",
+      "base_tls/tls/pq/providers.py": "71162ad3aac3a4be079ee39413761db62035fa222d60073393e19b4614d77bcb",
+      "base_tls/tls/pq/signature.py": "fbb492230691c108e715fc104032eb6d522acf2ed7fd76c81586569bada872f5",
+      "base_tls/tls/pq/slhdsa_sm3.py": "c7824ea462f256a65dcc54680e7414f4c4db31aff8d444d7d82bd155c0713cfc",
+      "base_tls/tls/pq/wots_xmss.py": "c02c6fc9fbdf1f59b50e4a16fe653847718368f92d7f3b14bf6133c843083ef8",
+      "base_tls/tls/record/__init__.py": "e5aa5cd0cc826f79499a4dbb8a70edf0a64c5e0a75e7b62cf62d06c241baf0e5",
+      "base_tls/tls/record/aead.py": "c4cfa634a53ee375920bc489b7d440f95a7f823ee59ee22017bc1427412d6dcc",
+      "base_tls/tls/transport/__init__.py": "13c6c20533cdf27cf2adeaf1c0d19b6917921da445bc8273a4e961ecc8e6ddea",
+      "base_tls/tls/transport/shaper.py": "45ad1238485950485fc19b52ba34027e5842b57ba890d5765e7bd2a270b471a4",
+      "base_tls/tls/transport/tcp.py": "2ca1175c19c9cb17b4f8c33bf3ebff5d9dca2b3ccf0d3f752054024147e515ae",
+      "base_tls/tls/wire.py": "de232f22c2dcf778ca6e83d1adb20873df5c9bb1be6e5fc621e36a00c235b846",
+      "base_tls/tools/audit_live_checks.py": "a7c275201c5af41bcdaccee65e4ad3a31a3f77a883c09defcbee3d42ae6b1b68",
+      "base_tls/tools/check_x509.py": "4be18e361178d0c8c49add460a1a786541675cdcf3bb2c4dce9edead70c0dfd9",
+      "base_tls/tools/dump_wire.py": "c50bb0db84874acc9577be03d011335e02d9030bca038551b39987d20538ab37",
+      "base_tls/tools/make_requirements_lock.py": "c19d951b36b1dab601907e1cbbdfd1c3ff2e576c6cf543192eaa16aeb679cbcc",
+      "base_tls/tools/make_source_patch.py": "805245cf16871d0a24672769620edbffb823162ec85c70d6e56159ecd2feea27",
+      "base_tls/tools/probe_pq.py": "4d69323d30c01e9bb23a92560b8c4fb96e483bf9174df1ea980732b364e06fb4",
+      "base_tls/tools/report_environment.py": "e2010fc74390687c8c3d7601d7410ce5547fa4953f2930a8b62bf376db10ba46",
+      "base_tls/tools/sandbox_pyfix/sitecustomize.py": "69c05c737d9f454094ca7cb91683b5cdd214e0bb3b3b56cbe8a7d7b85985ed2b",
+      "base_tls/tools/verify_dependency_lock.py": "d39bd14e698292bdd9cbf3a5c613363cbbcd9f9cd3d0e456f649d14d976d359d",
+      "c/fors_snapshot_20261004/include__slhdsa_sm3.h": "3db66ab03238caea0c2880c61875d2be3a6216de45c9aeb8d086e7b362ff243c",
+      "c/fors_snapshot_20261004/src__engine.c": "7d767a8b55ba81d62adfb1a29363c6471787cfbdcac335ed0ce5c98484188615",
+      "c/fors_snapshot_20261004/src__sm3.c": "5b165c63a7747fbad817459e1e4cbff4e884eab53ba5a14539b401a89db2d2dc",
+      "c/fors_snapshot_20261004/src__sm3.h": "a8eb36558ee2680ffb486c81430461406f8a6002a367d3187fa130e3e0d46761",
+      "c/fors_snapshot_20261004/src__sm3x8.c": "6d419a5e838c2402b5021b1bed6f8c4047402848ea2df234555cb210557e8f05",
+      "c/fors_snapshot_20261004/src__sm3x8.h": "94f3bef4ff710d6fff7d3e29633e390778ef0cfd2b4ab90084a01e497da43fc4",
+      "c/fors_snapshot_20261004/tests__test_avx2.c": "c97da4c1494073276977a166ba9df34d45bd304d56528c79df09bd6fd1e85a60",
+      "c/fors_snapshot_20261004/tests__test_fault.c": "248400cc2474fcfa9f441f12e8ece08a6c2ddcf6b3fed0692b1037a9dd61d745",
+      "c/fors_snapshot_20261004/tests__test_native.c": "e6452112bb3bfd4fd730c46301e8547e4dbba6b6cee248e42c11f129dace5723",
+      "c/fors_snapshot_20261004/tests__test_prehash.c": "f7c91d9e01ba8d82b4cd9ec50d7d3dad12c95ac3ebcc62f82d008d088c30e4c7",
+      "c/include/slhdsa_sm3.h": "dd3c12dd2ea439eab9bdd38fead74bd1bdae271588650c9fd1a8e511f52674c4",
+      "c/scalar_snapshot_20261004/include__slhdsa_sm3.h": "c84ef52141276d408b2f4b48155093c6e6011e69f0cfbc773006f68c9cab8cb5",
+      "c/scalar_snapshot_20261004/src__engine.c": "3dfd824ae1d619c041c7018f491c32e6fffd6a7138489c676301a7fe716d5acc",
+      "c/scalar_snapshot_20261004/src__sm3.c": "e655fbb8b8048230562beb03c8e0a0a0702acbed9a5a7e62862f0fcb8c374114",
+      "c/scalar_snapshot_20261004/src__sm3.h": "a00c3116686428ef9fbc7d4f7a9e88f066cf45ba39812fd7f17ec25ea70439b3",
+      "c/scalar_snapshot_20261004/tests__test_fault.c": "12e484882299aacc79f4b0732d80b49ee0d60c9f644fd53a6f6182a3fe9438aa",
+      "c/scalar_snapshot_20261004/tests__test_native.c": "4998f2cacc173249c76bdda2f3f880456016e7f83b42b5983201bfa7befb0739",
+      "c/scalar_snapshot_20261004/tests__test_review.c": "b906632f604a8b59abd32c76ab37a2b9b6c3f195dc8501db7971af72dc1f0e52",
+      "c/src/engine.c": "7071e8b410b3a19613c6ab8e525e97b1ba2fad37b79cb2cec3f7356b5bdfec99",
+      "c/src/fors_verify8.h": "f8d1c1223b7bb3d0bbba20e4cccc995e4b0001275ea9c0a2e4e0cbf322871b4e",
+      "c/src/secure_zero.h": "9ac49e9ece7575d338b8cec116cbacee394273392f2672af97af58266dca2b70",
+      "c/src/sm3.c": "1e2712dc6a2ac0f7f2950936acc37c08d80c69e39743ce211abbc5ed7142d20f",
+      "c/src/sm3.h": "a8eb36558ee2680ffb486c81430461406f8a6002a367d3187fa130e3e0d46761",
+      "c/src/sm3_cuda.h": "6354878a69a8c299688d8805de46a4b6adfecdf43560de04d6f081feabd18bf1",
+      "c/src/sm3_cuda_stub.c": "b5f2ccb7c8ca60e0eb8adf4609962ad0f5f6acbb109b22a799cc33e274a998f6",
+      "c/src/sm3x8.c": "41da8e709dd31d8ce126b5ea4bbf972ad57fcdc1565247a959f94f8001263b2e",
+      "c/src/sm3x8.h": "94f3bef4ff710d6fff7d3e29633e390778ef0cfd2b4ab90084a01e497da43fc4",
+      "c/src/wots_schedule8.h": "0b1a1a7da716961842a8aa981ad81dfc8506b9a0c8524ead44507c73b36b1194",
+      "c/tests/test_avx2.c": "8fa2c9478fec4a81accca00d9cec4b20257feec2d75aadec512aed574c37a9f5",
+      "c/tests/test_cuda.c": "6dee97e16a8f89832f6073f106c3b96202648c4d20de5b3ed23d51e61710e16b",
+      "c/tests/test_fault.c": "b40a103482ef8490756a765238a4fafadd703be6652a4fa91e219b7b91760d68",
+      "c/tests/test_native.c": "e6452112bb3bfd4fd730c46301e8547e4dbba6b6cee248e42c11f129dace5723",
+      "c/tests/test_prehash.c": "f7c91d9e01ba8d82b4cd9ec50d7d3dad12c95ac3ebcc62f82d008d088c30e4c7",
+      "c/tests/test_repair.c": "13833da787015ed9d0f76ce962707a3c0589c82466c78f898c658279915a5a35",
+      "c/tests/test_review.c": "b906632f604a8b59abd32c76ab37a2b9b6c3f195dc8501db7971af72dc1f0e52",
+      "c/tests/test_verify_scheduling.c": "5655fce0b06ef13bedae851df3814a3b3418af9b38eeb868263dab2fc82afa3b",
+      "c/tests/test_wots.c": "a9e79929776709535b365f5c0bd18853bb04c39c2b6ba5b33a81c204b6cbe413",
+      "reference/__init__.py": "5b730d2dc9edbb15aaa49be4f85fe829fd5962f5234bf0f182052baf59d0df26",
+      "reference/acvp.py": "2da1387d9d68abcc4e2bbaf02710048fd83491277e116664ce32f0169aaad88e",
+      "reference/differential.py": "f6675752546d8755c9ef17f155576c6d74cedf12d1f68c25e4081850ef979dd9",
+      "reference/evidence_sources/differential_2736be1.py": "2736be1ec5eb040a313b57901ff5d58ae6c423d78e5a79208b92d9c3cf7c66c1",
+      "reference/r1_evidence.py": "350c2b25c23258cf5d92e984f6dde7492fa93194f245d333349a4ad03cee0703",
+      "reference/selftest.py": "942c8083e3c6eacd55cff8436ba2e0f6a7a4d92b8add00049ea54298de546368",
+      "reference/slhdsa.py": "d7412bafb27d9e40b98a10eaf10faf24753007b0585099532fbaf628c717b043",
+      "reference/sm3.py": "43fb6d92afc803f4842bd06dfb00f813c7ed102f1b68d9115c3e0cd6497c2c8e",
+      "third_party/py-acvp-pqc/fips203.py": "f61f416cb50ea8897177a0912ab22eeaae4242a0654c1b755e6404ce996cf57e",
+      "third_party/py-acvp-pqc/fips204.py": "83bf547619dcb5c741f17731f40d6e073174844aaf68d693e552763e0e3d65ef",
+      "third_party/py-acvp-pqc/fips205.py": "edb662306b0ccac88ee9669aed6256c27a547d9084e6e9cc2180ce92e9da3a22",
+      "third_party/py-acvp-pqc/genvals_mldsa.py": "2d377aa7bb004ee2fb2985aeac5f2f3e834963ab3f63514b21aa6d51366ea7d6",
+      "third_party/py-acvp-pqc/genvals_mlkem.py": "dd3eea17d8ce35c29b3f368d56a82a89116bd51850d1be26597dda992a2cdbdd",
+      "third_party/py-acvp-pqc/genvals_slhdsa.py": "3eb0d48555b7b7949d2a28c1bb0aff9b4d1d69813444c7e2cfcb4b00217cf542",
+      "third_party/py-acvp-pqc/test_mldsa.py": "55b2b88b720308024ffb36dff5dc32ea62b3984eccbb04c718031502769c91b8",
+      "third_party/py-acvp-pqc/test_mlkem.py": "035ac1324e8086508ef4f4c1bd453779048a7dde9488f28089c1f2408c85b7e5",
+      "third_party/py-acvp-pqc/test_slhdsa.py": "706abf98b609e35dd4aec7d4a6b1bf8d75a183a85295ed3466a36f386fa98cdb",
+      "tools/alt_chain_fixtures.py": "9d0c2bcba649b57ef0c6a381b37b57ea8b90a8b5fe721853450894485bfd57e4",
+      "tools/audit_direct_sm3_words.py": "714f609cb3c5d4952619073e77327f2eb7481a9e0e02c7535278c1625faa930c",
+      "tools/audit_local_lifecycle.py": "ce897d41139377eecf886eea63983de8a5f6cdde471f459c5dd997a17eef0123",
+      "tools/audit_verify_optimization.py": "d5ca166b87e3c5a4fda92beaeb7bb0f9609957d98ebf7fe7211713f79180035d",
+      "tools/bench_cpu.py": "fac09840a52315b2f24cea8a855925d315c821f1bf99f5579e631fcb3fcc7417",
+      "tools/bench_cuda.py": "08ebf7cf44084958953c049d8ea6208be841bc00cae6a7b0ecc4cb6c118655b2",
+      "tools/bench_local_lifecycle.py": "b186a94b20202e5881f51be79bc99b5ed3d6c94ff0644d2081f831b2d6caa2a8",
+      "tools/bench_verify_optimization.py": "ad22b740bcb83dca3b3a36c65bb6c37a9fec317928e40208be7dce4c1ef5f63f",
+      "tools/bind_project_results.py": "6677b460c807dc4a719204699420bc83afd448593c83fe6be71901bdaf3b9329",
+      "tools/bootstrap_runtime.py": "c34325f87ad8ab239be3ad118371f1cbfaa71ce63f41d65c626e3f604c884ab2",
+      "tools/check_analysis.py": "e982997ada6cf12b04d3bb4292146d5e222501ca4b080cb5d3c969b134127ec0",
+      "tools/check_baseline.py": "42d75307e332c8a2af8a1dc78f468daaad4e46ad199ca95a935565809232a786",
+      "tools/check_cli_budget.py": "c68f2293ce542a42921f50bfc253b541878b8274fd5f783db6bdcec7c8b583c4",
+      "tools/check_counts.py": "58df7b4ff67a72f11bb2704a95aab928348fb74ce7e0787bb328235b74649984",
+      "tools/check_cuda.py": "4516f4311236de9cc5730762921c701259a21de9ef3e6b5e520f4e96d4544950",
+      "tools/check_cuda_release.py": "67057ffac6beafaa85fd479448dffe2d90f0fb03767b9cb292c0a68ebb0b54ed",
+      "tools/check_digest_native.py": "bea55c2f3f35d88065d2002e761018234af53a0e51985a7c308847bd157c9994",
+      "tools/check_kernel_network.py": "ed18fe8fe45609cc9a4bb3d193979eb16359fcac10e85a7cf5e8c544a28fe67f",
+      "tools/check_native_guards.py": "212505d8da6fa1454f1a2b299d82518406faa2140eea6d8079a22f8613ee40e0",
+      "tools/check_optimization.py": "866ea9fc8142b9bb257b35f0fead5be45ae98a888271f8cb5880b4eda3561c65",
+      "tools/check_real_resume.py": "a74c28b913807fc20eeb546b80b805ef8a1b2c157be2b7a2de4d81620043676d",
+      "tools/check_rng_native.py": "94e5fdf43bef7625b8da720e64990d0d1c2854d197745d42bbe86d23b065a84a",
+      "tools/check_verify_optimization_signing.py": "6d0051b4ee53d2fad0b182f3711037edcfe9c21b8b48599ede4663db5e0c661a",
+      "tools/cli.py": "80fa717e3ddc369f76dc89e6547272c1fbbd99c7d84840e837259965621349e3",
+      "tools/count_model.py": "6ac77e6b63e6cf9c03818c0e7d349012e16fafc5d1624e59da960564d97fc419",
+      "tools/demo_project.py": "b27f7a5dbb3c3553fab773e7777531842a91a3b8154829eb531fbfa9864ebd6e",
+      "tools/ds_acceptance.py": "267f648452222737f3257cbdca642a7e7401a2c9997a420ff9ca1d2510d89e22",
+      "tools/environment.py": "b7ff7b81c1e936636cb463642037c75370dfef9184b8ba5fc4adf9c636359cf5",
+      "tools/external_vectors.py": "c6eb4b30c70f4a994b8a0f508be6cd38c4516576a26c85f26ea582c40f910526",
+      "tools/freeze_cuda.py": "804d05e7e990ee063a6dc4e4dab86290931839f9a6ff7cd8cab4bd5a79cad8ca",
+      "tools/freeze_optimization.py": "d2e706e4e944f3e0d3e4af88d75ee860e0612709ce9a1c15795716ac4fe862b7",
+      "tools/fuzz_parsers.py": "1acac9dd62fa0a2fde2bfcf6ef4d985d690b64162e0882d9a6e4c163bed4b9cf",
+      "tools/generate_reference_vectors.py": "dc67bb0f22bf786d4592e16894480ee8115864d74fba969b17df70df2e3cadc4",
+      "tools/install_ca_verifier.py": "9ddf278fa72839ec9cdf741ca976f134ac176f01459694796116461b54bc8797",
+      "tools/install_falcon_provider.py": "e9f2955495804d9ed7fd054866fd0e301d87d7a023070938013e76adaec68e97",
+      "tools/make_tables.py": "77342e83a923475fb41c6792035ad88aa6eaf9714414494eebd88a01ce754068",
+      "tools/measure_cache_storage.py": "ff96608c07c97f281453dbd349e3a5f96f7f02368b976053766ec89fc9c72674",
+      "tools/native.py": "778a20a829d0f034f4a9852334d6f9480e66c41bfc76d0b891414cc0e2db6840",
+      "tools/package_local_lifecycle.py": "4d8b22c38ee46b292449ad3e7355f579eb5f4095b524228d6cb9c80e3af3200c",
+      "tools/package_stage1.py": "34fcde309c6e67a2ed16bda58a53853ccbad5d51dab8ce602630939413198ea4",
+      "tools/package_verify_optimization.py": "f0261397c73a71c98db2c2634a2bae1d06fed4e75b49314d1fd1a2c1dff9b829",
+      "tools/parameter_grid.py": "293f447acb29827ca84cee0471e40cfd94a1a57bc8b71be2747778765f498fd8",
+      "tools/plot_local_lifecycle.py": "7adab100509018464209ae4b5ee2e519cbe0724ed54dbc808e6abe233a2e78f0",
+      "tools/plot_verify_optimization.py": "308fb78dcc0df8b8094f7a4b2e80023e52d17eccec091a56c881b2a556ebb26a",
+      "tools/recheck_external.py": "162184345553b6e529baf9d79ec796f96477ebf8e8cbd8fc1f54f211e0070a94",
+      "tools/reproduce_project.py": "96a49c21c4e229a1070c21f2d3c3877a9c147f622919c8446f1fd1bae214d78e",
+      "tools/reproduce_verify_optimization.py": "1c7bb659e40117f86926072111b41db059d0e8357130af70dc1a794fe8b4a7e0",
+      "tools/run_ca_models.py": "b4415149e8749a69a68531562eefaf6b5dcceaf34d63d01d115a9d824779d19e",
+      "tools/run_ca_models_v2.py": "d60596d5820939d5b1c95b6b27b5791b39fd157f0c6b86a35aefe01f38a593e5",
+      "tools/run_cuda_native.py": "8febc7c366876f38c2d2b680887c8c7d317765b533680db153008acefec3ecc3",
+      "tools/run_native_stage2.py": "8187698d3d676abae99d5ec661a5b84dd73fd99056ddf3a9de48117e473ac885",
+      "tools/run_project_functional.py": "04085e7d046c0ec9facf44ff1dc1aa2de62462758f9d59e4ced2e156760f097a",
+      "tools/run_stage1.py": "80d5d68bebd4338fdd5994fd91245750f9357aa4b1a16250ed129a30e17fa2fc",
+      "tools/security_terms.py": "8a1ef5eb04282b3b552c6a72f7a97bb4d47f92e64b4ca933e7e3e7abf2d33cac",
+      "tools/signing_budget.py": "629425fc9764e2f7758a8c4927eff757cf3ec4ff3bc8970d50836d19fe7e6a50",
+      "tools/test_benchmark_rng_receipts.py": "359994135172b1d9fb272e5e33958d551034596741f016e3307ffa5f3cedbdda",
+      "tools/test_budget_repair.py": "69bc0e87cf9319084e7a82a011cef17edf4715b89dc64a94719316e7d4892724",
+      "tools/test_ca_models_v2.py": "7c0ecbfd5f611bd6193c081c47e7618a132e14f06e6c09096ffd93f74d4e300c",
+      "tools/test_cache_storage_headers.py": "eb7e088c452b6c77e790137ab4ed3332653d6d7e4df00d5487401f9e42e400d1",
+      "tools/test_lifecycle_package_bindings.py": "e32110ac0405a7158ffda09f23a46fc4b5c20b719f61f5074783bf59dcd04c61",
+      "tools/test_lifecycle_settlement.py": "49776de6e7d56e981efeb54505b341db7615133e5cac74ec0fee19e1755e1443",
+      "tools/test_native_boundaries.py": "ec48a334272a8077f7280e622142f68ce3b0eea22358f85cbb835566cd21c6c6",
+      "tools/test_native_digest_boundaries.py": "d14603084f8ca18ccb8a65f2f52e9d9c6f193428d5843b5f19860b282caf8b76",
+      "tools/test_workload_guard.py": "581364ad43e43c445a19c9b377fd5d2aac6fe311c837c60f9d08c945fe9709df",
+      "tools/workload_guard.py": "9fdb43eb26385852414f9a90c0fdbfa5e0c0b1269c05f621f378c302bf0eb6a5"
+    },
+    "fixtures_before": {
+      "MANIFEST.json": "d6d4322039dfc5ff136693d375cee98f745868b5b51cc44725a86a3b53656941",
+      "ml-dsa-44/classical-intermediate.der": "c90d258777f9742df883559a890da27449f5705785bec3482d4203d7be7d5f2b",
+      "ml-dsa-44/classical-leaf.der": "e93865fda447d679023cf283dbc961f91d31f3c0e735199fb01830b0b37dcc36",
+      "ml-dsa-44/classical-root.der": "6a739646046ec2486e30eb38764c2db3d99efe77180113c5f21b960be8f8353d",
+      "ml-dsa-44/fixture.json": "b525b645cec24299de9549336896092948be9fb3e3f58f615878d32318903435",
+      "ml-dsa-44/handshake-test-key.json": "e7a18241117a0fab516eba29f00f8e4b6115517de9c25867e8a802c25f7dd819",
+      "ml-dsa-44/hybrid-intermediate.der": "c90d258777f9742df883559a890da27449f5705785bec3482d4203d7be7d5f2b",
+      "ml-dsa-44/hybrid-leaf.der": "d1aee3f9581a1b50dc6266df38e265fd667cf0a5c1f1a7aa747c02a107d2c59d",
+      "ml-dsa-44/hybrid-root.der": "6a739646046ec2486e30eb38764c2db3d99efe77180113c5f21b960be8f8353d",
+      "ml-dsa-44/intermediate-pre-tbs.der": "e6a36dcef985cf8a5ea224c13623996101f029b77f728d5a3c78facd053972e6",
+      "ml-dsa-44/intermediate-test-key.pem": "c2c6d660d28e3f3efcd993ee7730af6def56922ca1e3997c85c398b8726eeb0a",
+      "ml-dsa-44/intermediate.der": "a5ba6c7fb4e300b25ede92c95d6234bb8f6b70b3b12514365906a885f72c0cf4",
+      "ml-dsa-44/leaf-pre-tbs.der": "d49626dd11d1cd8a1dd8f8205a7cc0d3190b01870426e125bd45a9fb46feb40c",
+      "ml-dsa-44/leaf-test-key.pem": "78752090aa021da5dba47301f58dcaca97d853e7d33ee7326409357258204b2a",
+      "ml-dsa-44/leaf.der": "8e32f03e84eeb9ae98a2789f782d7f0f5ab50f545ad5947c5e6ddd7bb6c400f8",
+      "ml-dsa-44/root-test-key.pem": "adcd092eefef950716b90d561db8560e478d46ad7c93915d2fcf471b0ee23dbf",
+      "ml-dsa-44/root.der": "363363a352b5cad901684b72ec81d1129ca5660ab215f5d24b3befa0c41fb444",
+      "slh-dsa-sm3-128-24/classical-intermediate.der": "be5c8ba5513d9248b19816e710b8f167bd6e818224f292a1b021fc2570b0098f",
+      "slh-dsa-sm3-128-24/classical-leaf.der": "8d79b5a507f4c9d655e862d7fc51309c111816a315661af7dcfe978846f58e70",
+      "slh-dsa-sm3-128-24/classical-root.der": "d247db944477ec276d5f1481de97d91fc9c1aa376ea45db241074e9be82ae186",
+      "slh-dsa-sm3-128-24/fixture.json": "92348d6213c893e8c1411daa5de2af1f984de922bffaae6069ca8f266b70896a",
+      "slh-dsa-sm3-128-24/handshake-test-key.json": "e7a18241117a0fab516eba29f00f8e4b6115517de9c25867e8a802c25f7dd819",
+      "slh-dsa-sm3-128-24/hybrid-intermediate.der": "be5c8ba5513d9248b19816e710b8f167bd6e818224f292a1b021fc2570b0098f",
+      "slh-dsa-sm3-128-24/hybrid-leaf.der": "2d1b4da6c01c1e1ad4c6559694d84f9edee85e23b2c1fd1ad6b4daec8c5777c0",
+      "slh-dsa-sm3-128-24/hybrid-root.der": "d247db944477ec276d5f1481de97d91fc9c1aa376ea45db241074e9be82ae186",
+      "slh-dsa-sm3-128-24/intermediate-pre-tbs.der": "c313e9f7d59c79c77710d9c915f777cd97e5ba51791e1d69a8199d381a640542",
+      "slh-dsa-sm3-128-24/intermediate-test-key.pem": "c2c6d660d28e3f3efcd993ee7730af6def56922ca1e3997c85c398b8726eeb0a",
+      "slh-dsa-sm3-128-24/intermediate.der": "4826a72e1b702cfea2840a5d8abf1f7a19928031fe597688111b3ef1dcf69a56",
+      "slh-dsa-sm3-128-24/leaf-pre-tbs.der": "bc1a4afaaf552cbd489a07f9d9f60dc10827077e73a0ea8b03d9bf2a2a5f5a5d",
+      "slh-dsa-sm3-128-24/leaf-test-key.pem": "78752090aa021da5dba47301f58dcaca97d853e7d33ee7326409357258204b2a",
+      "slh-dsa-sm3-128-24/leaf.der": "feb07ef2eb3c2276eb4123f3ef6c7342d18bf4ddae3238ba397419dc26868f74",
+      "slh-dsa-sm3-128-24/root-test-key.pem": "adcd092eefef950716b90d561db8560e478d46ad7c93915d2fcf471b0ee23dbf",
+      "slh-dsa-sm3-128-24/root.der": "56b5602e632845252f57380f5c16ae213a5d115d115cebe0ea40c5bdcce53ab1",
+      "slh-dsa-sm3-128s/classical-intermediate.der": "bf5712e7e87bc26ac03b1217815ced9b3b8277a6c98ec226eebde4f8585f55f0",
+      "slh-dsa-sm3-128s/classical-leaf.der": "3a6f38d8cce0f676946af7dfb46293b379e1740f36fbeeebfe41518972026ba5",
+      "slh-dsa-sm3-128s/classical-root.der": "0bf34d34811628d3d8b4a320714c742124eb048e62da32e3a6c96792ddccf471",
+      "slh-dsa-sm3-128s/fixture.json": "3da375263af600eb13ff6bf4058fc063648d3dc86a5838682e5db76ffc86afbe",
+      "slh-dsa-sm3-128s/handshake-test-key.json": "e7a18241117a0fab516eba29f00f8e4b6115517de9c25867e8a802c25f7dd819",
+      "slh-dsa-sm3-128s/hybrid-intermediate.der": "bf5712e7e87bc26ac03b1217815ced9b3b8277a6c98ec226eebde4f8585f55f0",
+      "slh-dsa-sm3-128s/hybrid-leaf.der": "857db61f7d8af0ecca60bca0b09cc35070ae17b865524b07a6f264edce743a77",
+      "slh-dsa-sm3-128s/hybrid-root.der": "0bf34d34811628d3d8b4a320714c742124eb048e62da32e3a6c96792ddccf471",
+      "slh-dsa-sm3-128s/intermediate-pre-tbs.der": "7d630cf8664c8db2ba413a8693c2fe30f363b142bf6796a09c39528cb5b83a42",
+      "slh-dsa-sm3-128s/intermediate-test-key.pem": "c2c6d660d28e3f3efcd993ee7730af6def56922ca1e3997c85c398b8726eeb0a",
+      "slh-dsa-sm3-128s/intermediate.der": "7db34206c43ae8aec8510bc2d6cf3a038b29474b33c48a6472d254ba2656fa0a",
+      "slh-dsa-sm3-128s/leaf-pre-tbs.der": "3aea69df53f75829141857518f3a3baca901c6688cd8f4c3893face0851ead40",
+      "slh-dsa-sm3-128s/leaf-test-key.pem": "78752090aa021da5dba47301f58dcaca97d853e7d33ee7326409357258204b2a",
+      "slh-dsa-sm3-128s/leaf.der": "7893e903552129382830085c27b993d18e5dc67ed4700b06ea9e8cf74da4a52b",
+      "slh-dsa-sm3-128s/root-test-key.pem": "adcd092eefef950716b90d561db8560e478d46ad7c93915d2fcf471b0ee23dbf",
+      "slh-dsa-sm3-128s/root.der": "ddbe13165b459226b90b5ddd8ff6d1c067f02d7d4c85e2b05daac884e6d22bf6"
+    },
+    "fixtures_after": {
+      "MANIFEST.json": "d6d4322039dfc5ff136693d375cee98f745868b5b51cc44725a86a3b53656941",
+      "ml-dsa-44/classical-intermediate.der": "c90d258777f9742df883559a890da27449f5705785bec3482d4203d7be7d5f2b",
+      "ml-dsa-44/classical-leaf.der": "e93865fda447d679023cf283dbc961f91d31f3c0e735199fb01830b0b37dcc36",
+      "ml-dsa-44/classical-root.der": "6a739646046ec2486e30eb38764c2db3d99efe77180113c5f21b960be8f8353d",
+      "ml-dsa-44/fixture.json": "b525b645cec24299de9549336896092948be9fb3e3f58f615878d32318903435",
+      "ml-dsa-44/handshake-test-key.json": "e7a18241117a0fab516eba29f00f8e4b6115517de9c25867e8a802c25f7dd819",
+      "ml-dsa-44/hybrid-intermediate.der": "c90d258777f9742df883559a890da27449f5705785bec3482d4203d7be7d5f2b",
+      "ml-dsa-44/hybrid-leaf.der": "d1aee3f9581a1b50dc6266df38e265fd667cf0a5c1f1a7aa747c02a107d2c59d",
+      "ml-dsa-44/hybrid-root.der": "6a739646046ec2486e30eb38764c2db3d99efe77180113c5f21b960be8f8353d",
+      "ml-dsa-44/intermediate-pre-tbs.der": "e6a36dcef985cf8a5ea224c13623996101f029b77f728d5a3c78facd053972e6",
+      "ml-dsa-44/intermediate-test-key.pem": "c2c6d660d28e3f3efcd993ee7730af6def56922ca1e3997c85c398b8726eeb0a",
+      "ml-dsa-44/intermediate.der": "a5ba6c7fb4e300b25ede92c95d6234bb8f6b70b3b12514365906a885f72c0cf4",
+      "ml-dsa-44/leaf-pre-tbs.der": "d49626dd11d1cd8a1dd8f8205a7cc0d3190b01870426e125bd45a9fb46feb40c",
+      "ml-dsa-44/leaf-test-key.pem": "78752090aa021da5dba47301f58dcaca97d853e7d33ee7326409357258204b2a",
+      "ml-dsa-44/leaf.der": "8e32f03e84eeb9ae98a2789f782d7f0f5ab50f545ad5947c5e6ddd7bb6c400f8",
+      "ml-dsa-44/root-test-key.pem": "adcd092eefef950716b90d561db8560e478d46ad7c93915d2fcf471b0ee23dbf",
+      "ml-dsa-44/root.der": "363363a352b5cad901684b72ec81d1129ca5660ab215f5d24b3befa0c41fb444",
+      "slh-dsa-sm3-128-24/classical-intermediate.der": "be5c8ba5513d9248b19816e710b8f167bd6e818224f292a1b021fc2570b0098f",
+      "slh-dsa-sm3-128-24/classical-leaf.der": "8d79b5a507f4c9d655e862d7fc51309c111816a315661af7dcfe978846f58e70",
+      "slh-dsa-sm3-128-24/classical-root.der": "d247db944477ec276d5f1481de97d91fc9c1aa376ea45db241074e9be82ae186",
+      "slh-dsa-sm3-128-24/fixture.json": "92348d6213c893e8c1411daa5de2af1f984de922bffaae6069ca8f266b70896a",
+      "slh-dsa-sm3-128-24/handshake-test-key.json": "e7a18241117a0fab516eba29f00f8e4b6115517de9c25867e8a802c25f7dd819",
+      "slh-dsa-sm3-128-24/hybrid-intermediate.der": "be5c8ba5513d9248b19816e710b8f167bd6e818224f292a1b021fc2570b0098f",
+      "slh-dsa-sm3-128-24/hybrid-leaf.der": "2d1b4da6c01c1e1ad4c6559694d84f9edee85e23b2c1fd1ad6b4daec8c5777c0",
+      "slh-dsa-sm3-128-24/hybrid-root.der": "d247db944477ec276d5f1481de97d91fc9c1aa376ea45db241074e9be82ae186",
+      "slh-dsa-sm3-128-24/intermediate-pre-tbs.der": "c313e9f7d59c79c77710d9c915f777cd97e5ba51791e1d69a8199d381a640542",
+      "slh-dsa-sm3-128-24/intermediate-test-key.pem": "c2c6d660d28e3f3efcd993ee7730af6def56922ca1e3997c85c398b8726eeb0a",
+      "slh-dsa-sm3-128-24/intermediate.der": "4826a72e1b702cfea2840a5d8abf1f7a19928031fe597688111b3ef1dcf69a56",
+      "slh-dsa-sm3-128-24/leaf-pre-tbs.der": "bc1a4afaaf552cbd489a07f9d9f60dc10827077e73a0ea8b03d9bf2a2a5f5a5d",
+      "slh-dsa-sm3-128-24/leaf-test-key.pem": "78752090aa021da5dba47301f58dcaca97d853e7d33ee7326409357258204b2a",
+      "slh-dsa-sm3-128-24/leaf.der": "feb07ef2eb3c2276eb4123f3ef6c7342d18bf4ddae3238ba397419dc26868f74",
+      "slh-dsa-sm3-128-24/root-test-key.pem": "adcd092eefef950716b90d561db8560e478d46ad7c93915d2fcf471b0ee23dbf",
+      "slh-dsa-sm3-128-24/root.der": "56b5602e632845252f57380f5c16ae213a5d115d115cebe0ea40c5bdcce53ab1",
+      "slh-dsa-sm3-128s/classical-intermediate.der": "bf5712e7e87bc26ac03b1217815ced9b3b8277a6c98ec226eebde4f8585f55f0",
+      "slh-dsa-sm3-128s/classical-leaf.der": "3a6f38d8cce0f676946af7dfb46293b379e1740f36fbeeebfe41518972026ba5",
+      "slh-dsa-sm3-128s/classical-root.der": "0bf34d34811628d3d8b4a320714c742124eb048e62da32e3a6c96792ddccf471",
+      "slh-dsa-sm3-128s/fixture.json": "3da375263af600eb13ff6bf4058fc063648d3dc86a5838682e5db76ffc86afbe",
+      "slh-dsa-sm3-128s/handshake-test-key.json": "e7a18241117a0fab516eba29f00f8e4b6115517de9c25867e8a802c25f7dd819",
+      "slh-dsa-sm3-128s/hybrid-intermediate.der": "bf5712e7e87bc26ac03b1217815ced9b3b8277a6c98ec226eebde4f8585f55f0",
+      "slh-dsa-sm3-128s/hybrid-leaf.der": "857db61f7d8af0ecca60bca0b09cc35070ae17b865524b07a6f264edce743a77",
+      "slh-dsa-sm3-128s/hybrid-root.der": "0bf34d34811628d3d8b4a320714c742124eb048e62da32e3a6c96792ddccf471",
+      "slh-dsa-sm3-128s/intermediate-pre-tbs.der": "7d630cf8664c8db2ba413a8693c2fe30f363b142bf6796a09c39528cb5b83a42",
+      "slh-dsa-sm3-128s/intermediate-test-key.pem": "c2c6d660d28e3f3efcd993ee7730af6def56922ca1e3997c85c398b8726eeb0a",
+      "slh-dsa-sm3-128s/intermediate.der": "7db34206c43ae8aec8510bc2d6cf3a038b29474b33c48a6472d254ba2656fa0a",
+      "slh-dsa-sm3-128s/leaf-pre-tbs.der": "3aea69df53f75829141857518f3a3baca901c6688cd8f4c3893face0851ead40",
+      "slh-dsa-sm3-128s/leaf-test-key.pem": "78752090aa021da5dba47301f58dcaca97d853e7d33ee7326409357258204b2a",
+      "slh-dsa-sm3-128s/leaf.der": "7893e903552129382830085c27b993d18e5dc67ed4700b06ea9e8cf74da4a52b",
+      "slh-dsa-sm3-128s/root-test-key.pem": "adcd092eefef950716b90d561db8560e478d46ad7c93915d2fcf471b0ee23dbf",
+      "slh-dsa-sm3-128s/root.der": "ddbe13165b459226b90b5ddd8ff6d1c067f02d7d4c85e2b05daac884e6d22bf6"
+    },
+    "library_before": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+    "library_after": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69"
+  },
+  "source_unchanged": true,
+  "fixtures_unchanged": true,
+  "library_unchanged": true,
+  "scope": "real in-process and loopback TCP handshakes; field-level predicates; not_covered is reported and never counted as passed"
+}

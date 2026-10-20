@@ -1,0 +1,1233 @@
+{
+  "schema": "a15-ds-acceptance-v2",
+  "generated_at_utc": "2026-10-19T08:04:07.478558+00:00",
+  "command": [
+    "tools/ds_acceptance.py",
+    "--fixtures",
+    "../out/final-rain-fixtures",
+    "--library",
+    "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+    "--client-root",
+    "../out/final-rain-fixtures/slh-dsa-sm3-128-24/root.der",
+    "--output",
+    "../out/final-rain-acceptance",
+    "--threads",
+    "8",
+    "--backend",
+    "2",
+    "--handshake-signer",
+    "rain4-bal",
+    "--profile-set",
+    "p2-only"
+  ],
+  "passed": true,
+  "profile_set": "p2-only",
+  "required_profiles": [
+    "P0",
+    "P1",
+    "P2"
+  ],
+  "coverage_missing": [],
+  "client_root": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-rain-fixtures/slh-dsa-sm3-128-24/root.der",
+  "client_root_source": "explicit --client-root",
+  "fixtures": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-rain-fixtures",
+  "library": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+  "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+  "threads": 8,
+  "requested_backend": 2,
+  "policy": {
+    "library": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+    "backend": 2,
+    "threads": 8,
+    "require_native": true,
+    "force_python": false
+  },
+  "summary": {
+    "tests": 36,
+    "passed": 29,
+    "failed": 0,
+    "not_covered": 7,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "name": "fixture-slh-dsa-sm3-128s-native",
+      "status": "not_covered",
+      "passed": false,
+      "stage": null,
+      "detail": "campaign issued only the 128-24 fixture set",
+      "reason": "campaign issued only the 128-24 fixture set",
+      "evidence": {}
+    },
+    {
+      "name": "fixture-slh-dsa-sm3-128s-python",
+      "status": "not_covered",
+      "passed": false,
+      "stage": null,
+      "detail": "campaign issued only the 128-24 fixture set",
+      "reason": "campaign issued only the 128-24 fixture set",
+      "evidence": {}
+    },
+    {
+      "name": "fixture-ml-dsa-44-provider",
+      "status": "not_covered",
+      "passed": false,
+      "stage": null,
+      "detail": "campaign issued only the 128-24 fixture set",
+      "reason": "campaign issued only the 128-24 fixture set",
+      "evidence": {}
+    },
+    {
+      "name": "fixture-slh-dsa-sm3-128-24-native",
+      "status": "passed",
+      "passed": true,
+      "stage": "fixture-verification",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "checked_edges": 2,
+        "verifiers": [
+          {
+            "algorithm": "slh-dsa-sm3-128-24",
+            "backend": 2,
+            "configured_backend": 2,
+            "configured_threads": 8,
+            "edge": 0,
+            "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+            "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+            "message_sha256": "fa7860a6a252e496c31a65c244fd7955ebd6677589b9a0c06c74d8bae09e3667",
+            "mode": "native",
+            "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/tools/native.py",
+            "passed": true,
+            "public_key_sha256": "a0bbb4ee39c567953cec9fa75b719b86ffc698de2e5c5114bc5fb34c2d121c87",
+            "signature_sha256": "18944bf3c554058db24bce1ffd9b3454099dea941392674024fd757278b7ab14",
+            "threads": 8
+          },
+          {
+            "algorithm": "slh-dsa-sm3-128-24",
+            "backend": 2,
+            "configured_backend": 2,
+            "configured_threads": 8,
+            "edge": 1,
+            "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+            "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+            "message_sha256": "9130abfdf41236cd38944540cb3d527f81a4f9ab3ff20a40ade75e5d5ee58eef",
+            "mode": "native",
+            "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/tools/native.py",
+            "passed": true,
+            "public_key_sha256": "ae368de88ebb87b17fda338f2baf7ea47a2162e3d26a2eaecbe5f6185dee4d2e",
+            "signature_sha256": "1e2adcf71226ee67d7669514ef723b06823b6c106f68cb660b9ae669727aec12",
+            "threads": 8
+          }
+        ]
+      }
+    },
+    {
+      "name": "fixture-slh-dsa-sm3-128-24-python",
+      "status": "passed",
+      "passed": true,
+      "stage": "fixture-verification",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "checked_edges": 2,
+        "verifiers": [
+          {
+            "algorithm": "slh-dsa-sm3-128-24",
+            "configured_backend": 2,
+            "configured_threads": 8,
+            "edge": 0,
+            "message_sha256": "fa7860a6a252e496c31a65c244fd7955ebd6677589b9a0c06c74d8bae09e3667",
+            "mode": "python",
+            "passed": true,
+            "public_key_sha256": "a0bbb4ee39c567953cec9fa75b719b86ffc698de2e5c5114bc5fb34c2d121c87",
+            "reference_model_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/reference/slhdsa.py",
+            "signature_sha256": "18944bf3c554058db24bce1ffd9b3454099dea941392674024fd757278b7ab14"
+          },
+          {
+            "algorithm": "slh-dsa-sm3-128-24",
+            "configured_backend": 2,
+            "configured_threads": 8,
+            "edge": 1,
+            "message_sha256": "9130abfdf41236cd38944540cb3d527f81a4f9ab3ff20a40ade75e5d5ee58eef",
+            "mode": "python",
+            "passed": true,
+            "public_key_sha256": "ae368de88ebb87b17fda338f2baf7ea47a2162e3d26a2eaecbe5f6185dee4d2e",
+            "reference_model_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/reference/slhdsa.py",
+            "signature_sha256": "1e2adcf71226ee67d7669514ef723b06823b6c106f68cb660b9ae669727aec12"
+          }
+        ]
+      }
+    },
+    {
+      "name": "fixture-verification-rows",
+      "status": "passed",
+      "passed": true,
+      "stage": "fixture-verification",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "rows": 2,
+        "expected": 2,
+        "library_sha256": {
+          "reference/__init__.py": "5b730d2dc9edbb15aaa49be4f85fe829fd5962f5234bf0f182052baf59d0df26",
+          "reference/acvp.py": "2da1387d9d68abcc4e2bbaf02710048fd83491277e116664ce32f0169aaad88e",
+          "reference/differential.py": "f6675752546d8755c9ef17f155576c6d74cedf12d1f68c25e4081850ef979dd9",
+          "reference/r1_evidence.py": "350c2b25c23258cf5d92e984f6dde7492fa93194f245d333349a4ad03cee0703",
+          "reference/selftest.py": "942c8083e3c6eacd55cff8436ba2e0f6a7a4d92b8add00049ea54298de546368",
+          "reference/slhdsa.py": "d7412bafb27d9e40b98a10eaf10faf24753007b0585099532fbaf628c717b043",
+          "reference/sm3.py": "43fb6d92afc803f4842bd06dfb00f813c7ed102f1b68d9115c3e0cd6497c2c8e",
+          "tls/__init__.py": "ee725a0df75f7b52e69b2ef24391904fb4c646d7b1a2fd9b2f124fd6d8f9272c",
+          "tls/_deps.py": "888333570240aca0adf6f7e4c8d528e962fbabc0728e126eceeb6a6bc6bfb0eb",
+          "tls/alt_chain.py": "45c67eb66ba1312c6495f61003ae025b13e9c724794eff0850a19c61a8f8bcc8",
+          "tls/alt_fixtures.py": "a72f45764f853dceb6400498850c32ff97c4c9b29df475dba0629b79cd17bb02",
+          "tls/alt_profiles.py": "f2d6c35e6a423b1f7c3362b2294361a4e8e14ac2635978536822c97ecfc2fb52",
+          "tls/classical/__init__.py": "722c3dbd0902dfd9fdedb56a050e48ac03bdaeb8384584c5cd1e5833506f1733",
+          "tls/classical/ecdh.py": "7751db31804d848f90df0c2d64aeaed019fbee4a9274d602f23582ec3e7f9e42",
+          "tls/classical/signature.py": "6f3c1e44447359f9f914120158516a033195130b80cf423452016776c7de16aa",
+          "tls/config.py": "8ce283465255b4d7ba99d1bcb57f025767e9583bdef410691dfe16da3e888930",
+          "tls/credentials.py": "6dbea615b16f2bb4ff097306e87a0a1860f30d4bab86618641b41b7d8c690fd8",
+          "tls/der.py": "f64059dfb5b1e22b0d551306c2abf0d565a25685267471b65e196c9b4e50dd4a",
+          "tls/errors.py": "7ee62437dbe66d2adc66b1fa6a9cf6a1ec89326bb139864a67127b4537c76272",
+          "tls/handshake/__init__.py": "77442b7b2f4d40f238f9bd0e3b37e4c2c71f4471501c92b3cceb9960c687a3d5",
+          "tls/handshake/certificate_verify.py": "5eb04d22f5b78965b503106ac016b852621508f748fcded0286de19b8b8e8911",
+          "tls/handshake/client.py": "9a4fe5013da126ba5241d40ebbd3aadcd6de3cb95703707e366fab7c120bdc46",
+          "tls/handshake/connection.py": "2b19857150d17a5eda20f074bc616dd0194576882095c8a288ab17ca5ec6ebd8",
+          "tls/handshake/messages.py": "9f7a242537f9a88cf397f9620b67bc0aefdd836f6f4f99dc7b3d312dd80be1c8",
+          "tls/handshake/server.py": "d5d99422498b1409fdc0787f8eb33b72c7ebcbef13716a4ca4606276a687b18e",
+          "tls/handshake/state.py": "771fbafdf83b0ff7d816369d60cbc4091eef372f1c4c3c2802cefe09c7e97e65",
+          "tls/handshake/transcript.py": "a412311ab55e907da35b9ad4cbbeaa31cd8a4bf972957019c47317ef338c26f4",
+          "tls/key_schedule/__init__.py": "c5ec7801ea5251a82d6291939c987b79a3f17a8a2e8e4b8730ad141af8270111",
+          "tls/key_schedule/hkdf.py": "842d3b016f30789a601e4f3bb4983044f5e3cebb3482954016c3cbdc3632ffb3",
+          "tls/metrics.py": "ba0c8bdba4dd8d868630ce5747c6f2a52342a1e3600e56d2cecb42b16c22a264",
+          "tls/pki.py": "e8862343223adf1babcfb5c2b1016aeb6788dde1b3cb08966c96eb9223358a22",
+          "tls/pq/__init__.py": "853b44429829d09b043c02a60caa1ae371ffcb2e47c4149222aa72784cde55d2",
+          "tls/pq/backends.py": "b0458bd4bef4390de0fe165ebd3fc9322d2d691de07e55d85c9fb4dd94ef591b",
+          "tls/pq/kem.py": "189e22aff7a5802ca9f6bc08316a142aa0b8e9d613320cfcb1eb12d2eb45bdfd",
+          "tls/pq/providers.py": "71162ad3aac3a4be079ee39413761db62035fa222d60073393e19b4614d77bcb",
+          "tls/pq/rain_voleith.py": "06341d55b64580edca13e7f068bf645b60a717ddf9b05e156c12298a7ae56652",
+          "tls/pq/signature.py": "55fb34a67d9c8ef203ad2cc2ff138dd5ecd7f0989183a3bfbc7848c233382d92",
+          "tls/pq/slhdsa_sm3.py": "c7824ea462f256a65dcc54680e7414f4c4db31aff8d444d7d82bd155c0713cfc",
+          "tls/pq/wots_xmss.py": "c02c6fc9fbdf1f59b50e4a16fe653847718368f92d7f3b14bf6133c843083ef8",
+          "tls/record/__init__.py": "e5aa5cd0cc826f79499a4dbb8a70edf0a64c5e0a75e7b62cf62d06c241baf0e5",
+          "tls/record/aead.py": "bc60db84478617eccd12846fc1fddbf1fd0188aa46b3f09695f51895620e414d",
+          "tls/transport/__init__.py": "13c6c20533cdf27cf2adeaf1c0d19b6917921da445bc8273a4e961ecc8e6ddea",
+          "tls/transport/shaper.py": "45ad1238485950485fc19b52ba34027e5842b57ba890d5765e7bd2a270b471a4",
+          "tls/transport/tcp.py": "a8b4c7d28e4753fd2a1646a02fab9dc030aa6c90483c6b1014fa0d870e95f161",
+          "tls/wire.py": "de232f22c2dcf778ca6e83d1adb20873df5c9bb1be6e5fc621e36a00c235b846",
+          "tools/alt_chain_fixtures.py": "9d0c2bcba649b57ef0c6a381b37b57ea8b90a8b5fe721853450894485bfd57e4",
+          "tools/native.py": "778a20a829d0f034f4a9852334d6f9480e66c41bfc76d0b891414cc0e2db6840",
+          "tools/signing_budget.py": "629425fc9764e2f7758a8c4927eff757cf3ec4ff3bc8970d50836d19fe7e6a50"
+        }
+      }
+    },
+    {
+      "name": "profile-coverage",
+      "status": "passed",
+      "passed": true,
+      "stage": "coverage",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "profile_set": "p2-only",
+        "required": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "available": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "missing": []
+      }
+    },
+    {
+      "name": "e1-P0",
+      "status": "passed",
+      "passed": true,
+      "stage": "handshake",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "server_flight_bytes": 1164,
+        "alt_extension_bytes": 0
+      }
+    },
+    {
+      "name": "e1-P1",
+      "status": "passed",
+      "passed": true,
+      "stage": "handshake",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "server_flight_bytes": 6392,
+        "alt_extension_bytes": 0
+      }
+    },
+    {
+      "name": "e1-P2",
+      "status": "passed",
+      "passed": true,
+      "stage": "handshake",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "server_flight_bytes": 14252,
+        "alt_extension_bytes": 7854
+      }
+    },
+    {
+      "name": "e1-P3",
+      "status": "not_covered",
+      "passed": false,
+      "stage": null,
+      "detail": "campaign issued only P0-P2",
+      "reason": "campaign issued only P0-P2",
+      "evidence": {}
+    },
+    {
+      "name": "e1-P4",
+      "status": "not_covered",
+      "passed": false,
+      "stage": null,
+      "detail": "campaign issued only P0-P2",
+      "reason": "campaign issued only P0-P2",
+      "evidence": {}
+    },
+    {
+      "name": "e1-profiles",
+      "status": "passed",
+      "passed": true,
+      "stage": "handshake",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "profiles": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "required": [
+          "P0",
+          "P1",
+          "P2"
+        ]
+      }
+    },
+    {
+      "name": "strict-p2-in-process",
+      "status": "passed",
+      "passed": true,
+      "stage": "handshake",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "checked_edges": 2,
+        "legacy_edges": 0,
+        "complete": true,
+        "algorithms": [
+          "slh-dsa-sm3-128-24",
+          "slh-dsa-sm3-128-24"
+        ],
+        "verifiers": [
+          {
+            "mode": "native",
+            "algorithm": "slh-dsa-sm3-128-24",
+            "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+            "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+            "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/tools/native.py",
+            "backend": 2,
+            "threads": 8,
+            "passed": true,
+            "edge": 0,
+            "public_key_sha256": "a0bbb4ee39c567953cec9fa75b719b86ffc698de2e5c5114bc5fb34c2d121c87",
+            "message_sha256": "fa7860a6a252e496c31a65c244fd7955ebd6677589b9a0c06c74d8bae09e3667",
+            "signature_sha256": "18944bf3c554058db24bce1ffd9b3454099dea941392674024fd757278b7ab14",
+            "configured_threads": 8,
+            "configured_backend": 2
+          },
+          {
+            "mode": "native",
+            "algorithm": "slh-dsa-sm3-128-24",
+            "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+            "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+            "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/tools/native.py",
+            "backend": 2,
+            "threads": 8,
+            "passed": true,
+            "edge": 1,
+            "public_key_sha256": "ae368de88ebb87b17fda338f2baf7ea47a2162e3d26a2eaecbe5f6185dee4d2e",
+            "message_sha256": "9130abfdf41236cd38944540cb3d527f81a4f9ab3ff20a40ade75e5d5ee58eef",
+            "signature_sha256": "1e2adcf71226ee67d7669514ef723b06823b6c106f68cb660b9ae669727aec12",
+            "configured_threads": 8,
+            "configured_backend": 2
+          }
+        ],
+        "certificate_verify": {
+          "classic_ok": true,
+          "pq_ok": true,
+          "accepted": true,
+          "pq_scheme": 65204
+        },
+        "application_ok": true,
+        "exporters_match": true,
+        "trusted_root_sha256": "299feac1291b82958cd0d020fd1c5bcfdc307916612ee08f469889fb31ff621a",
+        "chain_der_sha256": [
+          "87340328bb284e95d59ce16e0ab390af867bace36511b7393ec6497faf13956c",
+          "d7e1549cf4547492c75ca54bf3b7b67ceb23a5538092c5c9f535b810324444c9"
+        ],
+        "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+        "policy": null,
+        "handshake_bytes": 15616,
+        "server_flight_bytes": 14253,
+        "trusted_root_source": "../out/final-rain-fixtures/slh-dsa-sm3-128-24/root.der",
+        "predicate_reasons": []
+      }
+    },
+    {
+      "name": "strict-p2-loopback-tcp",
+      "status": "passed",
+      "passed": true,
+      "stage": "tcp",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "error": null,
+        "server_error": null,
+        "application_ok": true,
+        "exporters_match": true,
+        "checked_edges": 2,
+        "legacy_edges": 0,
+        "complete": true,
+        "algorithms": [
+          "slh-dsa-sm3-128-24",
+          "slh-dsa-sm3-128-24"
+        ],
+        "verifiers": [
+          {
+            "mode": "native",
+            "algorithm": "slh-dsa-sm3-128-24",
+            "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+            "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+            "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/tools/native.py",
+            "backend": 2,
+            "threads": 8,
+            "passed": true,
+            "edge": 0,
+            "public_key_sha256": "a0bbb4ee39c567953cec9fa75b719b86ffc698de2e5c5114bc5fb34c2d121c87",
+            "message_sha256": "fa7860a6a252e496c31a65c244fd7955ebd6677589b9a0c06c74d8bae09e3667",
+            "signature_sha256": "18944bf3c554058db24bce1ffd9b3454099dea941392674024fd757278b7ab14",
+            "configured_threads": 8,
+            "configured_backend": 2
+          },
+          {
+            "mode": "native",
+            "algorithm": "slh-dsa-sm3-128-24",
+            "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+            "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+            "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/tools/native.py",
+            "backend": 2,
+            "threads": 8,
+            "passed": true,
+            "edge": 1,
+            "public_key_sha256": "ae368de88ebb87b17fda338f2baf7ea47a2162e3d26a2eaecbe5f6185dee4d2e",
+            "message_sha256": "9130abfdf41236cd38944540cb3d527f81a4f9ab3ff20a40ade75e5d5ee58eef",
+            "signature_sha256": "1e2adcf71226ee67d7669514ef723b06823b6c106f68cb660b9ae669727aec12",
+            "configured_threads": 8,
+            "configured_backend": 2
+          }
+        ],
+        "certificate_verify_result": {
+          "classic_ok": true,
+          "pq_ok": true,
+          "accepted": true,
+          "pq_scheme": 65204
+        },
+        "certificate_verify_accepted": true,
+        "trusted_root_sha256": "299feac1291b82958cd0d020fd1c5bcfdc307916612ee08f469889fb31ff621a",
+        "client_waits": 2,
+        "waits_to_authenticated": 1,
+        "client_wall_ms": 59.70232095569372,
+        "server_wall_ms": 59.5424035564065,
+        "client_bytes_sent": 0,
+        "server_bytes_sent": 0,
+        "records": [
+          [
+            "ClientHello",
+            1306,
+            1
+          ],
+          [
+            "ServerHello",
+            1185,
+            1
+          ],
+          [
+            "EncryptedExtensions",
+            6,
+            1
+          ],
+          [
+            "Certificate",
+            8778,
+            1
+          ],
+          [
+            "CertificateVerify",
+            4162,
+            1
+          ],
+          [
+            "Finished",
+            36,
+            1
+          ],
+          [
+            "Finished",
+            36,
+            1
+          ]
+        ],
+        "predicate_reasons": []
+      }
+    },
+    {
+      "name": "large-certificate-fragmentation",
+      "status": "not_covered",
+      "passed": false,
+      "stage": null,
+      "detail": "campaign issued only P0-P2; no 128s certificate to fragment",
+      "reason": "campaign issued only P0-P2; no 128s certificate to fragment",
+      "evidence": {}
+    },
+    {
+      "name": "negative-root-replacement",
+      "status": "not_covered",
+      "passed": false,
+      "stage": null,
+      "detail": "campaign issued only the 128-24 anchor; no 128s anchor to swap",
+      "reason": "campaign issued only the 128-24 anchor; no 128s anchor to swap",
+      "evidence": {}
+    },
+    {
+      "name": "negative-unrelated-root-replacement",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate",
+      "detail": "HandshakeError: certificate: CN=A1-5 test intermediate is not signed by CN=unrelated root",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate",
+        "actual_stage": "certificate",
+        "expected_reason_contains": "not signed by",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-root-pq-key-replacement",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate_alt",
+      "detail": "HandshakeError: certificate_alt: alternative signature verification failed",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate_alt",
+        "actual_stage": "certificate_alt",
+        "expected_reason_contains": "alternative signature verification failed",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-leaf-alt-stripped",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate_alt",
+      "detail": "HandshakeError: certificate_alt: required alternative signature extensions are absent",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate_alt",
+        "actual_stage": "certificate_alt",
+        "expected_reason_contains": "required alternative signature extensions are absent",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-leaf-signature-corrupt",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate_alt",
+      "detail": "HandshakeError: certificate_alt: alternative signature verification failed",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate_alt",
+        "actual_stage": "certificate_alt",
+        "expected_reason_contains": "alternative signature verification failed",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-algorithm-oid-swap",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate_alt",
+      "detail": "HandshakeError: certificate_alt: alternative signature algorithm differs from issuer SPKI",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate_alt",
+        "actual_stage": "certificate_alt",
+        "expected_reason_contains": "alternative signature algorithm differs from issuer SPKI",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-cv-classical-signature",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate_verify",
+      "detail": "HandshakeError: certificate_verify: hybrid authentication failed: classical signature invalid",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate_verify",
+        "actual_stage": "certificate_verify",
+        "expected_reason_contains": "classical signature invalid",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-cv-pq-signature",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate_verify",
+      "detail": "HandshakeError: certificate_verify: hybrid authentication failed: post-quantum signature invalid",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate_verify",
+        "actual_stage": "certificate_verify",
+        "expected_reason_contains": "post-quantum signature invalid",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-cv-pq-absent",
+      "status": "passed",
+      "passed": true,
+      "stage": "certificate_verify",
+      "detail": "HandshakeError: certificate_verify: hybrid profile requires both signatures, but the PQ half is absent",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "certificate_verify",
+        "actual_stage": "certificate_verify",
+        "expected_reason_contains": "PQ half is absent",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-native-library-missing",
+      "status": "passed",
+      "passed": true,
+      "stage": "BackendUnavailableError",
+      "detail": "BackendUnavailableError: certificate_alt: SLH native backend unavailable: OSError: /mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/build/does-not-exist/libslhdsa_sm3.so: cannot open shared object file: No such file or directory",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "BackendUnavailableError"
+        ],
+        "actual_error_type": "BackendUnavailableError",
+        "expected_stage": null,
+        "actual_stage": null,
+        "expected_reason_contains": "unavailable",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-invalid-native-image",
+      "status": "passed",
+      "passed": true,
+      "stage": "BackendUnavailableError",
+      "detail": "BackendUnavailableError: certificate_alt: SLH native backend unavailable: OSError: /mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-rain-fixtures/slh-dsa-sm3-128-24/fixture.json: invalid ELF header",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "BackendUnavailableError"
+        ],
+        "actual_error_type": "BackendUnavailableError",
+        "expected_stage": null,
+        "actual_stage": null,
+        "expected_reason_contains": "unavailable",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-online-128-24-injection",
+      "status": "passed",
+      "passed": true,
+      "stage": "ValueError",
+      "detail": "ValueError: limited-use 128-24 is reserved for offline CA signing",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "ValueError"
+        ],
+        "actual_error_type": "ValueError",
+        "expected_stage": null,
+        "actual_stage": null,
+        "expected_reason_contains": "reserved for offline CA signing",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-flight-byte-budget",
+      "status": "passed",
+      "passed": true,
+      "stage": "server_flight",
+      "detail": "HandshakeError: server_flight: authenticated handshake flight exceeds byte budget",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "server_flight",
+        "actual_stage": "server_flight",
+        "expected_reason_contains": "exceeds byte budget",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "negative-flight-truncated",
+      "status": "passed",
+      "passed": true,
+      "stage": "server_flight",
+      "detail": "HandshakeError: server_flight: truncated authenticated handshake flight",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "HandshakeError"
+        ],
+        "actual_error_type": "HandshakeError",
+        "expected_stage": "server_flight",
+        "actual_stage": "server_flight",
+        "expected_reason_contains": "truncated authenticated handshake flight",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "budget-unique-first",
+      "status": "passed",
+      "passed": true,
+      "stage": "budget",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "receipt": "3c973e96b2a54519a5d3f7b96b9c0920",
+        "public_key_sha256": "630dcd2966c4336691125448bbb25b4ff412a49c732db2c8abc1b8581bd710dd"
+      }
+    },
+    {
+      "name": "budget-operation-identity-is-unique",
+      "status": "passed",
+      "passed": true,
+      "stage": "BudgetError",
+      "detail": "BudgetError: signing operation was already charged",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "BudgetError"
+        ],
+        "actual_error_type": "BudgetError",
+        "expected_stage": null,
+        "actual_stage": null,
+        "expected_reason_contains": "already charged",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "budget-unique-usage-remains-one",
+      "status": "passed",
+      "passed": true,
+      "stage": "budget",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "keys": [
+          {
+            "key_id": "8717000113770c0273f322a4f0de027b107771e28964fa7583f8c4298bca1901",
+            "algorithm": "slh-dsa-sm3-128-24",
+            "limit": 2,
+            "used": 1,
+            "remaining": 1,
+            "states": {
+              "reserved": 1
+            },
+            "count_reconciled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "budget-exhaustion-refuses-second",
+      "status": "passed",
+      "passed": true,
+      "stage": "BudgetError",
+      "detail": "BudgetError: signing budget exhausted; rotate the key",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "BudgetError"
+        ],
+        "actual_error_type": "BudgetError",
+        "expected_stage": null,
+        "actual_stage": null,
+        "expected_reason_contains": "exhausted",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "budget-reserve-failure-stops-sign",
+      "status": "passed",
+      "passed": true,
+      "stage": "BudgetError",
+      "detail": "BudgetError: exhausted",
+      "reason": null,
+      "evidence": {
+        "expected_error_types": [
+          "BudgetError"
+        ],
+        "actual_error_type": "BudgetError",
+        "expected_stage": null,
+        "actual_stage": null,
+        "expected_reason_contains": "exhausted",
+        "type_ok": true,
+        "stage_ok": true,
+        "reason_ok": true
+      }
+    },
+    {
+      "name": "budget-refusal-left-sign-uncalled",
+      "status": "passed",
+      "passed": true,
+      "stage": "budget",
+      "detail": null,
+      "reason": null,
+      "evidence": {
+        "sign_calls": 0
+      }
+    }
+  ],
+  "not_covered": [
+    {
+      "name": "fixture-slh-dsa-sm3-128s-native",
+      "status": "not_covered",
+      "passed": false,
+      "stage": null,
+      "detail": "campaign issued only the 128-24 fixture set",
+      "reason": "campaign issued only the 128-24 fixture set",
+      "evidence": {}
+    },
+    {
+      "name": "fixture-slh-dsa-sm3-128s-python",
+      "status": "not_covered",
+      "passed": false,
+      "stage": null,
+      "detail": "campaign issued only the 128-24 fixture set",
+      "reason": "campaign issued only the 128-24 fixture set",
+      "evidence": {}
+    },
+    {
+      "name": "fixture-ml-dsa-44-provider",
+      "status": "not_covered",
+      "passed": false,
+      "stage": null,
+      "detail": "campaign issued only the 128-24 fixture set",
+      "reason": "campaign issued only the 128-24 fixture set",
+      "evidence": {}
+    },
+    {
+      "name": "e1-P3",
+      "status": "not_covered",
+      "passed": false,
+      "stage": null,
+      "detail": "campaign issued only P0-P2",
+      "reason": "campaign issued only P0-P2",
+      "evidence": {}
+    },
+    {
+      "name": "e1-P4",
+      "status": "not_covered",
+      "passed": false,
+      "stage": null,
+      "detail": "campaign issued only P0-P2",
+      "reason": "campaign issued only P0-P2",
+      "evidence": {}
+    },
+    {
+      "name": "large-certificate-fragmentation",
+      "status": "not_covered",
+      "passed": false,
+      "stage": null,
+      "detail": "campaign issued only P0-P2; no 128s certificate to fragment",
+      "reason": "campaign issued only P0-P2; no 128s certificate to fragment",
+      "evidence": {}
+    },
+    {
+      "name": "negative-root-replacement",
+      "status": "not_covered",
+      "passed": false,
+      "stage": null,
+      "detail": "campaign issued only the 128-24 anchor; no 128s anchor to swap",
+      "reason": "campaign issued only the 128-24 anchor; no 128s anchor to swap",
+      "evidence": {}
+    }
+  ],
+  "phase_results": [
+    {
+      "phase": "fixture-verification",
+      "status": "passed"
+    },
+    {
+      "phase": "positive",
+      "status": "passed"
+    },
+    {
+      "phase": "strict-p2",
+      "status": "passed"
+    },
+    {
+      "phase": "tcp",
+      "status": "passed"
+    },
+    {
+      "phase": "negative",
+      "status": "passed"
+    }
+  ],
+  "phase_failures": [],
+  "environment": {
+    "executable": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/../out/baseline-1/venv/bin/python",
+    "version": "3.12.15 (main, Oct 13 2026, 16:52:04) [GCC 15.3.0]",
+    "platform": "linux",
+    "cwd": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb",
+    "pythonpath": null,
+    "sys_path": [
+      "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/third_party/py-acvp-pqc",
+      "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/base_tls",
+      "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb",
+      "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb",
+      "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/tools",
+      "/mnt1/lmy/lzl/rain-bench-20261016/env/lib/python312.zip",
+      "/mnt1/lmy/lzl/rain-bench-20261016/env/lib/python3.12",
+      "/mnt1/lmy/lzl/rain-bench-20261016/env/lib/python3.12/lib-dynload",
+      "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/baseline-1/venv/lib/python3.12/site-packages",
+      "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/.deps-falcon"
+    ]
+  },
+  "modules": {
+    "tls": {
+      "path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/tls/__init__.py",
+      "sha256": "ee725a0df75f7b52e69b2ef24391904fb4c646d7b1a2fd9b2f124fd6d8f9272c"
+    },
+    "native_adapter": {
+      "path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/tools/native.py",
+      "sha256": "778a20a829d0f034f4a9852334d6f9480e66c41bfc76d0b891414cc0e2db6840",
+      "imported_file": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/tools/native.py"
+    },
+    "reference": {
+      "path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/reference/__init__.py",
+      "sha256": "5b730d2dc9edbb15aaa49be4f85fe829fd5962f5234bf0f182052baf59d0df26",
+      "imported_file": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/reference/__init__.py"
+    },
+    "fips205": {
+      "path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/third_party/py-acvp-pqc/fips205.py",
+      "sha256": "edb662306b0ccac88ee9669aed6256c27a547d9084e6e9cc2180ce92e9da3a22"
+    },
+    "acceptance_driver": {
+      "path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/tlsb/tools/ds_acceptance.py",
+      "sha256": "267f648452222737f3257cbdca642a7e7401a2c9997a420ff9ca1d2510d89e22"
+    }
+  },
+  "hashes": {
+    "source_before": {
+      "native/faest_suite/build.py": "4cb28037ade44313bbf63a056d762f51a505109b133b3de1ec55901b4fa3487c",
+      "native/faest_suite/faest_suite_platform.c": "ca45cbb47313bb8757ba4087034f5721fc4459fdb5b59b0e4a0813bede35dc7d",
+      "native/faest_suite/faest_suite_tls.cpp": "836833c7e5cb893b2e869e11457b1a1ad550895954be617dbf2ee9b98186ad91",
+      "native/faest_suite/faest_suite_tls.h": "ed2d1e64f7175136ed1c97ea2d86aafc4f0180b64dc190c9bf1729a40e43aa50",
+      "native/faest_suite/faest_suite_tls_impl.hpp": "6b84ea410345719d46757d0ac1b26dd829652b1a65fa888f537d9fb0c3041949",
+      "native/faest_suite/win_aligned_alloc.hpp": "86820127e5fcecea01879171f4a7518b2db3088ed026587fe19ff16f661302c3",
+      "native/faest_suite/xkcp_config/config.h": "5cc3d25fe0af3cc72b4aa67e4a4ab031c1b84683ea8bd919c501194dc9e7cd55",
+      "native/rain_voleith/build.py": "575358c1778983941acd7276ed3449bb997c9f27f6f58537da7a49f55a651eb7",
+      "native/rain_voleith/build_linux.sh": "1336e9e3eb85dfca90fe231af155c1f06d63a653db804836ab364a442c02082b",
+      "native/rain_voleith/rain_voleith_platform.c": "b8a3a0d35e0cde7e4e3173a946340efffea3b8a0e5fd8e9217b23253e35db212",
+      "native/rain_voleith/rain_voleith_tls.cpp": "857d141b02a736111ef24dfbe052b87637af16c98c9e04fde8d721bd7b0a43bd",
+      "native/rain_voleith/rain_voleith_tls.h": "8c8db9d0caf8df816f730e78f5df47682c0da1b7ba4807acdd2e9f0cc1a25469",
+      "native/rain_voleith/rain_voleith_tls_impl.hpp": "10258b0943f9beab443cd9e2b44b082bcb25cc7adae115f45635fd2aeabdd671",
+      "native/rain_voleith/win_aligned_alloc.hpp": "86820127e5fcecea01879171f4a7518b2db3088ed026587fe19ff16f661302c3",
+      "native/rain_voleith/xkcp_config/config.h": "615ec8fc3689422086995a0655d79a64a157b13cc3aa396ea6c1d2039fa775b4",
+      "reference/__init__.py": "5b730d2dc9edbb15aaa49be4f85fe829fd5962f5234bf0f182052baf59d0df26",
+      "reference/acvp.py": "2da1387d9d68abcc4e2bbaf02710048fd83491277e116664ce32f0169aaad88e",
+      "reference/differential.py": "f6675752546d8755c9ef17f155576c6d74cedf12d1f68c25e4081850ef979dd9",
+      "reference/evidence_sources/differential_2736be1.py": "2736be1ec5eb040a313b57901ff5d58ae6c423d78e5a79208b92d9c3cf7c66c1",
+      "reference/r1_evidence.py": "350c2b25c23258cf5d92e984f6dde7492fa93194f245d333349a4ad03cee0703",
+      "reference/selftest.py": "942c8083e3c6eacd55cff8436ba2e0f6a7a4d92b8add00049ea54298de546368",
+      "reference/slhdsa.py": "d7412bafb27d9e40b98a10eaf10faf24753007b0585099532fbaf628c717b043",
+      "reference/sm3.py": "43fb6d92afc803f4842bd06dfb00f813c7ed102f1b68d9115c3e0cd6497c2c8e",
+      "third_party/py-acvp-pqc/fips203.py": "f61f416cb50ea8897177a0912ab22eeaae4242a0654c1b755e6404ce996cf57e",
+      "third_party/py-acvp-pqc/fips204.py": "83bf547619dcb5c741f17731f40d6e073174844aaf68d693e552763e0e3d65ef",
+      "third_party/py-acvp-pqc/fips205.py": "edb662306b0ccac88ee9669aed6256c27a547d9084e6e9cc2180ce92e9da3a22",
+      "third_party/py-acvp-pqc/genvals_mldsa.py": "2d377aa7bb004ee2fb2985aeac5f2f3e834963ab3f63514b21aa6d51366ea7d6",
+      "third_party/py-acvp-pqc/genvals_mlkem.py": "dd3eea17d8ce35c29b3f368d56a82a89116bd51850d1be26597dda992a2cdbdd",
+      "third_party/py-acvp-pqc/genvals_slhdsa.py": "3eb0d48555b7b7949d2a28c1bb0aff9b4d1d69813444c7e2cfcb4b00217cf542",
+      "third_party/py-acvp-pqc/test_mldsa.py": "55b2b88b720308024ffb36dff5dc32ea62b3984eccbb04c718031502769c91b8",
+      "third_party/py-acvp-pqc/test_mlkem.py": "035ac1324e8086508ef4f4c1bd453779048a7dde9488f28089c1f2408c85b7e5",
+      "third_party/py-acvp-pqc/test_slhdsa.py": "706abf98b609e35dd4aec7d4a6b1bf8d75a183a85295ed3466a36f386fa98cdb",
+      "tls/__init__.py": "ee725a0df75f7b52e69b2ef24391904fb4c646d7b1a2fd9b2f124fd6d8f9272c",
+      "tls/_deps.py": "888333570240aca0adf6f7e4c8d528e962fbabc0728e126eceeb6a6bc6bfb0eb",
+      "tls/alt_chain.py": "45c67eb66ba1312c6495f61003ae025b13e9c724794eff0850a19c61a8f8bcc8",
+      "tls/alt_fixtures.py": "a72f45764f853dceb6400498850c32ff97c4c9b29df475dba0629b79cd17bb02",
+      "tls/alt_profiles.py": "f2d6c35e6a423b1f7c3362b2294361a4e8e14ac2635978536822c97ecfc2fb52",
+      "tls/classical/__init__.py": "722c3dbd0902dfd9fdedb56a050e48ac03bdaeb8384584c5cd1e5833506f1733",
+      "tls/classical/ecdh.py": "7751db31804d848f90df0c2d64aeaed019fbee4a9274d602f23582ec3e7f9e42",
+      "tls/classical/signature.py": "6f3c1e44447359f9f914120158516a033195130b80cf423452016776c7de16aa",
+      "tls/config.py": "8ce283465255b4d7ba99d1bcb57f025767e9583bdef410691dfe16da3e888930",
+      "tls/credentials.py": "6dbea615b16f2bb4ff097306e87a0a1860f30d4bab86618641b41b7d8c690fd8",
+      "tls/der.py": "f64059dfb5b1e22b0d551306c2abf0d565a25685267471b65e196c9b4e50dd4a",
+      "tls/errors.py": "7ee62437dbe66d2adc66b1fa6a9cf6a1ec89326bb139864a67127b4537c76272",
+      "tls/handshake/__init__.py": "77442b7b2f4d40f238f9bd0e3b37e4c2c71f4471501c92b3cceb9960c687a3d5",
+      "tls/handshake/certificate_verify.py": "5eb04d22f5b78965b503106ac016b852621508f748fcded0286de19b8b8e8911",
+      "tls/handshake/client.py": "9a4fe5013da126ba5241d40ebbd3aadcd6de3cb95703707e366fab7c120bdc46",
+      "tls/handshake/connection.py": "2b19857150d17a5eda20f074bc616dd0194576882095c8a288ab17ca5ec6ebd8",
+      "tls/handshake/messages.py": "9f7a242537f9a88cf397f9620b67bc0aefdd836f6f4f99dc7b3d312dd80be1c8",
+      "tls/handshake/server.py": "d5d99422498b1409fdc0787f8eb33b72c7ebcbef13716a4ca4606276a687b18e",
+      "tls/handshake/state.py": "771fbafdf83b0ff7d816369d60cbc4091eef372f1c4c3c2802cefe09c7e97e65",
+      "tls/handshake/transcript.py": "a412311ab55e907da35b9ad4cbbeaa31cd8a4bf972957019c47317ef338c26f4",
+      "tls/key_schedule/__init__.py": "c5ec7801ea5251a82d6291939c987b79a3f17a8a2e8e4b8730ad141af8270111",
+      "tls/key_schedule/hkdf.py": "842d3b016f30789a601e4f3bb4983044f5e3cebb3482954016c3cbdc3632ffb3",
+      "tls/metrics.py": "ba0c8bdba4dd8d868630ce5747c6f2a52342a1e3600e56d2cecb42b16c22a264",
+      "tls/pki.py": "e8862343223adf1babcfb5c2b1016aeb6788dde1b3cb08966c96eb9223358a22",
+      "tls/pq/__init__.py": "853b44429829d09b043c02a60caa1ae371ffcb2e47c4149222aa72784cde55d2",
+      "tls/pq/backends.py": "b0458bd4bef4390de0fe165ebd3fc9322d2d691de07e55d85c9fb4dd94ef591b",
+      "tls/pq/kem.py": "189e22aff7a5802ca9f6bc08316a142aa0b8e9d613320cfcb1eb12d2eb45bdfd",
+      "tls/pq/providers.py": "71162ad3aac3a4be079ee39413761db62035fa222d60073393e19b4614d77bcb",
+      "tls/pq/rain_voleith.py": "06341d55b64580edca13e7f068bf645b60a717ddf9b05e156c12298a7ae56652",
+      "tls/pq/signature.py": "55fb34a67d9c8ef203ad2cc2ff138dd5ecd7f0989183a3bfbc7848c233382d92",
+      "tls/pq/slhdsa_sm3.py": "c7824ea462f256a65dcc54680e7414f4c4db31aff8d444d7d82bd155c0713cfc",
+      "tls/pq/wots_xmss.py": "c02c6fc9fbdf1f59b50e4a16fe653847718368f92d7f3b14bf6133c843083ef8",
+      "tls/record/__init__.py": "e5aa5cd0cc826f79499a4dbb8a70edf0a64c5e0a75e7b62cf62d06c241baf0e5",
+      "tls/record/aead.py": "bc60db84478617eccd12846fc1fddbf1fd0188aa46b3f09695f51895620e414d",
+      "tls/transport/__init__.py": "13c6c20533cdf27cf2adeaf1c0d19b6917921da445bc8273a4e961ecc8e6ddea",
+      "tls/transport/shaper.py": "45ad1238485950485fc19b52ba34027e5842b57ba890d5765e7bd2a270b471a4",
+      "tls/transport/tcp.py": "a8b4c7d28e4753fd2a1646a02fab9dc030aa6c90483c6b1014fa0d870e95f161",
+      "tls/wire.py": "de232f22c2dcf778ca6e83d1adb20873df5c9bb1be6e5fc621e36a00c235b846",
+      "tools/alt_chain_fixtures.py": "9d0c2bcba649b57ef0c6a381b37b57ea8b90a8b5fe721853450894485bfd57e4",
+      "tools/audit_live_checks.py": "185af3836c4a76e63453ae0e16d5e7ebb2e0636c3fc4c36f66337b6d81e5f4b3",
+      "tools/check_x509.py": "4be18e361178d0c8c49add460a1a786541675cdcf3bb2c4dce9edead70c0dfd9",
+      "tools/ds_acceptance.py": "267f648452222737f3257cbdca642a7e7401a2c9997a420ff9ca1d2510d89e22",
+      "tools/dump_wire.py": "c50bb0db84874acc9577be03d011335e02d9030bca038551b39987d20538ab37",
+      "tools/make_requirements_lock.py": "c19d951b36b1dab601907e1cbbdfd1c3ff2e576c6cf543192eaa16aeb679cbcc",
+      "tools/make_source_patch.py": "805245cf16871d0a24672769620edbffb823162ec85c70d6e56159ecd2feea27",
+      "tools/native.py": "778a20a829d0f034f4a9852334d6f9480e66c41bfc76d0b891414cc0e2db6840",
+      "tools/probe_pq.py": "4d69323d30c01e9bb23a92560b8c4fb96e483bf9174df1ea980732b364e06fb4",
+      "tools/rain_voleith_kat_gate.py": "77dbab29cbee415e28c18c48e7fde1f17ea938ea7ddc2262302959ac00de6437",
+      "tools/report_environment.py": "e2010fc74390687c8c3d7601d7410ce5547fa4953f2930a8b62bf376db10ba46",
+      "tools/sandbox_pyfix/sitecustomize.py": "69c05c737d9f454094ca7cb91683b5cdd214e0bb3b3b56cbe8a7d7b85985ed2b",
+      "tools/signing_budget.py": "629425fc9764e2f7758a8c4927eff757cf3ec4ff3bc8970d50836d19fe7e6a50",
+      "tools/verify_dependency_lock.py": "d39bd14e698292bdd9cbf3a5c613363cbbcd9f9cd3d0e456f649d14d976d359d"
+    },
+    "source_after": {
+      "native/faest_suite/build.py": "4cb28037ade44313bbf63a056d762f51a505109b133b3de1ec55901b4fa3487c",
+      "native/faest_suite/faest_suite_platform.c": "ca45cbb47313bb8757ba4087034f5721fc4459fdb5b59b0e4a0813bede35dc7d",
+      "native/faest_suite/faest_suite_tls.cpp": "836833c7e5cb893b2e869e11457b1a1ad550895954be617dbf2ee9b98186ad91",
+      "native/faest_suite/faest_suite_tls.h": "ed2d1e64f7175136ed1c97ea2d86aafc4f0180b64dc190c9bf1729a40e43aa50",
+      "native/faest_suite/faest_suite_tls_impl.hpp": "6b84ea410345719d46757d0ac1b26dd829652b1a65fa888f537d9fb0c3041949",
+      "native/faest_suite/win_aligned_alloc.hpp": "86820127e5fcecea01879171f4a7518b2db3088ed026587fe19ff16f661302c3",
+      "native/faest_suite/xkcp_config/config.h": "5cc3d25fe0af3cc72b4aa67e4a4ab031c1b84683ea8bd919c501194dc9e7cd55",
+      "native/rain_voleith/build.py": "575358c1778983941acd7276ed3449bb997c9f27f6f58537da7a49f55a651eb7",
+      "native/rain_voleith/build_linux.sh": "1336e9e3eb85dfca90fe231af155c1f06d63a653db804836ab364a442c02082b",
+      "native/rain_voleith/rain_voleith_platform.c": "b8a3a0d35e0cde7e4e3173a946340efffea3b8a0e5fd8e9217b23253e35db212",
+      "native/rain_voleith/rain_voleith_tls.cpp": "857d141b02a736111ef24dfbe052b87637af16c98c9e04fde8d721bd7b0a43bd",
+      "native/rain_voleith/rain_voleith_tls.h": "8c8db9d0caf8df816f730e78f5df47682c0da1b7ba4807acdd2e9f0cc1a25469",
+      "native/rain_voleith/rain_voleith_tls_impl.hpp": "10258b0943f9beab443cd9e2b44b082bcb25cc7adae115f45635fd2aeabdd671",
+      "native/rain_voleith/win_aligned_alloc.hpp": "86820127e5fcecea01879171f4a7518b2db3088ed026587fe19ff16f661302c3",
+      "native/rain_voleith/xkcp_config/config.h": "615ec8fc3689422086995a0655d79a64a157b13cc3aa396ea6c1d2039fa775b4",
+      "reference/__init__.py": "5b730d2dc9edbb15aaa49be4f85fe829fd5962f5234bf0f182052baf59d0df26",
+      "reference/acvp.py": "2da1387d9d68abcc4e2bbaf02710048fd83491277e116664ce32f0169aaad88e",
+      "reference/differential.py": "f6675752546d8755c9ef17f155576c6d74cedf12d1f68c25e4081850ef979dd9",
+      "reference/evidence_sources/differential_2736be1.py": "2736be1ec5eb040a313b57901ff5d58ae6c423d78e5a79208b92d9c3cf7c66c1",
+      "reference/r1_evidence.py": "350c2b25c23258cf5d92e984f6dde7492fa93194f245d333349a4ad03cee0703",
+      "reference/selftest.py": "942c8083e3c6eacd55cff8436ba2e0f6a7a4d92b8add00049ea54298de546368",
+      "reference/slhdsa.py": "d7412bafb27d9e40b98a10eaf10faf24753007b0585099532fbaf628c717b043",
+      "reference/sm3.py": "43fb6d92afc803f4842bd06dfb00f813c7ed102f1b68d9115c3e0cd6497c2c8e",
+      "third_party/py-acvp-pqc/fips203.py": "f61f416cb50ea8897177a0912ab22eeaae4242a0654c1b755e6404ce996cf57e",
+      "third_party/py-acvp-pqc/fips204.py": "83bf547619dcb5c741f17731f40d6e073174844aaf68d693e552763e0e3d65ef",
+      "third_party/py-acvp-pqc/fips205.py": "edb662306b0ccac88ee9669aed6256c27a547d9084e6e9cc2180ce92e9da3a22",
+      "third_party/py-acvp-pqc/genvals_mldsa.py": "2d377aa7bb004ee2fb2985aeac5f2f3e834963ab3f63514b21aa6d51366ea7d6",
+      "third_party/py-acvp-pqc/genvals_mlkem.py": "dd3eea17d8ce35c29b3f368d56a82a89116bd51850d1be26597dda992a2cdbdd",
+      "third_party/py-acvp-pqc/genvals_slhdsa.py": "3eb0d48555b7b7949d2a28c1bb0aff9b4d1d69813444c7e2cfcb4b00217cf542",
+      "third_party/py-acvp-pqc/test_mldsa.py": "55b2b88b720308024ffb36dff5dc32ea62b3984eccbb04c718031502769c91b8",
+      "third_party/py-acvp-pqc/test_mlkem.py": "035ac1324e8086508ef4f4c1bd453779048a7dde9488f28089c1f2408c85b7e5",
+      "third_party/py-acvp-pqc/test_slhdsa.py": "706abf98b609e35dd4aec7d4a6b1bf8d75a183a85295ed3466a36f386fa98cdb",
+      "tls/__init__.py": "ee725a0df75f7b52e69b2ef24391904fb4c646d7b1a2fd9b2f124fd6d8f9272c",
+      "tls/_deps.py": "888333570240aca0adf6f7e4c8d528e962fbabc0728e126eceeb6a6bc6bfb0eb",
+      "tls/alt_chain.py": "45c67eb66ba1312c6495f61003ae025b13e9c724794eff0850a19c61a8f8bcc8",
+      "tls/alt_fixtures.py": "a72f45764f853dceb6400498850c32ff97c4c9b29df475dba0629b79cd17bb02",
+      "tls/alt_profiles.py": "f2d6c35e6a423b1f7c3362b2294361a4e8e14ac2635978536822c97ecfc2fb52",
+      "tls/classical/__init__.py": "722c3dbd0902dfd9fdedb56a050e48ac03bdaeb8384584c5cd1e5833506f1733",
+      "tls/classical/ecdh.py": "7751db31804d848f90df0c2d64aeaed019fbee4a9274d602f23582ec3e7f9e42",
+      "tls/classical/signature.py": "6f3c1e44447359f9f914120158516a033195130b80cf423452016776c7de16aa",
+      "tls/config.py": "8ce283465255b4d7ba99d1bcb57f025767e9583bdef410691dfe16da3e888930",
+      "tls/credentials.py": "6dbea615b16f2bb4ff097306e87a0a1860f30d4bab86618641b41b7d8c690fd8",
+      "tls/der.py": "f64059dfb5b1e22b0d551306c2abf0d565a25685267471b65e196c9b4e50dd4a",
+      "tls/errors.py": "7ee62437dbe66d2adc66b1fa6a9cf6a1ec89326bb139864a67127b4537c76272",
+      "tls/handshake/__init__.py": "77442b7b2f4d40f238f9bd0e3b37e4c2c71f4471501c92b3cceb9960c687a3d5",
+      "tls/handshake/certificate_verify.py": "5eb04d22f5b78965b503106ac016b852621508f748fcded0286de19b8b8e8911",
+      "tls/handshake/client.py": "9a4fe5013da126ba5241d40ebbd3aadcd6de3cb95703707e366fab7c120bdc46",
+      "tls/handshake/connection.py": "2b19857150d17a5eda20f074bc616dd0194576882095c8a288ab17ca5ec6ebd8",
+      "tls/handshake/messages.py": "9f7a242537f9a88cf397f9620b67bc0aefdd836f6f4f99dc7b3d312dd80be1c8",
+      "tls/handshake/server.py": "d5d99422498b1409fdc0787f8eb33b72c7ebcbef13716a4ca4606276a687b18e",
+      "tls/handshake/state.py": "771fbafdf83b0ff7d816369d60cbc4091eef372f1c4c3c2802cefe09c7e97e65",
+      "tls/handshake/transcript.py": "a412311ab55e907da35b9ad4cbbeaa31cd8a4bf972957019c47317ef338c26f4",
+      "tls/key_schedule/__init__.py": "c5ec7801ea5251a82d6291939c987b79a3f17a8a2e8e4b8730ad141af8270111",
+      "tls/key_schedule/hkdf.py": "842d3b016f30789a601e4f3bb4983044f5e3cebb3482954016c3cbdc3632ffb3",
+      "tls/metrics.py": "ba0c8bdba4dd8d868630ce5747c6f2a52342a1e3600e56d2cecb42b16c22a264",
+      "tls/pki.py": "e8862343223adf1babcfb5c2b1016aeb6788dde1b3cb08966c96eb9223358a22",
+      "tls/pq/__init__.py": "853b44429829d09b043c02a60caa1ae371ffcb2e47c4149222aa72784cde55d2",
+      "tls/pq/backends.py": "b0458bd4bef4390de0fe165ebd3fc9322d2d691de07e55d85c9fb4dd94ef591b",
+      "tls/pq/kem.py": "189e22aff7a5802ca9f6bc08316a142aa0b8e9d613320cfcb1eb12d2eb45bdfd",
+      "tls/pq/providers.py": "71162ad3aac3a4be079ee39413761db62035fa222d60073393e19b4614d77bcb",
+      "tls/pq/rain_voleith.py": "06341d55b64580edca13e7f068bf645b60a717ddf9b05e156c12298a7ae56652",
+      "tls/pq/signature.py": "55fb34a67d9c8ef203ad2cc2ff138dd5ecd7f0989183a3bfbc7848c233382d92",
+      "tls/pq/slhdsa_sm3.py": "c7824ea462f256a65dcc54680e7414f4c4db31aff8d444d7d82bd155c0713cfc",
+      "tls/pq/wots_xmss.py": "c02c6fc9fbdf1f59b50e4a16fe653847718368f92d7f3b14bf6133c843083ef8",
+      "tls/record/__init__.py": "e5aa5cd0cc826f79499a4dbb8a70edf0a64c5e0a75e7b62cf62d06c241baf0e5",
+      "tls/record/aead.py": "bc60db84478617eccd12846fc1fddbf1fd0188aa46b3f09695f51895620e414d",
+      "tls/transport/__init__.py": "13c6c20533cdf27cf2adeaf1c0d19b6917921da445bc8273a4e961ecc8e6ddea",
+      "tls/transport/shaper.py": "45ad1238485950485fc19b52ba34027e5842b57ba890d5765e7bd2a270b471a4",
+      "tls/transport/tcp.py": "a8b4c7d28e4753fd2a1646a02fab9dc030aa6c90483c6b1014fa0d870e95f161",
+      "tls/wire.py": "de232f22c2dcf778ca6e83d1adb20873df5c9bb1be6e5fc621e36a00c235b846",
+      "tools/alt_chain_fixtures.py": "9d0c2bcba649b57ef0c6a381b37b57ea8b90a8b5fe721853450894485bfd57e4",
+      "tools/audit_live_checks.py": "185af3836c4a76e63453ae0e16d5e7ebb2e0636c3fc4c36f66337b6d81e5f4b3",
+      "tools/check_x509.py": "4be18e361178d0c8c49add460a1a786541675cdcf3bb2c4dce9edead70c0dfd9",
+      "tools/ds_acceptance.py": "267f648452222737f3257cbdca642a7e7401a2c9997a420ff9ca1d2510d89e22",
+      "tools/dump_wire.py": "c50bb0db84874acc9577be03d011335e02d9030bca038551b39987d20538ab37",
+      "tools/make_requirements_lock.py": "c19d951b36b1dab601907e1cbbdfd1c3ff2e576c6cf543192eaa16aeb679cbcc",
+      "tools/make_source_patch.py": "805245cf16871d0a24672769620edbffb823162ec85c70d6e56159ecd2feea27",
+      "tools/native.py": "778a20a829d0f034f4a9852334d6f9480e66c41bfc76d0b891414cc0e2db6840",
+      "tools/probe_pq.py": "4d69323d30c01e9bb23a92560b8c4fb96e483bf9174df1ea980732b364e06fb4",
+      "tools/rain_voleith_kat_gate.py": "77dbab29cbee415e28c18c48e7fde1f17ea938ea7ddc2262302959ac00de6437",
+      "tools/report_environment.py": "e2010fc74390687c8c3d7601d7410ce5547fa4953f2930a8b62bf376db10ba46",
+      "tools/sandbox_pyfix/sitecustomize.py": "69c05c737d9f454094ca7cb91683b5cdd214e0bb3b3b56cbe8a7d7b85985ed2b",
+      "tools/signing_budget.py": "629425fc9764e2f7758a8c4927eff757cf3ec4ff3bc8970d50836d19fe7e6a50",
+      "tools/verify_dependency_lock.py": "d39bd14e698292bdd9cbf3a5c613363cbbcd9f9cd3d0e456f649d14d976d359d"
+    },
+    "fixtures_before": {
+      "MANIFEST.json": "71c8ea576f8be8c51eb7f5611d5257a002606ae56b036c9f0a7dccd612eac337",
+      "campaign.json": "4c626d85337c2b583b8ccf2da99ccebebc8059b73b81ce1728af2ee1879749e6",
+      "slh-dsa-sm3-128-24/classical-intermediate.der": "440d112e00e68a6b3420190a502da48ca4a6bdbcd7ea64d3f313020492840da0",
+      "slh-dsa-sm3-128-24/classical-leaf.der": "9f4800767763565b7d1ead4e2b1b647b758d8585aec8d651b031228038b0bf21",
+      "slh-dsa-sm3-128-24/classical-root.der": "b8d7c7a05ef749bd19169d56a34a0f1a7e23e301eb06208be39cfbbba495efb2",
+      "slh-dsa-sm3-128-24/fixture.json": "2dabd0cf74fe0c43fdc3c75be1a2fe0d1a851e54109b5907cabf99ddc16cbe8e",
+      "slh-dsa-sm3-128-24/handshake-test-key.json": "e0b355ab2c70bd2d3a1876eeccb9955d7a35a958e05022c2be5966d02092f03b",
+      "slh-dsa-sm3-128-24/hybrid-intermediate.der": "440d112e00e68a6b3420190a502da48ca4a6bdbcd7ea64d3f313020492840da0",
+      "slh-dsa-sm3-128-24/hybrid-leaf.der": "c605c34986a5dae49e4314fb9e03c717603361f463faa7cc51db3134b464eca1",
+      "slh-dsa-sm3-128-24/hybrid-root.der": "b8d7c7a05ef749bd19169d56a34a0f1a7e23e301eb06208be39cfbbba495efb2",
+      "slh-dsa-sm3-128-24/intermediate-pre-tbs.der": "9130abfdf41236cd38944540cb3d527f81a4f9ab3ff20a40ade75e5d5ee58eef",
+      "slh-dsa-sm3-128-24/intermediate-test-key.pem": "0435b1b8c29b2a213967eedec96b3d90e574d0981875fa941dbafb5a64c59ae2",
+      "slh-dsa-sm3-128-24/intermediate.der": "d7e1549cf4547492c75ca54bf3b7b67ceb23a5538092c5c9f535b810324444c9",
+      "slh-dsa-sm3-128-24/leaf-pre-tbs.der": "fa7860a6a252e496c31a65c244fd7955ebd6677589b9a0c06c74d8bae09e3667",
+      "slh-dsa-sm3-128-24/leaf-test-key.pem": "bfc04be597bbecad6a57e2165bd3e2eb522cabca51a3c620bd428b6a7db4d775",
+      "slh-dsa-sm3-128-24/leaf.der": "87340328bb284e95d59ce16e0ab390af867bace36511b7393ec6497faf13956c",
+      "slh-dsa-sm3-128-24/root-test-key.pem": "8d52c541e669072198a36b7f0c49ca492565774a859d595b510e8df04791179e",
+      "slh-dsa-sm3-128-24/root.der": "299feac1291b82958cd0d020fd1c5bcfdc307916612ee08f469889fb31ff621a"
+    },
+    "fixtures_after": {
+      "MANIFEST.json": "71c8ea576f8be8c51eb7f5611d5257a002606ae56b036c9f0a7dccd612eac337",
+      "campaign.json": "4c626d85337c2b583b8ccf2da99ccebebc8059b73b81ce1728af2ee1879749e6",
+      "slh-dsa-sm3-128-24/classical-intermediate.der": "440d112e00e68a6b3420190a502da48ca4a6bdbcd7ea64d3f313020492840da0",
+      "slh-dsa-sm3-128-24/classical-leaf.der": "9f4800767763565b7d1ead4e2b1b647b758d8585aec8d651b031228038b0bf21",
+      "slh-dsa-sm3-128-24/classical-root.der": "b8d7c7a05ef749bd19169d56a34a0f1a7e23e301eb06208be39cfbbba495efb2",
+      "slh-dsa-sm3-128-24/fixture.json": "2dabd0cf74fe0c43fdc3c75be1a2fe0d1a851e54109b5907cabf99ddc16cbe8e",
+      "slh-dsa-sm3-128-24/handshake-test-key.json": "e0b355ab2c70bd2d3a1876eeccb9955d7a35a958e05022c2be5966d02092f03b",
+      "slh-dsa-sm3-128-24/hybrid-intermediate.der": "440d112e00e68a6b3420190a502da48ca4a6bdbcd7ea64d3f313020492840da0",
+      "slh-dsa-sm3-128-24/hybrid-leaf.der": "c605c34986a5dae49e4314fb9e03c717603361f463faa7cc51db3134b464eca1",
+      "slh-dsa-sm3-128-24/hybrid-root.der": "b8d7c7a05ef749bd19169d56a34a0f1a7e23e301eb06208be39cfbbba495efb2",
+      "slh-dsa-sm3-128-24/intermediate-pre-tbs.der": "9130abfdf41236cd38944540cb3d527f81a4f9ab3ff20a40ade75e5d5ee58eef",
+      "slh-dsa-sm3-128-24/intermediate-test-key.pem": "0435b1b8c29b2a213967eedec96b3d90e574d0981875fa941dbafb5a64c59ae2",
+      "slh-dsa-sm3-128-24/intermediate.der": "d7e1549cf4547492c75ca54bf3b7b67ceb23a5538092c5c9f535b810324444c9",
+      "slh-dsa-sm3-128-24/leaf-pre-tbs.der": "fa7860a6a252e496c31a65c244fd7955ebd6677589b9a0c06c74d8bae09e3667",
+      "slh-dsa-sm3-128-24/leaf-test-key.pem": "bfc04be597bbecad6a57e2165bd3e2eb522cabca51a3c620bd428b6a7db4d775",
+      "slh-dsa-sm3-128-24/leaf.der": "87340328bb284e95d59ce16e0ab390af867bace36511b7393ec6497faf13956c",
+      "slh-dsa-sm3-128-24/root-test-key.pem": "8d52c541e669072198a36b7f0c49ca492565774a859d595b510e8df04791179e",
+      "slh-dsa-sm3-128-24/root.der": "299feac1291b82958cd0d020fd1c5bcfdc307916612ee08f469889fb31ff621a"
+    },
+    "library_before": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+    "library_after": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69"
+  },
+  "source_unchanged": true,
+  "fixtures_unchanged": true,
+  "library_unchanged": true,
+  "scope": "real in-process and loopback TCP handshakes; field-level predicates; not_covered is reported and never counted as passed"
+}

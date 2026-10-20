@@ -1,0 +1,244 @@
+{
+  "command": [
+    "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/alt_chain_fixtures.py",
+    "verify",
+    "--fixtures",
+    "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/fixtures/public-alt-chain",
+    "--library",
+    "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+    "--output",
+    "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/fixture-verification.json"
+  ],
+  "passed": true,
+  "rows": [
+    {
+      "algorithm": "slh-dsa-sm3-128-24",
+      "checked_edges": 2,
+      "fixture_sha256": "92348d6213c893e8c1411daa5de2af1f984de922bffaae6069ca8f266b70896a",
+      "passed": true,
+      "verifier": "native",
+      "verifiers": [
+        {
+          "algorithm": "slh-dsa-sm3-128-24",
+          "backend": 2,
+          "configured_backend": 0,
+          "configured_threads": 32,
+          "edge": 0,
+          "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+          "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+          "message_sha256": "bc1a4afaaf552cbd489a07f9d9f60dc10827077e73a0ea8b03d9bf2a2a5f5a5d",
+          "mode": "native",
+          "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py",
+          "passed": true,
+          "public_key_sha256": "0142fabb249eaa508d0a02525f267f640f0812eb3670178ae664409937fababa",
+          "signature_sha256": "c40bfadce24f816b3446abd29cb6367e7417e5a8982d0d7f26543efb4650813b",
+          "threads": 32
+        },
+        {
+          "algorithm": "slh-dsa-sm3-128-24",
+          "backend": 2,
+          "configured_backend": 0,
+          "configured_threads": 32,
+          "edge": 1,
+          "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+          "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+          "message_sha256": "c313e9f7d59c79c77710d9c915f777cd97e5ba51791e1d69a8199d381a640542",
+          "mode": "native",
+          "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py",
+          "passed": true,
+          "public_key_sha256": "0631353368df87bad3ddeba35b2fbfbbd9fbaec0464261dfbd3b91b1ddaa0c8c",
+          "signature_sha256": "9cba4ff8def5ea6798b6c129030a40477f1d50221ead029406343e8b5676f5b7",
+          "threads": 32
+        }
+      ]
+    },
+    {
+      "algorithm": "slh-dsa-sm3-128-24",
+      "checked_edges": 2,
+      "fixture_sha256": "92348d6213c893e8c1411daa5de2af1f984de922bffaae6069ca8f266b70896a",
+      "passed": true,
+      "verifier": "python",
+      "verifiers": [
+        {
+          "algorithm": "slh-dsa-sm3-128-24",
+          "configured_backend": 0,
+          "configured_threads": 32,
+          "edge": 0,
+          "message_sha256": "bc1a4afaaf552cbd489a07f9d9f60dc10827077e73a0ea8b03d9bf2a2a5f5a5d",
+          "mode": "python",
+          "passed": true,
+          "public_key_sha256": "0142fabb249eaa508d0a02525f267f640f0812eb3670178ae664409937fababa",
+          "reference_model_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/reference/slhdsa.py",
+          "signature_sha256": "c40bfadce24f816b3446abd29cb6367e7417e5a8982d0d7f26543efb4650813b"
+        },
+        {
+          "algorithm": "slh-dsa-sm3-128-24",
+          "configured_backend": 0,
+          "configured_threads": 32,
+          "edge": 1,
+          "message_sha256": "c313e9f7d59c79c77710d9c915f777cd97e5ba51791e1d69a8199d381a640542",
+          "mode": "python",
+          "passed": true,
+          "public_key_sha256": "0631353368df87bad3ddeba35b2fbfbbd9fbaec0464261dfbd3b91b1ddaa0c8c",
+          "reference_model_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/reference/slhdsa.py",
+          "signature_sha256": "9cba4ff8def5ea6798b6c129030a40477f1d50221ead029406343e8b5676f5b7"
+        }
+      ]
+    },
+    {
+      "algorithm": "slh-dsa-sm3-128s",
+      "checked_edges": 2,
+      "fixture_sha256": "3da375263af600eb13ff6bf4058fc063648d3dc86a5838682e5db76ffc86afbe",
+      "passed": true,
+      "verifier": "native",
+      "verifiers": [
+        {
+          "algorithm": "slh-dsa-sm3-128s",
+          "backend": 2,
+          "configured_backend": 0,
+          "configured_threads": 32,
+          "edge": 0,
+          "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+          "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+          "message_sha256": "3aea69df53f75829141857518f3a3baca901c6688cd8f4c3893face0851ead40",
+          "mode": "native",
+          "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py",
+          "passed": true,
+          "public_key_sha256": "e5243c0e315cf34723c75416179fbc0ba5890d9e8fd26accc6e876192f020fd4",
+          "signature_sha256": "3b3f2657a6704310b339e3ab70e870def19e2fe88c01f5752f0c742c1a340ec5",
+          "threads": 32
+        },
+        {
+          "algorithm": "slh-dsa-sm3-128s",
+          "backend": 2,
+          "configured_backend": 0,
+          "configured_threads": 32,
+          "edge": 1,
+          "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+          "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+          "message_sha256": "7d630cf8664c8db2ba413a8693c2fe30f363b142bf6796a09c39528cb5b83a42",
+          "mode": "native",
+          "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py",
+          "passed": true,
+          "public_key_sha256": "7829c86ace48ae8b19a0aa21c0447202e7caaa4c5a412e4ef11141ebe41010c1",
+          "signature_sha256": "04369c1874dd2aa15e4625b27196fbed7207f3c3f057e2334e52fc7176ca07ef",
+          "threads": 32
+        }
+      ]
+    },
+    {
+      "algorithm": "slh-dsa-sm3-128s",
+      "checked_edges": 2,
+      "fixture_sha256": "3da375263af600eb13ff6bf4058fc063648d3dc86a5838682e5db76ffc86afbe",
+      "passed": true,
+      "verifier": "python",
+      "verifiers": [
+        {
+          "algorithm": "slh-dsa-sm3-128s",
+          "configured_backend": 0,
+          "configured_threads": 32,
+          "edge": 0,
+          "message_sha256": "3aea69df53f75829141857518f3a3baca901c6688cd8f4c3893face0851ead40",
+          "mode": "python",
+          "passed": true,
+          "public_key_sha256": "e5243c0e315cf34723c75416179fbc0ba5890d9e8fd26accc6e876192f020fd4",
+          "reference_model_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/reference/slhdsa.py",
+          "signature_sha256": "3b3f2657a6704310b339e3ab70e870def19e2fe88c01f5752f0c742c1a340ec5"
+        },
+        {
+          "algorithm": "slh-dsa-sm3-128s",
+          "configured_backend": 0,
+          "configured_threads": 32,
+          "edge": 1,
+          "message_sha256": "7d630cf8664c8db2ba413a8693c2fe30f363b142bf6796a09c39528cb5b83a42",
+          "mode": "python",
+          "passed": true,
+          "public_key_sha256": "7829c86ace48ae8b19a0aa21c0447202e7caaa4c5a412e4ef11141ebe41010c1",
+          "reference_model_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/reference/slhdsa.py",
+          "signature_sha256": "04369c1874dd2aa15e4625b27196fbed7207f3c3f057e2334e52fc7176ca07ef"
+        }
+      ]
+    },
+    {
+      "algorithm": "ml-dsa-44",
+      "checked_edges": 2,
+      "fixture_sha256": "b525b645cec24299de9549336896092948be9fb3e3f58f615878d32318903435",
+      "passed": true,
+      "verifier": "provider",
+      "verifiers": [
+        {
+          "algorithm": "ml-dsa-44",
+          "configured_backend": 0,
+          "configured_threads": 32,
+          "edge": 0,
+          "message_sha256": "d49626dd11d1cd8a1dd8f8205a7cc0d3190b01870426e125bd45a9fb46feb40c",
+          "mode": "provider",
+          "passed": true,
+          "public_key_sha256": "5a7aa399603215e31852354b1c19e43c3b6ca9c17b51e29b84e37e5d490ac640",
+          "signature_sha256": "1f95f3651b2071493c07fbf6ad45535b37bcd497ba7d66a48460b52448098ccd"
+        },
+        {
+          "algorithm": "ml-dsa-44",
+          "configured_backend": 0,
+          "configured_threads": 32,
+          "edge": 1,
+          "message_sha256": "e6a36dcef985cf8a5ea224c13623996101f029b77f728d5a3c78facd053972e6",
+          "mode": "provider",
+          "passed": true,
+          "public_key_sha256": "5bd3d062434b4423403fd104e0c197417673b08a2763328cacbe7daa2afaf631",
+          "signature_sha256": "4e9d2e875d47fc441236c00abc93f75b12689cf37517dcdec1e6d44e2d3a50f5"
+        }
+      ]
+    }
+  ],
+  "schema": "a15-alt-fixture-verification-v1",
+  "sources_sha256": {
+    "base_tls/tls/__init__.py": "ee725a0df75f7b52e69b2ef24391904fb4c646d7b1a2fd9b2f124fd6d8f9272c",
+    "base_tls/tls/_deps.py": "888333570240aca0adf6f7e4c8d528e962fbabc0728e126eceeb6a6bc6bfb0eb",
+    "base_tls/tls/alt_chain.py": "45c67eb66ba1312c6495f61003ae025b13e9c724794eff0850a19c61a8f8bcc8",
+    "base_tls/tls/alt_fixtures.py": "a72f45764f853dceb6400498850c32ff97c4c9b29df475dba0629b79cd17bb02",
+    "base_tls/tls/alt_profiles.py": "f2d6c35e6a423b1f7c3362b2294361a4e8e14ac2635978536822c97ecfc2fb52",
+    "base_tls/tls/classical/__init__.py": "722c3dbd0902dfd9fdedb56a050e48ac03bdaeb8384584c5cd1e5833506f1733",
+    "base_tls/tls/classical/ecdh.py": "7751db31804d848f90df0c2d64aeaed019fbee4a9274d602f23582ec3e7f9e42",
+    "base_tls/tls/classical/signature.py": "6f3c1e44447359f9f914120158516a033195130b80cf423452016776c7de16aa",
+    "base_tls/tls/config.py": "fccd78e68f82419d7f889fa11e4d4805c5489b4d910eb565f2f77cd69da5daff",
+    "base_tls/tls/credentials.py": "6dbea615b16f2bb4ff097306e87a0a1860f30d4bab86618641b41b7d8c690fd8",
+    "base_tls/tls/der.py": "f64059dfb5b1e22b0d551306c2abf0d565a25685267471b65e196c9b4e50dd4a",
+    "base_tls/tls/errors.py": "7ee62437dbe66d2adc66b1fa6a9cf6a1ec89326bb139864a67127b4537c76272",
+    "base_tls/tls/handshake/__init__.py": "77442b7b2f4d40f238f9bd0e3b37e4c2c71f4471501c92b3cceb9960c687a3d5",
+    "base_tls/tls/handshake/certificate_verify.py": "5eb04d22f5b78965b503106ac016b852621508f748fcded0286de19b8b8e8911",
+    "base_tls/tls/handshake/client.py": "9a4fe5013da126ba5241d40ebbd3aadcd6de3cb95703707e366fab7c120bdc46",
+    "base_tls/tls/handshake/connection.py": "8c788374a1a39cca4fc9b9238f94f976ab8f818f9b279ae2b1171b049f4a0d54",
+    "base_tls/tls/handshake/messages.py": "9f7a242537f9a88cf397f9620b67bc0aefdd836f6f4f99dc7b3d312dd80be1c8",
+    "base_tls/tls/handshake/server.py": "e20feb4fbd687fde6f192815eac0e6c3bbfa89dc786e03b6daee69c570b34785",
+    "base_tls/tls/handshake/state.py": "771fbafdf83b0ff7d816369d60cbc4091eef372f1c4c3c2802cefe09c7e97e65",
+    "base_tls/tls/handshake/transcript.py": "a412311ab55e907da35b9ad4cbbeaa31cd8a4bf972957019c47317ef338c26f4",
+    "base_tls/tls/key_schedule/__init__.py": "c5ec7801ea5251a82d6291939c987b79a3f17a8a2e8e4b8730ad141af8270111",
+    "base_tls/tls/key_schedule/hkdf.py": "842d3b016f30789a601e4f3bb4983044f5e3cebb3482954016c3cbdc3632ffb3",
+    "base_tls/tls/metrics.py": "e2d60ce32a1adc68b8ee514d5ac6dfee0d7211044cd9d1d32ce72f08a4b9d0d4",
+    "base_tls/tls/pki.py": "e8862343223adf1babcfb5c2b1016aeb6788dde1b3cb08966c96eb9223358a22",
+    "base_tls/tls/pq/__init__.py": "853b44429829d09b043c02a60caa1ae371ffcb2e47c4149222aa72784cde55d2",
+    "base_tls/tls/pq/backends.py": "b0458bd4bef4390de0fe165ebd3fc9322d2d691de07e55d85c9fb4dd94ef591b",
+    "base_tls/tls/pq/kem.py": "189e22aff7a5802ca9f6bc08316a142aa0b8e9d613320cfcb1eb12d2eb45bdfd",
+    "base_tls/tls/pq/providers.py": "71162ad3aac3a4be079ee39413761db62035fa222d60073393e19b4614d77bcb",
+    "base_tls/tls/pq/signature.py": "fbb492230691c108e715fc104032eb6d522acf2ed7fd76c81586569bada872f5",
+    "base_tls/tls/pq/slhdsa_sm3.py": "c7824ea462f256a65dcc54680e7414f4c4db31aff8d444d7d82bd155c0713cfc",
+    "base_tls/tls/pq/wots_xmss.py": "c02c6fc9fbdf1f59b50e4a16fe653847718368f92d7f3b14bf6133c843083ef8",
+    "base_tls/tls/record/__init__.py": "e5aa5cd0cc826f79499a4dbb8a70edf0a64c5e0a75e7b62cf62d06c241baf0e5",
+    "base_tls/tls/record/aead.py": "c4cfa634a53ee375920bc489b7d440f95a7f823ee59ee22017bc1427412d6dcc",
+    "base_tls/tls/transport/__init__.py": "13c6c20533cdf27cf2adeaf1c0d19b6917921da445bc8273a4e961ecc8e6ddea",
+    "base_tls/tls/transport/shaper.py": "45ad1238485950485fc19b52ba34027e5842b57ba890d5765e7bd2a270b471a4",
+    "base_tls/tls/transport/tcp.py": "2ca1175c19c9cb17b4f8c33bf3ebff5d9dca2b3ccf0d3f752054024147e515ae",
+    "base_tls/tls/wire.py": "de232f22c2dcf778ca6e83d1adb20873df5c9bb1be6e5fc621e36a00c235b846",
+    "reference/__init__.py": "5b730d2dc9edbb15aaa49be4f85fe829fd5962f5234bf0f182052baf59d0df26",
+    "reference/acvp.py": "2da1387d9d68abcc4e2bbaf02710048fd83491277e116664ce32f0169aaad88e",
+    "reference/differential.py": "f6675752546d8755c9ef17f155576c6d74cedf12d1f68c25e4081850ef979dd9",
+    "reference/r1_evidence.py": "350c2b25c23258cf5d92e984f6dde7492fa93194f245d333349a4ad03cee0703",
+    "reference/selftest.py": "942c8083e3c6eacd55cff8436ba2e0f6a7a4d92b8add00049ea54298de546368",
+    "reference/slhdsa.py": "d7412bafb27d9e40b98a10eaf10faf24753007b0585099532fbaf628c717b043",
+    "reference/sm3.py": "43fb6d92afc803f4842bd06dfb00f813c7ed102f1b68d9115c3e0cd6497c2c8e",
+    "tools/alt_chain_fixtures.py": "9d0c2bcba649b57ef0c6a381b37b57ea8b90a8b5fe721853450894485bfd57e4",
+    "tools/native.py": "778a20a829d0f034f4a9852334d6f9480e66c41bfc76d0b891414cc0e2db6840",
+    "tools/signing_budget.py": "629425fc9764e2f7758a8c4927eff757cf3ec4ff3bc8970d50836d19fe7e6a50"
+  }
+}

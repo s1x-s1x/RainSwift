@@ -1,0 +1,4 @@
+{"phase": "fixture-generation", "algorithm": "slh-dsa-sm3-128-24"}
+{"phase": "fixture-generation", "algorithm": "slh-dsa-sm3-128s"}
+{"phase": "fixture-generation", "algorithm": "ml-dsa-44"}
+{"completed": [{"algorithm": "slh-dsa-sm3-128-24", "fixture_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-new-fixtures/slh-dsa-sm3-128-24", "fixture_sha256": "6e1a672380bb536f8131e8e8122a7822fac102a6499122228834a3043e3c717e"}, {"algorithm": "slh-dsa-sm3-128s", "fixture_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-new-fixtures/slh-dsa-sm3-128s", "fixture_sha256": "92822708cb8321d1d5ae2621e425a7d5d0fc46040ad989158ad7a6ef219fe2d0"}, {"algorithm": "ml-dsa-44", "fixture_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-new-fixtures/ml-dsa-44", "fixture_sha256": "685a0154ffdcaad220b394cac23f2e65dbea2430347635ae239118e15cd1ddc7"}], "output": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-new-fixtures", "operation_prefix": "30ae38c78870423abc77864cdbb97dd0"}

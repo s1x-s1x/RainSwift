@@ -209,7 +209,12 @@ class HybridServer(HandshakeState):
             if frame_filter is not None:
                 frame = frame_filter(name, frame)
             self.transcript.add(frame)
-            flight.append((name, self.seal_handshake(frame), frame))
+            # Transcript hashes complete messages once; record sequence advances
+            # once per protected fragment, independently of message boundaries.
+            from ..record.aead import MAX_CONTENT_BYTES
+            for start in range(0, len(frame), MAX_CONTENT_BYTES):
+                fragment = frame[start:start + MAX_CONTENT_BYTES]
+                flight.append((name, self.seal_handshake(fragment), fragment))
 
         # EncryptedExtensions and Certificate must reach the transcript before the
         # CertificateVerify input is built, because that input covers them.

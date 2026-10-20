@@ -1,0 +1,22 @@
+# TLS-B changes in this round
+## added
+native/faest_suite/faest_suite_tls.cpp
+native/faest_suite/faest_suite_tls_impl.hpp
+native/faest_suite/win_aligned_alloc.hpp
+native/rain_voleith/rain_voleith_tls.cpp
+native/rain_voleith/rain_voleith_tls_impl.hpp
+native/rain_voleith/win_aligned_alloc.hpp
+tests/test_ds_acceptance_contracts.py
+tests/test_fixture_recovery_review.py
+tests/test_tls_integration_fixes.py
+
+## modified
+tls/alt_chain.py
+tls/config.py
+tls/handshake/connection.py
+tls/pq/slhdsa_sm3.py
+tls/transport/tcp.py
+tools/alt_chain_fixtures.py
+tools/audit_live_checks.py
+tools/ds_acceptance.py
+tools/native.py

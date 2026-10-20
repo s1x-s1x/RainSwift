@@ -51,9 +51,44 @@ class HybridTLSConfig:
     #: symbolic models describe and what keeps the minimal profile small. Only the X.509
     #: profile produces byte counts comparable to a deployment.
     x509: bool = False
+    #: Alternative CA signatures are checked on X.509 paths independently of
+    #: the leaf's CertificateVerify scheme. Fixtures are generated offline.
+    alt_chain: str | None = None
+    require_alt_chain: bool = False
+    alt_fixture: str | None = None
+    #: Native policy for the offline CA verifier. Explicit so a strict native
+    #: acceptance path cannot silently fall back to the Python model.
+    alt_require_native: bool = False
+    alt_force_python: bool = False
+    alt_library: str | None = None
+    alt_backend: int = 0
+    alt_threads: int = 1
     extra: dict[str, object] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
+        for name in ("pq_enabled", "x509", "require_alt_chain", "alt_require_native", "alt_force_python"):
+            if type(getattr(self, name)) is not bool:
+                raise ValueError(f"{name} must be a bool")
+        if self.pq_signer == "slh-dsa-sm3-128-24":
+            raise ValueError("limited-use 128-24 is reserved for offline CA signing")
+        if (self.alt_chain is not None or self.require_alt_chain or self.alt_fixture is not None) and not self.x509:
+            raise ValueError("alternative CA signatures require x509=True")
+        if self.alt_chain is not None:
+            from .alt_chain import ALGORITHM_OIDS
+            if self.alt_chain not in ALGORITHM_OIDS:
+                raise ValueError(f"unknown alternative-chain algorithm {self.alt_chain!r}")
+            # Pinning a CA algorithm is a requirement, not an opportunistic hint.
+            # Compatibility profiles must leave alt_chain unset explicitly.
+            object.__setattr__(self, "require_alt_chain", True)
+        if self.alt_require_native and self.alt_force_python:
+            raise ValueError("alt_require_native and alt_force_python are mutually exclusive")
+        if type(self.alt_backend) is not int or self.alt_backend not in (0, 1, 2, 5):
+            raise ValueError("alt_backend must be 0 (auto), 1 (reference), 2 (AVX2) or 5 (CUDA)")
+        if isinstance(self.alt_threads, bool) or not isinstance(self.alt_threads, int) or not 1 <= self.alt_threads <= 1024:
+            raise ValueError("alt_threads must be an explicit positive integer")
+        if (self.alt_require_native or self.alt_force_python or self.alt_library is not None
+                or self.alt_backend != 0 or self.alt_threads != 1) and self.alt_chain is None and self.alt_fixture is None:
+            raise ValueError("alternative-chain backend policy requires alt_chain or alt_fixture")
         if self.group not in ECDHE_GROUPS:
             raise ValueError(f"unknown group {self.group!r}; available: {sorted(ECDHE_GROUPS)}")
         if self.hash_name not in HASH_NAMES:
@@ -101,6 +136,16 @@ class HybridTLSConfig:
                 f"supported: {sorted(_CIPHER_SUITE_BY_PARAMETERS)}"
             ) from None
 
+    def alt_policy(self) -> dict[str, object]:
+        """Return the configured native policy for the offline CA verifier."""
+        return {
+            "library": self.alt_library,
+            "backend": self.alt_backend,
+            "threads": self.alt_threads,
+            "require_native": self.alt_require_native,
+            "force_python": self.alt_force_python,
+        }
+
     def describe(self) -> dict[str, str]:
         """Return a flat, report-friendly description of the profile."""
         return {
@@ -111,4 +156,12 @@ class HybridTLSConfig:
             "aead": self.aead,
             "hash": self.hash_name,
             "pq_enabled": str(self.pq_enabled).lower(),
+            "x509": str(self.x509).lower(),
+            "alt_chain": self.alt_chain or "(none)",
+            "require_alt_chain": str(self.require_alt_chain).lower(),
+            "alt_library": self.alt_library or "(default)",
+            "alt_backend": str(self.alt_backend),
+            "alt_threads": str(self.alt_threads),
+            "alt_require_native": str(self.alt_require_native).lower(),
+            "alt_force_python": str(self.alt_force_python).lower(),
         }

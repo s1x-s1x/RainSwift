@@ -10,10 +10,12 @@ it would trust a root store.
 from __future__ import annotations
 
 from dataclasses import dataclass
+import os
+from pathlib import Path
 
 from .classical.signature import ClassicalSigner, EcdsaP256Sha256
 from .config import HybridTLSConfig
-from .errors import HybridTLSError
+from .errors import HybridTLSError, BackendUnavailableError
 from .handshake.messages import HybridCertificateBody
 from .pki import CertificateChain, build_test_chain
 from .pq.backends import PqSigner
@@ -50,7 +52,32 @@ class ServerCredentials:
     ) -> None:
         self.config = config
         self.identity = identity
+        if getattr(pq_signer, "name", None) == "slh-dsa-sm3-128-24":
+            raise ValueError("limited-use 128-24 is reserved for offline CA signing")
         self.classical_signer = classical_signer or config.classical()
+        if config.alt_chain is not None or config.alt_fixture is not None:
+            from .alt_fixtures import load_fixture
+            if not isinstance(self.classical_signer, EcdsaP256Sha256):
+                raise HybridTLSError("fixture X.509 profile requires ECDSA P-256")
+            directory = config.alt_fixture
+            if directory is None:
+                fixtures = os.environ.get("A15_ALT_FIXTURES")
+                if fixtures:
+                    directory = str(Path(fixtures) / str(config.alt_chain))
+            if directory is None:
+                raise BackendUnavailableError("generate offline alt-chain fixtures and set alt_fixture or A15_ALT_FIXTURES")
+            self.pq_signer = (pq_signer or config.pq()) if config.pq_enabled else None
+            kind = "alt" if config.alt_chain else ("hybrid" if config.pq_enabled else "classical")
+            self.chain, self.classical_secret, self.pq_secret, self.pq_public = load_fixture(
+                directory, chain_kind=kind, identity=identity.decode(), pq_signer=self.pq_signer,
+                expected_algorithm=config.alt_chain,
+                library=config.alt_library, require_native=config.alt_require_native,
+                force_python=config.alt_force_python, threads=config.alt_threads,
+                backend=config.alt_backend)
+            from cryptography.hazmat.primitives import serialization
+            self.classical_public = self.classical_secret.public_key().public_bytes(
+                serialization.Encoding.X962, serialization.PublicFormat.UncompressedPoint)
+            return
         self.classical_secret, self.classical_public = self.classical_signer.keygen()
         if config.pq_enabled:
             self.pq_signer: PqSigner | None = pq_signer or config.pq()

@@ -1,0 +1,99 @@
+{
+  "algorithms": [
+    "slh-dsa-sm3-128-24",
+    "slh-dsa-sm3-128-24"
+  ],
+  "application_ok": true,
+  "certificate_verify_accepted": true,
+  "certificate_verify_result": {
+    "accepted": true,
+    "classic_ok": true,
+    "pq_ok": true,
+    "pq_scheme": 3921
+  },
+  "checked_edges": 2,
+  "client_bytes_sent": 0,
+  "client_waits": 2,
+  "client_wall_ms": 71.82818278670311,
+  "complete": true,
+  "error": null,
+  "exporters_match": true,
+  "legacy_edges": 0,
+  "predicate_reasons": [],
+  "records": [
+    [
+      "ClientHello",
+      1306,
+      1
+    ],
+    [
+      "ServerHello",
+      1185,
+      1
+    ],
+    [
+      "EncryptedExtensions",
+      6,
+      1
+    ],
+    [
+      "Certificate",
+      9647,
+      1
+    ],
+    [
+      "CertificateVerify",
+      738,
+      1
+    ],
+    [
+      "Finished",
+      36,
+      1
+    ],
+    [
+      "Finished",
+      36,
+      1
+    ]
+  ],
+  "server_bytes_sent": 0,
+  "server_error": null,
+  "server_wall_ms": 71.66749704629183,
+  "trusted_root_sha256": "994eceb269cce59ab9592dc6f429e155a650175d2f747b9962af6062991bdf69",
+  "verifiers": [
+    {
+      "algorithm": "slh-dsa-sm3-128-24",
+      "backend": 2,
+      "configured_backend": 2,
+      "configured_threads": 8,
+      "edge": 0,
+      "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+      "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+      "message_sha256": "41065ba8b60de44709f5d335555f718ea6173403cd765e74f4400c650e8ab050",
+      "mode": "native",
+      "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py",
+      "passed": true,
+      "public_key_sha256": "5d3485860774ea245a7b3229106b700aa8aaa8676721f962448880651c614c9b",
+      "signature_sha256": "021ca424b0179e765c13dc4aeed908a44cbb3d020ffd814051cfd069c9286ae1",
+      "threads": 8
+    },
+    {
+      "algorithm": "slh-dsa-sm3-128-24",
+      "backend": 2,
+      "configured_backend": 2,
+      "configured_threads": 8,
+      "edge": 1,
+      "library_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-gate-1/native/libslhdsa_sm3.so",
+      "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+      "message_sha256": "fc3a050305d6182cc2e2bc2941572d9513aee0fedad6e6865da35856bf112cfc",
+      "mode": "native",
+      "native_adapter_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/a15/tools/native.py",
+      "passed": true,
+      "public_key_sha256": "3feed2c2b665d88ed5462ade9bce6b36749c54ab8991e15dfb1ab68b59206a0b",
+      "signature_sha256": "7d6733649e374328a401faf4e16a640f0650167763c90f7b2ddc107df9716203",
+      "threads": 8
+    }
+  ],
+  "waits_to_authenticated": 1
+}

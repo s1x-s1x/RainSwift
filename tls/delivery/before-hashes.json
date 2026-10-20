@@ -1,0 +1,108 @@
+{
+  "created_utc": "2026-10-19",
+  "note": "before_this_round comes from the reviewer snapshot and the previous delivery hash lists; after is recomputed now. The DeepSeek server evidence is a third, older set.",
+  "a15": [
+    {
+      "path": "base_tls/tls/config.py",
+      "sha256_before_this_round": "ad8a0e223c88d37439de12578dec03511611de0b4b3210853828643753bf9a0d",
+      "source": "main-before.json"
+    },
+    {
+      "path": "base_tls/tls/handshake/client.py",
+      "sha256_before_this_round": "9a4fe5013da126ba5241d40ebbd3aadcd6de3cb95703707e366fab7c120bdc46",
+      "source": "main-before.json"
+    },
+    {
+      "path": "base_tls/tls/handshake/connection.py",
+      "sha256_before_this_round": "7605c9ea9d64bdfa814b12169268439ca63a1b93f92df817991b2a48ab01d43c",
+      "source": "main-before.json"
+    },
+    {
+      "path": "base_tls/tls/transport/tcp.py",
+      "sha256_before_this_round": "cab6e5ad470832d1ba6c6732c9c766c5bab7300d1c6f7b1c5c8ec886cf90dff5",
+      "source": "main-before.json"
+    },
+    {
+      "path": "base_tls/tls/pq/slhdsa_sm3.py",
+      "sha256_before_this_round": "51dc3eec5991b83723e4afcc8f9db6f616e5adc96146c39491ead10b2f622ffe",
+      "source": "main-before.json"
+    },
+    {
+      "path": "base_tls/tls/alt_chain.py",
+      "sha256_before_this_round": "86e8bc27ae4c8122cbd0745db82caa597e86f6c9cd10b61c7a2ea53a56240ade",
+      "source": "main-before.json"
+    },
+    {
+      "path": "tools/native.py",
+      "sha256_before_this_round": "43f3dcabcc4e5b55f98e021f6eb3d694e70d55ae680b5bb0f83f801e19739e64",
+      "source": "previous-delivery hash list"
+    },
+    {
+      "path": "tools/signing_budget.py",
+      "sha256_before_this_round": "629425fc9764e2f7758a8c4927eff757cf3ec4ff3bc8970d50836d19fe7e6a50",
+      "source": "previous-delivery hash list"
+    },
+    {
+      "path": "tools/alt_chain_fixtures.py",
+      "sha256_before_this_round": "fb0b6ba899772d08a4b0245aaafb1d1bebda67f64aebf410cd756df5abe764f3",
+      "source": "previous-delivery hash list"
+    },
+    {
+      "path": "tools/ds_acceptance.py",
+      "sha256_before_this_round": "aa0a9885fbe8c914bb00512470d5080c8774f7d89b84f44319f5662ca821e148",
+      "source": "previous-delivery hash list"
+    }
+  ],
+  "tlsb": [
+    {
+      "path": "tls/config.py",
+      "sha256_before_this_round": "8ce283465255b4d7ba99d1bcb57f025767e9583bdef410691dfe16da3e888930",
+      "source": "main-before.json"
+    },
+    {
+      "path": "tls/handshake/client.py",
+      "sha256_before_this_round": "9a4fe5013da126ba5241d40ebbd3aadcd6de3cb95703707e366fab7c120bdc46",
+      "source": "main-before.json"
+    },
+    {
+      "path": "tls/handshake/connection.py",
+      "sha256_before_this_round": "2b19857150d17a5eda20f074bc616dd0194576882095c8a288ab17ca5ec6ebd8",
+      "source": "main-before.json"
+    },
+    {
+      "path": "tls/transport/tcp.py",
+      "sha256_before_this_round": "fb3b26a1efdf7fa83ce62f210c95cd929d18ba6a19662278f3cfd8dfddfca7a8",
+      "source": "main-before.json"
+    },
+    {
+      "path": "tls/pq/slhdsa_sm3.py",
+      "sha256_before_this_round": "51dc3eec5991b83723e4afcc8f9db6f616e5adc96146c39491ead10b2f622ffe",
+      "source": "main-before.json"
+    },
+    {
+      "path": "tls/alt_chain.py",
+      "sha256_before_this_round": "86e8bc27ae4c8122cbd0745db82caa597e86f6c9cd10b61c7a2ea53a56240ade",
+      "source": "main-before.json"
+    },
+    {
+      "path": "tools/native.py",
+      "sha256_before_this_round": "43f3dcabcc4e5b55f98e021f6eb3d694e70d55ae680b5bb0f83f801e19739e64",
+      "source": "previous-delivery hash list"
+    },
+    {
+      "path": "tools/signing_budget.py",
+      "sha256_before_this_round": "629425fc9764e2f7758a8c4927eff757cf3ec4ff3bc8970d50836d19fe7e6a50",
+      "source": "previous-delivery hash list"
+    },
+    {
+      "path": "tools/alt_chain_fixtures.py",
+      "sha256_before_this_round": "fb0b6ba899772d08a4b0245aaafb1d1bebda67f64aebf410cd756df5abe764f3",
+      "source": "previous-delivery hash list"
+    },
+    {
+      "path": "tools/ds_acceptance.py",
+      "sha256_before_this_round": "aa0a9885fbe8c914bb00512470d5080c8774f7d89b84f44319f5662ca821e148",
+      "source": "previous-delivery hash list"
+    }
+  ]
+}

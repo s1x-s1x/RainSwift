@@ -1,0 +1,94 @@
+{
+  "a15": [
+    {
+      "path": "base_tls/tls/config.py",
+      "sha256": "fccd78e68f82419d7f889fa11e4d4805c5489b4d910eb565f2f77cd69da5daff"
+    },
+    {
+      "path": "base_tls/tls/handshake/client.py",
+      "sha256": "9a4fe5013da126ba5241d40ebbd3aadcd6de3cb95703707e366fab7c120bdc46"
+    },
+    {
+      "path": "base_tls/tls/handshake/connection.py",
+      "sha256": "8c788374a1a39cca4fc9b9238f94f976ab8f818f9b279ae2b1171b049f4a0d54"
+    },
+    {
+      "path": "base_tls/tls/transport/tcp.py",
+      "sha256": "2ca1175c19c9cb17b4f8c33bf3ebff5d9dca2b3ccf0d3f752054024147e515ae"
+    },
+    {
+      "path": "base_tls/tls/pq/slhdsa_sm3.py",
+      "sha256": "c7824ea462f256a65dcc54680e7414f4c4db31aff8d444d7d82bd155c0713cfc"
+    },
+    {
+      "path": "base_tls/tls/alt_chain.py",
+      "sha256": "45c67eb66ba1312c6495f61003ae025b13e9c724794eff0850a19c61a8f8bcc8"
+    },
+    {
+      "path": "tools/native.py",
+      "sha256": "778a20a829d0f034f4a9852334d6f9480e66c41bfc76d0b891414cc0e2db6840"
+    },
+    {
+      "path": "tools/signing_budget.py",
+      "sha256": "629425fc9764e2f7758a8c4927eff757cf3ec4ff3bc8970d50836d19fe7e6a50"
+    },
+    {
+      "path": "tools/alt_chain_fixtures.py",
+      "sha256": "9d0c2bcba649b57ef0c6a381b37b57ea8b90a8b5fe721853450894485bfd57e4"
+    },
+    {
+      "path": "tools/ds_acceptance.py",
+      "sha256": "267f648452222737f3257cbdca642a7e7401a2c9997a420ff9ca1d2510d89e22"
+    },
+    {
+      "path": "base_tls/tests/test_ds_acceptance_contracts.py",
+      "sha256": "232f6c1dc90ce5ee72a000e5782f82c16bd7d28021aed98d8e782cb6c81cb66c"
+    }
+  ],
+  "tlsb": [
+    {
+      "path": "tls/config.py",
+      "sha256": "9348cdc2c2dc92275ff99dea924eacac0524b0ea66e87a8afc852136c2bef5de"
+    },
+    {
+      "path": "tls/handshake/client.py",
+      "sha256": "9a4fe5013da126ba5241d40ebbd3aadcd6de3cb95703707e366fab7c120bdc46"
+    },
+    {
+      "path": "tls/handshake/connection.py",
+      "sha256": "e8bbdeda7bc4af4460b8208dcb0fe6a954e093c557f64a51468a8811a44d72cf"
+    },
+    {
+      "path": "tls/transport/tcp.py",
+      "sha256": "a8b4c7d28e4753fd2a1646a02fab9dc030aa6c90483c6b1014fa0d870e95f161"
+    },
+    {
+      "path": "tls/pq/slhdsa_sm3.py",
+      "sha256": "c7824ea462f256a65dcc54680e7414f4c4db31aff8d444d7d82bd155c0713cfc"
+    },
+    {
+      "path": "tls/alt_chain.py",
+      "sha256": "45c67eb66ba1312c6495f61003ae025b13e9c724794eff0850a19c61a8f8bcc8"
+    },
+    {
+      "path": "tools/native.py",
+      "sha256": "778a20a829d0f034f4a9852334d6f9480e66c41bfc76d0b891414cc0e2db6840"
+    },
+    {
+      "path": "tools/signing_budget.py",
+      "sha256": "629425fc9764e2f7758a8c4927eff757cf3ec4ff3bc8970d50836d19fe7e6a50"
+    },
+    {
+      "path": "tools/alt_chain_fixtures.py",
+      "sha256": "9d0c2bcba649b57ef0c6a381b37b57ea8b90a8b5fe721853450894485bfd57e4"
+    },
+    {
+      "path": "tools/ds_acceptance.py",
+      "sha256": "267f648452222737f3257cbdca642a7e7401a2c9997a420ff9ca1d2510d89e22"
+    },
+    {
+      "path": "tests/test_ds_acceptance_contracts.py",
+      "sha256": "232f6c1dc90ce5ee72a000e5782f82c16bd7d28021aed98d8e782cb6c81cb66c"
+    }
+  ]
+}

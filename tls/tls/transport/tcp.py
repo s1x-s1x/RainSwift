@@ -18,18 +18,20 @@ header already delimits records.
 
 from __future__ import annotations
 
+import hashlib
 import socket
 import threading
 import time
 from dataclasses import dataclass, field
 
 from cryptography import x509
+from cryptography.hazmat.primitives import serialization
 
 from ..config import HybridTLSConfig
 from ..credentials import CertificateAuthority, ServerCredentials
-from ..errors import HybridTLSError
+from ..errors import HandshakeError, HybridTLSError
 from ..handshake.client import HybridClient
-from ..handshake.connection import DEFAULT_APPLICATION_PAYLOAD
+from ..handshake.connection import DEFAULT_APPLICATION_PAYLOAD, load_trusted_root
 from ..handshake.server import HybridServer
 from ..metrics import MessageRecord, Metrics
 from ..record.aead import CONTENT_TYPE_APPLICATION_DATA
@@ -158,6 +160,8 @@ class TcpHandshakeResult:
     application_ok: bool
     messages: list[MessageRecord] = field(default_factory=list)
     error: str | None = None
+    #: Server-thread failure, kept separate so a client-side success cannot hide it.
+    server_error: str | None = None
     #: Name of the emulated link, when one was applied.
     link: str | None = None
     #: Bytes each direction put on the wire, which the latency prediction uses.
@@ -171,6 +175,12 @@ class TcpHandshakeResult:
     predicted_authenticated_ms: float = 0.0
     #: What the link's arithmetic says the whole measured span should cost.
     predicted_ms: float = 0.0
+    #: Alt-chain verification evidence from the live client (strict P2/TCP report).
+    alt_chain_verification: object | None = None
+    certificate_verify_accepted: bool | None = None
+    certificate_verify_result: dict[str, object] | None = None
+    exporters_match: bool | None = None
+    trusted_root_sha256: str | None = None
 
     @property
     def authenticated_ms(self) -> float:
@@ -205,6 +215,10 @@ def run_over_tcp(
     application_payload: bytes = DEFAULT_APPLICATION_PAYLOAD,
     timeout_seconds: float = 30.0,
     link: LinkProfile | None = None,
+    trusted_root: object | None = None,
+    expected_name: str = "server.example",
+    server_identity: bytes | None = None,
+    allow_server_root: bool = False,
 ) -> TcpHandshakeResult:
     """Execute one full handshake plus an application-data exchange over loopback TCP.
 
@@ -215,14 +229,26 @@ def run_over_tcp(
     """
     metrics = Metrics()
     authority = CertificateAuthority(config.classical())
-    credentials = ServerCredentials(config)
+    identity = server_identity or expected_name.encode()
+    credentials = ServerCredentials(config, identity=identity)
     certificate = credentials.bind_to(authority)
     server = HybridServer(config, credentials, certificate, metrics=metrics)
-    trusted_root = (
-        x509.load_der_x509_certificate(credentials.chain.root_der)
-        if config.x509 and credentials.chain is not None
-        else None
-    )
+    strict_alt = config.require_alt_chain or config.alt_chain is not None
+    if trusted_root is None:
+        if strict_alt and not allow_server_root:
+            raise HandshakeError(
+                "trust",
+                "strict alternative-chain verification requires an independently "
+                "provisioned client root; pass trusted_root instead of deriving it "
+                "from the server's credentials",
+            )
+        trusted_root = (
+            x509.load_der_x509_certificate(credentials.chain.root_der)
+            if config.x509 and credentials.chain is not None
+            else None
+        )
+    else:
+        trusted_root = load_trusted_root(trusted_root)
     client_shaper = ShapedLink(link) if link is not None else None
     server_shaper = ShapedLink(link) if link is not None else None
 
@@ -293,11 +319,9 @@ def run_over_tcp(
         authority,
         metrics=metrics,
         trusted_root=trusted_root,
-        trusted_name="server.example",
+        trusted_name=expected_name,
     )
     messages: list[MessageRecord] = []
-    suite = config.aead_suite()
-    protection = suite.tag_length + 5
     client_waits = 0
     waits_to_authenticated = 0
     application_ok = False
@@ -317,7 +341,7 @@ def run_over_tcp(
             sock.settimeout(timeout_seconds)
             deadline = _frame_deadline(timeout_seconds)
             client_hello = client.create_client_hello()
-            messages.append(MessageRecord("ClientHello", "client", len(client_hello)))
+            messages.append(MessageRecord("ClientHello", "client", len(client_hello), transport_prefix_bytes=4))
             outbound_client: list[bytes] = []
             _queue_frame(outbound_client, client_hello, client_shaper)
             _flush(sock, outbound_client, client_shaper)
@@ -325,10 +349,11 @@ def run_over_tcp(
             # Wait 1: ServerHello plus the whole authenticated server flight.
             client_waits += 1
             server_hello = _recv_frame(sock, deadline)
-            messages.append(MessageRecord("ServerHello", "server", len(server_hello)))
+            messages.append(MessageRecord("ServerHello", "server", len(server_hello), transport_prefix_bytes=4))
             client.receive_server_hello(server_hello)
-            flight = [_recv_frame(sock, deadline) for _ in range(4)]
-            client.receive_server_flight(flight)
+            while not client.server_flight_complete:
+                client.receive_server_record(_recv_frame(sock, deadline))
+            client.finish_server_flight()
             # The instant the server is authenticated and the handshake keys are usable.
             authenticated_seconds = time.perf_counter() - started
             # Snapshot the byte counters HERE, not at the end of the run: the prediction
@@ -337,17 +362,18 @@ def run_over_tcp(
             # difference into the reported harness overhead.
             authenticated_client_bytes = client_shaper.bytes_sent if client_shaper else 0
             authenticated_server_bytes = server_shaper.bytes_sent if server_shaper else 0
-            for name, record in zip(
-                ("EncryptedExtensions", "Certificate", "CertificateVerify", "Finished"), flight, strict=True
-            ):
-                messages.append(MessageRecord(name, "server", len(record) - protection, protection))
+            for name, plain_bytes, record_bytes in client.server_flight_fragments:
+                messages.append(MessageRecord(name, "server", plain_bytes,
+                                              record_bytes - plain_bytes, transport_prefix_bytes=4))
             waits_to_authenticated = client_waits
 
             # The client Finished and the first application data share one flight,
             # which is what keeps the handshake at one round trip.
             client_finished = client.send_client_finished()
             messages.append(
-                MessageRecord("Finished", "client", len(client.sent_client_finished or b""), protection)
+                MessageRecord("Finished", "client", len(client.sent_client_finished or b""),
+                              len(client_finished) - len(client.sent_client_finished or b""),
+                              transport_prefix_bytes=4)
             )
             _queue_frame(outbound_client, client_finished, client_shaper)
             request = client.application_client_records.seal(  # type: ignore[union-attr]
@@ -369,8 +395,19 @@ def run_over_tcp(
 
     thread.join(timeout=timeout_seconds)
     listener.close()
+    if thread.is_alive():
+        server_state["error"] = server_state["error"] or "server thread did not finish before its deadline"
     if error is None and server_state["error"] is not None:
         error = str(server_state["error"])
+    exporters_match = None
+    if error is None:
+        try:
+            exporters_match = client.exporter_secret("hybrid-tls13 test", b"context") == server.exporter_secret(
+                "hybrid-tls13 test", b"context")
+            if not exporters_match:
+                error = "client and server exporter secrets differ"
+        except Exception as failure:
+            error = f"exporter: {type(failure).__name__}: {failure}"
 
     client_sent = client_shaper.bytes_sent if client_shaper else 0
     server_sent = server_shaper.bytes_sent if server_shaper else 0
@@ -397,4 +434,21 @@ def run_over_tcp(
         application_ok=application_ok,
         messages=messages,
         error=error,
+        server_error=(str(server_state["error"]) if server_state["error"] is not None else None),
+        alt_chain_verification=getattr(client, "alt_chain_verification", None),
+        certificate_verify_accepted=(
+            client.verification.accepted if client.verification is not None else None
+        ),
+        certificate_verify_result=(
+            {"classic_ok": client.verification.classic_ok,
+             "pq_ok": client.verification.pq_ok,
+             "accepted": client.verification.accepted,
+             "pq_scheme": client.certificate_verify.pq_scheme if client.certificate_verify is not None else None}
+            if client.verification is not None else None
+        ),
+        exporters_match=exporters_match,
+        trusted_root_sha256=(
+            hashlib.sha256(trusted_root.public_bytes(serialization.Encoding.DER)).hexdigest()
+            if trusted_root is not None else None
+        ),
     )

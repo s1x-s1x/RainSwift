@@ -1,0 +1,2 @@
+{"phase": "fixture-generation", "algorithm": "slh-dsa-sm3-128-24"}
+{"completed": [{"algorithm": "slh-dsa-sm3-128-24", "fixture_path": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-rain-fixtures/slh-dsa-sm3-128-24", "fixture_sha256": "2dabd0cf74fe0c43fdc3c75be1a2fe0d1a851e54109b5907cabf99ddc16cbe8e"}], "output": "/mnt1/lmy/lzl/ds-pq-chain-20261019/out/final-rain-fixtures", "operation_prefix": "93c2d7a838da4e5baee9c4b4b33fca46"}

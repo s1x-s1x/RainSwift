@@ -84,6 +84,8 @@ ENTRY_POINTS: dict[str, str] = {
     "bench/measure_shaped.py::main": "shaped-link latency driver",
     "tools/check_x509.py::main": "real X.509 chain check over a handshake",
     "tools/dump_wire.py::main": "one handshake with a per-message wire dump",
+    "tools/alt_chain_fixtures.py::main": "offline alternative-chain fixture generator/verifier",
+    "tools/ds_acceptance.py::main": "field-level strict P2/TCP/negative acceptance driver",
 }
 
 #: Methods reached through a variable rather than a literal call site, keyed by
@@ -92,6 +94,7 @@ ENTRY_POINTS: dict[str, str] = {
 #: definition, and must have at least one variable-receiver reference from a live root.
 INTERFACE_METHODS: dict[str, str] = {
     'tls/config.py::HybridTLSConfig.cipher_suite_id': 'configured suite property in client/server',
+    'tls/config.py::HybridTLSConfig.aead_suite': 'handshake state selects record suite through its config receiver',
     'tls/credentials.py::CertificateAuthority.verify': 'called through the authority held by the connection',
     'tls/wire.py::Reader.expect_end': 'wire decoders enforce exact consumption',
     'tls/classical/ecdh.py::EcdheKeyPair.exchange': 'configured ECDHE key pair in client/server',
@@ -120,6 +123,13 @@ INTERFACE_METHODS: dict[str, str] = {
     'tls/pq/rain_voleith.py::RainVoleith.verify': 'called through the configured signer',
     'tls/pq/rain_voleith.py::RainVoleith.keygen': 'called through the configured signer',
     'tls/pq/rain_voleith.py::RainVoleith.sign': 'called through the configured signer',
+    # SLH-DSA-SM3 joins the same configured-signer dispatch; the offline fixture
+    # builder additionally binds a native context and builds an explicit CA cache.
+    'tls/pq/slhdsa_sm3.py::SlhDsaSm3.keygen': 'configured SLH signer key generation through a variable receiver',
+    'tls/pq/slhdsa_sm3.py::SlhDsaSm3.sign': 'configured SLH signer signing through a variable receiver',
+    'tls/pq/slhdsa_sm3.py::SlhDsaSm3.verify': 'configured SLH signer verification through a variable receiver',
+    'tls/pq/slhdsa_sm3.py::SlhDsaSm3.bind_signing_context': 'offline fixture builder binds one native context to a CA key',
+    'tls/pq/slhdsa_sm3.py::SlhDsaSm3.cache_build': 'explicit offline CA cache build selected by the fixture generator',
     # Added in v9: key generation goes through the config-selected signer (`config.pq()`), whose
     # concrete type is a runtime choice, so the call `pq.keygen()` cannot be resolved statically.
     # The declaration is verified like every other one: the definition exists and a live root
@@ -131,6 +141,7 @@ INTERFACE_METHODS: dict[str, str] = {
     'tls/pq/wots_xmss.py::XmssSignatureBackend.sign': 'called through the configured signer',
     'tls/pq/wots_xmss.py::XmssSignatureBackend.verify': 'called through the configured signer',
     'tls/record/aead.py::AeadSuite.new': 'transcript instantiates the configured AEAD suite',
+    'tls/record/aead.py::RecordLayer.seal': 'configured record layer protects handshake/application fragments',
     'tls/record/aead.py::RecordLayer.open': 'connection/handshake decrypts incoming records',
 }
 

@@ -1,0 +1,42 @@
+{
+  "schema": "a15-bounded-parser-fuzz-v1",
+  "passed": true,
+  "iterations": 5000,
+  "seed": 20261004,
+  "max_input_bytes": 4096,
+  "input_stream_sha256": "1814080c1968543fe0ff6aabda2647f430b777b902493bb544092aa7b296682d",
+  "outcomes": {
+    "der": {
+      "accepted": 1381,
+      "rejected": 3619
+    },
+    "handshake": {
+      "accepted": 349,
+      "rejected": 4651
+    },
+    "oid": {
+      "accepted": 147,
+      "rejected": 4853
+    },
+    "algorithm": {
+      "accepted": 155,
+      "rejected": 4845
+    },
+    "bit_string": {
+      "accepted": 162,
+      "rejected": 4838
+    },
+    "extension": {
+      "accepted": 146,
+      "rejected": 4854
+    }
+  },
+  "source_sha256": {
+    "tools/fuzz_parsers.py": "1acac9dd62fa0a2fde2bfcf6ef4d985d690b64162e0882d9a6e4c163bed4b9cf",
+    "base_tls/tls/der.py": "f64059dfb5b1e22b0d551306c2abf0d565a25685267471b65e196c9b4e50dd4a",
+    "base_tls/tls/wire.py": "de232f22c2dcf778ca6e83d1adb20873df5c9bb1be6e5fc621e36a00c235b846"
+  },
+  "native_slh_calls": 0,
+  "formal_performance_samples": 0,
+  "scope": "Bounded randomized parser validation only; no exhaustive or coverage percentage claim"
+}
