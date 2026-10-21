@@ -1,0 +1,30 @@
+<HOME>/rain-bench-20261016/storage_test/impls/_empty_zig  :
+section          size       addr
+.interp            28   16777840
+.note.ABI-tag      32   16777868
+.dynsym            72   16777904
+.gnu.version        6   16777976
+.gnu.version_r     32   16777984
+.gnu.hash          28   16778016
+.hash              32   16778044
+.dynstr            56   16778076
+.rela.dyn          48   16778136
+.eh_frame_hdr      44   16778184
+.eh_frame         156   16778232
+.text             177   16782496
+.init              23   16782676
+.fini               9   16782700
+.dynamic          304   16786808
+.got               16   16787112
+.relro_padding   2376   16787128
+.debug_info      1212          0
+.debug_abbrev     326          0
+.debug_aranges    176          0
+.debug_line       958          0
+.debug_ranges     256          0
+.debug_loc        398          0
+.debug_str        382          0
+.comment          124          0
+Total            7271
+
+

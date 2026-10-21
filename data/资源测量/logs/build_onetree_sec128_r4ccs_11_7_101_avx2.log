@@ -1,0 +1,178 @@
+Making default for sec128_r4ccs_11_7_101_avx2
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: Warning: File 'Additional_Implementations/sec128_r4ccs_11_7_101_avx2/' has modification time 1927 s in the future
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vole_check.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vole_check.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vole_check.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/owf_proof.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/owf_proof.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/owf_proof.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/small_vole.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/small_vole.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/small_vole.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/quicksilver.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/quicksilver.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/quicksilver.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vole_commit.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vole_commit.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vole_commit.c
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vole_commit.c: In function 'vole_commit':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vole_commit.c:80:36: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+   80 |                 unsigned int k = i < VOLES_MAX_K ? VOLE_MAX_K : VOLE_MIN_K;
+      |                                    ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vole_commit.c: In function 'vole_reconstruct':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vole_commit.c:134:36: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+  134 |                 unsigned int k = i < VOLES_MAX_K ? VOLE_MAX_K : VOLE_MIN_K;
+      |                                    ^
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/prgs.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/prgs.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/prgs.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/block.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/block.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/block.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakHashtimes4.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakHashtimes4.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakHashtimes4.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/rain.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/rain.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/rain.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/universal_hash.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/universal_hash.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/universal_hash.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/api.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/api.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/api.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/mq.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/mq.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/mq.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/hash.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/hash.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/hash.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/util.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/util.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/util.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c: In function 'vector_commit_from_roots':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:322:41: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+  322 |                 unsigned int height = i < VOLES_MAX_K ? VOLE_MAX_K : VOLE_MIN_K;
+      |                                         ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c: In function 'vector_open':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:367:40: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+  367 |                 unsigned int depth = i < VOLES_MAX_K ? VOLE_MAX_K : VOLE_MIN_K;
+      |                                        ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c: In function 'reorder_verifier_keys':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:443:38: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+  443 |                 for (size_t j = 0; j < VOLES_MAX_K; ++j, ++dst, src_idx += VOLE_MAX_K + 2)
+      |                                      ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:445:23: warning: comparison of unsigned expression in '>= 0' is always true [-Wtype-limits]
+  445 |                 if (i >= VOLE_MAX_K - VOLE_MIN_K)
+      |                       ^~
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c: In function 'vector_verify':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:505:45: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+  505 |                 unsigned int tree_depth = i < VOLES_MAX_K ? VOLE_MAX_K : VOLE_MIN_K;
+      |                                             ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:506:38: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+  506 |                 size_t root = i + (i < VOLES_MAX_K ? 0 : VOLES_MAX_K);
+      |                                      ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:533:31: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+  533 |                         if (i < VOLES_MAX_K && j == 0)
+      |                               ^
+In file included from Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:1:
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c: In function 'batch_vector_commit':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.h:19:48: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+   19 | #define BATCH_VEC_LEN( vec_index ) ( vec_index < VOLES_MAX_K ? BATCH_VEC_LONG_LEN : BATCH_VEC_SHORT_LEN )
+      |                                                ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:619:58: note: in expansion of macro 'BATCH_VEC_LEN'
+  619 |                 for (size_t leaf_index = 0; leaf_index < BATCH_VEC_LEN(vec_index); leaf_index++)
+      |                                                          ^~~~~~~~~~~~~
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.h:25:29: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+   25 |                 ( vec_index < VOLES_MAX_K ?  BATCH_VEC_POS_IN_OUTPUT_LONG( vec_index , leaf_index ) :  BATCH_VEC_POS_IN_OUTPUT_SHORT( vec_index , leaf_index ) )
+      |                             ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.h:28:65: note: in expansion of macro 'BATCH_VEC_HASH_POS_IN_OUTPUT'
+   28 | #define BATCH_VEC_LEAF_POS_IN_OUTPUT( vec_index , leaf_index )  BATCH_VEC_HASH_POS_IN_OUTPUT( vec_index , vole_permute_key_index_inv(leaf_index) )
+      |                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:621:32: note: in expansion of macro 'BATCH_VEC_LEAF_POS_IN_OUTPUT'
+  621 |                         leaves[BATCH_VEC_LEAF_POS_IN_OUTPUT(vec_index, leaf_index)] = prg_output[3*(BATCH_VEC_POS_IN_TREE(vec_index, leaf_index) - BATCH_VECTOR_COMMIT_LEAVES + 1)];
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.h:25:29: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+   25 |                 ( vec_index < VOLES_MAX_K ?  BATCH_VEC_POS_IN_OUTPUT_LONG( vec_index , leaf_index ) :  BATCH_VEC_POS_IN_OUTPUT_SHORT( vec_index , leaf_index ) )
+      |                             ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:622:48: note: in expansion of macro 'BATCH_VEC_HASH_POS_IN_OUTPUT'
+  622 |                         memcpy(hashed_leaves + BATCH_VEC_HASH_POS_IN_OUTPUT(vec_index, leaf_index), prg_output + 3*(BATCH_VEC_POS_IN_TREE(vec_index, leaf_index) - BATCH_VECTOR_COMMIT_LEAVES + 1) + 1, sizeof(block_2secpar));
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c: In function 'batch_vector_open':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:734:48: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+  734 |                 unsigned int depth = vec_index < VOLES_MAX_K ? VOLE_MAX_K : VOLE_MIN_K;
+      |                                                ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.h:25:29: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+   25 |                 ( vec_index < VOLES_MAX_K ?  BATCH_VEC_POS_IN_OUTPUT_LONG( vec_index , leaf_index ) :  BATCH_VEC_POS_IN_OUTPUT_SHORT( vec_index , leaf_index ) )
+      |                             ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:762:73: note: in expansion of macro 'BATCH_VEC_HASH_POS_IN_OUTPUT'
+  762 |                 memcpy(opening + opening_bytes_written, &hashed_leaves[ BATCH_VEC_HASH_POS_IN_OUTPUT(vec_index, delta_parsed[vec_index]) ], sizeof(block_2secpar));
+      |                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c: In function 'batch_vector_verify':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:813:48: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+  813 |                 unsigned int depth = vec_index < VOLES_MAX_K ? VOLE_MAX_K : VOLE_MIN_K;
+      |                                                ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.h:25:29: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+   25 |                 ( vec_index < VOLES_MAX_K ?  BATCH_VEC_POS_IN_OUTPUT_LONG( vec_index , leaf_index ) :  BATCH_VEC_POS_IN_OUTPUT_SHORT( vec_index , leaf_index ) )
+      |                             ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:826:39: note: in expansion of macro 'BATCH_VEC_HASH_POS_IN_OUTPUT'
+  826 |                 memcpy(&hashed_leaves[BATCH_VEC_HASH_POS_IN_OUTPUT(vec_index, delta_parsed[vec_index])], opening + opening_bytes_read, sizeof(block_2secpar));
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.h:25:29: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+   25 |                 ( vec_index < VOLES_MAX_K ?  BATCH_VEC_POS_IN_OUTPUT_LONG( vec_index , leaf_index ) :  BATCH_VEC_POS_IN_OUTPUT_SHORT( vec_index , leaf_index ) )
+      |                             ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.h:28:65: note: in expansion of macro 'BATCH_VEC_HASH_POS_IN_OUTPUT'
+   28 | #define BATCH_VEC_LEAF_POS_IN_OUTPUT( vec_index , leaf_index )  BATCH_VEC_HASH_POS_IN_OUTPUT( vec_index , vole_permute_key_index_inv(leaf_index) )
+      |                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:827:39: note: in expansion of macro 'BATCH_VEC_LEAF_POS_IN_OUTPUT'
+  827 |                 memset(&leaves[       BATCH_VEC_LEAF_POS_IN_OUTPUT(vec_index, 0)], 0, sizeof(block_secpar));
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.h:19:48: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+   19 | #define BATCH_VEC_LEN( vec_index ) ( vec_index < VOLES_MAX_K ? BATCH_VEC_LONG_LEN : BATCH_VEC_SHORT_LEN )
+      |                                                ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:868:58: note: in expansion of macro 'BATCH_VEC_LEN'
+  868 |                 for (size_t leaf_index = 0; leaf_index < BATCH_VEC_LEN(vec_index); leaf_index++)
+      |                                                          ^~~~~~~~~~~~~
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.h:25:29: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+   25 |                 ( vec_index < VOLES_MAX_K ?  BATCH_VEC_POS_IN_OUTPUT_LONG( vec_index , leaf_index ) :  BATCH_VEC_POS_IN_OUTPUT_SHORT( vec_index , leaf_index ) )
+      |                             ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.h:28:65: note: in expansion of macro 'BATCH_VEC_HASH_POS_IN_OUTPUT'
+   28 | #define BATCH_VEC_LEAF_POS_IN_OUTPUT( vec_index , leaf_index )  BATCH_VEC_HASH_POS_IN_OUTPUT( vec_index , vole_permute_key_index_inv(leaf_index) )
+      |                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:873:87: note: in expansion of macro 'BATCH_VEC_LEAF_POS_IN_OUTPUT'
+  873 |                                 write_leaf(iv, &fixed_key_leaf, tree + pos , leaves + BATCH_VEC_LEAF_POS_IN_OUTPUT(vec_index, leaf_index ^ delta_parsed[vec_index]), hashed_leaves + BATCH_VEC_HASH_POS_IN_OUTPUT(vec_index, leaf_index));
+      |                                                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.h:25:29: warning: comparison of unsigned expression in '< 0' is always false [-Wtype-limits]
+   25 |                 ( vec_index < VOLES_MAX_K ?  BATCH_VEC_POS_IN_OUTPUT_LONG( vec_index , leaf_index ) :  BATCH_VEC_POS_IN_OUTPUT_SHORT( vec_index , leaf_index ) )
+      |                             ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.c:873:182: note: in expansion of macro 'BATCH_VEC_HASH_POS_IN_OUTPUT'
+  873 |                                 write_leaf(iv, &fixed_key_leaf, tree + pos , leaves + BATCH_VEC_LEAF_POS_IN_OUTPUT(vec_index, leaf_index ^ delta_parsed[vec_index]), hashed_leaves + BATCH_VEC_HASH_POS_IN_OUTPUT(vec_index, leaf_index));
+      |                                                                                                                                                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/polynomials.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/polynomials.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/polynomials.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/aes.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/aes.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/aes.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/faest.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/faest.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/faest.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakSpongetimes4.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakSpongetimes4.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakSpongetimes4.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakHash.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakHash.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakHash.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakSponge.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakSponge.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakSponge.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/polynomials_impl.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/polynomials_impl.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/polynomials_impl.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/transpose.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/transpose.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/transpose.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/block_impl.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/block_impl.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/block_impl.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/rain_impl.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/rain_impl.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/rain_impl.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/aes_impl.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/aes_impl.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/aes_impl.c
+as   -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-AVX2.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-AVX2.s
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times2-SIMD128.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times2-SIMD128.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times2-SIMD128.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c: In function 'KeccakP1600times4_PermuteAll_12rounds':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c:827:18: warning: unused variable 'i' [-Wunused-variable]
+  827 |     unsigned int i;
+      |                  ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c: In function 'KeccakP1600times4_PermuteAll_6rounds':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c:840:18: warning: unused variable 'i' [-Wunused-variable]
+  840 |     unsigned int i;
+      |                  ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c: In function 'KeccakP1600times4_PermuteAll_4rounds':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c:853:18: warning: unused variable 'i' [-Wunused-variable]
+  853 |     unsigned int i;
+      |                  ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c: In function 'KeccakF1600times4_FastLoop_Absorb':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c:950:22: warning: unused variable 'i' [-Wunused-variable]
+  950 |         unsigned int i;
+      |                      ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c: In function 'KeccakP1600times4_12rounds_FastLoop_Absorb':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c:1005:22: warning: unused variable 'i' [-Wunused-variable]
+ 1005 |         unsigned int i;
+      |                      ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c:1052:22: warning: unused variable 'i' [-Wunused-variable]
+ 1052 |         unsigned int i;
+      |                      ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c: In function 'KeccakP1600times4_KravatteCompress':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c:1153:18: warning: unused variable 'i' [-Wunused-variable]
+ 1153 |     unsigned int i;
+      |                  ^
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c: In function 'KeccakP1600times4_KravatteExpand':
+Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.c:1239:18: warning: unused variable 'i' [-Wunused-variable]
+ 1239 |     unsigned int i;
+      |                  ^
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times8-on4.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times8-on4.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times8-on4.c
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-g++ -std=c++20 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/test_bench_api.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/test_bench_api.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/test_bench_api.cpp
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-gcc -std=c11 -pedantic-errors -Wall -Wextra -Wno-ignored-attributes -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG  -MMD -MP -MF Additional_Implementations/sec128_r4ccs_11_7_101_avx2/randomness_os.d  -c -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/randomness_os.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/randomness_os.c
+rm -f Additional_Implementations/sec128_r4ccs_11_7_101_avx2/catch_amalgamated.o
+cp -l Common/catch_amalgamated.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/catch_amalgamated.o
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-g++ -o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/sec128_r4ccs_11_7_101_avx2_bench Additional_Implementations/sec128_r4ccs_11_7_101_avx2/test_bench_api.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/randomness_os.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/catch_amalgamated.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vole_check.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/owf_proof.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/small_vole.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/quicksilver.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vole_commit.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/prgs.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/block.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakHashtimes4.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/rain.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/universal_hash.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/api.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/mq.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/hash.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/util.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/vector_com.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/polynomials.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/aes.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/faest.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakSpongetimes4.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakHash.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakSponge.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/polynomials_impl.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/transpose.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/block_impl.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/rain_impl.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/aes_impl.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-AVX2.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times2-SIMD128.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times4-SIMD256.o Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-times8-on4.o  -lcrypto -O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG 
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-ld: warning: Additional_Implementations/sec128_r4ccs_11_7_101_avx2/KeccakP-1600-AVX2.o: missing .note.GNU-stack section implies executable stack
+<HOME>/rain-bench-20261016/env/bin/x86_64-conda-linux-gnu-ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.

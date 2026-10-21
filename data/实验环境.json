@@ -1,0 +1,45 @@
+{
+  "server": {
+    "cpu": "双路 AMD EPYC 7773X（Zen 3），128 物理核、256 逻辑线程",
+    "os": "Ubuntu 20.04.5 LTS",
+    "kernel": "Linux 5.15.0-139-generic",
+    "memory": "约 1,877 GiB",
+    "gpu": "NVIDIA L40；本文实验使用 CPU 后端"
+  },
+  "series": [
+    {
+      "name": "原语主性能",
+      "host": "主服务器",
+      "toolchain": "Zig 0.13 / Clang 18；其他实现 GCC 14.4，选项见正文与构建清单",
+      "scope": "64 字节消息、单进程单线程、绑定逻辑核；run55 F3/S3，38组实现，每组每操作1503个非预热样本"
+    },
+    {
+      "name": "资源测量",
+      "host": "同一主服务器",
+      "toolchain": "独立探针构建，x86-64-v3 + AES + PCLMUL；Clang 18 -O3，MandaRain GCC 14.4 -O2",
+      "scope": "64 字节、单线程、14组实现，每种模式3次；与原语主性能不同构建"
+    },
+    {
+      "name": "应用握手与接口层",
+      "host": "同一主服务器",
+      "toolchain": "Python 3 / ctypes 原生后端；不将原语主表的具体构建选项机械套用于所有协议批次",
+      "scope": "经典 CA 链；运行11/52各30次、运行53各200次，保留原来的最佳表、同次对照和协议字节统计"
+    },
+    {
+      "name": "后量子链验收",
+      "host": "同一主服务器",
+      "toolchain": "Python 3.12.15；Rain 库 conda GCC 14.4.0，SM3 CA 库系统 GCC 9.4.0 -O3 -fopenmp，CUDA=0",
+      "scope": "CA 验证 configured_threads=8、AVX2 backend=2；不将该线程数套用于 RainSwift 原语计时"
+    },
+    {
+      "name": "功能演示与兼容性",
+      "host": "主服务器",
+      "scope": "保留 Windows 目标动态库和接口支持说明；终端摘要与原始运行记录分别保存"
+    }
+  ],
+  "evidence_scope": {
+    "host_attribution": "实验宿主平台由材料提供方确认；保留的原始日志不独立证明该平台归属。",
+    "timing": "各批次按原样本、原统计定义和各自构建配置解释；未重新测量。",
+    "compatibility": "Windows目标构建与接口兼容性不等于实验宿主平台。"
+  }
+}

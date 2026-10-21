@@ -1,0 +1,42 @@
+profile: group=x25519, classical_signer=ecdsa-p256-sha256, kem=ml-kem-768, pq_signer=ml-dsa-44, aead=aes-128-gcm, hash=sha256, pq_enabled=true, x509=false, alt_chain=(none), require_alt_chain=false, alt_library=(default), alt_backend=0, alt_threads=1, alt_require_native=false, alt_force_python=false
+handshake bytes (with record protection): 6666
+handshake framing bytes (plaintext):       6561
+  client -> server: 1363
+  server -> client: 5303
+
+message               sender      plain  protect   total
+ClientHello           client       1306        0    1306
+ServerHello           server       1185        0    1185
+EncryptedExtensions   server          6       21      27
+Certificate           server       1489       21    1510
+CertificateVerify     server       2503       21    2524
+Finished              server         36       21      57
+Finished              client         36       21      57
+
+post-quantum additions (bytes each):
+  client_hello.pq_key_share            1192
+  client_hello.pq_signature_algorithm      2
+  server_hello.pq_ciphertext           1094
+  certificate.pq_public_key            1316
+  certificate_verify.pq_signature      2424
+  sum                                  6028
+  classical-only estimate                638
+
+application data round trip: ok
+exporter secrets agree:      yes
+
+record layer: derived traffic keys (values withheld)
+  client handshake    keys=derived  aead=aes-128-gcm  records=1
+  server handshake    keys=derived  aead=aes-128-gcm  records=4
+  client application  keys=derived  aead=aes-128-gcm  records=1
+  server application  keys=derived  aead=aes-128-gcm  records=1
+
+key schedule: derived values withheld (lengths only; --fingerprint for hashes):
+  early_secret        32 bytes
+  handshake_secret    32 bytes
+  master_secret       32 bytes
+  c hs traffic        32 bytes
+  s hs traffic        32 bytes
+  c ap traffic        32 bytes
+  s ap traffic        32 bytes
+  exporter master     32 bytes

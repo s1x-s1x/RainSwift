@@ -1,0 +1,230 @@
+desc: --stacks=no --peak-inaccuracy=0.0 --massif-out-file=<HOME>/rain-bench-20261016/storage_test/raw/heap.mandarain_3_128s.verify.1.out
+cmd: ../probe_mandarain_3_128s verify
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=698418
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=699829
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=701134
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=detailed
+n2: 8664 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x5082D54: _IO_file_doallocate (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+  n1: 8192 0x5092ECF: _IO_doallocbuf (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+   n1: 8192 0x5090443: ??? (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+    n1: 8192 0x5083EE2: fread (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+     n1: 8192 0x4001629: rd (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+      n0: 8192 0x4001279: main (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+ n1: 472 0x508392D: fopen (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+  n1: 472 0x400160E: rd (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+   n0: 472 0x4001279: main (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+#-----------
+snapshot=4
+#-----------
+time=701134
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=701266
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=701331
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=701947
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=702487
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=702619
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=702684
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=703300
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=704152
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=704284
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n1: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=710184
+mem_heap_B=12288
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=710274
+mem_heap_B=372736
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=710337
+mem_heap_B=1093632
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=710419
+mem_heap_B=1814512
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=87507281
+mem_heap_B=1814512
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=peak
+n4: 1814512 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 720896 0x402F608: vole_reconstruct (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+  n1: 720896 0x400B04E: faest_verify (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+   n1: 720896 0x400921B: crypto_sign_open (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+    n0: 720896 0x4001328: main (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+ n1: 720880 0x402E45A: batch_vector_verify (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+  n1: 720880 0x402F628: vole_reconstruct (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+   n1: 720880 0x400B04E: faest_verify (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+    n1: 720880 0x400921B: crypto_sign_open (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+     n0: 720880 0x4001328: main (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+ n1: 360448 0x402F5EF: vole_reconstruct (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+  n1: 360448 0x400B04E: faest_verify (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+   n1: 360448 0x400921B: crypto_sign_open (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+    n0: 360448 0x4001328: main (in <HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/probe_mandarain_3_128s)
+ n0: 12288 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=87507281
+mem_heap_B=1093632
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=101553131
+mem_heap_B=372736
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=101553159
+mem_heap_B=12288
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=101689019
+mem_heap_B=24576
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=101697162
+mem_heap_B=12288
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=102279448
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty

@@ -1,0 +1,15 @@
+key	id	scheme	param_set	tree	param_type	setting	q7id	source_commit	compiler	cflags
+rain3_fast	1	Rain-3	快速档	rain	rain_sets::rain3_fast	-	1	rain-voleith 4d9bf3e2 (src=ed0221e)	zig 0.13.0 (clang 18)	-O3 -DNDEBUG -march=x86_64_v3 -maes -mpclmul
+rain3_bal	2	Rain-3	均衡档	rain	rain_sets::rain3_bal	-	2	rain-voleith 4d9bf3e2 (src=ed0221e)	zig 0.13.0 (clang 18)	-O3 -DNDEBUG -march=x86_64_v3 -maes -mpclmul
+rain3_short	3	Rain-3	短签名档	rain	rain_sets::rain3_short	-	3	rain-voleith 4d9bf3e2 (src=ed0221e)	zig 0.13.0 (clang 18)	-O3 -DNDEBUG -march=x86_64_v3 -maes -mpclmul
+rain4_fast	4	Rain-4	快速档	rain	rain_sets::rain4_fast	-	4	rain-voleith 4d9bf3e2 (src=ed0221e)	zig 0.13.0 (clang 18)	-O3 -DNDEBUG -march=x86_64_v3 -maes -mpclmul
+rain4_bal	5	Rain-4	均衡档	rain	rain_sets::rain4_bal	-	5	rain-voleith 4d9bf3e2 (src=ed0221e)	zig 0.13.0 (clang 18)	-O3 -DNDEBUG -march=x86_64_v3 -maes -mpclmul
+rain4_short	6	Rain-4	短签名档	rain	rain_sets::rain4_short	-	6	rain-voleith 4d9bf3e2 (src=ed0221e)	zig 0.13.0 (clang 18)	-O3 -DNDEBUG -march=x86_64_v3 -maes -mpclmul
+rfaest_em_128f	7	rFAEST	EM-128f	rfaest	v2::faest_em_128_f	-	7	rFAEST 7a59c5c	zig 0.13.0 (clang 18)	-O3 -DNDEBUG -march=x86_64_v3 -maes -mpclmul
+rfaest_em_128s	8	rFAEST	EM-128s	rfaest	v2::faest_em_128_s	-	8	rFAEST 7a59c5c	zig 0.13.0 (clang 18)	-O3 -DNDEBUG -march=x86_64_v3 -maes -mpclmul
+faest_v3_em_128f	10	FAEST v3	EM-128f	faest	v3::faest_em_128_f	-	10	faest-arch-opt 1d83309	zig 0.13.0 (clang 18)	-O3 -DNDEBUG -march=x86_64_v3 -maes -mpclmul
+faest_v3_em_128s	11	FAEST v3	EM-128s	faest	v3::faest_em_128_s	-	11	faest-arch-opt 1d83309	zig 0.13.0 (clang 18)	-O3 -DNDEBUG -march=x86_64_v3 -maes -mpclmul
+mandarain_3_128f	22	MandaRain	3-128f	one-tree	-	sec128_r3ccs_16_8_108_avx2	22	faest-one-tree 1ded993	gcc 14.4.0	-O2 -DNDEBUG -march=x86-64-v3 -maes -mpclmul
+mandarain_3_128s	23	MandaRain	3-128s	one-tree	-	sec128_r3ccs_11_7_100_avx2	23	faest-one-tree 1ded993	gcc 14.4.0	-O2 -DNDEBUG -march=x86-64-v3 -maes -mpclmul
+mandarain_4_128f	24	MandaRain	4-128f	one-tree	-	sec128_r4ccs_16_8_110_avx2	24	faest-one-tree 1ded993	gcc 14.4.0	-O2 -DNDEBUG -march=x86-64-v3 -maes -mpclmul
+mandarain_4_128s	25	MandaRain	4-128s	one-tree	-	sec128_r4ccs_11_7_101_avx2	25	faest-one-tree 1ded993	gcc 14.4.0	-O2 -DNDEBUG -march=x86-64-v3 -maes -mpclmul

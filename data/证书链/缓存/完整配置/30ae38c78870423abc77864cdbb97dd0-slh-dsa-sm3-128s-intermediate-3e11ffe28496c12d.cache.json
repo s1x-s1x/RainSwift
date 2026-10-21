@@ -1,0 +1,13 @@
+{
+  "algorithm": "slh-dsa-sm3-128s",
+  "backend": 2,
+  "cache_file_sha256": "93f0b6e1f98233b919768f9418b79f6d1ebd6ae2bc5baef2147f395e4fed1894",
+  "cache_level": 6,
+  "campaign": "30ae38c78870423abc77864cdbb97dd0",
+  "edge": "intermediate",
+  "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+  "pid": 1,
+  "public_key_sha256": "3e11ffe28496c12dbdc1436c8debd2f1566648655f0cba0bb4f43710b49eaf83",
+  "schema": "a15-slh-cache-v1",
+  "threads": 8
+}

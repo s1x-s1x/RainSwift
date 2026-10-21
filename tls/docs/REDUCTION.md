@@ -1,3 +1,5 @@
+> 2026-10-22 数据更新：本文保留历史设计／审查语境；引用的早期 `.bench-*` 输出与旧验收日志已从当前文件树删除。当前实验数据见 [复赛数据快照](../../data/README.md)，按其批次和源码版本读取。
+
 > **2026-09-21 U-03 follow-up:** this document retains historical analysis and measurements. The fixed constant-chain construction is superseded by the independently seeded/addressed/masked implementation documented in `docs/U03_WOTS_STEP_KEYS.md`. This change is not a completed security reduction; updated test and measurement evidence is in `validation/` and `.bench-u03/`.
 
 # Reduction skeleton — hybrid authentication and key secrecy

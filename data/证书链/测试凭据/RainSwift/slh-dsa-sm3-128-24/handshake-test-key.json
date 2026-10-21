@@ -1,0 +1,6 @@
+{
+  "algorithm": "rain4-bal",
+  "public_key": "445369e4c8d5aea4ac5e6a7501948642b6a93e86810e7065dc3a45be41e93eb7",
+  "secret_key": "445369e4c8d5aea4ac5e6a75019486423152885bccecee37297e3015389ee8eb",
+  "test_only": true
+}

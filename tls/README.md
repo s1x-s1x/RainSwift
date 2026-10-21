@@ -1,15 +1,6 @@
-> **v9 更新（第八轮红队审查）**：先读 [docs/AUDIT_V8_RESPONSE.md](docs/AUDIT_V8_RESPONSE.md) 与
-> [docs/CAPABILITIES.md](docs/CAPABILITIES.md)；本轮验证与环境记录在 [`validation/README.md`](validation/README.md)
-> 的「v9 验收与环境记录」一节，两套审计复跑（原用例兼容＋修订严格）在 `../02-审查记录/06-v8审计/audit_v9/`。
-
-> v8 更新：先读 docs/AUDIT_V7_RESPONSE.md；v8 验证记录在上一级 `validation/`。
-
-> **2026-09-21 U-03 修订 / 2026-09-22 第五轮审查修订**：WOTS+ 改用每树新生成的公开种子和完整链地址，加入独立 bitmask；XMSS 公钥为 64 字节，默认签名仍为 4612 字节，方案编号改为 `0xFE00 + height`。新旧密钥不兼容，需换钥、重签证书并同时升级双方。见 [修复说明](docs/U03_WOTS_STEP_KEYS.md) 和 [本轮验证](validation/README.md)。第五轮审查的十项修复见 [AUDIT_V6_RESPONSE.md](docs/AUDIT_V6_RESPONSE.md)；`tools\verify_all.ps1` 已在合并后的树上重跑，因此 `.bench-out/` 是**当前**测量，`.bench-u03/` 是补丁作者的合并前对照记录。
-
-> **Rain-VOLEitH 接入（2026-10-16，本副本新增）**：在 v9 不改握手、密钥协商与记录层的前提下，新增后量子签名后端
-> Rain-VOLEitH（`tls/pq/rain_voleith.py`，原生库 `native/rain_voleith/`），六组参数 `rain3-fast/bal/short`、`rain4-fast/bal/short`
-> 可直接作 `pq_signer`。说明与新增内容清单见 [docs/RAIN_VOLEITH.md](docs/RAIN_VOLEITH.md)；
-> 演示：`python demo/rain_voleith_demo.py`。v9 本身为团队前期工作。
+> **2026-10-22 数据更新**：旧测速输出和旧验收日志已删除；当前数据见 [data/README.md](../data/README.md)。本目录仍为此前公开的 v9 Rain 接入，复赛材料中的更新版 `tlsb/` 和离线 CA `a15/` 源码尚待同步。新日志对应材料版本。
+>
+> Rain 接入说明见 [docs/RAIN_VOLEITH.md](docs/RAIN_VOLEITH.md)，运行演示：`python demo/rain_voleith_demo.py`。源码构建、接口与历史审查说明保留在下文。
 
 # hybrid-tls13
 
@@ -38,7 +29,7 @@
 | 位置 | 传统支路 | 后量子支路 | 合入方式 |
 | --- | --- | --- | --- |
 | 密钥协商 | X25519 ECDHE（`key_share`） | ML-KEM-768（`pq_key_share` 扩展） | `Z_hybrid = uint16(len)‖Z_ecdh‖uint16(len)‖ss_pq` 送入 `HKDF-Extract` 得 `handshake_secret` |
-| 服务器认证 | ECDSA P-256（Certificate 中的经典公钥） | Falcon-512（或 ML-DSA / WOTS+/XMSS / Rain-VOLEitH） | 两份签名覆盖**同一个** `M_CV`，客户端要求 `ok_classic && ok_pq` |
+| 服务器认证 | ECDSA P-256（Certificate 中的经典公钥） | Falcon-512（或 ML-DSA / WOTS+/XMSS / RainSwift） | 两份签名覆盖**同一个** `M_CV`，客户端要求 `ok_classic && ok_pq` |
 | 握手完整性 | Finished（`HMAC(finished_key, TH)`） | 同左 | transcript 覆盖 qpk、ct、双公钥、双签名，删掉任一 PQ 字段都会导致 Finished 失败 |
 
 `M_CV = 0x20 × 64 ‖ "TLS 1.3, server CertificateVerify" ‖ 0x00 ‖ TH_S`，由传统的**和**后量子的签名同时覆盖——这正是"两份签名签同一条连接"的落地方式。
@@ -56,8 +47,8 @@ tls/
   classical/signature.py      ECDSA P-256、Ed25519
   pq/backends.py              KemBackend / PqSigner 协议
   pq/kem.py                   ML-KEM 512/768/1024、HQC、ECIES 占位 KEM
-  pq/signature.py             Falcon 512/1024、ML-DSA 44/65/87、XMSS、Rain-VOLEitH 包装
-  pq/rain_voleith.py          Rain-VOLEitH 后端（ctypes 调用 native/rain_voleith 构建的原生库）
+  pq/signature.py             Falcon 512/1024、ML-DSA 44/65/87、XMSS、RainSwift 包装
+  pq/rain_voleith.py          RainSwift 后端（ctypes 调用 native/rain_voleith 构建的原生库）
   pq/wots_xmss.py             纯 Python WOTS+ 与 XMSS（无第三方依赖）
   pq/providers.py             定位 .deps / .deps-falcon 依赖目录
   record/aead.py              AES-GCM 记录层（nonce = IV ⊕ seq，AAD = 记录头）

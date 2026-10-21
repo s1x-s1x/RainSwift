@@ -1,0 +1,127 @@
+desc: --stacks=no --peak-inaccuracy=0.0 --massif-out-file=<HOME>/rain-bench-20261016/storage_test/raw/heap.rain3_fast.none.2.out
+cmd: ../probe_rain3_fast none
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=160010
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=160630
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=161169
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=peak
+n2: 8664 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x48FDD54: _IO_file_doallocate (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+  n1: 8192 0x490DECF: _IO_doallocbuf (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+   n1: 8192 0x490B443: ??? (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+    n1: 8192 0x48FEEE2: fread (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+     n1: 8192 0x100695D: rd (probe.c:18)
+      n0: 8192 0x100695D: main (probe.c:43)
+ n1: 472 0x48FE92D: fopen (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+  n1: 472 0x1006938: rd (probe.c:16)
+   n0: 472 0x1006938: main (probe.c:43)
+#-----------
+snapshot=4
+#-----------
+time=161169
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=161301
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=161348
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=161968
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=162507
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=162639
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=162686
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=163306
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=168059
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=168191
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n1: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 0 in 2 places, all below massif's threshold (1.00%)

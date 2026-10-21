@@ -1,0 +1,30 @@
+<HOME>/rain-bench-20261016/storage_test/impls/_empty_gcc  :
+section                 size    addr
+.interp                   28     680
+.hash                     44     712
+.gnu.hash                 36     760
+.dynsym                  144     800
+.dynstr                  192     944
+.gnu.version              12    1136
+.gnu.version_r            32    1152
+.rela.dyn                192    1184
+.init                     27    4096
+.plt                      16    4128
+.plt.got                   8    4144
+.text                    373    4160
+.fini                     13    4536
+.eh_frame_hdr             60    8192
+.eh_frame                232    8256
+.note.ABI-tag             32    8488
+.init_array                8   15808
+.fini_array                8   15816
+.dynamic                 496   15824
+.got                      40   16320
+.got.plt                  24   16360
+.data                      8   16384
+.bss                       8   16392
+.comment                  84       0
+.gnu.build.attributes    944   24592
+Total                   3061
+
+

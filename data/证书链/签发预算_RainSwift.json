@@ -1,0 +1,96 @@
+{
+  "source_sha256": "9c236838847518f369fcab16554bc344a1d21db3756c15b3c1f7ba503e5d1e80",
+  "test_only": true,
+  "tables": {
+    "keys": {
+      "schema": "CREATE TABLE keys(\n                  key_id TEXT PRIMARY KEY, algorithm TEXT NOT NULL,\n                  public_key BLOB NOT NULL, limit_text TEXT NOT NULL,\n                  used_text TEXT NOT NULL, created_utc TEXT NOT NULL)",
+      "rows": [
+        {
+          "key_id": "44c87fcd9249ccdc8bdd0f610566da6ea1ded2d12e59a26dc061bbaa788c6b70",
+          "algorithm": "slh-dsa-sm3-128-24",
+          "public_key": {
+            "hex": "a271690a85aed77dbd4f1ef6d08603fe27b19dccb28d7efa883a2d989641c113"
+          },
+          "limit_text": "16777216",
+          "used_text": "1",
+          "created_utc": "2026-10-19T08:01:50.098036+00:00"
+        },
+        {
+          "key_id": "200656cd3161cc36648d08555905a40e0d151ec4e84c70b8c3eacf34798a41b5",
+          "algorithm": "slh-dsa-sm3-128-24",
+          "public_key": {
+            "hex": "e57a4d8e8ba4e54c1cc2b226ced8ec9091474046c8651c005ff6d72fdbadeff1"
+          },
+          "limit_text": "16777216",
+          "used_text": "1",
+          "created_utc": "2026-10-19T08:01:55.120782+00:00"
+        }
+      ]
+    },
+    "reservations": {
+      "schema": "CREATE TABLE reservations(\n                  receipt TEXT PRIMARY KEY, key_id TEXT NOT NULL REFERENCES keys(key_id),\n                  ordinal_text TEXT NOT NULL, message_sha256 TEXT NOT NULL,\n                  reserved_utc TEXT NOT NULL, status TEXT NOT NULL,\n                  signature_sha256 TEXT, finished_utc TEXT, operation_id TEXT, case_identity TEXT,\n                  UNIQUE(key_id, ordinal_text))",
+      "rows": [
+        {
+          "receipt": "92a38028195a460eb10a6c952bd2c4a3",
+          "key_id": "44c87fcd9249ccdc8bdd0f610566da6ea1ded2d12e59a26dc061bbaa788c6b70",
+          "ordinal_text": "1",
+          "message_sha256": "9130abfdf41236cd38944540cb3d527f81a4f9ab3ff20a40ade75e5d5ee58eef",
+          "reserved_utc": "2026-10-19T08:01:50.098036+00:00",
+          "status": "committed",
+          "signature_sha256": "1e2adcf71226ee67d7669514ef723b06823b6c106f68cb660b9ae669727aec12",
+          "finished_utc": "2026-10-19T08:01:55.112425+00:00",
+          "operation_id": "93c2d7a838da4e5baee9c4b4b33fca46:slh-dsa-sm3-128-24:intermediate",
+          "case_identity": "93c2d7a838da4e5baee9c4b4b33fca46:slh-dsa-sm3-128-24:intermediate"
+        },
+        {
+          "receipt": "1a3cd59dfb514e879c4b58c3112dc9b7",
+          "key_id": "200656cd3161cc36648d08555905a40e0d151ec4e84c70b8c3eacf34798a41b5",
+          "ordinal_text": "1",
+          "message_sha256": "fa7860a6a252e496c31a65c244fd7955ebd6677589b9a0c06c74d8bae09e3667",
+          "reserved_utc": "2026-10-19T08:01:55.120782+00:00",
+          "status": "committed",
+          "signature_sha256": "18944bf3c554058db24bce1ffd9b3454099dea941392674024fd757278b7ab14",
+          "finished_utc": "2026-10-19T08:02:00.124594+00:00",
+          "operation_id": "93c2d7a838da4e5baee9c4b4b33fca46:slh-dsa-sm3-128-24:leaf",
+          "case_identity": "93c2d7a838da4e5baee9c4b4b33fca46:slh-dsa-sm3-128-24:leaf"
+        }
+      ]
+    },
+    "ledger_metadata": {
+      "schema": "CREATE TABLE ledger_metadata(\n                  name TEXT PRIMARY KEY, value TEXT NOT NULL)",
+      "rows": [
+        {
+          "name": "ledger_uuid",
+          "value": "af58a0c2829541d9a059cb55dad786cd"
+        },
+        {
+          "name": "identity_schema",
+          "value": "2"
+        },
+        {
+          "name": "accounting_schema",
+          "value": "1"
+        }
+      ]
+    },
+    "identity_migrations": {
+      "schema": "CREATE TABLE identity_migrations(\n                  legacy_key_id TEXT PRIMARY KEY, canonical_key_id TEXT NOT NULL,\n                  legacy_algorithm TEXT NOT NULL, legacy_limit_text TEXT NOT NULL,\n                  legacy_used_text TEXT NOT NULL, migrated_utc TEXT NOT NULL)",
+      "rows": []
+    },
+    "accounting": {
+      "schema": "CREATE TABLE accounting(key_id TEXT PRIMARY KEY REFERENCES keys(key_id),used_text TEXT NOT NULL,last_receipt TEXT)",
+      "rows": [
+        {
+          "key_id": "44c87fcd9249ccdc8bdd0f610566da6ea1ded2d12e59a26dc061bbaa788c6b70",
+          "used_text": "1",
+          "last_receipt": "92a38028195a460eb10a6c952bd2c4a3"
+        },
+        {
+          "key_id": "200656cd3161cc36648d08555905a40e0d151ec4e84c70b8c3eacf34798a41b5",
+          "used_text": "1",
+          "last_receipt": "1a3cd59dfb514e879c4b58c3112dc9b7"
+        }
+      ]
+    }
+  }
+}

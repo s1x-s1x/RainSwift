@@ -1,0 +1,233 @@
+desc: --stacks=no --peak-inaccuracy=0.0 --massif-out-file=<HOME>/rain-bench-20261016/storage_test/raw/heap.rain4_fast.verify.2.out
+cmd: ../probe_rain4_fast verify
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=160008
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=160624
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=161163
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=detailed
+n2: 8664 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x48FDD54: _IO_file_doallocate (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+  n1: 8192 0x490DECF: _IO_doallocbuf (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+   n1: 8192 0x490B443: ??? (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+    n1: 8192 0x48FEEE2: fread (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+     n1: 8192 0x100791D: rd (probe.c:18)
+      n0: 8192 0x100791D: main (probe.c:43)
+ n1: 472 0x48FE92D: fopen (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+  n1: 472 0x10078F8: rd (probe.c:16)
+   n0: 472 0x10078F8: main (probe.c:43)
+#-----------
+snapshot=4
+#-----------
+time=161163
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=161295
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=161342
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=161958
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=162497
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=162629
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=162676
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=163292
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=168011
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=168143
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n1: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=175040
+mem_heap_B=14336
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=175122
+mem_heap_B=47104
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=175184
+mem_heap_B=79872
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=175264
+mem_heap_B=327776
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=688857
+mem_heap_B=327776
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=peak
+n5: 327776 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 247904 0x100FE13: faest::ggm_forest_bavc<(faest::secpar)128, 18ul, 122ul, (faest::prg)0, (faest::leaf_hash)0, 3ul>::verify(faest::block<128ul>, unsigned char const*, unsigned char const*, faest::block<128ul>*, unsigned char*) (in <HOME>/rain-bench-20261016/storage_test/impls/rain4_fast/probe_rain4_fast)
+  n1: 247904 0x100F0F0: bool faest::vole_reconstruct<faest::parameter_set<(faest::secpar)128, 18ul, (faest::owf)832, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 6ul, std::__1::pair<faest::bavc, unsigned long>{}> >(faest::block<128ul>, faest::block<128ul>*, unsigned char const*, unsigned char const*, unsigned char const*, unsigned char*) (in <HOME>/rain-bench-20261016/storage_test/impls/rain4_fast/probe_rain4_fast)
+   n1: 247904 0x100EBF7: bool faest::faest_verify<faest::parameter_set<(faest::secpar)128, 18ul, (faest::owf)832, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 6ul, std::__1::pair<faest::bavc, unsigned long>{}> >(unsigned char const*, unsigned char const*, unsigned long, unsigned char const*) (in <HOME>/rain-bench-20261016/storage_test/impls/rain4_fast/probe_rain4_fast)
+    n1: 247904 0x1007DA3: crypto_sign_open (in <HOME>/rain-bench-20261016/storage_test/impls/rain4_fast/probe_rain4_fast)
+     n0: 247904 0x1007A2E: main (probe.c:50)
+ n1: 32768 0x100F0C4: bool faest::vole_reconstruct<faest::parameter_set<(faest::secpar)128, 18ul, (faest::owf)832, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 6ul, std::__1::pair<faest::bavc, unsigned long>{}> >(faest::block<128ul>, faest::block<128ul>*, unsigned char const*, unsigned char const*, unsigned char const*, unsigned char*) (in <HOME>/rain-bench-20261016/storage_test/impls/rain4_fast/probe_rain4_fast)
+  n1: 32768 0x100EBF7: bool faest::faest_verify<faest::parameter_set<(faest::secpar)128, 18ul, (faest::owf)832, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 6ul, std::__1::pair<faest::bavc, unsigned long>{}> >(unsigned char const*, unsigned char const*, unsigned long, unsigned char const*) (in <HOME>/rain-bench-20261016/storage_test/impls/rain4_fast/probe_rain4_fast)
+   n1: 32768 0x1007DA3: crypto_sign_open (in <HOME>/rain-bench-20261016/storage_test/impls/rain4_fast/probe_rain4_fast)
+    n0: 32768 0x1007A2E: main (probe.c:50)
+ n1: 32768 0x100F0D6: bool faest::vole_reconstruct<faest::parameter_set<(faest::secpar)128, 18ul, (faest::owf)832, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 6ul, std::__1::pair<faest::bavc, unsigned long>{}> >(faest::block<128ul>, faest::block<128ul>*, unsigned char const*, unsigned char const*, unsigned char const*, unsigned char*) (in <HOME>/rain-bench-20261016/storage_test/impls/rain4_fast/probe_rain4_fast)
+  n1: 32768 0x100EBF7: bool faest::faest_verify<faest::parameter_set<(faest::secpar)128, 18ul, (faest::owf)832, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 6ul, std::__1::pair<faest::bavc, unsigned long>{}> >(unsigned char const*, unsigned char const*, unsigned long, unsigned char const*) (in <HOME>/rain-bench-20261016/storage_test/impls/rain4_fast/probe_rain4_fast)
+   n1: 32768 0x1007DA3: crypto_sign_open (in <HOME>/rain-bench-20261016/storage_test/impls/rain4_fast/probe_rain4_fast)
+    n0: 32768 0x1007A2E: main (probe.c:50)
+ n1: 14336 0x100EBD0: bool faest::faest_verify<faest::parameter_set<(faest::secpar)128, 18ul, (faest::owf)832, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 6ul, std::__1::pair<faest::bavc, unsigned long>{}> >(unsigned char const*, unsigned char const*, unsigned long, unsigned char const*) (in <HOME>/rain-bench-20261016/storage_test/impls/rain4_fast/probe_rain4_fast)
+  n1: 14336 0x1007DA3: crypto_sign_open (in <HOME>/rain-bench-20261016/storage_test/impls/rain4_fast/probe_rain4_fast)
+   n0: 14336 0x1007A2E: main (probe.c:50)
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=688857
+mem_heap_B=79872
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=1527213
+mem_heap_B=47104
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=1527241
+mem_heap_B=14336
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=1671664
+mem_heap_B=28672
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=1686611
+mem_heap_B=14336
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=1706333
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty

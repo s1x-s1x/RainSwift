@@ -1,0 +1,153 @@
+DIFF gf64 mul                                              4194368 comparisons, 0 mismatches
+DIFF gf64 sqr                                              4194312 comparisons, 0 mismatches
+DIFF map64 M1 T3=x^(2^3)                                    524360 comparisons, 0 mismatches
+DIFF map64 M1 T6=x^(2^6)                                    524360 comparisons, 0 mismatches
+DIFF map64 M1 T7=x^(2^7)                                    524360 comparisons, 0 mismatches
+DIFF map64 M1 T15=x^(2^15)                                  524360 comparisons, 0 mismatches
+DIFF map64 M1 T30=x^(2^30)                                  524360 comparisons, 0 mismatches
+DIFF map64 M1 T31=x^(2^31)                                  524360 comparisons, 0 mismatches
+DIFF map128 M1 MC_T3[0]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M1 MC_T3[1]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M1 MC_T4[0]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M1 MC_T4[1]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M1 MC_T4[2]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M1 PSI                                         1048708 comparisons, 0 mismatches
+DIFF map64 M2 T3=x^(2^3)                                    524360 comparisons, 0 mismatches
+DIFF map64 M2 T6=x^(2^6)                                    524360 comparisons, 0 mismatches
+DIFF map64 M2 T7=x^(2^7)                                    524360 comparisons, 0 mismatches
+DIFF map64 M2 T15=x^(2^15)                                  524360 comparisons, 0 mismatches
+DIFF map64 M2 T30=x^(2^30)                                  524360 comparisons, 0 mismatches
+DIFF map64 M2 T31=x^(2^31)                                  524360 comparisons, 0 mismatches
+DIFF map128 M2 MC_T3[0]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M2 MC_T3[1]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M2 MC_T4[0]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M2 MC_T4[1]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M2 MC_T4[2]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M2 PSI                                         1048708 comparisons, 0 mismatches
+DIFF map64 M3 T3=x^(2^3)                                    524360 comparisons, 0 mismatches
+DIFF map64 M3 T6=x^(2^6)                                    524360 comparisons, 0 mismatches
+DIFF map64 M3 T7=x^(2^7)                                    524360 comparisons, 0 mismatches
+DIFF map64 M3 T15=x^(2^15)                                  524360 comparisons, 0 mismatches
+DIFF map64 M3 T30=x^(2^30)                                  524360 comparisons, 0 mismatches
+DIFF map64 M3 T31=x^(2^31)                                  524360 comparisons, 0 mismatches
+DIFF map128 M3 MC_T3[0]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M3 MC_T3[1]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M3 MC_T4[0]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M3 MC_T4[1]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M3 MC_T4[2]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M3 PSI                                         1048708 comparisons, 0 mismatches
+DIFF map64 M4 T3=x^(2^3)                                    524360 comparisons, 0 mismatches
+DIFF map64 M4 T6=x^(2^6)                                    524360 comparisons, 0 mismatches
+DIFF map64 M4 T7=x^(2^7)                                    524360 comparisons, 0 mismatches
+DIFF map64 M4 T15=x^(2^15)                                  524360 comparisons, 0 mismatches
+DIFF map64 M4 T30=x^(2^30)                                  524360 comparisons, 0 mismatches
+DIFF map64 M4 T31=x^(2^31)                                  524360 comparisons, 0 mismatches
+DIFF map128 M4 MC_T3[0]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M4 MC_T3[1]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M4 MC_T4[0]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M4 MC_T4[1]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M4 MC_T4[2]                                    1048708 comparisons, 0 mismatches
+DIFF map128 M4 PSI                                         1048708 comparisons, 0 mismatches
+DIFF V1M1 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V1M1 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V1M1 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V1M1 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V1M1 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V1M1 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V2M1 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V2M1 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V2M1 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V2M1 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V2M1 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V2M1 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V3M1 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V3M1 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V3M1 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V3M1 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V3M1 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V3M1 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V4M1 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V4M1 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V4M1 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V4M1 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V4M1 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V4M1 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V1M2 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V1M2 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V1M2 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V1M2 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V1M2 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V1M2 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V2M2 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V2M2 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V2M2 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V2M2 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V2M2 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V2M2 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V3M2 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V3M2 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V3M2 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V3M2 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V3M2 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V3M2 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V4M2 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V4M2 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V4M2 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V4M2 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V4M2 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V4M2 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V1M3 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V1M3 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V1M3 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V1M3 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V1M3 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V1M3 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V2M3 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V2M3 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V2M3 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V2M3 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V2M3 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V2M3 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V3M3 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V3M3 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V3M3 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V3M3 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V3M3 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V3M3 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V4M3 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V4M3 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V4M3 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V4M3 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V4M3 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V4M3 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V1M4 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V1M4 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V1M4 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V1M4 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V1M4 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V1M4 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V2M4 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V2M4 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V2M4 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V2M4 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V2M4 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V2M4 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V3M4 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V3M4 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V3M4 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V3M4 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V3M4 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V3M4 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V4M4 gf64 inv                                          524296 comparisons, 0 mismatches
+DIFF V4M4 tower inv                                         524352 comparisons, 0 mismatches
+DIFF V4M4 forward R=3 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V4M4 forward R=3 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF V4M4 forward R=4 (ct, zero flag)                       524288 comparisons, 0 mismatches
+DIFF V4M4 forward R=4 zero at round 0                         1024 comparisons, 0 mismatches
+DIFF keygen path kg::forward R=3 (ct, zero flag)           4194304 comparisons, 0 mismatches
+DIFF keygen path kg::forward R=3 zero at round 0              4096 comparisons, 0 mismatches
+DIFF keygen path kg::forward R=4 (ct, zero flag)           4194304 comparisons, 0 mismatches
+DIFF keygen path kg::forward R=4 zero at round 0              4096 comparisons, 0 mismatches
+KEYGEN_CHOICE INV_CHAIN=V4 MAP_METHOD=M2
+RESULT PASS (0 mismatches in 88127464 comparisons, log2N=22)
+rc=0

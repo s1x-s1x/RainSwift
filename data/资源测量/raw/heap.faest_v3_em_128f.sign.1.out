@@ -1,0 +1,286 @@
+desc: --stacks=no --peak-inaccuracy=0.0 --massif-out-file=<HOME>/rain-bench-20261016/storage_test/raw/heap.faest_v3_em_128f.sign.1.out
+cmd: ../probe_faest_v3_em_128f sign
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=198553
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=199173
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=199712
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=detailed
+n2: 8664 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x48FDD54: _IO_file_doallocate (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+  n1: 8192 0x490DECF: _IO_doallocbuf (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+   n1: 8192 0x490B443: ??? (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+    n1: 8192 0x48FEEE2: fread (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+     n1: 8192 0x1018F5D: rd (probe.c:18)
+      n0: 8192 0x1018F5D: main (probe.c:43)
+ n1: 472 0x48FE92D: fopen (in /usr/lib/x86_64-linux-gnu/libc-2.31.so)
+  n1: 472 0x1018F38: rd (probe.c:16)
+   n0: 472 0x1018F38: main (probe.c:43)
+#-----------
+snapshot=4
+#-----------
+time=199712
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=199844
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=199891
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=200511
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=201050
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=201182
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=201229
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=201849
+mem_heap_B=8664
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=206626
+mem_heap_B=472
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=206758
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n1: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 0 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=217133
+mem_heap_B=73712
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=217197
+mem_heap_B=147440
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=217261
+mem_heap_B=147536
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=217325
+mem_heap_B=147696
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=217389
+mem_heap_B=159984
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=217453
+mem_heap_B=172272
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=217517
+mem_heap_B=172432
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=217760
+mem_heap_B=209296
+mem_heap_extra_B=96
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=2158639
+mem_heap_B=209296
+mem_heap_extra_B=96
+mem_stacks_B=0
+heap_tree=peak
+n6: 209296 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x101B65E: faest::vole_commit_data<faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true>, false>::alloc() (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+  n1: 73728 0x101B064: bool faest::faest_sign<faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true> >(unsigned char*, unsigned char const*, unsigned long, unsigned char const*, unsigned char const*, unsigned long) (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+   n1: 73728 0x1019443: crypto_sign (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+    n0: 73728 0x1019216: main (probe.c:48)
+ n1: 73712 0x101B641: faest::vole_commit_data<faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true>, false>::alloc() (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+  n1: 73712 0x101B064: bool faest::faest_sign<faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true> >(unsigned char*, unsigned char const*, unsigned long, unsigned char const*, unsigned char const*, unsigned long) (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+   n1: 73712 0x1019443: crypto_sign (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+    n0: 73712 0x1019216: main (probe.c:48)
+ n1: 36864 0x101C81F: void faest::detail::vole_commit_impl<faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true> >(faest::block<faest::secpar_to_bits(faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true>::secpar_v)>, faest::block<128ul>, faest::block<faest::secpar_to_bits(faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true>::secpar_v)>*, unsigned char*, faest::block<128ul>*, faest::block<128ul>*, unsigned char*, unsigned char*, unsigned char*) (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+  n1: 36864 0x101B7F7: void faest::crt_vole_commit<faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true> >(faest::block<faest::secpar_to_bits(faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true>::secpar_v)>, faest::block<128ul>, faest::vole_commit_data<faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true>, false> const&, std::__1::span<unsigned char, faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true>::CONSTS::VOLE_COMMIT_CORRECTIONS_SIZE>, std::__1::span<unsigned char, faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true>::CONSTS::VOLE_COMMIT_CHECK_SIZE>, std::__1::span<unsigned char, faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true>::CONSTS::CRT_CMULT_SIZE_BYTES>) requires faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true>::use_crt_vole_masks (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+   n1: 36864 0x101B0E2: bool faest::faest_sign<faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true> >(unsigned char*, unsigned char const*, unsigned long, unsigned char const*, unsigned char const*, unsigned long) (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+    n1: 36864 0x1019443: crypto_sign (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+     n0: 36864 0x1019216: main (probe.c:48)
+ n1: 12288 0x101B6AF: faest::vole_commit_data<faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true>, false>::alloc() (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+  n1: 12288 0x101B064: bool faest::faest_sign<faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true> >(unsigned char*, unsigned char const*, unsigned long, unsigned char const*, unsigned char const*, unsigned long) (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+   n1: 12288 0x1019443: crypto_sign (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+    n0: 12288 0x1019216: main (probe.c:48)
+ n1: 12288 0x101B6CA: faest::vole_commit_data<faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true>, false>::alloc() (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+  n1: 12288 0x101B064: bool faest::faest_sign<faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)565, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{(faest::bavc)1, 105ul}, true, true> >(unsigned char*, unsigned char const*, unsigned long, unsigned char const*, unsigned char const*, unsigned long) (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+   n1: 12288 0x1019443: crypto_sign (in <HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128f/probe_faest_v3_em_128f)
+    n0: 12288 0x1019216: main (probe.c:48)
+ n0: 416 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=23
+#-----------
+time=2158639
+mem_heap_B=172432
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=5105094
+mem_heap_B=98720
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=5105122
+mem_heap_B=24992
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=5105150
+mem_heap_B=24896
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=5105178
+mem_heap_B=12608
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=5105206
+mem_heap_B=320
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=5105234
+mem_heap_B=160
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=5105262
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty

@@ -1,3 +1,5 @@
+> 2026-10-22 数据更新：本文保留历史设计／审查语境；引用的早期 `.bench-*` 输出与旧验收日志已从当前文件树删除。当前实验数据见 [复赛数据快照](../../data/README.md)，按其批次和源码版本读取。
+
 > **U-03 implementation update, 2026-09-21:** fixed constant WOTS+ step material by introducing independently sampled public seeds, leaf/chain/step/role addresses and bitmasks. Public keys now authenticate `root || public_seed`. See [U-03](U03_WOTS_STEP_KEYS.md). This is a tested implementation correction, not a proof of the whole custom XMSS construction. State persistence/rollback remains open. The bench numbers in this file's older sections are historical; `.bench-out/` is regenerated on the merged revision (v7), and `.bench-u03/` holds the pre-merge record.
 
 # Security claims, assumptions, and gaps
@@ -445,18 +447,18 @@ cost decomposition and not a remote denial-of-service claim, and **no XMSS state
 cross-process reuse stays disabled until a monotonic counter source and its crash tests exist
 (gap 14).
 
-## Rain-VOLEitH in the post-quantum slot (added with the Rain-VOLEitH integration)
+## RainSwift in the post-quantum slot (added with the RainSwift integration)
 
-This copy adds Rain-VOLEitH as a post-quantum signer (`tls/pq/rain_voleith.py`, native code in
+This copy adds RainSwift as a post-quantum signer (`tls/pq/rain_voleith.py`, native code in
 `native/rain_voleith/`; `docs/RAIN_VOLEITH.md` describes the integration). Nothing in the handshake,
 the key schedule or the record layer changed, so C1-C6 and the gaps above apply unchanged; what
 changes is what stands behind the PQ half of C2.
 
 * **What C2 needs from the PQ slot** is EUF-CMA of the PQ signature, and the bound in
   `docs/REDUCTION.md` is the minimum of the two signature advantages: an attacker has to forge
-  ECDSA P-256 *and* Rain-VOLEitH over the same `M_CV`. If either assumption fails, the other still
+  ECDSA P-256 *and* RainSwift over the same `M_CV`. If either assumption fails, the other still
   carries server authentication.
-* **What Rain-VOLEitH offers there** is a classical EUF-CMA proof that is *conditional*: on the
+* **What RainSwift offers there** is a classical EUF-CMA proof that is *conditional*: on the
   random-oracle and ideal-cipher idealisations of the rFAEST framework it is built on, and on an
   explicit computational assumption about the Rain one-way function (finding any valid Rain
   preimage for a public key produced by the scheme's key generation is hard). This is the level at

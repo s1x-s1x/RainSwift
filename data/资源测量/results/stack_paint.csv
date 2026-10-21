@@ -1,0 +1,57 @@
+id,scheme,param_set,key,mode,run1,run2,run3,max_B,net_B
+1,Rain-3,快速档,rain3_fast,none,0,0,0,0,0
+1,Rain-3,快速档,rain3_fast,keygen,56,56,56,56,56
+1,Rain-3,快速档,rain3_fast,sign,6752,6736,6736,6752,6752
+1,Rain-3,快速档,rain3_fast,verify,5824,5840,5824,5840,5840
+2,Rain-3,均衡档,rain3_bal,none,0,0,0,0,0
+2,Rain-3,均衡档,rain3_bal,keygen,56,56,56,56,56
+2,Rain-3,均衡档,rain3_bal,sign,6752,6752,6736,6752,6752
+2,Rain-3,均衡档,rain3_bal,verify,5840,5840,5840,5840,5840
+3,Rain-3,短签名档,rain3_short,none,0,0,0,0,0
+3,Rain-3,短签名档,rain3_short,keygen,56,56,56,56,56
+3,Rain-3,短签名档,rain3_short,sign,6736,6736,6736,6736,6736
+3,Rain-3,短签名档,rain3_short,verify,5808,5792,5792,5808,5808
+4,Rain-4,快速档,rain4_fast,none,0,0,0,0,0
+4,Rain-4,快速档,rain4_fast,keygen,56,56,56,56,56
+4,Rain-4,快速档,rain4_fast,sign,6736,6736,6752,6752,6752
+4,Rain-4,快速档,rain4_fast,verify,5792,5808,5792,5808,5808
+5,Rain-4,均衡档,rain4_bal,none,0,0,0,0,0
+5,Rain-4,均衡档,rain4_bal,keygen,56,56,56,56,56
+5,Rain-4,均衡档,rain4_bal,sign,6752,6736,6752,6752,6752
+5,Rain-4,均衡档,rain4_bal,verify,5792,5792,5792,5792,5792
+6,Rain-4,短签名档,rain4_short,none,0,0,0,0,0
+6,Rain-4,短签名档,rain4_short,keygen,56,56,56,56,56
+6,Rain-4,短签名档,rain4_short,sign,6736,6752,6736,6752,6752
+6,Rain-4,短签名档,rain4_short,verify,5792,5808,5792,5808,5808
+7,rFAEST,EM-128f,rfaest_em_128f,none,0,0,0,0,0
+7,rFAEST,EM-128f,rfaest_em_128f,keygen,248,248,248,248,248
+7,rFAEST,EM-128f,rfaest_em_128f,sign,139120,139120,139120,139120,139120
+7,rFAEST,EM-128f,rfaest_em_128f,verify,130728,130744,130728,130744,130744
+8,rFAEST,EM-128s,rfaest_em_128s,none,0,0,0,0,0
+8,rFAEST,EM-128s,rfaest_em_128s,keygen,248,248,248,248,248
+8,rFAEST,EM-128s,rfaest_em_128s,sign,139120,139136,139136,139136,139136
+8,rFAEST,EM-128s,rfaest_em_128s,verify,130728,130728,130728,130728,130728
+10,FAEST v3,EM-128f,faest_v3_em_128f,none,0,0,0,0,0
+10,FAEST v3,EM-128f,faest_v3_em_128f,keygen,248,248,248,248,248
+10,FAEST v3,EM-128f,faest_v3_em_128f,sign,123568,123552,123568,123568,123568
+10,FAEST v3,EM-128f,faest_v3_em_128f,verify,118584,118568,118584,118584,118584
+11,FAEST v3,EM-128s,faest_v3_em_128s,none,0,0,0,0,0
+11,FAEST v3,EM-128s,faest_v3_em_128s,keygen,248,248,248,248,248
+11,FAEST v3,EM-128s,faest_v3_em_128s,sign,123568,123552,123568,123568,123568
+11,FAEST v3,EM-128s,faest_v3_em_128s,verify,118584,118568,118568,118584,118584
+22,MandaRain,3-128f,mandarain_3_128f,none,0,0,0,0,0
+22,MandaRain,3-128f,mandarain_3_128f,keygen,1576,1576,1576,1576,1576
+22,MandaRain,3-128f,mandarain_3_128f,sign,20376,20360,20360,20376,20376
+22,MandaRain,3-128f,mandarain_3_128f,verify,19840,19856,19856,19856,19856
+23,MandaRain,3-128s,mandarain_3_128s,none,0,0,0,0,0
+23,MandaRain,3-128s,mandarain_3_128s,keygen,1608,1624,1576,1624,1624
+23,MandaRain,3-128s,mandarain_3_128s,sign,49808,49792,49792,49808,49808
+23,MandaRain,3-128s,mandarain_3_128s,verify,49400,49448,49448,49448,49448
+24,MandaRain,4-128f,mandarain_4_128f,none,0,0,0,0,0
+24,MandaRain,4-128f,mandarain_4_128f,keygen,1608,1624,1576,1624,1624
+24,MandaRain,4-128f,mandarain_4_128f,sign,20400,20384,20384,20400,20400
+24,MandaRain,4-128f,mandarain_4_128f,verify,19920,19920,19904,19920,19920
+25,MandaRain,4-128s,mandarain_4_128s,none,0,0,0,0,0
+25,MandaRain,4-128s,mandarain_4_128s,keygen,1592,1592,1592,1592,1592
+25,MandaRain,4-128s,mandarain_4_128s,sign,49808,49792,49792,49808,49808
+25,MandaRain,4-128s,mandarain_4_128s,verify,49432,49432,49480,49480,49480

@@ -13,3 +13,10 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 build/
+# Local measurements are generated on demand; published snapshots live in /data.
+.bench-out/
+.bench-u03/
+.bench-lifecycle/
+.bench-lifecycle-quick/
+validation/*
+!validation/README.md

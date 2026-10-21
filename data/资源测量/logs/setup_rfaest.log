@@ -1,0 +1,43 @@
+The Meson build system
+Version: 1.12.1
+Source dir: <HOME>/rain-bench-20261016/q5/work/rfaest
+Build dir: <HOME>/rain-bench-20261016/storage_test/build/rfaest
+Build type: native build
+Project name: faest
+Project version: 0.1.0
+C compiler for the host machine: <HOME>/rain-bench-20261016/工具/bin/zig-cc (clang 18.1.6 "clang version 18.1.6 (https://github.com/ziglang/zig-bootstrap 98bc6bf4fc4009888d33941daf6b600d20a42a56)")
+C linker for the host machine: <HOME>/rain-bench-20261016/工具/bin/zig-cc ld.bfd 2.40
+C++ compiler for the host machine: <HOME>/rain-bench-20261016/工具/bin/zig-c++ (clang 18.1.6 "clang version 18.1.6 (https://github.com/ziglang/zig-bootstrap 98bc6bf4fc4009888d33941daf6b600d20a42a56)")
+C++ linker for the host machine: <HOME>/rain-bench-20261016/工具/bin/zig-c++ ld.bfd 2.40
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+
+Executing subproject xkcp for machine: host 
+
+xkcp| Project name: xkcp
+xkcp| Project version: undefined
+xkcp| C compiler for the host machine: <HOME>/rain-bench-20261016/工具/bin/zig-cc (clang 18.1.6 "clang version 18.1.6 (https://github.com/ziglang/zig-bootstrap 98bc6bf4fc4009888d33941daf6b600d20a42a56)")
+xkcp| C linker for the host machine: <HOME>/rain-bench-20261016/工具/bin/zig-cc ld.bfd 2.40
+xkcp| Build targets in project: 1
+xkcp| Subproject xkcp finished.
+
+Program python3 found: YES (<HOME>/rain-bench-20261016/env/bin/python3)
+Build targets in project: 8
+
+faest 0.1.0
+
+  Subprojects (for host machine)
+    xkcp        : YES
+
+  User defined options
+    b_lto       : false
+    b_ndebug    : true
+    buildtype   : release
+    c_args      : -march=x86_64_v3 -maes -mpclmul -g0
+    c_std       : c23
+    cpp_args    : -march=x86_64_v3 -maes -mpclmul -g0 -Wno-psabi
+    cpp_std     : c++23
+    optimization: 3
+    wrap_mode   : nodownload
+
+Found ninja-1.13.2 at <HOME>/rain-bench-20261016/env/bin/ninja

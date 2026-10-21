@@ -9,8 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build image
-        run: docker build -t rain-voleith .
+        run: docker build -t rainswift .
       - name: T1-T8 and signature KATs
-        run: docker run --rm rain-voleith bash verify.sh
+        run: docker run --rm rainswift bash verify.sh
       - name: Usage example
-        run: docker run --rm rain-voleith ./build/sign_demo
+        run: docker run --rm rainswift ./build/sign_demo

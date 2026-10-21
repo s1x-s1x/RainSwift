@@ -1,0 +1,312 @@
+{
+  "status": "PASS",
+  "implementations": 38,
+  "nonwarmup_samples": 57114,
+  "raw_files": 342,
+  "checks": [
+    {
+      "key": "3f",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "3b",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "3s",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "4f",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "4b",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "4s",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "rff",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "rfs",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "lyn",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "f3f",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "f3s",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "f3af",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "f3as",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "f2af",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "f2as",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "f2ef",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "f2es",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "fsf",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "fss",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "fsef",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "fses",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "md3f",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "md3s",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "md4f",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "md4s",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "kq1f",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "kq1s",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "kq8f",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "kq8s",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "bn3f",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "bn3s",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "bn4f",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "rr3f",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "rr3s",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "rr4f",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "rr4s",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "am21f",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    },
+    {
+      "key": "am21s",
+      "sample_count": 1503,
+      "source_files": 9,
+      "metadata_and_lengths": "PASS",
+      "raw_quartiles_and_median": "PASS",
+      "return_codes_and_validity": "PASS"
+    }
+  ]
+}

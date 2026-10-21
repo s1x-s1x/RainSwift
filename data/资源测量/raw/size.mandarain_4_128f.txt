@@ -1,0 +1,387 @@
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/aes_impl.o  :
+section               size   addr
+.text                31410      0
+.data                    0      0
+.bss                     0      0
+.rodata.cst16           96      0
+.comment                40      0
+.note.GNU-stack          0      0
+.note.gnu.property      48      0
+.eh_frame             1520      0
+Total                33114
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/aes.o  :
+section               size   addr
+.text                21205      0
+.data                   14      0
+.bss                     0      0
+.rodata                384      0
+.rodata.cst16           48      0
+.comment                40      0
+.note.GNU-stack          0      0
+.note.gnu.property      48      0
+.eh_frame              480      0
+Total                22219
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/api.o  :
+section              size   addr
+.text                 263      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             184      0
+Total                 535
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/block_impl.o  :
+section              size   addr
+.text                4710      0
+.data                   0      0
+.bss                    0      0
+.rodata.cst32         352      0
+.rodata.cst16         160      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame            1320      0
+Total                6630
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/block.o  :
+section              size   addr
+.text                 453      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             408      0
+Total                 949
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/faest.o  :
+section              size   addr
+.text                3808      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             424      0
+Total                4320
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/hash.o  :
+section              size   addr
+.text                1488      0
+.data                   0      0
+.bss                    0      0
+.rodata.cst32          32      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             456      0
+Total                2064
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/KeccakHash.o  :
+section              size   addr
+.text                 329      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             216      0
+Total                 633
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/KeccakHashtimes4.o  :
+section              size   addr
+.text                 201      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             160      0
+Total                 449
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/KeccakP-1600-AVX2.o  :
+section   size   addr
+.text   5048      0
+.data      0      0
+.bss       0      0
+Total   5048
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/KeccakP-1600-times2-SIMD128.o  :
+section               size   addr
+.text                16829      0
+.data                    0      0
+.bss                     0      0
+.rodata                192      0
+.rodata.cst16           32      0
+.comment                40      0
+.note.GNU-stack          0      0
+.note.gnu.property      48      0
+.eh_frame              536      0
+Total                17677
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/KeccakP-1600-times4-SIMD256.o  :
+section                size   addr
+.text                100534      0
+.data                     0      0
+.bss                      0      0
+.rodata                 192      0
+.rodata.cst32            64      0
+.rodata.cst8              8      0
+.comment                 40      0
+.note.GNU-stack           0      0
+.note.gnu.property       48      0
+.eh_frame               664      0
+Total                101550
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/KeccakP-1600-times8-on4.o  :
+section              size   addr
+.text                 693      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             536      0
+Total                1317
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/KeccakSponge.o  :
+section              size   addr
+.text                2807      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             704      0
+Total                3599
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/KeccakSpongetimes4.o  :
+section              size   addr
+.text                1288      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             216      0
+Total                1592
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/mq.o  :
+section              size   addr
+.text                   0      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+Total                  88
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/owf_proof.o  :
+section              size   addr
+.text                7757      0
+.data                   0      0
+.bss                    0      0
+.rodata.cst16          16      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             216      0
+Total                8077
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/polynomials_impl.o  :
+section               size   addr
+.text                12927      0
+.data                    0      0
+.bss                     0      0
+.comment                40      0
+.note.GNU-stack          0      0
+.note.gnu.property      48      0
+.eh_frame             2808      0
+Total                15823
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/polynomials.o  :
+section               size   addr
+.text                 3599      0
+.data                    0      0
+.bss                     0      0
+.rodata              16528      0
+.rodata.cst16           80      0
+.comment                40      0
+.note.GNU-stack          0      0
+.note.gnu.property      48      0
+.eh_frame              800      0
+Total                21095
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/prgs.o  :
+section              size   addr
+.text                   1      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame              48      0
+Total                 137
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/quicksilver.o  :
+section              size   addr
+.text                6816      0
+.data                   0      0
+.bss                    0      0
+.rodata.cst16          16      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             880      0
+Total                7800
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/rain_impl.o  :
+section              size   addr
+.text                 694      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame              80      0
+Total                 862
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/rain.o  :
+section              size   addr
+.text                 334      0
+.data                   0      0
+.bss                    0      0
+.rodata              6208      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             104      0
+Total                6734
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/randomness_os.o  :
+section              size   addr
+.text                  36      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame              56      0
+Total                 180
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/small_vole.o  :
+section              size   addr
+.text                4829      0
+.data                   0      0
+.bss                    0      0
+.rodata.cst16          16      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             240      0
+Total                5173
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/transpose.o  :
+section              size   addr
+.text                2851      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame              80      0
+Total                3019
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/universal_hash.o  :
+section              size   addr
+.text                 853      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             304      0
+Total                1245
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/util.o  :
+section              size   addr
+.text                 180      0
+.data                   0      0
+.bss                    0      0
+.rodata.str1.1         10      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             128      0
+Total                 406
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/vector_com.o  :
+section               size   addr
+.text                 9723      0
+.data                    0      0
+.bss                     0      0
+.rodata.cst16           16      0
+.rodata.cst32           64      0
+.comment                40      0
+.note.GNU-stack          0      0
+.note.gnu.property      48      0
+.eh_frame              736      0
+Total                10627
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/vole_check.o  :
+section              size   addr
+.text                2099      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             128      0
+Total                2315
+
+
+<HOME>/rain-bench-20261016/源码/faest-one-tree/Additional_Implementations/sec128_r4ccs_16_8_110_avx2/vole_commit.o  :
+section              size   addr
+.text                1669      0
+.data                   0      0
+.bss                    0      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             224      0
+Total                1981
+
+

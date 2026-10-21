@@ -81,11 +81,11 @@ Three states, and the difference matters when a paper is written:
 * any absolute handshake-size or latency claim without naming the profile and saying that the
   modelled certificate is a research shape, not a deployment one.
 
-## Rain-VOLEitH backend (added with the Rain-VOLEitH integration)
+## RainSwift backend (added with the RainSwift integration)
 
 | Area | State | Evidence / reason |
 |---|---|---|
-| Rain-VOLEitH as `pq_signer` (six sets, `0xFEB0`-`0xFEB5`), modelled certificate and X.509 chain | implemented and verified | `tests/test_rain_voleith.py` (60 tests: sizes, code points, published KATs, round trips, malformed input, key binding, missing library, handshakes in both certificate modes, the tamper matrix, rewritten PQ fields, a client/server scheme mismatch); the six Rain profiles also run in `tests/test_handshake.py`'s parametrized end-to-end test |
+| RainSwift as `pq_signer` (six sets, `0xFEB0`-`0xFEB5`), modelled certificate and X.509 chain | implemented and verified | `tests/test_rain_voleith.py` (60 tests: sizes, code points, published KATs, round trips, malformed input, key binding, missing library, handshakes in both certificate modes, the tamper matrix, rewritten PQ fields, a client/server scheme mismatch); the six Rain profiles also run in `tests/test_handshake.py`'s parametrized end-to-end test |
 | Native library = the KAT-checked signature code | implemented and verified | the Windows DLL reproduces the six published signature KATs byte for byte and the key-generation KATs (`tools/rain_voleith_kat_gate.py`, run by the repository's Windows CI on every push); the published signature KATs are in `tests/vectors/rain_voleith/` |
 | Fail-closed loading | implemented and verified | a missing library, another interface version or a processor without x86-64-v3/AES-NI/PCLMULQDQ raises `BackendUnavailableError`; there is no Python fallback (`test_rain_voleith_missing_library_fails_closed`) |
 | Random-source failure | implemented and verified | outputs wiped and an error returned; exercised by `tools/rain_voleith_kat_gate.py` through the test build of the DLL (`build.py --test-hooks`), which the TLS stack never loads |

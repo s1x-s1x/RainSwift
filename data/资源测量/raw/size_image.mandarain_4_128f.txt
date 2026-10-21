@@ -1,0 +1,32 @@
+<HOME>/rain-bench-20261016/storage_test/impls/mandarain_4_128f/probe_mandarain_4_128f  :
+section                   size     addr
+.interp                     28      680
+.hash                      160      712
+.gnu.hash                   40      872
+.dynsym                    504      912
+.dynstr                    325     1416
+.gnu.version                42     1742
+.gnu.version_r              64     1784
+.rela.dyn                  216     1848
+.rela.plt                  336     2064
+.init                       27     4096
+.plt                       240     4128
+.plt.got                     8     4368
+.text                   191621     4416
+.fini                       13   196040
+.rodata                  23904   196608
+.eh_frame_hdr             2276   220512
+.eh_frame                 8752   222792
+.note.ABI-tag               32   231544
+.init_array                  8   236944
+.fini_array                  8   236952
+.dynamic                   544   236960
+.got                        40   237504
+.got.plt                   136   237544
+.data                       22   237680
+.bss                      8096   237728
+.comment                    84        0
+.gnu.build.attributes      944   254016
+Total                   238470
+
+

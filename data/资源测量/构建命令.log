@@ -1,0 +1,73 @@
+存储需求测试 — 实际运行命令记录
+工作目录（服务器）：<HOME>/rain-bench-20261016/storage_test
+（交付包内已脱敏为 <HOME>）
+
+== 0. 工具链 ==
+valgrind 由 conda-forge 安装到项目环境：
+  conda install -p env --override-channels -c conda-forge valgrind -y
+版本：valgrind-3.27.1；zig 0.13.0；conda GCC 14.4.0；GNU time 1.7。
+
+== 1. 配置与构建模板树（Rain / rFAEST / FAEST v3）==
+bash scripts/build_storage.sh setup
+  meson setup build/<tree> <src> --buildtype=release --wrap-mode=nodownload \
+    -Db_ndebug=true -Db_lto=false -Doptimization=3 -Dc_std=c23 -Dcpp_std=c++23 \
+    '-Dc_args=-march=x86_64_v3 -maes -mpclmul -g0' \
+    '-Dcpp_args=-march=x86_64_v3 -maes -mpclmul -g0 -Wno-psabi'
+  CC=zig-cc CXX=zig-c++
+
+bash scripts/build_storage.sh libs
+  ninja -j 12 libfaest.a librandomness_os.a subprojects/xkcp/libxkcp.a
+
+== 2. 构建 one-tree（MandaRain 4 个 setting）==
+bash scripts/build_storage.sh onetree
+  cd <faest-one-tree>
+  COMMON_LD_FLAGS="-O2 -march=x86-64-v3 -maes -mpclmul -DNDEBUG" \
+    make -j 8 CC=<conda-gcc> CXX=<conda-g++> <setting>
+  setting: sec128_r3ccs_16_8_108_avx2 / sec128_r3ccs_11_7_100_avx2 /
+           sec128_r4ccs_16_8_110_avx2 / sec128_r4ccs_11_7_101_avx2
+  （先删除各自的 *.o/*.d，避免复用旧的 native 构建产物）
+
+== 3. 构建 14 个探针 ==
+bash scripts/build_storage.sh all
+  每个实现：
+  - 由 api.h.in / api.cpp.in 生成本参数集的 NIST API（scripts/gen_api.py）
+  - probe.c + rand_wrap.c 编译
+  - 链接：-Wl,--gc-sections，模板树用 zig c++，one-tree 用 conda g++
+  - 验证：probe_<key> gen 后依次运行 none/keygen/sign/verify，全部返回 0
+
+== 4. 测量（每实现 × 模式 × 3 次）==
+REPEAT=3 bash scripts/measure_storage.sh all
+  valgrind --tool=massif --stacks=no --peak-inaccuracy=0.0 \
+    --massif-out-file=raw/heap.<key>.<mode>.<r>.out <probe> <mode>
+  valgrind --tool=massif --heap=no --stacks=yes --peak-inaccuracy=0.0 \
+    --massif-out-file=raw/stack.<key>.<mode>.<r>.out <probe> <mode>
+  /usr/bin/time -v <probe> <mode> 2> raw/time.<key>.<mode>.<r>.txt
+  /usr/bin/size -A <objects/libraries> > raw/size.<key>.txt
+  /usr/bin/size -A <probe> > raw/size_image.<key>.txt
+  /usr/bin/size -A <probe.o> [rand_wrap.o] > raw/size_probeobjs.<key>.txt
+  /usr/bin/size -A <empty> > raw/size_empty.<key>.txt
+
+== 4.1 M3 栈涂抹补测 ==
+bash scripts/build_stack_probes.sh all
+  # 每实现另编 probe_stack_<key>（probe_stack.c；不参与 M5）
+bash scripts/measure_stack.sh
+  # 每实现 × none/keygen/sign/verify × 3 次，原生运行
+python3 scripts/collect_stack.py
+  # results/stack_paint.csv / stack_paint_wide.csv / stack_paint_vs_massif.csv
+
+== 5. 汇总 ==
+python3 scripts/collect.py        # storage_results.csv / baseline_none.csv / m5 对照
+python3 scripts/make_summary.py   # summary.md / storage_results_pivot.csv
+
+== 5.1 完整编译选项记录 ==
+python3 scripts/make_flags.py
+  生成 build_flags/<key>.txt：编译器版本、ninja -t commands 的实际编译命令、
+  NIST 包装/探针/链接命令；one-tree 含实测编译命令与作者 bench 链接命令（仅记录 flags）。
+
+== 6. 关键结果位置 ==
+results/storage_results.csv
+results/storage_results_pivot.csv
+results/summary.md
+raw/（168 个 heap、168 个 stack、168 个 time、168 个 stackpaint、全部 size 输出）
+logs/（构建与测量日志、m1_check.txt、stackpaint_failures.txt；failures.txt 不存在 = 无失败）
+build_flags/（14 份完整编译命令记录）

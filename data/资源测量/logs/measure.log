@@ -1,0 +1,29 @@
+[2026-10-18T07:51:18Z] size -A rain3_fast
+[2026-10-18T07:51:25Z] measured rain3_fast
+[2026-10-18T07:51:25Z] size -A rain3_bal
+[2026-10-18T07:51:32Z] measured rain3_bal
+[2026-10-18T07:51:32Z] size -A rain3_short
+[2026-10-18T07:51:41Z] measured rain3_short
+[2026-10-18T07:51:41Z] size -A rain4_fast
+[2026-10-18T07:51:47Z] measured rain4_fast
+[2026-10-18T07:51:48Z] size -A rain4_bal
+[2026-10-18T07:51:54Z] measured rain4_bal
+[2026-10-18T07:51:54Z] size -A rain4_short
+[2026-10-18T07:52:03Z] measured rain4_short
+[2026-10-18T07:52:03Z] size -A rfaest_em_128f
+[2026-10-18T07:52:11Z] measured rfaest_em_128f
+[2026-10-18T07:52:12Z] size -A rfaest_em_128s
+[2026-10-18T07:52:23Z] measured rfaest_em_128s
+[2026-10-18T07:52:23Z] size -A faest_v3_em_128f
+[2026-10-18T07:52:32Z] measured faest_v3_em_128f
+[2026-10-18T07:52:32Z] size -A faest_v3_em_128s
+[2026-10-18T07:52:44Z] measured faest_v3_em_128s
+[2026-10-18T07:52:44Z] size -A mandarain_3_128f
+[2026-10-18T07:52:53Z] measured mandarain_3_128f
+[2026-10-18T07:52:53Z] size -A mandarain_3_128s
+[2026-10-18T07:53:07Z] measured mandarain_3_128s
+[2026-10-18T07:53:07Z] size -A mandarain_4_128f
+[2026-10-18T07:53:16Z] measured mandarain_4_128f
+[2026-10-18T07:53:16Z] size -A mandarain_4_128s
+[2026-10-18T07:53:30Z] measured mandarain_4_128s
+MEASURE_STORAGE_DONE

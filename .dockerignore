@@ -3,3 +3,4 @@ build*/
 src/subprojects/xkcp/
 src/subprojects/packagecache/
 tls/
+data/

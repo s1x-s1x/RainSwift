@@ -1,0 +1,112 @@
+{
+  "schema": "a15-local-digest-native-v1",
+  "passed": true,
+  "pid": 201,
+  "scope": "Real native API equivalence and negative validation, toy parameter only",
+  "library_sha256": "b66ecc3bc57db3f2d2337d37e88503763b64d6c4a128632c711f8b8720284f69",
+  "library_unchanged": true,
+  "signing_calls": 20,
+  "formal_performance_samples": 0,
+  "rows": [
+    {
+      "backend_requested": 1,
+      "backend_actual": 1,
+      "algorithm": "sha256",
+      "digest_bytes": 32,
+      "prehash_digest_equal": true,
+      "verified": true,
+      "changed_digest_rejected": true,
+      "changed_context_rejected": true
+    },
+    {
+      "backend_requested": 1,
+      "backend_actual": 1,
+      "algorithm": "sha512",
+      "digest_bytes": 64,
+      "prehash_digest_equal": true,
+      "verified": true,
+      "changed_digest_rejected": true,
+      "changed_context_rejected": true
+    },
+    {
+      "backend_requested": 1,
+      "backend_actual": 1,
+      "algorithm": "shake128",
+      "digest_bytes": 32,
+      "prehash_digest_equal": true,
+      "verified": true,
+      "changed_digest_rejected": true,
+      "changed_context_rejected": true
+    },
+    {
+      "backend_requested": 1,
+      "backend_actual": 1,
+      "algorithm": "shake256",
+      "digest_bytes": 64,
+      "prehash_digest_equal": true,
+      "verified": true,
+      "changed_digest_rejected": true,
+      "changed_context_rejected": true
+    },
+    {
+      "backend_requested": 1,
+      "backend_actual": 1,
+      "algorithm": "sm3",
+      "digest_bytes": 32,
+      "prehash_digest_equal": true,
+      "verified": true,
+      "changed_digest_rejected": true,
+      "changed_context_rejected": true
+    },
+    {
+      "backend_requested": 2,
+      "backend_actual": 2,
+      "algorithm": "sha256",
+      "digest_bytes": 32,
+      "prehash_digest_equal": true,
+      "verified": true,
+      "changed_digest_rejected": true,
+      "changed_context_rejected": true
+    },
+    {
+      "backend_requested": 2,
+      "backend_actual": 2,
+      "algorithm": "sha512",
+      "digest_bytes": 64,
+      "prehash_digest_equal": true,
+      "verified": true,
+      "changed_digest_rejected": true,
+      "changed_context_rejected": true
+    },
+    {
+      "backend_requested": 2,
+      "backend_actual": 2,
+      "algorithm": "shake128",
+      "digest_bytes": 32,
+      "prehash_digest_equal": true,
+      "verified": true,
+      "changed_digest_rejected": true,
+      "changed_context_rejected": true
+    },
+    {
+      "backend_requested": 2,
+      "backend_actual": 2,
+      "algorithm": "shake256",
+      "digest_bytes": 64,
+      "prehash_digest_equal": true,
+      "verified": true,
+      "changed_digest_rejected": true,
+      "changed_context_rejected": true
+    },
+    {
+      "backend_requested": 2,
+      "backend_actual": 2,
+      "algorithm": "sm3",
+      "digest_bytes": 32,
+      "prehash_digest_equal": true,
+      "verified": true,
+      "changed_digest_rejected": true,
+      "changed_context_rejected": true
+    }
+  ]
+}

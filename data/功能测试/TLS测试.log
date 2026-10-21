@@ -1,0 +1,20 @@
+........................................................................ [ 13%]
+........................................................................ [ 26%]
+........................................................................ [ 40%]
+........................................................................ [ 53%]
+.................................sssssssssssssssssssssssssssssssssssssss [ 67%]
+sssssssssssssssssssss................................................... [ 80%]
+........................................................................ [ 94%]
+..........................s.....                                         [100%]
+=========================== short test summary info ===========================
+SKIPPED [6] tests\test_rain_voleith.py:77: Rain-VOLEitH needs its native library: native/rain_voleith/build.py or RAIN_VOLEITH_LIB
+SKIPPED [8] tests\test_rain_voleith.py: Rain-VOLEitH needs its native library: native/rain_voleith/build.py or RAIN_VOLEITH_LIB
+SKIPPED [6] tests\test_rain_voleith.py:95: Rain-VOLEitH needs its native library: native/rain_voleith/build.py or RAIN_VOLEITH_LIB
+SKIPPED [6] tests\test_rain_voleith.py:102: Rain-VOLEitH needs its native library: native/rain_voleith/build.py or RAIN_VOLEITH_LIB
+SKIPPED [6] tests\test_rain_voleith.py:113: Rain-VOLEitH needs its native library: native/rain_voleith/build.py or RAIN_VOLEITH_LIB
+SKIPPED [8] tests\test_rain_voleith.py:130: Rain-VOLEitH needs its native library: native/rain_voleith/build.py or RAIN_VOLEITH_LIB
+SKIPPED [12] tests\test_rain_voleith.py:181: Rain-VOLEitH needs its native library: native/rain_voleith/build.py or RAIN_VOLEITH_LIB
+SKIPPED [4] tests\test_rain_voleith.py:196: Rain-VOLEitH needs its native library: native/rain_voleith/build.py or RAIN_VOLEITH_LIB
+SKIPPED [4] tests\test_rain_voleith.py:223: Rain-VOLEitH needs its native library: native/rain_voleith/build.py or RAIN_VOLEITH_LIB
+SKIPPED [1] tests\test_x509.py:136: falcon-512 needs the Falcon provider: tools/install_falcon_provider.ps1
+475 passed, 61 skipped in 48.85s

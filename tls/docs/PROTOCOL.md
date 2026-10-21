@@ -1,3 +1,5 @@
+> 2026-10-22 数据更新：本文保留历史设计／审查语境；引用的早期 `.bench-*` 输出与旧验收日志已从当前文件树删除。当前实验数据见 [复赛数据快照](../../data/README.md)，按其批次和源码版本读取。
+
 # Wire protocol specification
 
 Byte-exact description of what `hybrid-tls13` puts on the wire, as implemented.
@@ -55,7 +57,7 @@ algorithms fail on the first flight rather than deriving different secrets silen
 | PQ signature | `ml-dsa-44/65/87` | `0x0904` / `0x0905` / `0x0906` |
 | PQ signature | `falcon-512/1024`, padded variants | `0x0F51` / `0x0F52` / `0x0F53` / `0x0F54` |
 | PQ signature | `xmss-sha256-hH-wW` (U-03 v2) | `0xFE00 + H` |
-| PQ signature | `rain3-fast/bal/short`, `rain4-fast/bal/short` (Rain-VOLEitH) | `0xFEB0`–`0xFEB5` |
+| PQ signature | `rain3-fast/bal/short`, `rain4-fast/bal/short` (RainSwift) | `0xFEB0`–`0xFEB5` |
 
 ## 3. ClientHello (type 1)
 
@@ -210,7 +212,7 @@ The classical-only field is `2 + 2 + |sig_PQ|` = **661 bytes** for Falcon-512. F
 signatures are variable-length within an encoding maximum, so this is measured per
 handshake, not fixed.
 
-With Rain-VOLEitH in the post-quantum slot the field has a fixed length,
+With RainSwift in the post-quantum slot the field has a fixed length,
 `2 + 2 + |sig_PQ|` = 4150 / 3710 / 3018 bytes for `rain3-fast/bal/short` and
 4116 / 4084 / 3194 bytes for `rain4-fast/bal/short` (signatures of 4146 / 3706 / 3014 and
 4112 / 4080 / 3190 bytes), and the public key carried by the certificate is 32 bytes. The

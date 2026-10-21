@@ -1,0 +1,16 @@
+[2026-10-18T07:38:16Z] ninja rain
+   33 | #define FAEST_ASSERT(x) [[assume(x)]]
+      |                           ^~~~~~
+14 warnings generated.
+[4/4] Linking static target libfaest.a
+[2026-10-18T07:40:56Z] ninja rfaest
+   33 | #define FAEST_ASSERT(x) [[assume(x)]]
+      |                           ^~~~~~
+14 warnings generated.
+[18/18] Linking static target libfaest.a
+[2026-10-18T07:43:11Z] ninja faest
+   34 | #define FAEST_ASSERT(x) [[assume(x)]]
+      |                           ^~~~~~
+18 warnings generated.
+[56/56] Linking static target libfaest.a
+BUILD_STORAGE_DONE

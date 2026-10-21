@@ -1,0 +1,63 @@
+rain_q2_test: B1 (RAIN_SHRUNK_KEYSPACE) = 0, T6 roundtrips per set = 1000
+T1 rain3_fast   VOLE_ROWS=688 (=128*3+256+8*6) SIG=4146 B (frozen 4146) pk=32 sk=32 OWF_NUM_CONSTRAINTS=3
+T2 rain3_fast   3 sigs | Q=V^Delta*u mismatches: witness[0,384)=0 qs_mask[384,512)=0 vhash_mask[512,688)=0 last_row=0 | padding rows [688,768) mismatching bits=6588 (ignored by all computations)
+T3 rain3_fast   zero first S-box input (k = pt xor rc_t(0)) rejected 4/4
+T4 rain3_fast   keygen retry: script of 2 candidates consumed, returned sk = last candidate: 1, sign/verify: 1
+T5 rain3_fast   byte flips (0x01,0x80 at all 4146 bytes): accepted 0/8292 | truncate-1 rejected 1 | extend+1 rejected 1 | other msg 1 | other pk 1 | other set (rain3_bal) 1
+T6 rain3_fast   roundtrip 1000/1000 | same message signed twice -> different valid signatures 50/50
+T7 rain3_fast   Q1 Rain KAT (pk, witness, reject case) 11/11
+T7 rain3_fast   signature KAT written to out/q2_retest_kat_b0/sigkat_rain3_fast.txt (reproducible=1, verifies=1)
+T8 rain3_fast   same pt, different k, same mu and rho -> (r, iv_pre) differ: 1 | unpacked sk.sk == packed k (bytes 16..32), != pt: 1
+BENCH rain3_fast   owf_constraints only, median of 2001: prover 2004 ns / 5516 TSC ticks (1839 per round) | verifier 1593 ns / 4340 TSC ticks (1447 per round) | model: ~10000 cycles per round (TSC ticks are not core cycles when frequency scaling is active)
+T1 rain3_bal    VOLE_ROWS=688 (=128*3+256+8*6) SIG=3706 B (frozen 3706) pk=32 sk=32 OWF_NUM_CONSTRAINTS=3
+T2 rain3_bal    3 sigs | Q=V^Delta*u mismatches: witness[0,384)=0 qs_mask[384,512)=0 vhash_mask[512,688)=0 last_row=0 | padding rows [688,768) mismatching bits=6357 (ignored by all computations)
+T3 rain3_bal    zero first S-box input (k = pt xor rc_t(0)) rejected 4/4
+T4 rain3_bal    keygen retry: script of 2 candidates consumed, returned sk = last candidate: 1, sign/verify: 1
+T5 rain3_bal    byte flips (0x01,0x80 at all 3706 bytes): accepted 0/7412 | truncate-1 rejected 1 | extend+1 rejected 1 | other msg 1 | other pk 1 | other set (rain3_short) 1
+T6 rain3_bal    roundtrip 1000/1000 | same message signed twice -> different valid signatures 50/50
+T7 rain3_bal    Q1 Rain KAT (pk, witness, reject case) 11/11
+T7 rain3_bal    signature KAT written to out/q2_retest_kat_b0/sigkat_rain3_bal.txt (reproducible=1, verifies=1)
+T8 rain3_bal    same pt, different k, same mu and rho -> (r, iv_pre) differ: 1 | unpacked sk.sk == packed k (bytes 16..32), != pt: 1
+BENCH rain3_bal    owf_constraints only, median of 2001: prover 2004 ns / 5516 TSC ticks (1839 per round) | verifier 1573 ns / 4312 TSC ticks (1437 per round) | model: ~10000 cycles per round (TSC ticks are not core cycles when frequency scaling is active)
+T1 rain3_short  VOLE_ROWS=688 (=128*3+256+8*6) SIG=3014 B (frozen 3014) pk=32 sk=32 OWF_NUM_CONSTRAINTS=3
+T2 rain3_short  3 sigs | Q=V^Delta*u mismatches: witness[0,384)=0 qs_mask[384,512)=0 vhash_mask[512,688)=0 last_row=0 | padding rows [688,768) mismatching bits=6236 (ignored by all computations)
+T3 rain3_short  zero first S-box input (k = pt xor rc_t(0)) rejected 4/4
+T4 rain3_short  keygen retry: script of 2 candidates consumed, returned sk = last candidate: 1, sign/verify: 1
+T5 rain3_short  byte flips (0x01,0x80 at all 3014 bytes): accepted 0/6028 | truncate-1 rejected 1 | extend+1 rejected 1 | other msg 1 | other pk 1 | other set (rain4_short) 1
+T6 rain3_short  roundtrip 1000/1000 | same message signed twice -> different valid signatures 50/50
+T7 rain3_short  Q1 Rain KAT (pk, witness, reject case) 11/11
+T7 rain3_short  signature KAT written to out/q2_retest_kat_b0/sigkat_rain3_short.txt (reproducible=1, verifies=1)
+T8 rain3_short  same pt, different k, same mu and rho -> (r, iv_pre) differ: 1 | unpacked sk.sk == packed k (bytes 16..32), != pt: 1
+BENCH rain3_short  owf_constraints only, median of 2001: prover 2003 ns / 5488 TSC ticks (1829 per round) | verifier 1583 ns / 4340 TSC ticks (1447 per round) | model: ~10000 cycles per round (TSC ticks are not core cycles when frequency scaling is active)
+T1 rain4_fast   VOLE_ROWS=816 (=128*4+256+8*6) SIG=4112 B (frozen 4112) pk=32 sk=32 OWF_NUM_CONSTRAINTS=4
+T2 rain4_fast   3 sigs | Q=V^Delta*u mismatches: witness[0,512)=0 qs_mask[512,640)=0 vhash_mask[640,816)=0 last_row=0 | padding rows [816,896) mismatching bits=7016 (ignored by all computations)
+T3 rain4_fast   zero first S-box input (k = pt xor rc_t(0)) rejected 4/4
+T4 rain4_fast   keygen retry: script of 2 candidates consumed, returned sk = last candidate: 1, sign/verify: 1
+T5 rain4_fast   byte flips (0x01,0x80 at all 4112 bytes): accepted 0/8224 | truncate-1 rejected 1 | extend+1 rejected 1 | other msg 1 | other pk 1 | other set (rain4_bal) 1
+T6 rain4_fast   roundtrip 1000/1000 | same message signed twice -> different valid signatures 50/50
+T7 rain4_fast   Q1 Rain KAT (pk, witness, reject case) 11/11
+T7 rain4_fast   signature KAT written to out/q2_retest_kat_b0/sigkat_rain4_fast.txt (reproducible=1, verifies=1)
+T8 rain4_fast   same pt, different k, same mu and rho -> (r, iv_pre) differ: 1 | unpacked sk.sk == packed k (bytes 16..32), != pt: 1
+BENCH rain4_fast   owf_constraints only, median of 2001: prover 2786 ns / 7700 TSC ticks (1925 per round) | verifier 2194 ns / 6048 TSC ticks (1512 per round) | model: ~10000 cycles per round (TSC ticks are not core cycles when frequency scaling is active)
+T1 rain4_bal    VOLE_ROWS=816 (=128*4+256+8*6) SIG=4080 B (frozen 4080) pk=32 sk=32 OWF_NUM_CONSTRAINTS=4
+T2 rain4_bal    3 sigs | Q=V^Delta*u mismatches: witness[0,512)=0 qs_mask[512,640)=0 vhash_mask[640,816)=0 last_row=0 | padding rows [816,896) mismatching bits=7092 (ignored by all computations)
+T3 rain4_bal    zero first S-box input (k = pt xor rc_t(0)) rejected 4/4
+T4 rain4_bal    keygen retry: script of 2 candidates consumed, returned sk = last candidate: 1, sign/verify: 1
+T5 rain4_bal    byte flips (0x01,0x80 at all 4080 bytes): accepted 0/8160 | truncate-1 rejected 1 | extend+1 rejected 1 | other msg 1 | other pk 1 | other set (rain3_fast) 1
+T6 rain4_bal    roundtrip 1000/1000 | same message signed twice -> different valid signatures 50/50
+T7 rain4_bal    Q1 Rain KAT (pk, witness, reject case) 11/11
+T7 rain4_bal    signature KAT written to out/q2_retest_kat_b0/sigkat_rain4_bal.txt (reproducible=1, verifies=1)
+T8 rain4_bal    same pt, different k, same mu and rho -> (r, iv_pre) differ: 1 | unpacked sk.sk == packed k (bytes 16..32), != pt: 1
+BENCH rain4_bal    owf_constraints only, median of 2001: prover 2786 ns / 7700 TSC ticks (1925 per round) | verifier 2175 ns / 5992 TSC ticks (1498 per round) | model: ~10000 cycles per round (TSC ticks are not core cycles when frequency scaling is active)
+T1 rain4_short  VOLE_ROWS=816 (=128*4+256+8*6) SIG=3190 B (frozen 3190) pk=32 sk=32 OWF_NUM_CONSTRAINTS=4
+T2 rain4_short  3 sigs | Q=V^Delta*u mismatches: witness[0,512)=0 qs_mask[512,640)=0 vhash_mask[640,816)=0 last_row=0 | padding rows [816,896) mismatching bits=6380 (ignored by all computations)
+T3 rain4_short  zero first S-box input (k = pt xor rc_t(0)) rejected 4/4
+T4 rain4_short  keygen retry: script of 2 candidates consumed, returned sk = last candidate: 1, sign/verify: 1
+T5 rain4_short  byte flips (0x01,0x80 at all 3190 bytes): accepted 0/6380 | truncate-1 rejected 1 | extend+1 rejected 1 | other msg 1 | other pk 1 | other set (rain3_short) 1
+T6 rain4_short  roundtrip 1000/1000 | same message signed twice -> different valid signatures 50/50
+T7 rain4_short  Q1 Rain KAT (pk, witness, reject case) 11/11
+T7 rain4_short  signature KAT written to out/q2_retest_kat_b0/sigkat_rain4_short.txt (reproducible=1, verifies=1)
+T8 rain4_short  same pt, different k, same mu and rho -> (r, iv_pre) differ: 1 | unpacked sk.sk == packed k (bytes 16..32), != pt: 1
+BENCH rain4_short  owf_constraints only, median of 2001: prover 2795 ns / 7728 TSC ticks (1932 per round) | verifier 2184 ns / 5992 TSC ticks (1498 per round) | model: ~10000 cycles per round (TSC ticks are not core cycles when frequency scaling is active)
+RESULT PASS (0 failed of 6582 checks, T6=1000 per set)
+rc=0

@@ -1,6 +1,6 @@
 # native/rain_voleith: the signature library for the hybrid TLS harness
 
-A C interface (`rain_voleith_tls.h`) over the Rain-VOLEitH signature code, built as a Windows DLL,
+A C interface (`rain_voleith_tls.h`) over the RainSwift signature code, built as a Windows DLL,
 `rain_voleith_tls.dll`, and loaded by `tls/pq/rain_voleith.py` through ctypes. It exports the six
 Rain sets.
 

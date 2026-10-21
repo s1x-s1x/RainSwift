@@ -1,0 +1,16 @@
+<HOME>/rain-bench-20261016/storage_test/impls/mandarain_3_128s/work/probe.o  :
+section              size   addr
+.text                 235      0
+.data                   0      0
+.bss                 6080      0
+.rodata.str1.1         75      0
+.rodata.str1.8         41      0
+.text.startup         809      0
+.rodata.cst16          16      0
+.comment               40      0
+.note.GNU-stack         0      0
+.note.gnu.property     48      0
+.eh_frame             232      0
+Total                7576
+
+

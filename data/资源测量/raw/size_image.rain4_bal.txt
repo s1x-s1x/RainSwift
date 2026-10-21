@@ -1,0 +1,35 @@
+<HOME>/rain-bench-20261016/storage_test/impls/rain4_bal/probe_rain4_bal  :
+section            size       addr
+.interp              28   16777896
+.note.ABI-tag        32   16777924
+.dynsym             480   16777960
+.gnu.version         40   16778440
+.gnu.version_r      112   16778480
+.gnu.hash            28   16778592
+.hash               168   16778620
+.dynstr             254   16778788
+.rela.dyn            96   16779048
+.rela.plt           384   16779144
+.rodata           19744   16779552
+.eh_frame_hdr       612   16799296
+.eh_frame          3764   16799912
+.text            169409   16807808
+.init                23   16977220
+.fini                 9   16977244
+.plt                272   16977264
+.dynamic            384   16981632
+.got                 32   16982016
+.got.plt            152   16982048
+.relro_padding     3912   16982200
+.bss               8416   16986304
+.debug_info        4156          0
+.debug_abbrev       976          0
+.debug_aranges      176          0
+.debug_line        2307          0
+.debug_ranges       256          0
+.debug_loc         1735          0
+.debug_str         1086          0
+.comment            124          0
+Total            219167
+
+

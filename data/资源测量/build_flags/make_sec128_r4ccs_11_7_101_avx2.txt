@@ -1,0 +1,1 @@
+`python3 scripts/parse_variant_name.py sec128_r4ccs_11_7_101_avx2` && make --no-print-directory -f Makefile.variant VARIANT=sec128_r4ccs_11_7_101_avx2 SUBDIR=Additional_Implementations/sec128_r4ccs_11_7_101_avx2 default

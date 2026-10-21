@@ -1,0 +1,204 @@
+{
+  "source_sha256": "7b88a474141f0d2f90146d095e161a054bbcb56acf076609237d0aa2689d933e",
+  "test_only": true,
+  "tables": {
+    "keys": {
+      "schema": "CREATE TABLE keys(\n                  key_id TEXT PRIMARY KEY, algorithm TEXT NOT NULL,\n                  public_key BLOB NOT NULL, limit_text TEXT NOT NULL,\n                  used_text TEXT NOT NULL, created_utc TEXT NOT NULL)",
+      "rows": [
+        {
+          "key_id": "21e5d679ceb6e51801923bbdf5942ee800292fb5800cb55578e2c30c6adc0b95",
+          "algorithm": "slh-dsa-sm3-128-24",
+          "public_key": {
+            "hex": "41bbcc52db3775c165237acd76795f415e3fe6da53320103ea219702c171321b"
+          },
+          "limit_text": "16777216",
+          "used_text": "1",
+          "created_utc": "2026-10-19T07:47:44.654269+00:00"
+        },
+        {
+          "key_id": "4cfebff7d341101d106a7aa95db40b42f92bcedb060082e9b5449ed907b99ff4",
+          "algorithm": "slh-dsa-sm3-128-24",
+          "public_key": {
+            "hex": "c55f1b069fa8ed48434ca63fd40672ceb7db9e705cefc626ffac433114987399"
+          },
+          "limit_text": "16777216",
+          "used_text": "1",
+          "created_utc": "2026-10-19T07:47:49.619207+00:00"
+        },
+        {
+          "key_id": "fdcd179f3a653fb82d268b9a81ee6e0b9518f2fc66ade73976b3bb46d497963a",
+          "algorithm": "slh-dsa-sm3-128s",
+          "public_key": {
+            "hex": "cb3dbf66bfffce5bdd31f9620453655ecfc201127a71cbbda3688f0c8a4627d8"
+          },
+          "limit_text": "18446744073709551616",
+          "used_text": "1",
+          "created_utc": "2026-10-19T07:47:54.825172+00:00"
+        },
+        {
+          "key_id": "65f82e4bad41f709babd2b34a9f69879d6281dc1610e81eee7c06a32e4cf7854",
+          "algorithm": "slh-dsa-sm3-128s",
+          "public_key": {
+            "hex": "69d9ef2168db5a949d52c8354fc58a0f10fd790b5f6f2cbe1fb59a5bb97e9fbd"
+          },
+          "limit_text": "18446744073709551616",
+          "used_text": "1",
+          "created_utc": "2026-10-19T07:47:54.941200+00:00"
+        },
+        {
+          "key_id": "a899e3bd276286cb3dc16584e2b80a9bfdcf9a6fe57e73b03a3eb74961a278a4",
+          "algorithm": "ml-dsa-44",
+          "public_key": {
+            "hex": "0980e039a3dcc1dedae2b2f83eb351dc30631ca7687087542cfc9dae9af7f714ee186a17053b43cbe49a0d1ec0919b64d6c5e10fca93ebea84610045db207c6677d681aa88fa4bfd905aa3dcd753facc5c2d5db89812df285faf9d2536f03d80dd12fb55cb0ff078289c618bc9bb253f589ad3ec493c0d5473d12d7e8bb005928786383b521ed57673a4025179717094f6fe41605f9611a94dd93b8c0dd191ea4b9286c85ffde33cec0ccee9d2bab2bbafc5f5bb1ad670532a1e0d154c18e3e0538b58158f415701b0ce8c8bde86894289cf61ea33b333842a66c0ef16baa63ee49427ac6efefe7fd69269a97038c6c818b53cb5c4f935fab0fb0e51ed838354fead19e705c94e57ad91b02dd283436e380b994f7919161e96e90b9866b80acb688d2294c8d2fffc101f9cfcd2ace0589066a8747209feb0f83a54e26d8b5b8524af0c68e36c53c0ac100c44906124937580c5a640e39855d756ebece85d91502f60339398a5ee4643f4205beaf3c949d263c3ae60ef2947716a2207dcdb92e93e2cab2eb65f8a045aaae74c6e6c1eb27007618f18ef035779aea32638ea78544ade1ebc6572f55a462035d4f75d4d0ff3775791af8dd20c608eac1cb6e090119dcc8807dca55613d363922bc16ef7355c338233692e8568a84246509f149f4bc3982ece29628619456fb99ca72dfec13b1f247ed6e294b1b8f05b417de08d67d4693127e918e389c1b33e7af3169345a3ab9f7f3c7a330bd144248ec73398f6455aee00b886ef226406ff6c8c90955e4ad1f3da125eebaf251b74e68fe3c2f1bc390a623906fca2f4c7a37982491ff257782397c672a76bc527d3dfde73d5c80f5dee35af15ae3cbcc44e054130a29d4a458e093c9d7ba6d737592fa1c9046a45b1db47d8b4fce7645deedbcd03e6633818a718828df9efd09ce3f0fe6d539b682c01fe6c998562ada78e73d690ffb5bd359767821f4533ae8f085d443a351d28c24008d9e8e3aa8756dcb3d8cd7da8a83245804f1ce14badb8604684512bcf909ab5373f798486c1f58d492c45ccb6a9622e67884b546a20be6439a760883a4e8c8edb489021db1b7aa240f82d3c027a38a0fae271678699df75d53bdee82fc3bc128c93058451b07c5e3a00dfbe78a3230674169b1bb1e1e88e45add5428772e2298b24b718a9ea83bebc8c8601826afc298a92f4737ed97399969cf3a57ca1cca2d9a613793807e9eb9e8f7e304f8a282319cb5f74942175bb2071110e19b2781bf0fabebb7b9bb5af60c56de0823e247009f7a9f73bc03fdb6e80285789fbc8d3e5ba02f68e1c980f7faf4d873ad65fceae5ddff2a62ec686f263e08420b6e2295c4f17954363765b917ba725b2e87a2bda066991610de7e401366e9c2da1e1982da49a26b98da24cefb793c0c8fe16e40374676b9b657e5916336e9151cfb6b9709a1a4da378419f639798c8ac61b51e984b6c54bfeca932f8314bffe04b05347dc5e08ac3723a19bcbb177d36314e52c4f4aa92621ec49756ec0d2ccc37230d74eab35732f17856c39cccd00cc0e0fb9b1e0b8df921a258275ed899ca681b879caab44241c965954db71e12ec6563e92bba0b69d065fd20e24c287f392c24d4e59043d03428d242c1b79da3f76899643fa81b8e89abef65f7e9a76f8620b494dcc68a4c14cf7ad32fbdbae1a69d4cde1c6ac01e1795923567e45d04b145cb003f5ba547204051db9214147442d15b06115253fff898e7befe7ba1b367e45665c5c9a4bd11824c62f483585086d7ae59cd12dfa4c6012761cd291563786c364272dc4917c074e883c5f0d63db3c662fbd38fadf50ec8cfd44fe89f5d1f"
+          },
+          "limit_text": "18446744073709551616",
+          "used_text": "1",
+          "created_utc": "2026-10-19T07:47:55.250723+00:00"
+        },
+        {
+          "key_id": "6759502d25b2bdc054645b35cd76c6799f6ece001043cb0884b39e3a8f30edc3",
+          "algorithm": "ml-dsa-44",
+          "public_key": {
+            "hex": "d08c978c64eb2af7a6a945871ef306f296395bb667e86396fd9d4df05388442db1b324788b5e98b3ade9b4dc6fb0d103ad87d55c5f2ba54e74d3b6311edd137f5842636136ad6520a07510dac830b4a9c0227643cb85cd4faf6a4b206854548c664fb74f5d64c29fe06de35b6eabd3b2533ff04232c8fa96e734aec7bd75c8f35afa9d67c02d71dadfa36aa7707bbfeea46adbf6153bfb87154cd7018d8b92cf51894f63666c6f32b8a6a34cbe7581a01fd5c8cddd9f991f469f9e966635da379162acd3e683862018c90453e159db37a4b0785e2e14925388d2c161188bd00a2c53cd0dab62dcb113c3111f0645ea0b6516f86a945da77ed09fbd9f8ffef31cb7e3f5b739618cfc23298ceb1a2f3ce47e3463d3c4654adef02a9935d8c6ef21fdcccc7322ae1efc7ef5e2eed57ada688643aea883fdcff9d7479a72b638bb3858260b17b80213a24210fe1a74f33708d88c190f6f8297bb7579cf06cb55f70b0cefb9f26be5226e8fcd4cf87b604504cbcf1cc145928d3b91e828ccc9315530a100741160921355d79ea90b1382184391fa4df6303c75cab9f54258a627c3f5492208cb45a2903200104841145c2acf02a8fa1d0aeb5bb11b0a42f43533b736bb335d8cae8ba48aaeac27a620ed67358fb67bdf18308f03b60b82b8befd9955ab50ddceca241ee3f2fd46908a372891ea19824740599153601a5556780ed16b0c0193d25f390cfff937a7e9f4a7f3ce7c993ab6863efe2503c7fcd800089fa8cdb4761de55d0772a85d11adbf065051661f516f2eeed92c8fea5c2b3f625a915ed768bd7e75ef8b38d08fa4a0d67ab3600d32007ed4a461c32fbfec162d60f1d7c9b0afa784cf896712eb39c2664f556e4ac165c48828b29b57a177aad119f8fe89a4c3db4b1688e20af5d6f169e95175963083e1eb9482976f0fbeb778549f6dad2661571915a9c68e66456e73954405939a4cdd828caa40252fbf7f2eeec2169e61f2e364a7d49916a5cd362c44ed6a519e157f64571724a3c77dc3ec50947904763a207850bcb6ef2cfb187f39aa0c46a8c4e2bac65357a3d7109a32de56f62818b2ec0568739b163b76416db976220034b797b175cda448e750d47f89dff0de92ce83a4e26c7cc9a0a6d93c830787f29ae2d767ba5e3e102dceb556266026bf28e665e9d5f2cbfc63cb5f4d533c311db5cdc9187c680a815990300970ef0d11924bf358b3435da4a7b06af85da696f335987f1a67526624542b57376420eade7885aa301f36294bb2cbae6ca34dadb7f860b1aec515366e773bab06837658ee920599eefb42fd251ea75e4d5404489bf7de1985b4b372be6d9d23c1af10b1e59c6d7cbbac04d30662a31bd6f2f700b48b1d2ba398812a2cdc606ded323f2cd188674cf2cfe31cb916e3b6ade1066aae76e84b30773edb65bc593f9a415d0ab2d5fb8a20fbd44c5ee6be257db3c9501a6145fb349466d91068a14aad119b10f0d78f904e1c86a89331e400ed27060bdef3a6e6b20bd548a9ab568834ce24d944d70663b163192db5fb211ff1eddeb634296b3a3e72183227caf0e21f7cc13b2787f85ad21f4851b77af94d12f2aae7d4883bc5a2f15b4bd273aed2400f334ac2aaaa80834b09643368afb3e7356b2a0efc2b6e477935ebfcea6187462d1c9d8c2db9a871b4d0e3cad53ef9340bb742f9d429615e053cdfe2c397492c626216beb404af586dfb3188b8dd7d0913650e8dd1071e23f52850eddab51eb406b5e79820552d821d110cbd7dd73aab9180cb6b549a4762488f55dd740158a44197d360a308a0250d335512b79b1afbc3300739fa205ad046dd4c8335fb85c50ade"
+          },
+          "limit_text": "18446744073709551616",
+          "used_text": "1",
+          "created_utc": "2026-10-19T07:47:55.316184+00:00"
+        }
+      ]
+    },
+    "reservations": {
+      "schema": "CREATE TABLE reservations(\n                  receipt TEXT PRIMARY KEY, key_id TEXT NOT NULL REFERENCES keys(key_id),\n                  ordinal_text TEXT NOT NULL, message_sha256 TEXT NOT NULL,\n                  reserved_utc TEXT NOT NULL, status TEXT NOT NULL,\n                  signature_sha256 TEXT, finished_utc TEXT, operation_id TEXT, case_identity TEXT,\n                  UNIQUE(key_id, ordinal_text))",
+      "rows": [
+        {
+          "receipt": "1d5b9592b38f4991a5e596e0e579ff6d",
+          "key_id": "21e5d679ceb6e51801923bbdf5942ee800292fb5800cb55578e2c30c6adc0b95",
+          "ordinal_text": "1",
+          "message_sha256": "fc3a050305d6182cc2e2bc2941572d9513aee0fedad6e6865da35856bf112cfc",
+          "reserved_utc": "2026-10-19T07:47:44.654269+00:00",
+          "status": "committed",
+          "signature_sha256": "7d6733649e374328a401faf4e16a640f0650167763c90f7b2ddc107df9716203",
+          "finished_utc": "2026-10-19T07:47:49.609787+00:00",
+          "operation_id": "30ae38c78870423abc77864cdbb97dd0:slh-dsa-sm3-128-24:intermediate",
+          "case_identity": "30ae38c78870423abc77864cdbb97dd0:slh-dsa-sm3-128-24:intermediate"
+        },
+        {
+          "receipt": "3646896458964bd999fafa89af99cb3b",
+          "key_id": "4cfebff7d341101d106a7aa95db40b42f92bcedb060082e9b5449ed907b99ff4",
+          "ordinal_text": "1",
+          "message_sha256": "41065ba8b60de44709f5d335555f718ea6173403cd765e74f4400c650e8ab050",
+          "reserved_utc": "2026-10-19T07:47:49.619207+00:00",
+          "status": "committed",
+          "signature_sha256": "021ca424b0179e765c13dc4aeed908a44cbb3d020ffd814051cfd069c9286ae1",
+          "finished_utc": "2026-10-19T07:47:54.581750+00:00",
+          "operation_id": "30ae38c78870423abc77864cdbb97dd0:slh-dsa-sm3-128-24:leaf",
+          "case_identity": "30ae38c78870423abc77864cdbb97dd0:slh-dsa-sm3-128-24:leaf"
+        },
+        {
+          "receipt": "fbb41102eeec464297d56ad86614e302",
+          "key_id": "fdcd179f3a653fb82d268b9a81ee6e0b9518f2fc66ade73976b3bb46d497963a",
+          "ordinal_text": "1",
+          "message_sha256": "955fc50c244caced0457ed641170b79c7e4b29944588eb0d263679ea960fed14",
+          "reserved_utc": "2026-10-19T07:47:54.825172+00:00",
+          "status": "committed",
+          "signature_sha256": "1c15e3f773ce08274830e3887185c6f7e6366e859afe43114fa3684400ae71b5",
+          "finished_utc": "2026-10-19T07:47:54.932734+00:00",
+          "operation_id": "30ae38c78870423abc77864cdbb97dd0:slh-dsa-sm3-128s:intermediate",
+          "case_identity": "30ae38c78870423abc77864cdbb97dd0:slh-dsa-sm3-128s:intermediate"
+        },
+        {
+          "receipt": "86e6715cafe3446882d75ea606ce5346",
+          "key_id": "65f82e4bad41f709babd2b34a9f69879d6281dc1610e81eee7c06a32e4cf7854",
+          "ordinal_text": "1",
+          "message_sha256": "24031dd51b32d7af7398297a566b4b191e569c7ed8e6270bfbcda4171d1cd232",
+          "reserved_utc": "2026-10-19T07:47:54.941200+00:00",
+          "status": "committed",
+          "signature_sha256": "ecef6d746654b8a8781731972ce869678b50c3e5230134a18f22c50076aa0d44",
+          "finished_utc": "2026-10-19T07:47:55.052979+00:00",
+          "operation_id": "30ae38c78870423abc77864cdbb97dd0:slh-dsa-sm3-128s:leaf",
+          "case_identity": "30ae38c78870423abc77864cdbb97dd0:slh-dsa-sm3-128s:leaf"
+        },
+        {
+          "receipt": "dc51b654d2fd4ddfb3e15d81de5000c1",
+          "key_id": "a899e3bd276286cb3dc16584e2b80a9bfdcf9a6fe57e73b03a3eb74961a278a4",
+          "ordinal_text": "1",
+          "message_sha256": "76c2ab9e0a8a24401906430bd6494789b48a42b301c59778abed9471aea47c59",
+          "reserved_utc": "2026-10-19T07:47:55.250723+00:00",
+          "status": "committed",
+          "signature_sha256": "9a2f1a1d58f14afda816a7a3a76345751592d055e3b8cd3cd30774b82ed5f7c1",
+          "finished_utc": "2026-10-19T07:47:55.307964+00:00",
+          "operation_id": "30ae38c78870423abc77864cdbb97dd0:ml-dsa-44:intermediate",
+          "case_identity": "30ae38c78870423abc77864cdbb97dd0:ml-dsa-44:intermediate"
+        },
+        {
+          "receipt": "86be068b056e443d93b049baa2cf7ec1",
+          "key_id": "6759502d25b2bdc054645b35cd76c6799f6ece001043cb0884b39e3a8f30edc3",
+          "ordinal_text": "1",
+          "message_sha256": "9bff69c0abd61975fa0970eaf294d945ac1b7fd3f359462ed33f9a488b34e5ef",
+          "reserved_utc": "2026-10-19T07:47:55.316184+00:00",
+          "status": "committed",
+          "signature_sha256": "f391185b5b0441e32dbe4846654d93bd22e2e5d24873aa3869e68a106c56ef88",
+          "finished_utc": "2026-10-19T07:47:55.376051+00:00",
+          "operation_id": "30ae38c78870423abc77864cdbb97dd0:ml-dsa-44:leaf",
+          "case_identity": "30ae38c78870423abc77864cdbb97dd0:ml-dsa-44:leaf"
+        }
+      ]
+    },
+    "ledger_metadata": {
+      "schema": "CREATE TABLE ledger_metadata(\n                  name TEXT PRIMARY KEY, value TEXT NOT NULL)",
+      "rows": [
+        {
+          "name": "ledger_uuid",
+          "value": "6d43d10ac2974754b34d51448ef46df4"
+        },
+        {
+          "name": "identity_schema",
+          "value": "2"
+        },
+        {
+          "name": "accounting_schema",
+          "value": "1"
+        }
+      ]
+    },
+    "identity_migrations": {
+      "schema": "CREATE TABLE identity_migrations(\n                  legacy_key_id TEXT PRIMARY KEY, canonical_key_id TEXT NOT NULL,\n                  legacy_algorithm TEXT NOT NULL, legacy_limit_text TEXT NOT NULL,\n                  legacy_used_text TEXT NOT NULL, migrated_utc TEXT NOT NULL)",
+      "rows": []
+    },
+    "accounting": {
+      "schema": "CREATE TABLE accounting(key_id TEXT PRIMARY KEY REFERENCES keys(key_id),used_text TEXT NOT NULL,last_receipt TEXT)",
+      "rows": [
+        {
+          "key_id": "21e5d679ceb6e51801923bbdf5942ee800292fb5800cb55578e2c30c6adc0b95",
+          "used_text": "1",
+          "last_receipt": "1d5b9592b38f4991a5e596e0e579ff6d"
+        },
+        {
+          "key_id": "4cfebff7d341101d106a7aa95db40b42f92bcedb060082e9b5449ed907b99ff4",
+          "used_text": "1",
+          "last_receipt": "3646896458964bd999fafa89af99cb3b"
+        },
+        {
+          "key_id": "fdcd179f3a653fb82d268b9a81ee6e0b9518f2fc66ade73976b3bb46d497963a",
+          "used_text": "1",
+          "last_receipt": "fbb41102eeec464297d56ad86614e302"
+        },
+        {
+          "key_id": "65f82e4bad41f709babd2b34a9f69879d6281dc1610e81eee7c06a32e4cf7854",
+          "used_text": "1",
+          "last_receipt": "86e6715cafe3446882d75ea606ce5346"
+        },
+        {
+          "key_id": "a899e3bd276286cb3dc16584e2b80a9bfdcf9a6fe57e73b03a3eb74961a278a4",
+          "used_text": "1",
+          "last_receipt": "dc51b654d2fd4ddfb3e15d81de5000c1"
+        },
+        {
+          "key_id": "6759502d25b2bdc054645b35cd76c6799f6ece001043cb0884b39e3a8f30edc3",
+          "used_text": "1",
+          "last_receipt": "86be068b056e443d93b049baa2cf7ec1"
+        }
+      ]
+    }
+  }
+}

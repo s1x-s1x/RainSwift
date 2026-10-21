@@ -1,3 +1,5 @@
+> 2026-10-22 数据更新：本文保留历史设计／审查语境；引用的早期 `.bench-*` 输出与旧验收日志已从当前文件树删除。当前实验数据见 [复赛数据快照](../../data/README.md)，按其批次和源码版本读取。
+
 # Response to the eighth review (`audit_v8`, the red-team pass)
 
 The eighth package is the third **attack** package and the first with a red-team surface scan

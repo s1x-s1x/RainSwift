@@ -1,0 +1,84 @@
+{
+  "status": "ok",
+  "tool": "objdump",
+  "translation_units": {
+    "faest": {
+      "functions_q3": 63,
+      "functions_q5": 65,
+      "common": 63,
+      "identical": 57,
+      "different": [
+        {
+          "name": "bool faest::faest_pubkey<faest::parameter_set<(faest::secpar)128, 11ul, (faest::owf)816, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 12ul, std::__1::pair<faest::bavc, unsigned long>{}> >(unsigned char*, unsigned char const*)",
+          "instructions_q3": 128,
+          "instructions_q5": 50
+        },
+        {
+          "name": "bool faest::faest_pubkey<faest::parameter_set<(faest::secpar)128, 11ul, (faest::owf)832, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 12ul, std::__1::pair<faest::bavc, unsigned long>{}> >(unsigned char*, unsigned char const*)",
+          "instructions_q3": 128,
+          "instructions_q5": 60
+        },
+        {
+          "name": "bool faest::faest_pubkey<faest::parameter_set<(faest::secpar)128, 17ul, (faest::owf)816, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 7ul, std::__1::pair<faest::bavc, unsigned long>{}> >(unsigned char*, unsigned char const*)",
+          "instructions_q3": 128,
+          "instructions_q5": 50
+        },
+        {
+          "name": "bool faest::faest_pubkey<faest::parameter_set<(faest::secpar)128, 18ul, (faest::owf)832, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 6ul, std::__1::pair<faest::bavc, unsigned long>{}> >(unsigned char*, unsigned char const*)",
+          "instructions_q3": 128,
+          "instructions_q5": 60
+        },
+        {
+          "name": "bool faest::faest_pubkey<faest::parameter_set<(faest::secpar)128, 18ul, (faest::owf)832, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 8ul, std::__1::pair<faest::bavc, unsigned long>{}> >(unsigned char*, unsigned char const*)",
+          "instructions_q3": 128,
+          "instructions_q5": 60
+        },
+        {
+          "name": "bool faest::faest_pubkey<faest::parameter_set<(faest::secpar)128, 21ul, (faest::owf)816, (faest::prg)0, (faest::prg)0, (faest::leaf_hash)0, 5ul, std::__1::pair<faest::bavc, unsigned long>{}> >(unsigned char*, unsigned char const*)",
+          "instructions_q3": 128,
+          "instructions_q5": 50
+        }
+      ],
+      "only_q3": [],
+      "only_q5": [
+        "long long __vector(2) faest::rain::kg::map128<2>(unsigned long const (*) [2], long long __vector(2))",
+        "long long __vector(2) faest::rain::kg::tinv_v<4, 2>(long long __vector(2))"
+      ],
+      "sign_verify_functions": 12,
+      "sign_verify_identical": 12
+    },
+    "owf_proof": {
+      "functions_q3": 12,
+      "functions_q5": 12,
+      "common": 12,
+      "identical": 12,
+      "different": [],
+      "only_q3": [],
+      "only_q5": [],
+      "sign_verify_functions": 0,
+      "sign_verify_identical": 0
+    },
+    "small_vole": {
+      "functions_q3": 18,
+      "functions_q5": 18,
+      "common": 18,
+      "identical": 18,
+      "different": [],
+      "only_q3": [],
+      "only_q5": [],
+      "sign_verify_functions": 0,
+      "sign_verify_identical": 0
+    },
+    "vole_commit": {
+      "functions_q3": 34,
+      "functions_q5": 34,
+      "common": 34,
+      "identical": 34,
+      "different": [],
+      "only_q3": [],
+      "only_q5": [],
+      "sign_verify_functions": 0,
+      "sign_verify_identical": 0
+    }
+  }
+}

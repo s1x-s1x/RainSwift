@@ -1,0 +1,35 @@
+<HOME>/rain-bench-20261016/storage_test/impls/rfaest_em_128s/probe_rfaest_em_128s  :
+section            size       addr
+.interp              28   16777896
+.note.ABI-tag        32   16777924
+.dynsym             480   16777960
+.gnu.version         40   16778440
+.gnu.version_r      112   16778480
+.gnu.hash            28   16778592
+.hash               168   16778620
+.dynstr             254   16778788
+.rela.dyn            96   16779048
+.rela.plt           384   16779144
+.rodata            1952   16779552
+.eh_frame_hdr       748   16781504
+.eh_frame          4424   16782256
+.text            331137   16790784
+.init                23   17121924
+.fini                 9   17121948
+.plt                272   17121968
+.dynamic            384   17126336
+.got                 32   17126720
+.got.plt            152   17126752
+.relro_padding     2568   17126904
+.bss               8286   17131008
+.debug_info        4156          0
+.debug_abbrev       976          0
+.debug_aranges      176          0
+.debug_line        2312          0
+.debug_ranges       256          0
+.debug_loc         1735          0
+.debug_str         1086          0
+.comment            124          0
+Total            362430
+
+

@@ -1,0 +1,175 @@
+{
+  "measurement": "historical handshake-byte accounting model; no timing data",
+  "original_source": "review-workspace\\密码\\密码实验2.0\\迭代\\迭代030_高把握方案\\B线_TLS全面测试_20261016\\原始数据\\运行记录\\32_B线T5a_v9四脚本_20261016T155818Z\\handshake_x509\\handshake.json",
+  "original_sha256": "fe4d821c66be783ae82ac21661d59408ce4a61f6a9a95fe28b10dbba19456962",
+  "repeats": 30,
+  "rows": [
+    {
+      "key": "3f",
+      "name": "RainSwift-3f",
+      "total_median_bytes": 7893,
+      "stage_mean_floor_bytes": {
+        "ClientHello": 1306,
+        "ServerHello": 1185,
+        "Certificate": 1010,
+        "CertificateVerify": 4249,
+        "EncryptedExtensions": 27,
+        "Finished": 114
+      }
+    },
+    {
+      "key": "3b",
+      "name": "RainSwift-3b",
+      "total_median_bytes": 7453,
+      "stage_mean_floor_bytes": {
+        "ClientHello": 1306,
+        "ServerHello": 1185,
+        "Certificate": 1011,
+        "CertificateVerify": 3809,
+        "EncryptedExtensions": 27,
+        "Finished": 114
+      }
+    },
+    {
+      "key": "4f",
+      "name": "RainSwift-4f",
+      "total_median_bytes": 7859,
+      "stage_mean_floor_bytes": {
+        "ClientHello": 1306,
+        "ServerHello": 1185,
+        "Certificate": 1011,
+        "CertificateVerify": 4216,
+        "EncryptedExtensions": 27,
+        "Finished": 114
+      }
+    },
+    {
+      "key": "4b",
+      "name": "RainSwift-4b",
+      "total_median_bytes": 7827,
+      "stage_mean_floor_bytes": {
+        "ClientHello": 1306,
+        "ServerHello": 1185,
+        "Certificate": 1010,
+        "CertificateVerify": 4184,
+        "EncryptedExtensions": 27,
+        "Finished": 114
+      }
+    },
+    {
+      "key": "rff",
+      "name": "rFAEST-EM-128f",
+      "total_median_bytes": 8727,
+      "stage_mean_floor_bytes": {
+        "ClientHello": 1306,
+        "ServerHello": 1185,
+        "Certificate": 1011,
+        "CertificateVerify": 5083,
+        "EncryptedExtensions": 27,
+        "Finished": 114
+      }
+    },
+    {
+      "key": "f3f",
+      "name": "FAEST v3-EM-128f",
+      "total_median_bytes": 7917,
+      "stage_mean_floor_bytes": {
+        "ClientHello": 1306,
+        "ServerHello": 1185,
+        "Certificate": 1010,
+        "CertificateVerify": 4274,
+        "EncryptedExtensions": 27,
+        "Finished": 114
+      }
+    },
+    {
+      "key": "3s",
+      "name": "RainSwift-3s",
+      "total_median_bytes": 6761,
+      "stage_mean_floor_bytes": {
+        "ClientHello": 1306,
+        "ServerHello": 1185,
+        "Certificate": 1010,
+        "CertificateVerify": 3117,
+        "EncryptedExtensions": 27,
+        "Finished": 114
+      }
+    },
+    {
+      "key": "4s",
+      "name": "RainSwift-4s",
+      "total_median_bytes": 6937,
+      "stage_mean_floor_bytes": {
+        "ClientHello": 1306,
+        "ServerHello": 1185,
+        "Certificate": 1010,
+        "CertificateVerify": 3294,
+        "EncryptedExtensions": 27,
+        "Finished": 114
+      }
+    },
+    {
+      "key": "rfs",
+      "name": "rFAEST-EM-128s",
+      "total_median_bytes": 7761,
+      "stage_mean_floor_bytes": {
+        "ClientHello": 1306,
+        "ServerHello": 1185,
+        "Certificate": 1011,
+        "CertificateVerify": 4117,
+        "EncryptedExtensions": 27,
+        "Finished": 114
+      }
+    },
+    {
+      "key": "f3s",
+      "name": "FAEST v3-EM-128s",
+      "total_median_bytes": 7213,
+      "stage_mean_floor_bytes": {
+        "ClientHello": 1306,
+        "ServerHello": 1185,
+        "Certificate": 1010,
+        "CertificateVerify": 3570,
+        "EncryptedExtensions": 27,
+        "Finished": 114
+      }
+    },
+    {
+      "key": "mldsa",
+      "name": "ML-DSA-44（参照）",
+      "total_median_bytes": 7453,
+      "stage_mean_floor_bytes": {
+        "ClientHello": 1306,
+        "ServerHello": 1185,
+        "Certificate": 2297,
+        "CertificateVerify": 2523,
+        "EncryptedExtensions": 27,
+        "Finished": 114
+      }
+    },
+    {
+      "key": "classical",
+      "name": "纯经典 ECDSA（参照）",
+      "total_median_bytes": 1404,
+      "stage_mean_floor_bytes": {
+        "ClientHello": 112,
+        "ServerHello": 91,
+        "Certificate": 960,
+        "CertificateVerify": 100,
+        "EncryptedExtensions": 27,
+        "Finished": 114
+      }
+    }
+  ],
+  "stage_statistic": "floor of arithmetic mean over 30 runs; not median",
+  "total_statistic": "median of total accounted handshake bytes over 30 runs, truncated to integer by the original script",
+  "protection_accounting": {
+    "per_protected_frame": {
+      "authentication_tag_bytes": 16,
+      "assumed_record_header_bytes": 5
+    },
+    "tcp_driver_length_prefix_included": false,
+    "interpretation": "Historical accounting model. Current record seal adds 1 inner-content-type byte and a 16-byte tag; the TCP driver separately adds a 4-byte prefix. These boundaries are described separately, without treating the model as captured wire bytes."
+  },
+  "stage_totals_note": "Floored per-stage means need not sum to the median of total bytes; the statistics are presented separately."
+}

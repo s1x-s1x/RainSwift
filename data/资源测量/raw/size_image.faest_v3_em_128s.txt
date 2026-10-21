@@ -1,0 +1,39 @@
+<HOME>/rain-bench-20261016/storage_test/impls/faest_v3_em_128s/probe_faest_v3_em_128s  :
+section                size       addr
+.interp                  28   16777896
+.note.ABI-tag            32   16777924
+.dynsym                1032   16777960
+.gnu.version             86   16778992
+.gnu.version_r          160   16779080
+.gnu.hash                28   16779240
+.hash                   352   16779268
+.dynstr                 569   16779620
+.rela.dyn                96   16780192
+.rela.plt               936   16780288
+.rodata               59716   16781248
+.gcc_except_table      1248   16840964
+.eh_frame_hdr          5196   16842212
+.eh_frame             28428   16847408
+.text                523025   16879936
+.init                    23   17402964
+.fini                     9   17402988
+__lcxx_override         277   17403008
+.plt                    640   17403296
+.data.rel.ro          14376   17408032
+.dynamic                400   17422408
+.got                     32   17422808
+.got.plt                336   17422840
+.relro_padding         1208   17423176
+.data                    56   17427272
+.bss                   9904   17427328
+.debug_info          386787          0
+.debug_abbrev         16785          0
+.debug_aranges          272          0
+.debug_line          118068          0
+.debug_ranges         54400          0
+.debug_loc           294291          0
+.debug_str           202298          0
+.comment                124          0
+Total               1721218
+
+

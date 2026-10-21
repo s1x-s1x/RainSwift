@@ -1,0 +1,63 @@
+{
+  "import_date": "2026-10-22",
+  "source_archive": "CACR2026RO5FCA-2026密码竞赛复赛相关支撑材料(1).zip",
+  "source_archive_sha256": "43635e3204ed3dc429d5b29a55199743a0415fc80fa73af033adebbbd34ddf05",
+  "source_data_root": "03_测试数据/",
+  "repository_data_root": "data/",
+  "source_files": 1279,
+  "source_bytes": 129757903,
+  "source_files_preserved_byte_for_byte": true,
+  "categories": [
+    {
+      "path": "功能测试",
+      "files": 11,
+      "bytes": 203164
+    },
+    {
+      "path": "协议时延",
+      "files": 7,
+      "bytes": 2781487
+    },
+    {
+      "path": "原语性能",
+      "files": 354,
+      "bytes": 21221213
+    },
+    {
+      "path": "实验环境.json",
+      "files": 1,
+      "bytes": 2161
+    },
+    {
+      "path": "证书链",
+      "files": 113,
+      "bytes": 674075
+    },
+    {
+      "path": "资源测量",
+      "files": 793,
+      "bytes": 104875803
+    }
+  ],
+  "companion_document": {
+    "source": "01_配套文档/测试数据说明.md",
+    "destination": "data/测试数据说明.md",
+    "sha256": "945008cb222d5934c6046c849253c10a43a5dbd2eb38f30abbd590ec886e32b2"
+  },
+  "base_repository": "https://github.com/s1x-s1x/rain-voleith",
+  "base_commit": "3a4c58290d7821db13d454a0d425c5f1c2f02e17",
+  "primitive_scope": {
+    "implementations": 38,
+    "nonwarmup_samples": 57114,
+    "raw_jsonl_files": 342,
+    "windows": [
+      "F3",
+      "S3"
+    ]
+  },
+  "verification": "Recomputed using data/原语性能/核验性能数据.py; see docs/data_update_20261022.md",
+  "source_scope": "Data and documentation update; support-package tlsb and a15 source synchronization remains pending.",
+  "algorithm_name": "RainSwift",
+  "algorithm_name_zh": "雨燕",
+  "repository": "https://github.com/s1x-s1x/RainSwift"
+}

@@ -1,0 +1,14 @@
+rain3_fast gen pk=32 sk=32 sm=4210
+rain3_bal gen pk=32 sk=32 sm=3770
+rain3_short gen pk=32 sk=32 sm=3078
+rain4_fast gen pk=32 sk=32 sm=4176
+rain4_bal gen pk=32 sk=32 sm=4144
+rain4_short gen pk=32 sk=32 sm=3254
+rfaest_em_128f gen pk=32 sk=32 sm=5044
+rfaest_em_128s gen pk=32 sk=32 sm=4078
+faest_v3_em_128f gen pk=32 sk=32 sm=4234
+faest_v3_em_128s gen pk=32 sk=32 sm=3530
+mandarain_3_128f gen pk=32 sk=32 sm=3652
+mandarain_3_128s gen pk=32 sk=32 sm=2954
+mandarain_4_128f gen pk=32 sk=32 sm=3940
+mandarain_4_128s gen pk=32 sk=32 sm=3146

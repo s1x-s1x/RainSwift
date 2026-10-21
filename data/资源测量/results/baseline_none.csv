@@ -1,0 +1,15 @@
+key,id,scheme,param_set,heap_none_B,stack_none_B,maxrss_none_KB
+rain3_fast,1,Rain-3,快速档,8688,7192,1548
+rain3_bal,2,Rain-3,均衡档,8688,7192,1636
+rain3_short,3,Rain-3,短签名档,8688,7192,1640
+rain4_fast,4,Rain-4,快速档,8688,7192,1576
+rain4_bal,5,Rain-4,均衡档,8688,7192,1660
+rain4_short,6,Rain-4,短签名档,8688,7192,1580
+rfaest_em_128f,7,rFAEST,EM-128f,8688,7192,1652
+rfaest_em_128s,8,rFAEST,EM-128s,8688,7192,1504
+faest_v3_em_128f,10,FAEST v3,EM-128f,8688,7192,1704
+faest_v3_em_128s,11,FAEST v3,EM-128s,8688,7192,1668
+mandarain_3_128f,22,MandaRain,3-128f,8688,7192,3912
+mandarain_3_128s,23,MandaRain,3-128s,8688,7192,3836
+mandarain_4_128f,24,MandaRain,4-128f,8688,7192,3780
+mandarain_4_128s,25,MandaRain,4-128s,8688,7192,3800
