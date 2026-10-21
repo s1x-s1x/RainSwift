@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "project_id": "CACR2026RO5FCA",
+  "name": "RainSwift",
+  "name_zh": "雨燕",
+  "version": "1.0.0-competition",
+  "release_tag": "v1.0.0-competition",
+  "prepared_date": "2026-10-22",
+  "repository": "https://github.com/s1x-s1x/RainSwift",
+  "paper_distribution": "local_submission_package_only",
+  "documentation": ["README.md", "SUBMISSION.md", "LICENSES.md", "docs/README.md", "docs/REPRODUCE.md", "docs/RESULTS.md"],
+  "modules": [
+    {"path": "src", "entry": "verify.sh"},
+    {"path": "tls", "entry": "tls/README.md"},
+    {"path": "a15", "entry": "a15/ops/bootstrap_local_env.py"}
+  ],
+  "data": {
+    "root": "data",
+    "hash_list": "data/SHA256SUMS.txt",
+    "hashed_files": 1282,
+    "original_support_files": 1279,
+    "implementations": 38,
+    "nonwarmup_samples": 57114,
+    "raw_jsonl_files": 342,
+    "windows": ["F3", "S3"]
+  },
+  "source_provenance": "docs/source_snapshot_20261022.json",
+  "source_import_files": 568,
+  "kat_hash_list": "KAT/SHA256SUMS",
+  "kat_files": 6,
+  "workflows": ["submission-check", "verify", "tls-windows", "ca-linux"]
+}

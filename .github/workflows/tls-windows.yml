@@ -3,9 +3,9 @@ name: tls-windows
 # known-answer gate on them, then the TLS test suite and the demo with Rain required.
 on:
   push:
-    paths: ["tls/**", "src/**", "KAT/**", ".github/workflows/tls-windows.yml"]
+    paths: ["tls/**", "src/**", "KAT/**", "submission.json", ".github/workflows/tls-windows.yml"]
   pull_request:
-    paths: ["tls/**", "src/**", "KAT/**", ".github/workflows/tls-windows.yml"]
+    paths: ["tls/**", "src/**", "KAT/**", "submission.json", ".github/workflows/tls-windows.yml"]
   workflow_dispatch:
 jobs:
   tls:

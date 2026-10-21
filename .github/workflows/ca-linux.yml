@@ -1,9 +1,9 @@
 name: ca-linux
 on:
   push:
-    paths: ["a15/**", ".github/workflows/ca-linux.yml"]
+    paths: ["a15/**", "submission.json", ".github/workflows/ca-linux.yml"]
   pull_request:
-    paths: ["a15/**", ".github/workflows/ca-linux.yml"]
+    paths: ["a15/**", "submission.json", ".github/workflows/ca-linux.yml"]
   workflow_dispatch:
 jobs:
   functional:

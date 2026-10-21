@@ -1,2 +1,9 @@
 /build*/
 /.v9-scratch/
+/xkcp/
+/ca-evidence/
+/dist/
+**/.venv/
+**/.deps/
+**/__pycache__/
+**/.pytest_cache/

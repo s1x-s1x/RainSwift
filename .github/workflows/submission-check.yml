@@ -1,0 +1,33 @@
+name: submission-check
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  submission:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Snapshot provenance, checksums, statistics and entry documents
+        run: python -I -X utf8 tools/check_submission.py --report "${{ runner.temp }}/submission-check.json"
+      - name: Export the committed submission
+        run: python -I -X utf8 tools/package_release.py --output "${{ runner.temp }}/RainSwift-v1.0.0-competition.zip"
+      - name: Verify the exported artifact independently of Git
+        run: |
+          python -m zipfile -e "${{ runner.temp }}/RainSwift-v1.0.0-competition.zip" "${{ runner.temp }}/submission-export"
+          python -I -X utf8 "${{ runner.temp }}/submission-export/RainSwift/tools/check_submission.py" --report "${{ runner.temp }}/release-check.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: submission-evidence
+          path: |
+            ${{ runner.temp }}/submission-check.json
+            ${{ runner.temp }}/release-check.json
+            ${{ runner.temp }}/RainSwift-v1.0.0-competition.zip.sha256
+          if-no-files-found: warn
