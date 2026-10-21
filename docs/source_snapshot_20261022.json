@@ -8,7 +8,7 @@
     "a15/": "a15/",
     "rain-voleith/src/test/kat_gen.cpp": "src/test/kat_gen.cpp"
   },
-  "note": "Support files imported byte for byte, with repository documentation adaptations recorded in documentation_overrides. XKCP is fetched at the existing pinned revision; generated binaries and dependency installations are excluded.",
+  "note": "Support files imported byte for byte, except explicit repository adaptations recorded in documentation_overrides and code_overrides. XKCP is fetched at the existing pinned revision; generated binaries and dependency installations are excluded.",
   "files": [
     {
       "source": "02_程序与测试源码/tlsb/bench/__init__.py",
@@ -3460,6 +3460,18 @@
       "path": "a15/README.md",
       "repository_sha256": "e538ef6863eabe4d5bab28864794d64818bd83cc4b29447571db8ef95502dd53",
       "reason": "Repository paths/build instructions, RainSwift naming, historical document annotations or removal of obsolete timing table."
+    }
+  ],
+  "code_overrides": [
+    {
+      "path": "tls/tests/test_fixture_recovery_review.py",
+      "repository_sha256": "3ac58c0476939efde4db4748f31541f9a6fc440a228fee02bd4b5c7e3a4b1142",
+      "reason": "2026-10-22: normalize both output paths in the recovery test interruption hook; add a noncanonical-path regression reproducing the Windows CI failure. Test harness only; algorithm and fixture generator are unchanged."
+    },
+    {
+      "path": "a15/base_tls/tests/test_fixture_recovery_review.py",
+      "repository_sha256": "3ac58c0476939efde4db4748f31541f9a6fc440a228fee02bd4b5c7e3a4b1142",
+      "reason": "2026-10-22: normalize both output paths in the recovery test interruption hook; add a noncanonical-path regression reproducing the Windows CI failure. Test harness only; algorithm and fixture generator are unchanged."
     }
   ]
 }

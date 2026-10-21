@@ -92,7 +92,10 @@ class FixtureRecoveryReview(unittest.TestCase):
         def renamed(source, destination):
             destination = Path(destination)
             hit = ((phase == "complete-work" and destination.name == self.algorithm) or
-                   (phase in ("manifest", "after-final-rename") and destination == self.args.output))
+                   # The generator resolves output paths; Windows TEMP can use
+                   # an 8.3 alias for that same directory on hosted runners.
+                   (phase in ("manifest", "after-final-rename") and
+                    destination.resolve() == self.args.output.resolve()))
             if hit and phase != "after-final-rename":
                 raise KeyboardInterrupt("injected publication interruption")
             result = replace(source, destination)
@@ -134,6 +137,13 @@ class FixtureRecoveryReview(unittest.TestCase):
         self.assert_resumes_without_signing()
 
     def test_manifest_before_final_rename_recovers(self):
+        self.interrupt("manifest")
+        self.assert_resumes_without_signing()
+
+    def test_manifest_interruption_handles_noncanonical_output_path(self):
+        alias = self.folder / "path-alias"
+        alias.mkdir()
+        self.args.output = alias / ".." / "published"
         self.interrupt("manifest")
         self.assert_resumes_without_signing()
 

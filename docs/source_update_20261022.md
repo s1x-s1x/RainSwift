@@ -16,7 +16,7 @@
 | `02_程序与测试源码/a15/` | `a15/` | 421 个文件；含离线 CA 的 REF/AVX2/OpenMP/CUDA 源码、Python 对照、预算与生命周期工具、向量、第三方来源与许可、公开测试链。 |
 | `02_程序与测试源码/rain-voleith/src/test/kat_gen.cpp` | `src/test/kat_gen.cpp` | 补齐 KAT 生成程序。已有共有原语源码与支撑材料一致。 |
 
-共核对 568 个材料文件。逐文件原始哈希、目录映射及 5 处 Markdown 适配记录见 [source_snapshot_20261022.json](source_snapshot_20261022.json)。除这些文档适配外，导入文件保持材料中的原始字节。文档适配包括 RainSwift 名称、仓库相对路径、构建入口及历史范围注释；此前已清理的旧计时表保持清理状态。
+共核对 568 个材料文件。逐文件原始哈希、目录映射、5 处 Markdown 适配及后续 2 处测试兼容修复见 [source_snapshot_20261022.json](source_snapshot_20261022.json)。除这些明确列出的适配外，导入文件保持材料中的原始字节。文档适配包括 RainSwift 名称、仓库相对路径、构建入口及历史范围注释；此前已清理的旧计时表保持清理状态。
 
 `a15/base_tls/` 被 CA 工具直接导入并用于回归，随模块保留。第三方向量、许可证、来源说明及固定版本一起发布。XKCP 延用 `src/subprojects/xkcp.wrap` 的固定提交，由构建流程获取。生成的动态库、虚拟环境、依赖安装目录与临时测试输出由忽略规则排除。
 
@@ -43,6 +43,14 @@
 | `ca-linux` | Python 3.12 / Ubuntu 24.04，执行 `a15/ops/bootstrap_local_env.py --verify --falcon --fixtures fixtures/public-alt-chain`；保存逐步骤日志、JUnit 和清单。 |
 
 CA 入口包含原生库构建、边界与调度测试、预算及生命周期工具、解析器模糊输入、TLS 回归、预签发链的原生/Python 双重验证、P0–P4 功能检查。`manifest.json` 的 `passed` 与 `functional_gate_completed` 同为 `true` 才表示该次入口完成。CUDA 检查在该入口中为模拟测试，真实 GPU 运行及论文性能采样另行验收。
+
+### Windows 恢复测试的路径比较修复
+
+源码同步提交 `6205f6c` 的 `verify` 与 `ca-linux` 均通过；[Windows TLS 首次运行](https://github.com/s1x-s1x/RainSwift/actions/runs/39654687696)完成 DLL 构建和 KAT，但协议测试出现 17 失败、524 通过、1 跳过。17 项均在同一个恢复测试辅助方法报 `KeyboardInterrupt not raised`。
+
+夹具生成器使用 `args.output.resolve()` 发布目录；测试的中断注入辅助方法却直接与原始 `args.output` 比较。同一目录使用不同路径表示（例如 Windows 临时目录的短路径与展开路径）时，两者字符串不同，预设中断未触发，依赖该中断的恢复测试连带失败。
+
+修复将辅助方法的两侧路径都用 `resolve()` 规范化，覆盖 `tls/` 与 `a15/base_tls/` 两份恢复测试。新增含 `path-alias/../published` 的回归案例，修复前复现相同异常，修复后该文件 27 项全部通过。算法实现、夹具生成器和论文数据保持原样；修复后的完整构建、KAT、TLS 和 CA 结果以对应提交的 Actions 记录为准。
 
 ## 与数据的关系
 
