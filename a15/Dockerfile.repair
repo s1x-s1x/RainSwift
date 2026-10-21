@@ -1,0 +1,11 @@
+# Official Ubuntu 24.04 image index verified from Docker Hub on 2026-10-04.
+FROM ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55
+ENV DEBIAN_FRONTEND=noninteractive PYTHONDONTWRITEBYTECODE=1
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates gcc make python3 python3-venv && \
+    rm -rf /var/lib/apt/lists/*
+WORKDIR /workspace
+COPY . /workspace
+# Mount /evidence to retain command outputs. Every --output must be new.
+ENTRYPOINT ["python3", "-B", "ops/bootstrap_local_env.py"]
+CMD ["--verify", "--falcon", "--jobs", "4", "--fixtures", "fixtures/public-alt-chain", "--output", "/evidence/functional"]

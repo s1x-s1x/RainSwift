@@ -1,0 +1,9 @@
+# Local builds, dependency installations and regression outputs.
+build/
+.venv/
+.deps/
+.deps-falcon/
+.cache/
+.pytest_cache/
+__pycache__/
+*.py[cod]

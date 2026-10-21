@@ -35,6 +35,7 @@ import hashlib
 import hmac
 import os
 import socket
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -578,5 +579,5 @@ def test_sandbox_mkdir_patch_applies_under_the_sandbox_environment():
     """The positive control: under the sandbox the patch is still what makes pip work."""
     assert (
         _run_with_sandbox_path({"DSH_SESSION_ID": "regression-test"})
-        == "_mkdir_with_inheritable_dacl"
+        == ("_mkdir_with_inheritable_dacl" if os.name == "nt" else "mkdir")
     )

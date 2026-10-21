@@ -8,14 +8,17 @@ consumes.
 
 from __future__ import annotations
 
+import os
 import time
 from dataclasses import dataclass, field, replace
+from pathlib import Path
 
 from cryptography import x509
 
 from ..classical.signature import ClassicalSigner
 from ..config import HybridTLSConfig
 from ..credentials import CertificateAuthority, IssuedCertificate, ServerCredentials
+from ..errors import HandshakeError
 from ..metrics import TLS_RECORD_HEADER_BYTES, MessageRecord, Metrics
 from ..pq.backends import KemBackend, PqSigner
 from ..record.aead import CONTENT_TYPE_APPLICATION_DATA
@@ -31,6 +34,27 @@ __all__ = [
 
 DEFAULT_APPLICATION_PAYLOAD = b"GET / HTTP/1.1\r\nHost: server.example\r\n\r\n"
 _APPLICATION_RESPONSE = b"HTTP/1.1 200 OK\r\n\r\n"
+
+
+def load_trusted_root(value: object) -> x509.Certificate:
+    """Load an independently provisioned client trust anchor.
+
+    Accepted forms are an already parsed certificate, DER/PEM bytes, or a file
+    path. The path form is the strict entry point: it is read directly by the
+    client and never derived from the server's own credential bundle.
+    """
+    if isinstance(value, x509.Certificate):
+        return value
+    if isinstance(value, (bytes, bytearray)):
+        data = bytes(value)
+    elif isinstance(value, (str, os.PathLike)):
+        data = Path(value).read_bytes()
+    else:
+        raise TypeError("trusted_root must be an x509.Certificate, DER/PEM bytes, or a file path")
+    try:
+        return x509.load_der_x509_certificate(data)
+    except ValueError:
+        return x509.load_pem_x509_certificate(data)
 
 
 @dataclass
@@ -57,7 +81,7 @@ class HandshakeResult:
 
     @property
     def handshake_bytes(self) -> int:
-        """Total handshake bytes including record protection and record headers."""
+        """Actual bare harness handshake bytes, including inner types and AEAD tags."""
         return sum(record.total_bytes for record in self.messages)
 
     @property
@@ -116,7 +140,7 @@ class HandshakeResult:
     def flight_table(self) -> list[tuple[str, str, int, int]]:
         """``(message, sender, plaintext bytes, protection bytes)`` per message."""
         return [
-            (record.name, record.sender, record.message_bytes, record.protection_bytes)
+            (record.name, record.sender, record.message_bytes, record.total_bytes - record.message_bytes)
             for record in self.messages
         ]
 
@@ -167,6 +191,9 @@ class HybridConnection:
         credentials: ServerCredentials | None = None,
         certificate: IssuedCertificate | None = None,
         timings: dict[str, float] | None = None,
+        trusted_root: object | None = None,
+        expected_name: str | None = None,
+        allow_server_root: bool = False,
     ) -> HandshakeResult:
         """Execute a full handshake and the first application-data exchange.
 
@@ -188,11 +215,24 @@ class HybridConnection:
             credentials = ServerCredentials(config, identity=server_identity)
         if certificate is None:
             certificate = credentials.bind_to(authority)
-        trusted_root = (
-            x509.load_der_x509_certificate(credentials.chain.root_der)
-            if config.x509 and credentials.chain is not None
-            else None
-        )
+        identity = server_identity.decode() if isinstance(server_identity, bytes) else str(server_identity)
+        name = expected_name or identity
+        strict_alt = config.require_alt_chain or config.alt_chain is not None
+        if trusted_root is None:
+            if strict_alt and not allow_server_root:
+                raise HandshakeError(
+                    "trust",
+                    "strict alternative-chain verification requires an independently "
+                    "provisioned client root; pass trusted_root instead of deriving it "
+                    "from the server's credentials",
+                )
+            trusted_root = (
+                x509.load_der_x509_certificate(credentials.chain.root_der)
+                if config.x509 and credentials.chain is not None
+                else None
+            )
+        else:
+            trusted_root = load_trusted_root(trusted_root)
 
         def mark(name: str) -> None:
             if timings is not None:
@@ -205,11 +245,9 @@ class HybridConnection:
             authority,
             metrics=metrics,
             trusted_root=trusted_root,
-            trusted_name=server_identity.decode(),
+            trusted_name=name,
         )
         server = HybridServer(config, credentials, certificate, metrics=metrics)
-        suite = config.aead_suite()
-        protection = suite.tag_length + TLS_RECORD_HEADER_BYTES
         messages: list[MessageRecord] = []
 
         with metrics.time("handshake_total"):
@@ -225,14 +263,19 @@ class HybridConnection:
             # Flight 2: authenticated server flight, then the client's Finished.
             flight = server.send_authenticated_flight()
             mark("server_flight_ready")
-            for name, _record, frame in flight:
-                messages.append(MessageRecord(name, "server", len(frame), protection))
+            for name, record, frame in flight:
+                # The inner content type is part of the sealed record but not of the
+                # message framing; the five-byte TLS record header is the other part.
+                messages.append(MessageRecord(name, "server", len(frame),
+                                              len(record) - len(frame) - 1 + TLS_RECORD_HEADER_BYTES))
             client.receive_server_flight([record for _, record, _ in flight])
 
             client_finished = client.send_client_finished()
             mark("client_finished_ready")
             messages.append(
-                MessageRecord("Finished", "client", len(client.sent_client_finished or b""), protection)
+                MessageRecord("Finished", "client", len(client.sent_client_finished or b""),
+                              len(client_finished) - len(client.sent_client_finished or b"")
+                              - 1 + TLS_RECORD_HEADER_BYTES)
             )
             server.receive_client_finished(client_finished)
         mark("complete")
@@ -253,9 +296,9 @@ class HybridConnection:
             certificate=certificate,
             application_payload_ok=application_ok,
             exporters_match=exporters_match,
-            kem=config.kem_backend(),
+            kem=config.kem_backend() if config.pq_enabled else None,
             classical_signer=config.classical(),
-            pq_signer=config.pq(),
+            pq_signer=config.pq() if config.pq_enabled else None,
         )
 
 

@@ -59,3 +59,14 @@ Every call returns `RAIN_TLS_OK` (0) or a negative code. Look parameter sets up 
 `rain4-fast`, `rain4-bal` and `rain4-short`. Keys are 32 bytes; signatures have the fixed lengths
 `rain_tls_set_sizes` reports. `rain_tls_sign` and `rain_tls_verify` take detached signatures and
 run `crypto_sign` / `crypto_sign_open` underneath. Call `rain_tls_cpu_supported()` first.
+
+## Linux build
+
+From `tls/`, with GCC 14+, G++, ar and the same pinned XKCP checkout:
+
+```sh
+bash native/rain_voleith/build_linux.sh "$(realpath ../src)" "$(realpath ../xkcp)" "$(pwd)/build/native-rain"
+export RAIN_VOLEITH_LIB="$PWD/build/native-rain/librain_voleith_tls.so"
+```
+
+See [the application README](../../README.md) for locked dependencies, tests and the demo.

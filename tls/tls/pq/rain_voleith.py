@@ -163,6 +163,9 @@ class RainSecretKey:
 class RainVoleith:
     """One Rain-VOLEitH parameter set behind :class:`~tls.pq.backends.PqSigner`."""
 
+    #: Typed secret-key constructor, used when an offline fixture reloads key bytes.
+    secret_key_type = RainSecretKey
+
     def __init__(self, name: str) -> None:
         if name not in RAIN_SCHEME_IDS:
             raise BackendUnavailableError(f"unknown Rain-VOLEitH parameter set {name!r}")

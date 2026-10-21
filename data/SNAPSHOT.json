@@ -56,7 +56,7 @@
     ]
   },
   "verification": "Recomputed using data/原语性能/核验性能数据.py; see docs/data_update_20261022.md",
-  "source_scope": "Data and documentation update; support-package tlsb and a15 source synchronization remains pending.",
+  "source_scope": "Support-package tlsb is synchronized into tls/; a15/ including base_tls/ and src/test/kat_gen.cpp are imported. See docs/source_snapshot_20261022.json for source hashes and documentation adaptations.",
   "algorithm_name": "RainSwift",
   "algorithm_name_zh": "雨燕",
   "repository": "https://github.com/s1x-s1x/RainSwift"

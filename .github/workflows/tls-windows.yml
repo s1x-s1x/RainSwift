@@ -47,7 +47,7 @@ jobs:
         run: python -I tools/rain_voleith_kat_gate.py --release build/rain_voleith_tls.dll --test build/native-rain-test/rain_voleith_tls_test.dll --kat-dir ../KAT --rain-src ../src
       - name: Locked dependencies (hash-pinned wheels)
         working-directory: tls
-        run: python -m pip install --disable-pip-version-check --require-hashes --only-binary ":all:" --target .deps -r requirements.lock.txt
+        run: python -m pip install --disable-pip-version-check --require-hashes --only-binary ":all:" --target .deps -r requirements.lock.txt -r reference/requirements.lock.txt
       - name: Test suite with RainSwift required
         working-directory: tls
         env:

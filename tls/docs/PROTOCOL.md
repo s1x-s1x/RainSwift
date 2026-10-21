@@ -1,3 +1,5 @@
+> 当前应用已同步支撑材料 `tlsb/`。本文的逐字节示例保留历史配置语境，当前能力以 [CAPABILITIES](CAPABILITIES.md) 和当前测试为准。
+
 > 2026-10-22 数据更新：本文保留历史设计／审查语境；引用的早期 `.bench-*` 输出与旧验收日志已从当前文件树删除。当前实验数据见 [复赛数据快照](../../data/README.md)，按其批次和源码版本读取。
 
 # Wire protocol specification

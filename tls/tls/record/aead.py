@@ -31,6 +31,11 @@ CONTENT_TYPE_ALERT = 21
 
 _LEGACY_VERSION = b"\x03\x03"
 
+#: RFC 8446 section 5.1: a plaintext record carries at most 2^14 content bytes.
+#: The harness enforces this instead of allowing a peer-sized allocation.
+MAX_CONTENT_BYTES = 1 << 14
+MAX_CIPHERTEXT_BYTES = MAX_CONTENT_BYTES + 256
+
 #: Records one key may protect before the AEAD usage limit of RFC 8446 section 5.5 is
 #: reached: ``2**24.5`` for AES-GCM with a 16-byte tag. Held as a float because the section
 #: states it as a fractional power of two; compared as an integer bound.
@@ -133,6 +138,10 @@ class RecordLayer:
 
     def seal(self, content_type: int, payload: bytes) -> bytes:
         """Encrypt ``payload`` into one record."""
+        if len(payload) > MAX_CONTENT_BYTES:
+            raise HandshakeError(
+                "record", f"plaintext record is {len(payload)} bytes, over the {MAX_CONTENT_BYTES}-byte limit"
+            )
         self._check_usage_limit(self._sequence)
         inner = payload + u8(content_type)
         ciphertext = self._aead.encrypt(self._nonce(), inner, self._additional_data(content_type, len(inner)))
@@ -152,6 +161,11 @@ class RecordLayer:
         inner_length = len(record) - self.suite.tag_length
         if inner_length < 1:
             raise HandshakeError("record", f"record {record_number} is shorter than its tag")
+        if inner_length - 1 > MAX_CONTENT_BYTES:
+            raise HandshakeError(
+                "record", f"record {record_number} carries {inner_length - 1} plaintext bytes, "
+                f"over the {MAX_CONTENT_BYTES}-byte limit"
+            )
         try:
             inner = self._aead.decrypt(
                 self._nonce(), record, self._additional_data(header_type, inner_length)

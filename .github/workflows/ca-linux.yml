@@ -1,0 +1,31 @@
+name: ca-linux
+on:
+  push:
+    paths: ["a15/**", ".github/workflows/ca-linux.yml"]
+  pull_request:
+    paths: ["a15/**", ".github/workflows/ca-linux.yml"]
+  workflow_dispatch:
+jobs:
+  functional:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Offline CA CPU functional gate
+        working-directory: a15
+        run: |
+          python -B ops/bootstrap_local_env.py --verify --falcon --jobs 4 --fixtures fixtures/public-alt-chain --output "${{ runner.temp }}/ca-functional"
+      - name: Functional logs and manifests
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ca-functional-evidence
+          path: |
+            ${{ runner.temp }}/ca-functional/*.log
+            ${{ runner.temp }}/ca-functional/*.json
+            ${{ runner.temp }}/ca-functional/*.jsonl
+            ${{ runner.temp }}/ca-functional/*.xml
+          if-no-files-found: warn

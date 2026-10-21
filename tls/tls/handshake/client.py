@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import hmac
 import os
+from dataclasses import dataclass
 
 from cryptography.hazmat.primitives import serialization
 
@@ -25,7 +26,8 @@ from ..credentials import CertificateAuthority
 from ..errors import HandshakeError, named_errors
 from ..key_schedule.hkdf import encode_hybrid_secret
 from ..metrics import Metrics
-from ..pki import pq_extension_from_leaf, verify_chain
+from ..pki import pq_extension_from_leaf
+from ..alt_chain import verify_alt_chain
 from ..wire import split_handshake_message
 from .certificate_verify import (
     HybridCertificateVerify,
@@ -55,7 +57,27 @@ from .messages import (
 )
 from .state import HandshakeState
 
-__all__ = ["HybridClient"]
+__all__ = ["HybridClient", "ServerFlightLimits"]
+
+
+@dataclass(frozen=True)
+class ServerFlightLimits:
+    """Finite resource budgets for this private harness's authenticated flight.
+
+    ``max_bytes`` counts authenticated handshake content, including message
+    headers. The record budget also bounds the fragment metadata retained by
+    the client. These local limits are not negotiated TLS extensions.
+    """
+
+    max_records: int = 1024
+    max_bytes: int = 4 << 20
+
+    def __post_init__(self) -> None:
+        for name in ("max_records", "max_bytes"):
+            value = getattr(self, name)
+            if isinstance(value, bool) or not isinstance(value, int) or value <= 0:
+                raise ValueError(f"{name} must be a positive integer")
+
 
 _EXPECTED_FLIGHT = (
     ("EncryptedExtensions", ENCRYPTED_EXTENSIONS),
@@ -75,8 +97,13 @@ class HybridClient(HandshakeState):
         metrics: Metrics | None = None,
         trusted_root: object | None = None,
         trusted_name: str = "server.example",
+        *,
+        flight_limits: ServerFlightLimits | None = None,
     ) -> None:
         super().__init__(config, role="client", metrics=metrics)
+        if flight_limits is not None and not isinstance(flight_limits, ServerFlightLimits):
+            raise TypeError("flight_limits must be ServerFlightLimits")
+        self.flight_limits = flight_limits if flight_limits is not None else ServerFlightLimits()
         self.authority = authority
         #: The X.509 profile validates against a parsed root certificate; the modelled
         #: profile against the test CA object. Whichever the profile needs must be here.
@@ -95,6 +122,12 @@ class HybridClient(HandshakeState):
         self.verification: HybridVerificationResult | None = None
         self.certificate_verify_input: bytes | None = None
         self.sent_client_finished: bytes | None = None
+        self._server_flight_index = 0
+        self._server_flight_failed = False
+        self.server_flight_records = 0
+        self.server_flight_bytes = 0
+        self._handshake_buffer = bytearray()
+        self.server_flight_fragments: list[tuple[str, int, int]] = []
 
     # -- flight 1 -----------------------------------------------------------
 
@@ -260,48 +293,100 @@ class HybridClient(HandshakeState):
     @named_errors("server_flight")
     def receive_server_flight(self, records: list[bytes]) -> None:
         """Decrypt and check EncryptedExtensions, Certificate, CertificateVerify, Finished."""
-        if len(records) != len(_EXPECTED_FLIGHT):
-            raise HandshakeError(
-                "server_flight",
-                f"expected {len(_EXPECTED_FLIGHT)} records, received {len(records)}",
-            )
-        for (name, expected_type), record in zip(_EXPECTED_FLIGHT, records, strict=True):
-            inner = self.open_handshake(record)
-            message_type, body = split_handshake_message(inner)
-            if message_type != expected_type:
+        for record in records:
+            self.receive_server_record(record)
+        self.finish_server_flight()
+
+    @property
+    def server_flight_complete(self) -> bool:
+        return (not self._server_flight_failed
+                and self._server_flight_index == len(_EXPECTED_FLIGHT)
+                and not self._handshake_buffer)
+
+    def _fail_server_flight(self) -> None:
+        self._server_flight_failed = True
+        self._handshake_buffer.clear()
+        self.application_client_records = None
+        self.application_server_records = None
+
+    @named_errors("server_flight")
+    def finish_server_flight(self) -> None:
+        if self._server_flight_failed:
+            raise HandshakeError("server_flight", "authenticated handshake flight already failed")
+        if not self.server_flight_complete:
+            self._fail_server_flight()
+            raise HandshakeError("server_flight", "truncated authenticated handshake flight")
+
+    @named_errors("server_flight")
+    def receive_server_record(self, record: bytes) -> None:
+        """Consume one authenticated fragment; preserve complete-message transcripts."""
+        if self._server_flight_failed:
+            raise HandshakeError("server_flight", "authenticated handshake flight already failed")
+        try:
+            self._receive_server_record(record)
+        except BaseException:
+            self._fail_server_flight()
+            raise
+
+    def _receive_server_record(self, record: bytes) -> None:
+        if self.server_flight_complete:
+            raise HandshakeError("server_flight", "unexpected record after Finished")
+        if self.server_flight_records >= self.flight_limits.max_records:
+            raise HandshakeError("server_flight", "authenticated handshake flight exceeds record budget")
+        payload = self.open_handshake(record)
+        if not payload:
+            raise HandshakeError("server_flight", "empty handshake fragment")
+        if self.server_flight_bytes + len(payload) > self.flight_limits.max_bytes:
+            raise HandshakeError("server_flight", "authenticated handshake flight exceeds byte budget")
+        name = _EXPECTED_FLIGHT[self._server_flight_index][0]
+        self.server_flight_records += 1
+        self.server_flight_bytes += len(payload)
+        self.server_flight_fragments.append((name, len(payload), len(record)))
+        self._handshake_buffer.extend(payload)
+        # Bound the announced message before buffering its body. This harness
+        # supports at most 1 MiB per handshake message; TLS record bounds are lower.
+        while len(self._handshake_buffer) >= 4:
+            size = 4 + int.from_bytes(self._handshake_buffer[1:4], "big")
+            if size > (1 << 20):
+                raise HandshakeError("server_flight", "handshake message exceeds harness limit")
+            if len(self._handshake_buffer) < size:
+                return
+            inner = bytes(self._handshake_buffer[:size])
+            del self._handshake_buffer[:size]
+            self._consume_server_handshake(inner)
+            self._server_flight_index += 1
+            if self._server_flight_index == len(_EXPECTED_FLIGHT):
+                if self._handshake_buffer:
+                    raise HandshakeError("server_flight", "trailing data after Finished")
+                self.setup_application_keys()
+                return
+
+    def _consume_server_handshake(self, inner: bytes) -> None:
+        name, expected_type = _EXPECTED_FLIGHT[self._server_flight_index]
+        message_type, body = split_handshake_message(inner)
+        if message_type != expected_type:
+            raise HandshakeError("server_flight", f"{name} expected type {expected_type}, received {message_type}")
+        if name == "EncryptedExtensions":
+            extensions = EncryptedExtensions.decode(body)
+            present = sorted(kind for kind, _data in extensions.extensions)
+            if present:
+                # This profile offers no EncryptedExtensions extension, so any is
+                # un-offered by definition (RFC 8446 section 4.2).
                 raise HandshakeError(
-                    "server_flight", f"{name} expected type {expected_type}, received {message_type}"
+                    "server_flight",
+                    "EncryptedExtensions carries extension(s) this client never offered: "
+                    + ", ".join(f"{kind:#06x}" for kind in present),
                 )
-            if name == "EncryptedExtensions":
-                extensions = EncryptedExtensions.decode(body)
-                present = sorted(kind for kind, _data in extensions.extensions)
-                if present:
-                    # This profile offers no EncryptedExtensions extension, so any is
-                    # un-offered by definition (RFC 8446 section 4.2).
-                    raise HandshakeError(
-                        "server_flight",
-                        "EncryptedExtensions carries extension(s) this client never offered: "
-                        + ", ".join(f"{kind:#06x}" for kind in present),
-                    )
-                self.transcript.add(inner)
-            elif name == "Certificate":
-                self._check_certificate(body)
-                self.transcript.add(inner)
-            elif name == "CertificateVerify":
-                self._check_certificate_verify(CertificateVerify.decode(body).payload)
-                self.transcript.add(inner)
-            else:
-                self._check_server_finished(Finished.decode(body).verify_data)
-                self.transcript.add(inner)
-        # RFC 8446 section 7.1 derives `c ap traffic`, `s ap traffic` and `exp master` over
-        # the transcript through the *server* Finished, so this is the moment: the client's
-        # own Finished is not in the transcript yet, and adding it first would move all
-        # three secrets off the standard. An earlier version derived them in
-        # `send_client_finished`, after its own Finished — the two halves agreed with each
-        # other and disagreed with the standard, which no equality test here can see.
-        # `res master` is the exception and is derived after the client Finished instead;
-        # see `HandshakeState.setup_resumption_secret`. An independent audit found this.
-        self.setup_application_keys()
+            self.transcript.add(inner)
+        elif name == "Certificate":
+            self._check_certificate(body)
+            self.transcript.add(inner)
+        elif name == "CertificateVerify":
+            self._check_certificate_verify(CertificateVerify.decode(body).payload)
+            self.transcript.add(inner)
+        else:
+            self._check_server_finished(Finished.decode(body).verify_data)
+            self.transcript.add(inner)
 
     def _check_certificate(self, body: bytes) -> None:
         """Validate the certificate and adopt both server public keys.
@@ -326,11 +411,20 @@ class HybridClient(HandshakeState):
         if chain.extensions or any(chain.entry_extensions):
             raise HandshakeError("certificate", "unsolicited CertificateEntry extensions")
         with self.metrics.time("client_verify_certificate"):
-            leaf = verify_chain(
+            alt_result = verify_alt_chain(
                 list(chain.chain),
                 self.trusted_root,  # type: ignore[arg-type]
                 self.trusted_name,
+                require_alt_chain=self.config.require_alt_chain,
+                expected_algorithm=self.config.alt_chain,
+                require_native=self.config.alt_require_native,
+                force_python=self.config.alt_force_python,
+                library=self.config.alt_library,
+                threads=self.config.alt_threads,
+                backend=self.config.alt_backend,
             )
+            leaf = alt_result.leaf
+            self.alt_chain_verification = alt_result
         self.chain = chain
         self.server_classical_public = leaf.public_key().public_bytes(
             serialization.Encoding.X962, serialization.PublicFormat.UncompressedPoint
@@ -504,6 +598,8 @@ class HybridClient(HandshakeState):
         This method adds the client's own Finished and then derives ``res master``, which
         is the one secret RFC 8446 section 7.1 takes over the longer transcript.
         """
+        if self._server_flight_failed:
+            raise HandshakeError("client_finished", "authenticated handshake flight already failed")
         if self.application_client_records is None:
             raise HandshakeError(
                 "client_finished",

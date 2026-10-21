@@ -1,0 +1,301 @@
+{
+  "schema": "a15-preissued-fixture-acquisition-v1",
+  "baseline_commit": "808d34c938725cf9b1edb7b2452d550afa396455",
+  "scope": "PUBLIC TEST-ONLY keys and preissued signatures. Copied unchanged, not new signing or performance evidence.",
+  "files": [
+    {
+      "file": "MANIFEST.json",
+      "bytes": 6353,
+      "sha256": "d6d4322039dfc5ff136693d375cee98f745868b5b51cc44725a86a3b53656941",
+      "git_blob_sha1": "9e53fc1250fc279eabf862505f5d8d63bd52e462"
+    },
+    {
+      "file": "ml-dsa-44/classical-intermediate.der",
+      "bytes": 403,
+      "sha256": "c90d258777f9742df883559a890da27449f5705785bec3482d4203d7be7d5f2b",
+      "git_blob_sha1": "8db8abb4a7c4eff02b97e493707a447225c78b28"
+    },
+    {
+      "file": "ml-dsa-44/classical-leaf.der",
+      "bytes": 447,
+      "sha256": "e93865fda447d679023cf283dbc961f91d31f3c0e735199fb01830b0b37dcc36",
+      "git_blob_sha1": "7b1e22d6f626437436ed20e70d56bbf931b5c0e2"
+    },
+    {
+      "file": "ml-dsa-44/classical-root.der",
+      "bytes": 396,
+      "sha256": "6a739646046ec2486e30eb38764c2db3d99efe77180113c5f21b960be8f8353d",
+      "git_blob_sha1": "75e9c97f4b04b9b136e2e8167b7cda51430f389d"
+    },
+    {
+      "file": "ml-dsa-44/fixture.json",
+      "bytes": 8243,
+      "sha256": "b525b645cec24299de9549336896092948be9fb3e3f58f615878d32318903435",
+      "git_blob_sha1": "2b3e68c8fe85a37e9225a9562ddec46546067c5d"
+    },
+    {
+      "file": "ml-dsa-44/handshake-test-key.json",
+      "bytes": 4449,
+      "sha256": "e7a18241117a0fab516eba29f00f8e4b6115517de9c25867e8a802c25f7dd819",
+      "git_blob_sha1": "cdd5f31feee29e18a40dfcc96e53c1b36f38d91f"
+    },
+    {
+      "file": "ml-dsa-44/hybrid-intermediate.der",
+      "bytes": 403,
+      "sha256": "c90d258777f9742df883559a890da27449f5705785bec3482d4203d7be7d5f2b",
+      "git_blob_sha1": "8db8abb4a7c4eff02b97e493707a447225c78b28"
+    },
+    {
+      "file": "ml-dsa-44/hybrid-leaf.der",
+      "bytes": 1368,
+      "sha256": "d1aee3f9581a1b50dc6266df38e265fd667cf0a5c1f1a7aa747c02a107d2c59d",
+      "git_blob_sha1": "45e567a886579d992e186ccf69d6b79cfb7cf358"
+    },
+    {
+      "file": "ml-dsa-44/hybrid-root.der",
+      "bytes": 396,
+      "sha256": "6a739646046ec2486e30eb38764c2db3d99efe77180113c5f21b960be8f8353d",
+      "git_blob_sha1": "75e9c97f4b04b9b136e2e8167b7cda51430f389d"
+    },
+    {
+      "file": "ml-dsa-44/intermediate-pre-tbs.der",
+      "bytes": 1674,
+      "sha256": "e6a36dcef985cf8a5ea224c13623996101f029b77f728d5a3c78facd053972e6",
+      "git_blob_sha1": "8c622a4f543415918e4ac855bec1d0d65f513e55"
+    },
+    {
+      "file": "ml-dsa-44/intermediate-test-key.pem",
+      "bytes": 241,
+      "sha256": "c2c6d660d28e3f3efcd993ee7730af6def56922ca1e3997c85c398b8726eeb0a",
+      "git_blob_sha1": "1ebe27ca4fce53faca27c716cc8b33bce70c41c0"
+    },
+    {
+      "file": "ml-dsa-44/intermediate.der",
+      "bytes": 4215,
+      "sha256": "a5ba6c7fb4e300b25ede92c95d6234bb8f6b70b3b12514365906a885f72c0cf4",
+      "git_blob_sha1": "a35d0cf4e14559258b4c856014c6ea76bb8b7f04"
+    },
+    {
+      "file": "ml-dsa-44/leaf-pre-tbs.der",
+      "bytes": 1289,
+      "sha256": "d49626dd11d1cd8a1dd8f8205a7cc0d3190b01870426e125bd45a9fb46feb40c",
+      "git_blob_sha1": "9c917e9964b6a2e6320560452862d4eb4f27bcaa"
+    },
+    {
+      "file": "ml-dsa-44/leaf-test-key.pem",
+      "bytes": 241,
+      "sha256": "78752090aa021da5dba47301f58dcaca97d853e7d33ee7326409357258204b2a",
+      "git_blob_sha1": "db3d01bf22eb4b8d66ae75c48fbaa259384e89f8"
+    },
+    {
+      "file": "ml-dsa-44/leaf.der",
+      "bytes": 3829,
+      "sha256": "8e32f03e84eeb9ae98a2789f782d7f0f5ab50f545ad5947c5e6ddd7bb6c400f8",
+      "git_blob_sha1": "774c1a100c8aee1f2b61a7ae718ed349ca4f7be9"
+    },
+    {
+      "file": "ml-dsa-44/root-test-key.pem",
+      "bytes": 241,
+      "sha256": "adcd092eefef950716b90d561db8560e478d46ad7c93915d2fcf471b0ee23dbf",
+      "git_blob_sha1": "27fad52671428c6b0c638f9e52cba859b813e46b"
+    },
+    {
+      "file": "ml-dsa-44/root.der",
+      "bytes": 1746,
+      "sha256": "363363a352b5cad901684b72ec81d1129ca5660ab215f5d24b3befa0c41fb444",
+      "git_blob_sha1": "daceb4ab2e00b587e5b3da1238c982b38e8f110d"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/classical-intermediate.der",
+      "bytes": 403,
+      "sha256": "be5c8ba5513d9248b19816e710b8f167bd6e818224f292a1b021fc2570b0098f",
+      "git_blob_sha1": "b518916bad9f2c49095483c031f4ae1d2d9e1ad9"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/classical-leaf.der",
+      "bytes": 446,
+      "sha256": "8d79b5a507f4c9d655e862d7fc51309c111816a315661af7dcfe978846f58e70",
+      "git_blob_sha1": "27980e56d3748b974a10d70247181f210fab78b1"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/classical-root.der",
+      "bytes": 395,
+      "sha256": "d247db944477ec276d5f1481de97d91fc9c1aa376ea45db241074e9be82ae186",
+      "git_blob_sha1": "60e6df3554910f6bc190f0379276206af8e7e124"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/fixture.json",
+      "bytes": 8269,
+      "sha256": "92348d6213c893e8c1411daa5de2af1f984de922bffaae6069ca8f266b70896a",
+      "git_blob_sha1": "115c451e815f5f5835a8b82b85880ddeb4aa3932"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/handshake-test-key.json",
+      "bytes": 4449,
+      "sha256": "e7a18241117a0fab516eba29f00f8e4b6115517de9c25867e8a802c25f7dd819",
+      "git_blob_sha1": "cdd5f31feee29e18a40dfcc96e53c1b36f38d91f"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/hybrid-intermediate.der",
+      "bytes": 403,
+      "sha256": "be5c8ba5513d9248b19816e710b8f167bd6e818224f292a1b021fc2570b0098f",
+      "git_blob_sha1": "b518916bad9f2c49095483c031f4ae1d2d9e1ad9"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/hybrid-leaf.der",
+      "bytes": 1368,
+      "sha256": "2d1b4da6c01c1e1ad4c6559694d84f9edee85e23b2c1fd1ad6b4daec8c5777c0",
+      "git_blob_sha1": "b8e389d42b562c6fc168e0238503384781caac5f"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/hybrid-root.der",
+      "bytes": 395,
+      "sha256": "d247db944477ec276d5f1481de97d91fc9c1aa376ea45db241074e9be82ae186",
+      "git_blob_sha1": "60e6df3554910f6bc190f0379276206af8e7e124"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/intermediate-pre-tbs.der",
+      "bytes": 386,
+      "sha256": "c313e9f7d59c79c77710d9c915f777cd97e5ba51791e1d69a8199d381a640542",
+      "git_blob_sha1": "e0a12f786cadc5875a1292d9f174e8382dfe9fa0"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/intermediate-test-key.pem",
+      "bytes": 241,
+      "sha256": "c2c6d660d28e3f3efcd993ee7730af6def56922ca1e3997c85c398b8726eeb0a",
+      "git_blob_sha1": "1ebe27ca4fce53faca27c716cc8b33bce70c41c0"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/intermediate.der",
+      "bytes": 4364,
+      "sha256": "4826a72e1b702cfea2840a5d8abf1f7a19928031fe597688111b3ef1dcf69a56",
+      "git_blob_sha1": "e47dd2fbe375e86ae050ed31dfbba08d26b3983b"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/leaf-pre-tbs.der",
+      "bytes": 1290,
+      "sha256": "bc1a4afaaf552cbd489a07f9d9f60dc10827077e73a0ea8b03d9bf2a2a5f5a5d",
+      "git_blob_sha1": "de4a4212b0ef93cdd6e42ac4419fbc5b817581cb"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/leaf-test-key.pem",
+      "bytes": 241,
+      "sha256": "78752090aa021da5dba47301f58dcaca97d853e7d33ee7326409357258204b2a",
+      "git_blob_sha1": "db3d01bf22eb4b8d66ae75c48fbaa259384e89f8"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/leaf.der",
+      "bytes": 5265,
+      "sha256": "feb07ef2eb3c2276eb4123f3ef6c7342d18bf4ddae3238ba397419dc26868f74",
+      "git_blob_sha1": "441563c96c45dc2a850189264a50e507c103f647"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/root-test-key.pem",
+      "bytes": 241,
+      "sha256": "adcd092eefef950716b90d561db8560e478d46ad7c93915d2fcf471b0ee23dbf",
+      "git_blob_sha1": "27fad52671428c6b0c638f9e52cba859b813e46b"
+    },
+    {
+      "file": "slh-dsa-sm3-128-24/root.der",
+      "bytes": 458,
+      "sha256": "56b5602e632845252f57380f5c16ae213a5d115d115cebe0ea40c5bdcce53ab1",
+      "git_blob_sha1": "133d1fdf8c1e6d017c9776b1f8cd28ee5e6076f5"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/classical-intermediate.der",
+      "bytes": 403,
+      "sha256": "bf5712e7e87bc26ac03b1217815ced9b3b8277a6c98ec226eebde4f8585f55f0",
+      "git_blob_sha1": "68bf0de647f61062d1a15997c6ffa2e91bad5e5a"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/classical-leaf.der",
+      "bytes": 448,
+      "sha256": "3a6f38d8cce0f676946af7dfb46293b379e1740f36fbeeebfe41518972026ba5",
+      "git_blob_sha1": "3096e8bcbd5593817f3b0f94b3159f1925f45fa8"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/classical-root.der",
+      "bytes": 395,
+      "sha256": "0bf34d34811628d3d8b4a320714c742124eb048e62da32e3a6c96792ddccf471",
+      "git_blob_sha1": "3fc18f02b62d5ec63b70b934c2e708d257832425"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/fixture.json",
+      "bytes": 8263,
+      "sha256": "3da375263af600eb13ff6bf4058fc063648d3dc86a5838682e5db76ffc86afbe",
+      "git_blob_sha1": "5392521ae83b6307883a1bbf312b201a2150cbba"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/handshake-test-key.json",
+      "bytes": 4449,
+      "sha256": "e7a18241117a0fab516eba29f00f8e4b6115517de9c25867e8a802c25f7dd819",
+      "git_blob_sha1": "cdd5f31feee29e18a40dfcc96e53c1b36f38d91f"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/hybrid-intermediate.der",
+      "bytes": 403,
+      "sha256": "bf5712e7e87bc26ac03b1217815ced9b3b8277a6c98ec226eebde4f8585f55f0",
+      "git_blob_sha1": "68bf0de647f61062d1a15997c6ffa2e91bad5e5a"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/hybrid-leaf.der",
+      "bytes": 1369,
+      "sha256": "857db61f7d8af0ecca60bca0b09cc35070ae17b865524b07a6f264edce743a77",
+      "git_blob_sha1": "802d6a3f2290fb03febbb47c0febce4bdf184baa"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/hybrid-root.der",
+      "bytes": 395,
+      "sha256": "0bf34d34811628d3d8b4a320714c742124eb048e62da32e3a6c96792ddccf471",
+      "git_blob_sha1": "3fc18f02b62d5ec63b70b934c2e708d257832425"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/intermediate-pre-tbs.der",
+      "bytes": 386,
+      "sha256": "7d630cf8664c8db2ba413a8693c2fe30f363b142bf6796a09c39528cb5b83a42",
+      "git_blob_sha1": "3294f95379491ebedfa03520fe1c1edfb9e8e6f6"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/intermediate-test-key.pem",
+      "bytes": 241,
+      "sha256": "c2c6d660d28e3f3efcd993ee7730af6def56922ca1e3997c85c398b8726eeb0a",
+      "git_blob_sha1": "1ebe27ca4fce53faca27c716cc8b33bce70c41c0"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/intermediate.der",
+      "bytes": 8364,
+      "sha256": "7db34206c43ae8aec8510bc2d6cf3a038b29474b33c48a6472d254ba2656fa0a",
+      "git_blob_sha1": "6c411e003d94d3401f675cc89b39d769663d6505"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/leaf-pre-tbs.der",
+      "bytes": 1290,
+      "sha256": "3aea69df53f75829141857518f3a3baca901c6688cd8f4c3893face0851ead40",
+      "git_blob_sha1": "9ab8c68dfc94b9e09d930540c85c6a776b27f05f"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/leaf-test-key.pem",
+      "bytes": 241,
+      "sha256": "78752090aa021da5dba47301f58dcaca97d853e7d33ee7326409357258204b2a",
+      "git_blob_sha1": "db3d01bf22eb4b8d66ae75c48fbaa259384e89f8"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/leaf.der",
+      "bytes": 9266,
+      "sha256": "7893e903552129382830085c27b993d18e5dc67ed4700b06ea9e8cf74da4a52b",
+      "git_blob_sha1": "80086d520e8a7bd64ed38f67f519ecf27ac2c9f8"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/root-test-key.pem",
+      "bytes": 241,
+      "sha256": "adcd092eefef950716b90d561db8560e478d46ad7c93915d2fcf471b0ee23dbf",
+      "git_blob_sha1": "27fad52671428c6b0c638f9e52cba859b813e46b"
+    },
+    {
+      "file": "slh-dsa-sm3-128s/root.der",
+      "bytes": 457,
+      "sha256": "ddbe13165b459226b90b5ddd8ff6d1c067f02d7d4c85e2b05daac884e6d22bf6",
+      "git_blob_sha1": "62363fc413a88b8df8819df046e1df9105328de1"
+    }
+  ]
+}

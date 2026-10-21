@@ -23,11 +23,29 @@ class MessageRecord:
     message_bytes: int
     #: Record protection bytes (tag and, where applicable, the record header).
     protection_bytes: int = 0
+    #: Actual private transport prefix per record, if this observation used TCP.
+    transport_prefix_bytes: int = 0
+    #: Number of protected records this observation covers.
+    record_count: int = 1
+
+    @property
+    def record_bytes(self) -> int:
+        """Actual serialized bare harness bytes (no imputed TLS header)."""
+        return self.message_bytes + self.protection_bytes
+
+    @property
+    def tcp_framed_bytes(self) -> int:
+        return self.record_bytes + 4 * self.record_count
+
+    @property
+    def standard_tls_model_bytes(self) -> int:
+        """Size model adding TLS's 5-byte header; no interoperability claim."""
+        return self.record_bytes + TLS_RECORD_HEADER_BYTES * self.record_count
 
     @property
     def total_bytes(self) -> int:
         """Bytes this message contributes to the handshake flight."""
-        return self.message_bytes + self.protection_bytes
+        return self.record_bytes + self.transport_prefix_bytes * self.record_count
 
 
 @dataclass

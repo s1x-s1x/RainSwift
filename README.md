@@ -8,9 +8,11 @@
 block cipher, keeping rFAEST's VOLE, commitment, hashing and AVX2 code unchanged. Six 128-bit parameter sets.
 Key generation uses an optimized but functionally identical Rain evaluation (`src/rain_kg.hpp`), checked bit for bit
 against the original implementation. Run `docker build -t rainswift . && docker run --rm rainswift` to rebuild
-and check all known-answer tests byte-for-byte. `tls/` integrates the six sets into a hybrid TLS 1.3
-implementation (the team's earlier v9 stack) as the post-quantum CertificateVerify signature; a Windows CI job builds
-the DLL, reproduces the KATs through it and runs the TLS test suite. Documentation is in Chinese.
+and check all known-answer tests byte-for-byte. `tls/` contains the current hybrid TLS application
+from the competition support package (`tlsb/` there); `a15/` contains the SLH-DSA-SM3 offline CA,
+its independent Python reference, public test fixtures, vectors and required `base_tls/` dependency.
+Windows CI builds the RainSwift DLL and runs KAT/TLS tests; Linux CI runs the offline CA functional gate.
+Documentation is in Chinese.
 
 本仓库在 rFAEST 的同一份代码基础上，把单向函数由 EM-AES 换成 Rain-3／Rain-4，其余部分（VOLE、承诺、哈希、AVX2 实现）保持不变。共有六组 128 位参数。任何人都可以按下文一键复现编译、测试和已知答案测试（KAT）比对，也可以直接调用签名接口。
 
@@ -133,47 +135,45 @@ docker run --rm rainswift taskset -c 2 ./build/rain_bench 501
 | `src/rain_kg.hpp`、`src/q5_kg_test.cpp` | 建钥专用的 Rain 正向计算（与原实现同一函数）及其差分测试、组件微基准 |
 | `src/examples/`、`src/bench/` | 使用示例、便捷测速 |
 | `KAT/` | 六组签名 KAT 与 SHA-256 |
-| `docs/` | Q2 验收、Q4 安全证明、建钥实现说明与数据更新记录（中文） |
+| `docs/` | Q2 验收、Q4 安全证明、建钥实现说明、数据与源码同步记录（中文） |
 | `docs/Q4_records/` | Q4 证明引用的分稿、内部审查与复算记录（索引见其 README） |
 | `data/` | 复赛支撑材料的新数据快照：原语性能、资源测量、协议时延、证书链与功能测试 |
-| `tls/` | 混合 TLS 1.3 应用：团队前期的 v9 实现接入 RainSwift（见第 6 节） |
-| `verify.sh`、`Dockerfile`、`.github/workflows/` | 一键验证与持续集成（`verify.yml`：Linux 上的算法验证；`tls-windows.yml`：Windows 上的 TLS 接入验证） |
+| `tls/` | 支撑材料 `tlsb/` 的当前混合 TLS 应用：RainSwift 在线签名、严格替代 CA 链验证及回环 TCP |
+| `a15/` | SLH-DSA-SM3 离线 CA、REF/AVX2/OpenMP/CUDA 源码、Python 对照、公开向量与预签发测试链 |
+| `verify.sh`、`Dockerfile`、`.github/workflows/` | 一键验证与持续集成（`verify.yml`：Linux 算法验证；`tls-windows.yml`：Windows TLS 接入；`ca-linux.yml`：Linux 离线 CA 功能入口） |
 
-## 6. TLS 1.3 应用（`tls/`）
+## 6. TLS 应用与离线 CA
 
-`tls/` 是团队前期的混合 TLS 1.3 实现 v9，接入了本仓库的 RainSwift，作为握手中的后量子签名使用：
+2026-10-22 已同步复赛支撑材料中的新版源码：`tlsb/` 映射到仓库 `tls/`，`a15/` 保持目录名。原语补入 `src/test/kat_gen.cpp`；已有共有原语实现与材料一致。逐文件来源、哈希和文档适配见 [源码同步记录](docs/source_update_20261022.md) 与 [来源清单](docs/source_snapshot_20261022.json)。
 
-- **协议**：密钥协商用 X25519＋ML-KEM-768。认证时，ECDSA P-256 与 RainSwift 对同一个 CertificateVerify 输入各签一次，客户端要求两者都通过。X.509 叶证书的私有扩展携带 32 字节的 Rain 公钥。
-- **改动范围**：v9 的握手、密钥协商、密钥调度和记录层都没有改。新增的是：
-  - 原生库接口 `tls/native/rain_voleith/`，由本仓库 `src/` 编成 Windows DLL；
-  - ctypes 后端 `tls/tls/pq/rain_voleith.py`；
-  - 测试、已知答案关卡、演示与文档。
+### 在线签名与混合握手：`tls/`
 
-  说明见 [tls/docs/RAIN_VOLEITH.md](tls/docs/RAIN_VOLEITH.md)。
-- **只含 RainSwift**：本仓库只发布我方算法的接入。六组参数的编号为 0xFEB0–0xFEB5。
-- **验证**：GitHub Actions（`tls-windows.yml`）在 Windows 上依次完成：
-  1. 用 MinGW-w64 GCC 构建生产版与测试版 DLL；
-  2. 已知答案关卡 `tls/tools/rain_voleith_kat_gate.py`：经 DLL 逐字节复现六份签名 KAT，并核对建钥 KAT、负例、随机源失败和并发；
-  3. 在要求 Rain 可用的设置下，运行 v9 全套测试；
-  4. 运行演示。
+- X25519 与后量子 KEM 组合；经典签名与 RainSwift 等后量子签名对同一 CertificateVerify 输入签名，验证要求两者都通过。
+- 支持 X.509 测试链、严格替代 CA 边验证、Finished、应用数据、exporter 和回环 TCP。
+- 新版含 DER/替代链解析、SLH-DSA-SM3 后端、签发预算与验收驱动，以及 FAEST 对照库构建代码。RainSwift 六组编号继续为 `0xFEB0–0xFEB5`。
+- Windows DLL 与 Linux 共享库构建说明见 [tls/README.md](tls/README.md) 和 [原生库说明](tls/native/rain_voleith/README.md)。测试使用锁定依赖；`RAIN_VOLEITH_REQUIRED=1` 将缺失 Rain 库视为错误。
 
-**当前数据。** 新的握手数据、功能日志和证书链验收结果分别见 [协议时延](data/协议时延/)、[功能测试](data/功能测试/) 与 [证书链](data/证书链/)。协议时延保留各批次原始口径：进程内计时、握手记账字节和证书链功能验收分别解释；跨运行最佳观察值与同次运行对照分别读取。
+Windows 持续集成依次构建生产版和测试版 DLL、复现六组 KAT、运行协议测试及演示。Linux 共享库脚本位于 `tls/native/rain_voleith/build_linux.sh`。
 
-**源码范围。** 本次更新数据及其说明。现有 `tls/` 仍是先前公开的 v9 Rain 接入版本；支撑材料中更新的 `tlsb/` 和离线 CA `a15/` 源码尚待同步。因此，新日志记录的是支撑材料对应版本的结果，完整的新功能复现还需同步相应源码。
+### 离线 CA：`a15/`
 
-**运行（Windows，x86-64-v3 加 AES-NI、PCLMULQDQ）**，在 `tls/` 目录中依次执行：
+在 Linux x86-64、Python 3.12、GCC、make、venv 环境中执行：
 
-1. 构建 DLL，见 [tls/native/rain_voleith/README.md](tls/native/rain_voleith/README.md)。需要 MSYS2 UCRT64 GCC，以及 XKCP 的固定提交。
-2. 安装锁定的依赖：`python -m pip install --require-hashes --only-binary :all: --target .deps -r requirements.lock.txt`。
-3. 设 `PYTHONPATH=.deps`，然后运行：
-   - 演示：`python demo/rain_voleith_demo.py`；
-   - 测试：`RAIN_VOLEITH_REQUIRED=1 python -m pytest tests -q`。
+```bash
+cd a15
+python3 -B ops/bootstrap_local_env.py --verify --falcon --jobs 4 \
+  --fixtures fixtures/public-alt-chain --output build/functional-check
+```
 
-**数据文件。** 早期 `docs/speed_data/`、TLS 基准输出与旧验收日志已从当前文件树删除。性能和验收结果统一从 [data/](data/README.md) 读取；原先的数据仍可在 Git 历史中查看。源码中的基准程序保留供重新采集使用。
+每次使用新的输出目录。入口安装带哈希锁的依赖、构建 CPU 库，运行原生边界、预算、解析器、TLS 回归、预签发链的原生/Python 双重验证及 P0–P4 功能检查。CUDA 源码保留；该入口的 CUDA 项为模拟检查，真实设备执行单独验收。详见 [a15/README.md](a15/README.md)。`a15/base_tls/` 是 CA 工具的直接导入与回归依赖，随模块保留。
+
+**当前数据。** [协议时延](data/协议时延/)、[功能测试](data/功能测试/) 和 [证书链](data/证书链/) 保留支撑材料的原始结果及各批次计量口径。源码同步不代表重新采集这些性能样本；本次新运行的功能检查在源码同步记录中单列。
+
+**数据文件。** 早期测速输出和旧验收日志已从当前文件树移除，Git 历史保留原版本。源码中的基准程序保留供再次采集；当前公开测量入口为 [data/](data/README.md)。协议使用私有实验码点、OID 与分帧，完整能力范围见 [tls/docs/CAPABILITIES.md](tls/docs/CAPABILITIES.md)。
 
 ## 7. 来源与许可
 
 - 代码基于 [rFAEST](https://github.com/samsungsds-research-papers/rFAEST)（Samsung SDS，提交 `7a59c5c18b199bae427bd71d3b9fb5ea3f3b6d97`），rFAEST 又基于 FAEST 参考实现。按 MIT 许可证发布，版权声明见 [src/LICENSE](src/LICENSE)。
 - SHAKE 使用 [XKCP](https://github.com/XKCP/XKCP)，固定在提交 `64404bee`。
-- `tls/` 中的混合 TLS 1.3 实现 v9 是团队前期工作，原包未附许可证。
+- `tls/` 和 `a15/` 来自团队复赛支撑材料；保留各第三方目录内的 LICENSE、来源与固定版本。团队混合协议代码的原包未附独立许可证；`src/LICENSE` 适用范围按原文。
 - `src/` 相对 Q2 验收源码的改动：`src/meson.build` 追加了 `sign_demo`、`rain_bench` 与 `q5_kg_test` 三个构建目标并新增这三个程序；Q5 新增 `src/rain_kg.hpp`，`src/faest_keys.inc` 中建钥（`faest_pubkey`）改调它（增 3 行、删 1 行）。协议字节由 KAT 比对保证不变。

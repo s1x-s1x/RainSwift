@@ -1,0 +1,51 @@
+{
+  "schema": "tlsb-reference-import-v1",
+  "scope": "Exact copies of existing A1-5 independent verification sources; no new CA signing or performance claim.",
+  "files": [
+    {
+      "path": "reference/__init__.py",
+      "source": "source-artifacts\\pqc-a1-5-修复版-20261004\\reference\\__init__.py",
+      "sha256": "5b730d2dc9edbb15aaa49be4f85fe829fd5962f5234bf0f182052baf59d0df26"
+    },
+    {
+      "path": "reference/slhdsa.py",
+      "source": "source-artifacts\\pqc-a1-5-修复版-20261004\\reference\\slhdsa.py",
+      "sha256": "d7412bafb27d9e40b98a10eaf10faf24753007b0585099532fbaf628c717b043"
+    },
+    {
+      "path": "reference/sm3.py",
+      "source": "source-artifacts\\pqc-a1-5-修复版-20261004\\reference\\sm3.py",
+      "sha256": "43fb6d92afc803f4842bd06dfb00f813c7ed102f1b68d9115c3e0cd6497c2c8e"
+    },
+    {
+      "path": "reference/README.md",
+      "source": "source-artifacts\\pqc-a1-5-修复版-20261004\\reference\\README.md",
+      "sha256": "03b1863d7bcff088ef720ebfe00b3d9917d4d9475e1ee1c496d76cffd3ccc9d2"
+    },
+    {
+      "path": "reference/requirements.txt",
+      "source": "source-artifacts\\pqc-a1-5-修复版-20261004\\reference\\requirements.txt",
+      "sha256": "8af6d5cfebc5c65614d58aee1d40b734d61d9ce4741ef03bad97749a4aa24145"
+    },
+    {
+      "path": "reference/requirements.lock.txt",
+      "source": "source-artifacts\\pqc-a1-5-修复版-20261004\\reference\\requirements.lock.txt",
+      "sha256": "80c5f4d26639bc37ce334765c4f5dca695012407ed7acc644eecbed8c635e5cc"
+    },
+    {
+      "path": "third_party/py-acvp-pqc/fips205.py",
+      "source": "source-artifacts\\pqc-a1-5-修复版-20261004\\third_party\\py-acvp-pqc\\fips205.py",
+      "sha256": "edb662306b0ccac88ee9669aed6256c27a547d9084e6e9cc2180ce92e9da3a22"
+    },
+    {
+      "path": "third_party/py-acvp-pqc/LICENSE",
+      "source": "source-artifacts\\pqc-a1-5-修复版-20261004\\third_party\\py-acvp-pqc\\LICENSE",
+      "sha256": "436a6d536138f203ac333858cff92a568be62797752b3adb94bcaa0f6ffe7ef6"
+    },
+    {
+      "path": "third_party/py-acvp-pqc/README.md",
+      "source": "source-artifacts\\pqc-a1-5-修复版-20261004\\third_party\\py-acvp-pqc\\README.md",
+      "sha256": "2759aa91cb5242740203515212a43ff1b76ca21b267fa2a301b17372d1fcc0c8"
+    }
+  ]
+}

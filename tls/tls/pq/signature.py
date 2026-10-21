@@ -16,11 +16,13 @@ from typing import Any
 
 from ..errors import BackendUnavailableError
 from .rain_voleith import RAIN_SCHEME_IDS, RainVoleith
+from .slhdsa_sm3 import SlhDsaSm3, PARAMETERS as _SLH_PARAMETERS
 
 __all__ = [
     "Falcon",
     "MlDsa",
     "RainVoleith",
+    "SlhDsaSm3",
     "XMSS_HEIGHT_DEFAULT",
     "Xmss",
     "available_pq_signers",
@@ -206,6 +208,8 @@ def get_pq_signer(name: str, **options: object) -> Any:
         return Falcon(name)
     if name in RAIN_SCHEME_IDS:
         return RainVoleith(name)
+    if name in _SLH_PARAMETERS:
+        return SlhDsaSm3(name, **options)
     if name == "xmss" or name.startswith("xmss-"):
         return Xmss(height=int(options.pop("height", XMSS_HEIGHT_DEFAULT)), **options)  # type: ignore[arg-type]
     raise BackendUnavailableError(
@@ -215,7 +219,7 @@ def get_pq_signer(name: str, **options: object) -> Any:
 
 def available_pq_signers() -> dict[str, str]:
     """Map every advertised signer to ``"ok"`` or the reason it cannot be built."""
-    names = ["xmss", *_ML_DSA_MODULES, *_FALCON_MODULES, *RAIN_SCHEME_IDS]
+    names = ["xmss", *_ML_DSA_MODULES, *_FALCON_MODULES, *RAIN_SCHEME_IDS, *_SLH_PARAMETERS]
     report: dict[str, str] = {}
     for name in names:
         try:
